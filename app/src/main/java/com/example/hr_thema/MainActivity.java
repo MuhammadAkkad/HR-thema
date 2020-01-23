@@ -16,4 +16,8 @@ public class MainActivity extends AppCompatActivity {
         System.out.println("sadfasdif");
 >>>>>>> ATİLAYBRANCH
     }
+
+    void muhammad (){
+        
+    }
 }
