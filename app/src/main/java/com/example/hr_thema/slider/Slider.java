@@ -106,7 +106,7 @@ public class Slider extends
             textViewHeader = itemView.findViewById(R.id.tv_slider_header);
             textViewDescription = itemView.findViewById(R.id.tv_slider_body);
             logo = itemView.findViewById(R.id.img_logo_activity_main);
-            btn_skip = itemView.findViewById(R.id.btn_skip_welcome_page);
+            //btn_skip = itemView.findViewById(R.id.btn_skip_welcome_page);
             this.itemView = itemView;
         }
     }

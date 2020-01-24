@@ -7,7 +7,7 @@
     android:background="@drawable/tutorial"
     tools:context=".login.LoginActivity">
     <ImageView
-        android:id="@+id/imgLogo"
+        android:id="@+id/img_logo_activity_login"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="25dp"
@@ -18,7 +18,7 @@
         app:srcCompat="@drawable/logo" />
 
     <TextView
-        android:id="@+id/txtHosgeldin"
+        android:id="@+id/txt_welcome_activity_login"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -26,29 +26,29 @@
         android:text="Hoşgeldin, Emre"
         android:textColor="#FFF"
         android:textSize="26dp"
-        app:layout_constraintStart_toEndOf="@+id/imgProfil"
-        app:layout_constraintTop_toBottomOf="@+id/imgLogo" />
+        app:layout_constraintStart_toEndOf="@+id/img_profile_activity_login"
+        app:layout_constraintTop_toBottomOf="@+id/img_logo_activity_login" />
 
     <ImageView
-        android:id="@+id/imgProfil"
+        android:id="@+id/img_profile_activity_login"
         android:layout_width="34dp"
         android:layout_height="34dp"
         android:layout_marginTop="40dp"
         android:background="@drawable/profilfoto"
         android:visibility="visible"
-        app:layout_constraintStart_toStartOf="@+id/imgLogo"
-        app:layout_constraintTop_toBottomOf="@+id/imgLogo" />
+        app:layout_constraintStart_toStartOf="@+id/img_logo_activity_login"
+        app:layout_constraintTop_toBottomOf="@+id/img_logo_activity_login" />
 
     <TextView
-        android:id="@+id/txtAciklama"
+        android:id="@+id/txt_welcome_description_activity_login"
         android:layout_width="329dp"
         android:layout_height="50dp"
         android:layout_marginTop="10dp"
         android:text="Aşağıdaki formu doldurarak giriş yapabilirsin."
         android:textColor="#C5C9CE"
         android:textSize="21dp"
-        app:layout_constraintStart_toStartOf="@+id/txtHosgeldin"
-        app:layout_constraintTop_toBottomOf="@+id/txtHosgeldin" />
+        app:layout_constraintStart_toStartOf="@+id/txt_welcome_activity_login"
+        app:layout_constraintTop_toBottomOf="@+id/txt_welcome_activity_login" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -60,7 +60,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
-            android:id="@+id/txtUserName"
+            android:id="@+id/txt_user_name_activity_login"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
@@ -68,7 +68,7 @@
             android:textColor="#AE48C7"
             android:textSize="22dp"
             android:visibility="visible"
-            app:layout_constraintBottom_toTopOf="@+id/btnGirisYap"
+            app:layout_constraintBottom_toTopOf="@+id/btn_sign_in_activity_login"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
@@ -76,7 +76,7 @@
             app:layout_constraintVertical_bias="0.07999998" />
 
         <EditText
-            android:id="@+id/edtUserName"
+            android:id="@+id/tv_user_name_activity_login"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:ems="17"
@@ -85,11 +85,11 @@
             android:theme="@style/MyEditText"
             android:visibility="visible"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="@+id/txtUserName"
-            app:layout_constraintTop_toBottomOf="@+id/txtUserName" />
+            app:layout_constraintStart_toStartOf="@+id/txt_user_name_activity_login"
+            app:layout_constraintTop_toBottomOf="@+id/txt_user_name_activity_login" />
 
         <EditText
-            android:id="@+id/edtPassword"
+            android:id="@+id/tv_password_activity_login"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
@@ -100,21 +100,21 @@
             android:inputType="textPersonName"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/edtUserName" />
+            app:layout_constraintTop_toBottomOf="@+id/tv_user_name_activity_login" />
 
         <CheckBox
-            android:id="@+id/cbBeniHatirla"
+            android:id="@+id/cb_remember_me_activity_login"
             android:theme="@style/MyEditText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
             android:text="Beni Hatırla"
             android:textColor="#B1B1B1"
-            app:layout_constraintStart_toStartOf="@+id/edtPassword"
-            app:layout_constraintTop_toBottomOf="@+id/edtPassword" />
+            app:layout_constraintStart_toStartOf="@+id/tv_password_activity_login"
+            app:layout_constraintTop_toBottomOf="@+id/tv_password_activity_login" />
 
         <TextView
-            android:id="@+id/txtSifremiUnuttum"
+            android:id="@+id/txt_forgot_password_activity_login"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="150dp"
@@ -122,12 +122,12 @@
             android:text="Şifremi Unuttum"
             android:textColor="#B1B1B1"
             android:textSize="15dp"
-            app:layout_constraintEnd_toEndOf="@+id/edtPassword"
-            app:layout_constraintStart_toEndOf="@+id/cbBeniHatirla"
-            app:layout_constraintTop_toBottomOf="@+id/edtPassword" />
+            app:layout_constraintEnd_toEndOf="@+id/tv_password_activity_login"
+            app:layout_constraintStart_toEndOf="@+id/cb_remember_me_activity_login"
+            app:layout_constraintTop_toBottomOf="@+id/tv_password_activity_login" />
 
         <Button
-            android:id="@+id/btnGirisYap"
+            android:id="@+id/btn_sign_in_activity_login"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="29dp"
@@ -138,12 +138,12 @@
             android:background="@drawable/shapebuttonradious"
             android:text="Giriş Yap"
             android:textColor="#FFF"
-            app:layout_constraintBottom_toTopOf="@+id/txtYada"
+            app:layout_constraintBottom_toTopOf="@+id/txt_yada_activity_login"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
 
         <TextView
-            android:id="@+id/txtYada"
+            android:id="@+id/txt_yada_activity_login"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="194dp"
@@ -151,13 +151,13 @@
             android:layout_marginBottom="20dp"
             android:text="Yada"
             android:visibility="visible"
-            app:layout_constraintBottom_toTopOf="@+id/btnGirisYapDiger"
+            app:layout_constraintBottom_toTopOf="@+id/btn_another_account_sign_in_activity_login"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.8"
             app:layout_constraintStart_toStartOf="parent" />
 
         <Button
-            android:id="@+id/btnGirisYapDiger"
+            android:id="@+id/btn_another_account_sign_in_activity_login"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="30dp"
@@ -168,8 +168,8 @@
             android:textColor="#838383"
             android:visibility="visible"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="@+id/btnGirisYap"
-            app:layout_constraintStart_toStartOf="@+id/btnGirisYap" />
+            app:layout_constraintEnd_toEndOf="@+id/btn_sign_in_activity_login"
+            app:layout_constraintStart_toStartOf="@+id/btn_sign_in_activity_login" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

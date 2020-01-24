@@ -3,12 +3,12 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:background="@color/colorPrimary"
     android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
     tools:context=".home.HomeActivity">
 
     <ImageView
-        android:id="@+id/imgLogo"
+        android:id="@+id/img_logo_activity_login"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="25dp"
@@ -19,7 +19,7 @@
 
 
     <ImageView
-        android:id="@+id/imgProfil"
+        android:id="@+id/img_profile_activity_login"
         android:layout_width="34dp"
         android:layout_height="34dp"
         android:layout_marginTop="25dp"
@@ -39,20 +39,20 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="match_parent">
 
             <Button
-                android:id="@+id/button5"
+                android:id="@+id/btn_home_nvg"
                 android:layout_width="32dp"
                 android:layout_height="32dp"
                 android:layout_marginTop="19dp"
                 android:layout_marginEnd="68dp"
                 android:background="@drawable/ic_unactve"
-                app:layout_constraintEnd_toStartOf="@+id/button6"
+                app:layout_constraintEnd_toStartOf="@+id/btn_menu_nvg"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <Button
-                android:id="@+id/button6"
+                android:id="@+id/btn_menu_nvg"
                 android:layout_width="32dp"
                 android:layout_height="32dp"
                 android:layout_marginTop="19dp"
@@ -60,11 +60,11 @@
                 android:layout_marginBottom="21dp"
                 android:background="@drawable/ic_group_3_copy"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/button7"
+                app:layout_constraintEnd_toStartOf="@+id/btn_notification_nvg"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <Button
-                android:id="@+id/button7"
+                android:id="@+id/btn_notification_nvg"
                 android:layout_width="32dp"
                 android:layout_height="32dp"
                 android:layout_marginTop="19dp"
@@ -72,11 +72,11 @@
                 android:layout_marginBottom="21dp"
                 android:background="@drawable/ic_group_4_copy"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/button8"
+                app:layout_constraintEnd_toStartOf="@+id/btn_settings_nvg"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <Button
-                android:id="@+id/button8"
+                android:id="@+id/btn_settings_nvg"
                 android:layout_width="37dp"
                 android:layout_height="34dp"
                 android:layout_marginTop="19dp"
