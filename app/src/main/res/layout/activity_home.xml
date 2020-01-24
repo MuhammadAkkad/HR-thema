@@ -29,63 +29,24 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:layout_width="match_parent"
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:background="@color/colorPrimaryDark"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottom_navigation"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:background="@color/colorPrimary"
+            app:itemIconTint="@color/colorPrimaryDark"
+            app:itemTextColor="@color/colorPrimary"
+            app:menu="@menu/bottom_navigation_menu"
+            />
+    </FrameLayout>
 
-            <Button
-                android:id="@+id/btn_home_nvg"
-                android:layout_width="32dp"
-                android:layout_height="32dp"
-                android:layout_marginTop="19dp"
-                android:layout_marginEnd="68dp"
-                android:background="@drawable/ic_unactve"
-                app:layout_constraintEnd_toStartOf="@+id/btn_menu_nvg"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <Button
-                android:id="@+id/btn_menu_nvg"
-                android:layout_width="32dp"
-                android:layout_height="32dp"
-                android:layout_marginTop="19dp"
-                android:layout_marginEnd="68dp"
-                android:layout_marginBottom="21dp"
-                android:background="@drawable/ic_group_3_copy"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/btn_notification_nvg"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <Button
-                android:id="@+id/btn_notification_nvg"
-                android:layout_width="32dp"
-                android:layout_height="32dp"
-                android:layout_marginTop="19dp"
-                android:layout_marginEnd="68dp"
-                android:layout_marginBottom="21dp"
-                android:background="@drawable/ic_group_4_copy"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/btn_settings_nvg"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <Button
-                android:id="@+id/btn_settings_nvg"
-                android:layout_width="37dp"
-                android:layout_height="34dp"
-                android:layout_marginTop="19dp"
-                android:layout_marginEnd="37dp"
-                android:layout_marginBottom="19dp"
-                android:background="@drawable/ic_cogwheel"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
-    </com.google.android.material.bottomnavigation.BottomNavigationView>
 </androidx.constraintlayout.widget.ConstraintLayout>

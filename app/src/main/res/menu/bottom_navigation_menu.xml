@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/navigation_home"
+        android:icon="@drawable/ic_group_3"
+        android:title="Home" />
+    <item
+        android:id="@+id/navigation_menu"
+        android:icon="@drawable/ic_group_3_copy"
+        android:title="SMS" />
+    <item
+        android:id="@+id/navigation_notifications"
+        android:icon="@drawable/ic_group_4_copy"
+        android:title="Notification" />
+    <item
+        android:id="@+id/navigation_settings"
+        android:icon="@drawable/ic_cogwheel"
+        android:title="Notification" />
+</menu>
