@@ -4,6 +4,7 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -96,11 +97,16 @@ public class Slider extends
         TextView textViewHeader;
         TextView textViewDescription;
 
+        ImageView logo;
+        Button btn_skip;
+
         public SliderAdapterVH(View itemView) {
             super(itemView);
             imageViewBackground = itemView.findViewById(R.id.iv_auto_image_slider);
             textViewHeader = itemView.findViewById(R.id.tv_slider_header);
             textViewDescription = itemView.findViewById(R.id.tv_slider_body);
+            logo = itemView.findViewById(R.id.img_logo_activity_main);
+            btn_skip = itemView.findViewById(R.id.btn_skip_welcome_page);
             this.itemView = itemView;
         }
     }

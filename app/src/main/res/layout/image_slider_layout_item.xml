@@ -42,12 +42,4 @@
             android:textSize="18sp" />
     </LinearLayout>
 
-    <FrameLayout
-        android:id="@+id/fl_text_container"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:visibility="gone">
-
-    </FrameLayout>
-
 </FrameLayout>
