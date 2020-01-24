@@ -22,6 +22,7 @@ public class LoginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+        setLightStatusBar(this.findViewById(R.id.login_activity_layout).getRootView(), this);
         btn_sign_in = findViewById(R.id.btn_sign_in_activity_login);
         btn_sign_in.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -30,31 +31,24 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
-        //make translucent statusBar on kitkat devices
-        if (Build.VERSION.SDK_INT >= 19 && Build.VERSION.SDK_INT < 21) {
-            setWindowFlag(this, WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS, true);
-        }
-        if (Build.VERSION.SDK_INT >= 19) {
-            getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_STABLE | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN);
-        }
-        //make fully Android Transparent Status bar
-        if (Build.VERSION.SDK_INT >= 21) {
-            setWindowFlag(this, WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS, false);
-            getWindow().setStatusBarColor(Color.TRANSPARENT);
-        }
+
     }
     void home (){
         Intent home = new Intent(this , HomeActivity.class);
         startActivity(home);
     }
-    public static void setWindowFlag(Activity activity, final int bits, boolean on) {
-        Window win = activity.getWindow();
-        WindowManager.LayoutParams winParams = win.getAttributes();
-        if (on) {
-            winParams.flags |= bits;
-        } else {
-            winParams.flags &= ~bits;
-        }
-        win.setAttributes(winParams);
+    // set status bar icon colors to dark
+    public static void setLightStatusBar(View view, Activity activity) {
+        //if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+//
+//            int flags = view.getSystemUiVisibility();
+//            flags |= View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR;
+//
+        view.setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_STABLE
+                | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
+                | View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);
+
+        activity.getWindow().setStatusBarColor(Color.TRANSPARENT);
+        //}
     }
 }

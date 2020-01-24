@@ -6,8 +6,6 @@ import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
-import android.view.Window;
-import android.view.WindowManager;
 import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -36,18 +34,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        //make translucent statusBar on kitkat devices
-        if (Build.VERSION.SDK_INT >= 19 && Build.VERSION.SDK_INT < 21) {
-            setWindowFlag(this, WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS, true);
-        }
-        if (Build.VERSION.SDK_INT >= 19) {
-            getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_STABLE | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN);
-        }
-        //make fully Android Transparent Status bar
-        if (Build.VERSION.SDK_INT >= 21) {
-            setWindowFlag(this, WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS, false);
-            getWindow().setStatusBarColor(Color.TRANSPARENT);
-        }
+
 
 
 
@@ -57,10 +44,10 @@ public class MainActivity extends AppCompatActivity {
         adapter.setCount(3);
 
         sliderView.setSliderAdapter(adapter);
-
+        setLightStatusBar(this.findViewById(R.id.welcome_page_layout).getRootView(), this);
         sliderView.setIndicatorAnimation(IndicatorAnimations.SLIDE); //set indicator animation by using SliderLayout.IndicatorAnimations. :WORM or THIN_WORM or COLOR or DROP or FILL or NONE or SCALE or SCALE_DOWN or SLIDE and SWAP!!
         sliderView.setSliderTransformAnimation(SliderAnimations.SIMPLETRANSFORMATION);
-        sliderView.setAutoCycleDirection(SliderView.AUTO_CYCLE_DIRECTION_BACK_AND_FORTH);
+        sliderView.setAutoCycleDirection(SliderView.AUTO_CYCLE_DIRECTION_RIGHT);
         sliderView.setIndicatorSelectedColor(Color.WHITE);
         sliderView.setIndicatorUnselectedColor(Color.GRAY);
         //sliderView.setAutoCycle(false);
@@ -77,15 +64,20 @@ public class MainActivity extends AppCompatActivity {
         Intent loginPage = new Intent(this, LoginActivity.class);
         startActivity(loginPage);
     }
+    // set status bar icon colors to dark
+    public static void setLightStatusBar(View view, Activity activity) {
+        //if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+//
+//            int flags = view.getSystemUiVisibility();
+//            flags |= View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR;
+//
+            view.setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_STABLE
+                    | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
+                    | View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);
 
-    public static void setWindowFlag(Activity activity, final int bits, boolean on) {
-        Window win = activity.getWindow();
-        WindowManager.LayoutParams winParams = win.getAttributes();
-        if (on) {
-            winParams.flags |= bits;
-        } else {
-            winParams.flags &= ~bits;
-        }
-        win.setAttributes(winParams);
+            activity.getWindow().setStatusBarColor(Color.TRANSPARENT);
+        //}
     }
+
+
 }
