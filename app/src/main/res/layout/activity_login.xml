@@ -8,7 +8,7 @@
     tools:context=".login.LoginActivity">
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/imgLogo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="25dp"
@@ -19,26 +19,37 @@
         app:srcCompat="@drawable/logo" />
 
     <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
+        android:id="@+id/txtHosgeldin"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:text="HOŞGELDİN"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="40dp"
+        android:text="Hoşgeldin, Emre"
         android:textColor="#FFF"
         android:textSize="26dp"
-        app:layout_constraintStart_toStartOf="@+id/imageView"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintStart_toEndOf="@+id/imgProfil"
+        app:layout_constraintTop_toBottomOf="@+id/imgLogo" />
+
+    <ImageView
+        android:id="@+id/imgProfil"
+        android:layout_width="34dp"
+        android:layout_height="34dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/profilfoto"
+        android:visibility="visible"
+        app:layout_constraintStart_toStartOf="@+id/imgLogo"
+        app:layout_constraintTop_toBottomOf="@+id/imgLogo" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/txtAciklama"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:text="Aşağıdaki formu doldurarak giriş yapabilirsin."
         android:textColor="#C5C9CE"
         android:textSize="21dp"
-        app:layout_constraintStart_toStartOf="@+id/textView"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintStart_toStartOf="@+id/txtHosgeldin"
+        app:layout_constraintTop_toBottomOf="@+id/txtHosgeldin" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -50,14 +61,15 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
-            android:id="@+id/textView3"
+            android:id="@+id/txtUserName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
             android:text="User Name"
             android:textColor="#AE48C7"
             android:textSize="22dp"
-            app:layout_constraintBottom_toTopOf="@+id/button"
+            android:visibility="visible"
+            app:layout_constraintBottom_toTopOf="@+id/btnGirisYap"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
@@ -65,40 +77,42 @@
             app:layout_constraintVertical_bias="0.07999998" />
 
         <EditText
-            android:id="@+id/editText"
+            android:id="@+id/edtUserName"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:ems="17"
             android:hint="User Name"
             android:inputType="textPersonName"
+            android:visibility="visible"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="@+id/textView3"
-            app:layout_constraintTop_toBottomOf="@+id/textView3" />
+            app:layout_constraintStart_toStartOf="@+id/txtUserName"
+            app:layout_constraintTop_toBottomOf="@+id/txtUserName" />
 
         <EditText
-            android:id="@+id/editText2"
+            android:id="@+id/edtPassword"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
             android:layout_marginTop="10dp"
             android:ems="17"
             android:hint="Password"
             android:inputType="textPersonName"
-            app:layout_constraintEnd_toEndOf="@+id/editText"
-            app:layout_constraintStart_toStartOf="@+id/editText"
-            app:layout_constraintTop_toBottomOf="@+id/editText" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edtUserName" />
 
         <CheckBox
-            android:id="@+id/checkBox"
+            android:id="@+id/cbBeniHatirla"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
             android:text="Beni Hatırla"
             android:textColor="#B1B1B1"
-            app:layout_constraintStart_toStartOf="@+id/editText2"
-            app:layout_constraintTop_toBottomOf="@+id/editText2" />
+            app:layout_constraintStart_toStartOf="@+id/edtPassword"
+            app:layout_constraintTop_toBottomOf="@+id/edtPassword" />
 
         <TextView
-            android:id="@+id/textView6"
+            android:id="@+id/txtSifremiUnuttum"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="150dp"
@@ -106,23 +120,54 @@
             android:text="Şifremi Unuttum"
             android:textColor="#B1B1B1"
             android:textSize="15dp"
-            app:layout_constraintEnd_toEndOf="@+id/editText2"
-            app:layout_constraintStart_toEndOf="@+id/checkBox"
-            app:layout_constraintTop_toBottomOf="@+id/editText2" />
+            app:layout_constraintEnd_toEndOf="@+id/edtPassword"
+            app:layout_constraintStart_toEndOf="@+id/cbBeniHatirla"
+            app:layout_constraintTop_toBottomOf="@+id/edtPassword" />
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/btnGirisYap"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
+            android:layout_marginStart="29dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginBottom="25dp"
             android:width="355dp"
             android:height="55dp"
             android:background="@drawable/shapebuttonradious"
             android:text="Giriş Yap"
             android:textColor="#FFF"
-            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/txtYada"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/txtYada"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="194dp"
+            android:layout_marginEnd="180dp"
+            android:layout_marginBottom="20dp"
+            android:text="Yada"
+            android:visibility="visible"
+            app:layout_constraintBottom_toTopOf="@+id/btnGirisYapDiger"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.8"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/btnGirisYapDiger"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:width="355dp"
+            android:height="55dp"
+            android:background="@drawable/shapebuttonradiouswhite"
+            android:text="Başka bir kullanıcı ile giriş yap"
+            android:textColor="#838383"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/btnGirisYap"
+            app:layout_constraintStart_toStartOf="@+id/btnGirisYap" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
