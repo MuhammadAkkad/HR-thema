@@ -4,4 +4,11 @@
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
     <color name="specialPurple">#AE48C7</color>
+    <color name="navigationText">#505050</color>
+
+
+    <color name="navigationIconSelected">#505050</color>
+    <color name="navigationIcon">#D8D8D8</color>
+
+
 </resources>
