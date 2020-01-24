@@ -1,10 +1,14 @@
 package com.example.hr_thema;
 
-import androidx.appcompat.app.AppCompatActivity;
-
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 
+import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.hr_thema.login.LoginActivity;
 import com.example.hr_thema.slider.Slider;
 import com.smarteist.autoimageslider.IndicatorAnimations;
 import com.smarteist.autoimageslider.IndicatorView.draw.controller.DrawController;
@@ -13,12 +17,20 @@ import com.smarteist.autoimageslider.SliderView;
 
 public class MainActivity extends AppCompatActivity {
     SliderView sliderView;
+    Button btn_login;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        btn_login = findViewById(R.id.btn_login_main_activity);
+        btn_login.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                LoginPage(v);
+            }
+        });
         sliderView = findViewById(R.id.imageSlider);
 
         final Slider adapter = new Slider(this);
@@ -39,5 +51,10 @@ public class MainActivity extends AppCompatActivity {
                 sliderView.setCurrentPagePosition(position);
             }
         });
+    }
+
+    public void LoginPage(View view) {
+        Intent loginPage = new Intent(this, LoginActivity.class);
+        startActivity(loginPage);
     }
 }

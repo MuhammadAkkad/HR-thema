@@ -1,7 +1,6 @@
 package com.example.hr_thema.slider;
 
 import android.content.Context;
-import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -74,13 +73,6 @@ public class Slider extends
                 viewHolder.textViewDescription.setText("Lorem Ipsum, dizgi ve baskı endüstrisi\n" +
                         "kullanılan mıgır metinlerdir. ");
                 Glide.with(viewHolder.itemView);
-                       // .load(R.drawable.bg_overlay)
-                        //.fitCenter()
-                       // .into(viewHolder.imageViewBackground);
-
-               // .asGif()
-               // .load(R.drawable.oh_look_at_this)
-               // .into(viewHolder.imageGifContainer);
                 break;
 
         }
