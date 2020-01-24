@@ -4,9 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/deneme"
+    android:background="@drawable/tutorial"
     tools:context=".login.LoginActivity">
-
     <ImageView
         android:id="@+id/imgLogo"
         android:layout_width="wrap_content"
@@ -20,7 +19,7 @@
 
     <TextView
         android:id="@+id/txtHosgeldin"
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="40dp"
@@ -42,8 +41,8 @@
 
     <TextView
         android:id="@+id/txtAciklama"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="329dp"
+        android:layout_height="50dp"
         android:layout_marginTop="10dp"
         android:text="Aşağıdaki formu doldurarak giriş yapabilirsin."
         android:textColor="#C5C9CE"
@@ -83,6 +82,7 @@
             android:ems="17"
             android:hint="User Name"
             android:inputType="textPersonName"
+            android:theme="@style/MyEditText"
             android:visibility="visible"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="@+id/txtUserName"
@@ -96,6 +96,7 @@
             android:layout_marginTop="10dp"
             android:ems="17"
             android:hint="Password"
+            android:theme="@style/MyEditText"
             android:inputType="textPersonName"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -103,6 +104,7 @@
 
         <CheckBox
             android:id="@+id/cbBeniHatirla"
+            android:theme="@style/MyEditText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
@@ -170,4 +172,5 @@
             app:layout_constraintStart_toStartOf="@+id/btnGirisYap" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
