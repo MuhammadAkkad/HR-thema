@@ -15,7 +15,9 @@ import com.smarteist.autoimageslider.SliderViewAdapter;
 
 public class Slider extends
         SliderViewAdapter<Slider.SliderAdapterVH> {
-
+    // temp strings
+    String header = "Lorem Ipsum, dizgi";
+    String description = "Lorem Ipsum, dizgi ve baskı endüstrisi kullanılan mıgır metinlerdir. ";
     private Context context;
     private int mCount;
 
@@ -43,36 +45,32 @@ public class Slider extends
 
         switch (position) {
             case 0:
-                viewHolder.textViewHeader.setText("Lorem Ipsum, dizgi");
-                viewHolder.textViewDescription.setText("Lorem Ipsum, dizgi ve baskı endüstrisi\n" +
-                        "kullanılan mıgır metinlerdir. ");
+                viewHolder.textViewHeader.setText(header);
+                viewHolder.textViewDescription.setText(description);
                 Glide.with(viewHolder.itemView)
-                        .load("https://images.pexels.com/photos/218983/pexels-photo-218983.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260")
+                        .load(R.drawable.tutorial)
                         .fitCenter()
                         .into(viewHolder.imageViewBackground);
                 break;
             case 1:
-                viewHolder.textViewHeader.setText("Lorem Ipsum, dizgi");
-                viewHolder.textViewDescription.setText("Lorem Ipsum, dizgi ve baskı endüstrisi\n" +
-                        "kullanılan mıgır metinlerdir. ");
+                viewHolder.textViewHeader.setText(header);
+                viewHolder.textViewDescription.setText(description);
                 Glide.with(viewHolder.itemView)
-                        .load("https://images.pexels.com/photos/747964/pexels-photo-747964.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260")
+                        .load(R.drawable.tutorial_2)
                         .fitCenter()
                         .into(viewHolder.imageViewBackground);
                 break;
             case 2:
-                viewHolder.textViewHeader.setText("Lorem Ipsum, dizgi");
-                viewHolder.textViewDescription.setText("Lorem Ipsum, dizgi ve baskı endüstrisi\n" +
-                        "kullanılan mıgır metinlerdir. ");
+                viewHolder.textViewHeader.setText(header);
+                viewHolder.textViewDescription.setText(description);
                 Glide.with(viewHolder.itemView)
-                        .load("https://images.pexels.com/photos/929778/pexels-photo-929778.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260")
+                        .load(R.drawable.tutorial_3)
                         .fitCenter()
                         .into(viewHolder.imageViewBackground);
                 break;
             default:
-                viewHolder.textViewHeader.setText("Lorem Ipsum, dizgi");
-                viewHolder.textViewDescription.setText("Lorem Ipsum, dizgi ve baskı endüstrisi\n" +
-                        "kullanılan mıgır metinlerdir. ");
+                viewHolder.textViewHeader.setText(header);
+                viewHolder.textViewDescription.setText(description);
                 Glide.with(viewHolder.itemView);
                 break;
 

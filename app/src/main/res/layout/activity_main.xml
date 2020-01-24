@@ -27,10 +27,10 @@
         app:sliderIndicatorGravity="center_horizontal|bottom"
         app:sliderIndicatorMargin="90dp"
         app:sliderIndicatorOrientation="horizontal"
-        app:sliderIndicatorPadding="8dp"
+        app:sliderIndicatorPadding="10dp"
         app:sliderIndicatorRadius="2dp"
-        app:sliderIndicatorSelectedColor="#5A5A5A"
-        app:sliderIndicatorUnselectedColor="#FFF"
+        app:sliderIndicatorSelectedColor="#FFFFFF"
+        app:sliderIndicatorUnselectedColor="#7D817A"
         app:sliderScrollTimeInSec="4"
         app:sliderStartAutoCycle="true">
     </com.smarteist.autoimageslider.SliderView>
