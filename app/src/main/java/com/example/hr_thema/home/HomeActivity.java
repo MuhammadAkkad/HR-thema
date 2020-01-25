@@ -56,8 +56,8 @@ public class HomeActivity extends AppCompatActivity {
 
     public void loadFragment(Fragment fragment) {
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-        transaction.replace(R.id.fragments_display_frame, fragment);
-        transaction.commit();
+        //transaction.replace(R.id.fragments_display_frame, fragment);
+        //transaction.commit();
     }
     // set status bar icon colors to dark
     public static void setLightStatusBar(View view, Activity activity) {
