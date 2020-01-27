@@ -3,34 +3,78 @@
 
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/nav_camera"
-            android:icon="@drawable/ic_group_4_copy"
-            android:title="Import" />
+            android:id="@+id/anasayfa"
+            android:icon="@drawable/ic_unactve"
+            android:title="Anasayfa" />
         <item
-            android:id="@+id/nav_gallery"
+            android:id="@+id/onaylanmayı_bekleyen"
+            android:icon="@drawable/ic_group_4_copy"
+            android:title="Onaylanmayı_Bekleyen" />
+        <item
+            android:id="@+id/Gelen_kutusu"
+            android:icon="@drawable/ic_group_4_copy"
+            android:title="Gelen Kutusu" />
+        <item
+            android:id="@+id/Kişiler"
             android:icon="@drawable/ic_cogwheel"
-            android:title="Gallery" />
+            android:title="Kişiler" />
         <item
-            android:id="@+id/nav_slideshow"
+            android:id="@+id/Çalışma_Alanı_Yönetimi"
             android:icon="@drawable/ic_group_3_copy"
-            android:title="Slideshow" />
+            android:title="Çalışma Alanı Yönetimi" />
         <item
-            android:id="@+id/nav_manage"
+            android:id="@+id/Yönetim"
             android:icon="@drawable/ic_group_4_copy"
-            android:title="Tools" />
+            android:title="Notification" />
+        <item
+            android:id="@+id/Organizasyon_Şeması"
+            android:icon="@drawable/ic_cogwheel"
+            android:title="Notification" />
     </group>
 
-    <item android:title="Communicate">
-        <menu>
-            <item
-                android:id="@+id/nav_share"
-                android:icon="@drawable/logo"
-                android:title="Share" />
-            <item
-                android:id="@+id/nav_send"
-                android:icon="@drawable/ic_arrow_right"
-                android:title="Send" />
-        </menu>
-    </item>
+<!--    <?xml version="1.0" encoding="utf-8"?>-->
+<!--    <menu xmlns:android="http://schemas.android.com/apk/res/android">-->
+<!--        <item-->
+<!--            android:id="@+id/anasayfa"-->
+<!--            android:icon="@drawable/ic_group_3"-->
+<!--            android:title="Anasayfa" />-->
+<!--        <item-->
+<!--            android:id="@+id/onaylanmayı_bekleyen"-->
+<!--            android:icon="@drawable/ic_group_3_copy"-->
+<!--            android:title="Onaylanmayı_Bekleyen" />-->
+<!--        <item-->
+<!--            android:id="@+id/Gelen_kutusu"-->
+<!--            android:icon="@drawable/ic_group_4_copy"-->
+<!--            android:title="Gelen Kutusu" />-->
+<!--        <item-->
+<!--            android:id="@+id/Kişiler"-->
+<!--            android:icon="@drawable/ic_cogwheel"-->
+<!--            android:title="Kişiler" />-->
+<!--        <item-->
+<!--            android:id="@+id/Çalışma_Alanı_Yönetimi"-->
+<!--            android:icon="@drawable/ic_group_3_copy"-->
+<!--            android:title="Çalışma Alanı Yönetimi" />-->
+<!--        <item-->
+<!--            android:id="@+id/Yönetim"-->
+<!--            android:icon="@drawable/ic_group_4_copy"-->
+<!--            android:title="Notification" />-->
+<!--        <item-->
+<!--            android:id="@+id/Organizasyon_Şeması"-->
+<!--            android:icon="@drawable/ic_cogwheel"-->
+<!--            android:title="Notification" />-->
+<!--    </menu>-->
+
+<!--    <item android:title="Communicate">-->
+<!--        <menu>-->
+<!--            <item-->
+<!--                android:id="@+id/nav_share"-->
+<!--                android:icon="@drawable/logo"-->
+<!--                android:title="Share" />-->
+<!--            <item-->
+<!--                android:id="@+id/nav_send"-->
+<!--                android:icon="@drawable/ic_arrow_right"-->
+<!--                android:title="Send" />-->
+<!--        </menu>-->
+<!--    </item>-->
 
 </menu>

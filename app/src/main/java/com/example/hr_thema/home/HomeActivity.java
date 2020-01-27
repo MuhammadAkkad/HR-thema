@@ -31,19 +31,32 @@ public class HomeActivity extends AppCompatActivity {
             @Override
             public boolean onNavigationItemSelected(MenuItem menuItem) {
                 int id = menuItem.getItemId();
-                if (id == R.id.navigation_home) {
+                if (id == R.id.anasayfa) {
                     //toolbar.setTitle(getResources().getString(R.string.title_home));
                     loadFragment(new HomeFragment());
                     return true;
-                } else if (id == R.id.navigation_menu) {
+                } else if (id == R.id.onaylanmayı_bekleyen) {
                     //toolbar.setTitle(getResources().getString(R.string.title_category));
                     loadFragment(new MenuFragment());
                     return true;
-                } else if (id == R.id.navigation_notifications) {
+                } else if (id == R.id.Gelen_kutusu) {
                     //toolbar.setTitle(getResources().getString(R.string.title_notifications));
                     loadFragment(new NotificationFragment());
                     return true;
-                } else if (id == R.id.navigation_settings) {
+                } else if (id == R.id.Kişiler) {
+                    //toolbar.setTitle(getResources().getString(R.string.title_profile));
+                    loadFragment(new SettingsFragment());
+                    return true;
+                }
+                else if (id == R.id.Çalışma_Alanı_Yönetimi) {
+                    //toolbar.setTitle(getResources().getString(R.string.title_profile));
+                    loadFragment(new SettingsFragment());
+                    return true;
+                }else if (id == R.id.Yönetim) {
+                    //toolbar.setTitle(getResources().getString(R.string.title_profile));
+                    loadFragment(new SettingsFragment());
+                    return true;
+                }else if (id == R.id.Organizasyon_Şeması) {
                     //toolbar.setTitle(getResources().getString(R.string.title_profile));
                     loadFragment(new SettingsFragment());
                     return true;

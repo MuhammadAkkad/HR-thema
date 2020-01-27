@@ -8,4 +8,6 @@
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
     <string name="action_right_drawer">Right Drawer</string>
+    <string name="user_name">Boran Gökbulut</string>
+    <string name="user_title">Direktör</string>
 </resources>

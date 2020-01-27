@@ -7,8 +7,12 @@
     <color name="navigationText">#505050</color>
 
 
-    <color name="navigationIconSelected">#505050</color>
-    <color name="navigationIcon">#D8D8D8</color>
+    <color name="bottomNavigationIconSelected">#505050</color>
+    <color name="BottomNavigationIcon">#D8D8D8</color>
+
+
+    <color name="SideNavigationIconText">#FFFFFF</color>
+    <color name="SideNavigationBackgroundColor">#27B9DD</color>
 
 
 </resources>
