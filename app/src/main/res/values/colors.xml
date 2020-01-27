@@ -13,6 +13,7 @@
 
     <color name="SideNavigationIconText">#FFFFFF</color>
     <color name="SideNavigationBackgroundColor">#27B9DD</color>
+    <color name="transparentColor">#00FFFFFF</color>
 
 
 </resources>

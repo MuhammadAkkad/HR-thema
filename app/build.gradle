@@ -31,7 +31,6 @@ dependencies {
     implementation 'com.github.bumptech.glide:glide:4.11.0'
     annotationProcessor 'com.github.bumptech.glide:compiler:4.11.0'
     implementation 'com.google.android.material:material:1.0.0'
-    compile 'com.jaeger.statusbarutil:library:1.4.0'
     implementation 'com.jaeger.statusbarutil:library:1.4.0'
     implementation 'com.infideap.drawerbehavior:drawer-behavior:0.2.2'
 }

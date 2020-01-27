@@ -34,10 +34,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-
-
-
-
         sliderView = findViewById(R.id.imageSlider);
 
         final Slider adapter = new Slider(this);
