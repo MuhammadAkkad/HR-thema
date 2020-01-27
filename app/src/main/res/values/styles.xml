@@ -13,8 +13,14 @@
     </style>
 
 
+
     <style name="MyToggleButtonStyle" parent="android:Widget.Button.Toggle">
         <item name="android:src">@drawable/ic_ok</item>
     </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="Theme.AppCompat.Light.NoActionBar" />
+    <style name="AppTheme.PopupOverlay" parent="Theme.AppCompat.Light.NoActionBar" />
+
+
 
 </resources>
