@@ -19,8 +19,9 @@ import android.widget.PopupWindow;
 import android.widget.TextView;
 
 import com.example.hr_thema.R;
-import com.example.hr_thema.home.HomeActivity;
-import com.example.hr_thema.popup.PopupExample;
+
+import com.example.hr_thema.navigationDrawer.NavigationDrawer;
+
 
 public class LoginActivity extends AppCompatActivity {
     Button btn_sign_in;
@@ -47,7 +48,7 @@ public class LoginActivity extends AppCompatActivity {
 
     }
     void home (){
-        Intent home = new Intent(this , HomeActivity.class);
+        Intent home = new Intent(this , NavigationDrawer.class);
         startActivity(home);
     }
     // set status bar icon colors to dark
