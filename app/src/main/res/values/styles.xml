@@ -6,7 +6,6 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
-
     <style name="MyEditText" parent="Theme.AppCompat.Light">
         <item name="colorControlNormal">@android:color/darker_gray</item>
         <item name="colorControlActivated">@color/specialPurple</item>
@@ -14,13 +13,8 @@
 
 
 
-    <style name="MyToggleButtonStyle" parent="android:Widget.Button.Toggle">
-        <item name="android:src">@drawable/ic_ok</item>
-    </style>
-
+    
     <style name="AppTheme.AppBarOverlay" parent="Theme.AppCompat.Light.NoActionBar" />
     <style name="AppTheme.PopupOverlay" parent="Theme.AppCompat.Light.NoActionBar" />
-
-
 
 </resources>
