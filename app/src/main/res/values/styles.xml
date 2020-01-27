@@ -12,4 +12,9 @@
         <item name="colorControlActivated">@color/specialPurple</item>
     </style>
 
+
+    <style name="MyToggleButtonStyle" parent="android:Widget.Button.Toggle">
+        <item name="android:src">@drawable/ic_ok</item>
+    </style>
+
 </resources>
