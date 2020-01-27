@@ -39,8 +39,8 @@ public class LoginActivity extends AppCompatActivity {
 
              //  Intent i = new Intent(LoginActivity.this, PopupExample.class);
              //  startActivity(i);
-                showPopup2(v);
-                //home();
+                //showPopup2(v);
+                home();
             }
         });
 

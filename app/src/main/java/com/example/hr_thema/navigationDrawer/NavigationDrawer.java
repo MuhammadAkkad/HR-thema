@@ -32,7 +32,7 @@ import com.google.android.material.navigation.NavigationView;
 import com.infideap.drawerbehavior.AdvanceDrawerLayout;
 
 public class NavigationDrawer extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener, HomeFragment.DrawerListener {
+        implements NavigationView.OnNavigationItemSelectedListener{
     BottomNavigationView navigation;
     private AdvanceDrawerLayout drawer;
     ImageView usrImg;
@@ -122,13 +122,6 @@ public class NavigationDrawer extends AppCompatActivity
         transaction.replace(R.id.nav_home, fragment);
         transaction.commit();
     }
-
-    @Override
-    public void OpenDrawer() {
-        drawer.openDrawer(GravityCompat.START);
-    }
-
-
 
 //    @Override
 //    public boolean onCreateOptionsMenu(Menu menu) {
