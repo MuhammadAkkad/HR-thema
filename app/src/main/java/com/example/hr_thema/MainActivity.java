@@ -10,7 +10,9 @@ import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.hr_thema.home.HomeFragment;
 import com.example.hr_thema.login.LoginActivity;
+import com.example.hr_thema.navigationDrawer.NavigationDrawer;
 import com.example.hr_thema.slider.Slider;
 import com.smarteist.autoimageslider.IndicatorAnimations;
 import com.smarteist.autoimageslider.IndicatorView.draw.controller.DrawController;
@@ -33,11 +35,6 @@ public class MainActivity extends AppCompatActivity {
                 LoginPage(v);
             }
         });
-
-
-
-
-
         sliderView = findViewById(R.id.imageSlider);
 
         final Slider adapter = new Slider(this);
@@ -66,18 +63,10 @@ public class MainActivity extends AppCompatActivity {
     }
     // set status bar icon colors to dark
     public static void setLightStatusBar(View view, Activity activity) {
-        //if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-//
-//            int flags = view.getSystemUiVisibility();
-//            flags |= View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR;
-//
             view.setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_STABLE
                     | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
                     | View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);
 
             activity.getWindow().setStatusBarColor(Color.TRANSPARENT);
-        //}
     }
-
-
 }

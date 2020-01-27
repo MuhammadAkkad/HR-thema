@@ -1,50 +1,102 @@
 package com.example.hr_thema.navigationDrawer;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.ActionBarDrawerToggle;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
-import androidx.core.view.GravityCompat;
-
+import android.app.Activity;
+import android.content.Context;
+import android.graphics.Color;
 import android.os.Bundle;
+import android.util.AttributeSet;
 import android.view.Gravity;
-import android.view.Menu;
+import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.ActionBarDrawerToggle;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.view.GravityCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 
 import com.example.hr_thema.R;
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.example.hr_thema.home.HomeFragment;
+import com.example.hr_thema.menu.MenuFragment;
+import com.example.hr_thema.notification.NotificationFragment;
+import com.example.hr_thema.settings.SettingsFragment;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationView;
-import com.google.android.material.snackbar.Snackbar;
 import com.infideap.drawerbehavior.AdvanceDrawerLayout;
 
 public class NavigationDrawer extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener {
-
+        implements NavigationView.OnNavigationItemSelectedListener, HomeFragment.DrawerListener {
+    BottomNavigationView navigation;
     private AdvanceDrawerLayout drawer;
+    ImageView usrImg;
+
+
+
+    // set status bar icon colors to dark
+    public static void setLightStatusBar(View view, Activity activity) {
+        view.setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_STABLE
+                | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
+                | View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);
+
+        activity.getWindow().setStatusBarColor(Color.TRANSPARENT);
+    }
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_navigation_drawer);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
 
 
-        drawer = (AdvanceDrawerLayout) findViewById(R.id.drawer_layout);
+
+        // side navigation slider
+        //Toolbar toolbar = findViewById(R.id.toolbar);
+        //setSupportActionBar(toolbar);
+        drawer = findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
-                this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+                this, drawer, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
         toggle.syncState();
-
-        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+        NavigationView navigationView = findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
-
         drawer.setViewScale(Gravity.START, 0.8f);
         drawer.setRadius(Gravity.START, 35);
         drawer.setViewElevation(Gravity.START, 30);
 
-
+        loadFragment(new HomeFragment());
+        //setLightStatusBar(this.findViewById(R.id.drawer_layout).getRootView(), this);
+        navigation = findViewById(R.id.bottom_navigation);
+        navigation.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(MenuItem menuItem) {
+                int id = menuItem.getItemId();
+                if (id == R.id.navigation_home) {
+                    //toolbar.setTitle(getResources().getString(R.string.title_home));
+                    loadFragment(new HomeFragment());
+                    return true;
+                } else if (id == R.id.navigation_menu) {
+                    //toolbar.setTitle(getResources().getString(R.string.title_category));
+                    loadFragment(new MenuFragment());
+                    return true;
+                } else if (id == R.id.navigation_notifications) {
+                    //toolbar.setTitle(getResources().getString(R.string.title_notifications));
+                    loadFragment(new NotificationFragment());
+                    return true;
+                } else if (id == R.id.navigation_settings) {
+                    //toolbar.setTitle(getResources().getString(R.string.title_profile));
+                    loadFragment(new SettingsFragment());
+                    return true;
+                }
+                return true;
+            }
+        });
     }
 
     @Override
@@ -56,7 +108,6 @@ public class NavigationDrawer extends AppCompatActivity
         }
     }
 
-
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
@@ -65,6 +116,19 @@ public class NavigationDrawer extends AppCompatActivity
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
+
+    public void loadFragment(Fragment fragment) {
+        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+        transaction.replace(R.id.nav_home, fragment);
+        transaction.commit();
+    }
+
+    @Override
+    public void OpenDrawer() {
+        drawer.openDrawer(GravityCompat.START);
+    }
+
+
 
 //    @Override
 //    public boolean onCreateOptionsMenu(Menu menu) {
