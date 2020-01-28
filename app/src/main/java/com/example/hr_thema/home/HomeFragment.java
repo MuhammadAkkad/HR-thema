@@ -8,14 +8,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.core.view.GravityCompat;
 import androidx.fragment.app.Fragment;
 
-import com.example.hr_thema.IDrawerListener;
+import com.example.hr_thema.navigationDrawer.IDrawerListener;
 import com.example.hr_thema.R;
 
 public class HomeFragment extends Fragment {

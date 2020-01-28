@@ -24,9 +24,10 @@
         android:layout_width="75dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
+        android:fontFamily="@font/lato"
+        android:gravity="center"
         android:text="Onaylanmayı Bekleyenler"
         android:textColor="#fff"
-        android:gravity="center"
         android:textSize="12dp"
         app:layout_constraintStart_toStartOf="@+id/imageButton"
         app:layout_constraintTop_toBottomOf="@+id/imageButton" />
@@ -36,19 +37,21 @@
         android:layout_width="65dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:text="Onayımı Bekleyenler"
+        android:fontFamily="@font/lato"
         android:gravity="center"
+        android:text="Onayımı Bekleyenler"
         android:textColor="#fff"
         android:textSize="12dp"
         app:layout_constraintStart_toStartOf="@+id/imageButton2"
         app:layout_constraintTop_toBottomOf="@+id/imageButton2" />
 
     <TextView
-        android:gravity="center"
         android:id="@+id/textView3"
         android:layout_width="65dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
+        android:fontFamily="@font/lato"
+        android:gravity="center"
         android:text="Geçmiş Aktiviteler"
         android:textColor="#fff"
         android:textSize="12dp"
@@ -57,10 +60,11 @@
 
     <TextView
         android:id="@+id/textView4"
-        android:gravity="center"
         android:layout_width="65dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
+        android:fontFamily="@font/lato"
+        android:gravity="center"
         android:text="Tümünü Görüntüle"
         android:textColor="#fff"
         android:textSize="12dp"
@@ -118,7 +122,7 @@
         android:layout_marginTop="25dp"
         android:layout_marginEnd="25dp"
         android:clickable="true"
-        android:focusable="true"
+
         android:background="@drawable/profilfoto"
         android:visibility="visible"
         app:layout_constraintEnd_toEndOf="parent"
@@ -153,17 +157,18 @@
         <EditText
             android:id="@+id/textView6"
             android:layout_width="match_parent"
-            android:layout_height="35dp"
-            android:layout_marginStart="24dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="32dp"
             android:layout_marginTop="8dp"
-            android:layout_marginEnd="24dp"
+            android:layout_marginEnd="32dp"
             android:background="@drawable/shapebuttonradiouswhite"
             android:drawableLeft="@drawable/ic_search_black_24dp"
+            android:drawableTint="#D9DADC"
             android:fontFamily="@font/lato"
             android:gravity="center_horizontal|start|center_vertical"
             android:hint="@android:string/search_go"
             android:textColorHint="#D9DADC"
-            android:textSize="18sp"
+            android:textSize="12sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="@+id/textView5"
             app:layout_constraintTop_toBottomOf="@+id/textView5" />
@@ -173,19 +178,20 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:fontFamily="@font/lato_bold"
+            android:fontFamily="@font/lato"
+            android:paddingBottom="8dp"
             android:text="Filtreler :"
             android:textColor=" #3E4450"
             android:textSize="20sp"
-            app:layout_constraintStart_toStartOf="@+id/textView5"
+            app:layout_constraintStart_toStartOf="@+id/textView6"
             app:layout_constraintTop_toBottomOf="@+id/textView6" />
 
 
         <HorizontalScrollView
             android:id="@+id/horizontalScrollView1"
             android:layout_width="0dp"
-            android:layout_height="62dp"
-            android:paddingTop="6dp"
+            android:layout_height="wrap_content"
+            android:scrollbars="none"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
@@ -199,42 +205,41 @@
                 <Button
                     android:id="@+id/button2"
                     android:layout_width="wrap_content"
-                    android:layout_height="35dp"
-                    android:layout_gravity="center"
-                    android:layout_marginLeft="24dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="36dp"
                     android:background="@drawable/shapebuttonradiouswhite"
-                    android:gravity="center"
+                    android:fontFamily="@font/lato"
                     android:text="Hepsi" />
 
                 <Button
                     android:id="@+id/button3"
                     android:layout_width="wrap_content"
-                    android:layout_height="35dp"
-                    android:layout_gravity="center"
+                    android:layout_height="30dp"
                     android:layout_marginStart="28dp"
                     android:background="@drawable/shapebuttonradiouswhite"
                     android:drawableLeft="@drawable/ic_up"
+                    android:fontFamily="@font/lato"
                     android:text="Pahalıdan Ucuza" />
 
                 <Button
                     android:id="@+id/button"
                     android:layout_width="wrap_content"
-                    android:layout_height="35dp"
-                    android:layout_gravity="center"
+                    android:layout_height="30dp"
                     android:layout_marginStart="28dp"
                     android:background="@drawable/shapebuttonradiouswhite"
                     android:drawableLeft="@drawable/ic_down"
+                    android:fontFamily="@font/lato"
                     android:text="Ucuzdan Pahalıya" />
 
                 <Button
                     android:id="@+id/button21"
                     android:layout_width="wrap_content"
-                    android:layout_height="35dp"
-                    android:layout_gravity="center"
+                    android:layout_height="30dp"
                     android:layout_marginStart="28dp"
                     android:background="@drawable/shapebuttonradiouswhite"
                     android:drawableLeft="@drawable/ic_down"
-                    android:text="DENEME" />
+                    android:fontFamily="@font/lato"
+                    android:text="Temp" />
             </LinearLayout>
         </HorizontalScrollView>
 
@@ -242,10 +247,10 @@
             android:id="@+id/textView8"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="16dp"
             android:fontFamily="@font/lato"
             android:text="Bugün"
-            android:textColor=" #3E4450"
+            android:textColor="#A9ABB0"
             android:textSize="20sp"
             app:layout_constraintStart_toStartOf="@+id/textView6"
             app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView1" />
@@ -262,7 +267,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView8"
-            app:layout_constraintVertical_bias="0.25">
+            app:layout_constraintVertical_bias="0.110000014">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="346dp"
@@ -286,6 +291,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4dp"
+                    android:fontFamily="@font/lato"
                     android:text="22.01.2020"
                     android:textColor="#C4C5C9"
                     android:textSize="11dp"
@@ -305,6 +311,7 @@
                         android:id="@+id/textView9"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:fontFamily="@font/lato"
                         android:text="9128399"
                         android:textColor=" #3E4450"
                         android:textSize="17dp" />
@@ -313,6 +320,7 @@
                         android:id="@+id/textView10"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:fontFamily="@font/lato"
                         android:text="\@BoranGökbulut"
                         android:textColor=" #3E4450"
                         android:textSize="12dp" />
@@ -322,23 +330,26 @@
                     android:id="@+id/textView12"
                     android:layout_width="294dp"
                     android:layout_height="0dp"
+                    android:fontFamily="@font/lato"
                     android:text="TextView"
                     app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
                     app:layout_constraintStart_toStartOf="@+id/imageView2"
                     app:layout_constraintTop_toBottomOf="@+id/textView11" />
+
+                <Button
+                    android:id="@+id/button5"
+                    android:layout_width="10dp"
+                    android:layout_height="16dp"
+                    android:layout_marginStart="16dp"
+                    android:background="@drawable/ic_arrow_right"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/textView12"
+                    app:layout_constraintTop_toTopOf="@+id/textView12" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
         </androidx.cardview.widget.CardView>
-
-        <Button
-            android:id="@+id/button5"
-            android:layout_width="13dp"
-            android:layout_height="25dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="127dp"
-            android:background="@drawable/ic_arrow_right"
-            app:layout_constraintStart_toEndOf="@+id/cardView"
-            app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView1" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
