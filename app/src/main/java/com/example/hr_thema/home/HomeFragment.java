@@ -12,16 +12,23 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.cardview.widget.CardView;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.core.view.GravityCompat;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import com.example.hr_thema.IDrawerListener;
 import com.example.hr_thema.R;
+import com.example.hr_thema.detail.DetailFragment;
 
 public class HomeFragment extends Fragment {
 
     View view;
     ImageView imageView;
+    CardView cardView;
+
     // set status bar icon colors to dark
     public static void setLightStatusBar(View view, Activity activity) {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
@@ -52,5 +59,33 @@ public class HomeFragment extends Fragment {
                 iDrawerListener.OpenDrawer();
             }
         });
+
+        cardView = view.findViewById(R.id.cardView);
+        cardView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+               // ListenerHome listenerHome = (ListenerHome) getActivity();
+               // listenerHome.OpenDetailPage();
+                openDetail();
+            }
+        });
+    }
+
+    public void openDetail(){
+        DetailFragment detailFragment = new DetailFragment();
+        FragmentManager fragmentManager = getFragmentManager();
+
+      // for (Fragment fragment : getFragmentManager().getFragments()) {
+      //     if (fragment != null) {
+      //         getFragmentManager().beginTransaction().remove(fragment).commit();
+      //     }
+      // }
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        fragmentTransaction.add(R.id.constraintLayout2, detailFragment);
+        fragmentTransaction.commit();
+    }
+
+    public interface ListenerHome{
+        void OpenDetailPage();
     }
 }

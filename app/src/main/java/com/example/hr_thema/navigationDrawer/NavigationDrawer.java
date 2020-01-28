@@ -17,13 +17,16 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import com.example.hr_thema.IDrawerListener;
 import com.example.hr_thema.R;
+import com.example.hr_thema.detail.DetailFragment;
 import com.example.hr_thema.home.HomeFragment;
 import com.example.hr_thema.menu.MenuFragment;
 import com.example.hr_thema.notification.NotificationFragment;
@@ -36,7 +39,6 @@ public class NavigationDrawer extends AppCompatActivity implements IDrawerListen
     BottomNavigationView navigation;
     private AdvanceDrawerLayout drawer;
     ImageView usrImg;
-
 
 
     // set status bar icon colors to dark
@@ -53,9 +55,6 @@ public class NavigationDrawer extends AppCompatActivity implements IDrawerListen
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_navigation_drawer);
-
-
-
         // side navigation slider
         //Toolbar toolbar = findViewById(R.id.toolbar);
         //setSupportActionBar(toolbar);
@@ -127,6 +126,8 @@ public class NavigationDrawer extends AppCompatActivity implements IDrawerListen
     public void OpenDrawer() {
         drawer.openDrawer(GravityCompat.START);
     }
+
+
 
 //    @Override
 //    public boolean onCreateOptionsMenu(Menu menu) {
