@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/toggle_on_going"
+        android:icon="@drawable/ic_group_3"
+        android:title="Onaylanmayı Bekleyenler" />
+    <item
+        android:id="@+id/toggle_done"
+        android:icon="@drawable/ic_ok"
+        android:title="Onayımı Bekleyenler" />
+    <item
+        android:id="@+id/toggle_history"
+        android:icon="@drawable/ic_history"
+        android:title="Geçmiş Aktiviteler" />
+    <item
+        android:id="@+id/toggle_diagram"
+        android:icon="@drawable/ic_diagram"
+        android:title="Tümünü Görüntüle" />
+</menu>
