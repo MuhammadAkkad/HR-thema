@@ -22,6 +22,7 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
+import com.example.hr_thema.IDrawerListener;
 import com.example.hr_thema.R;
 import com.example.hr_thema.home.HomeFragment;
 import com.example.hr_thema.menu.MenuFragment;
@@ -31,8 +32,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationView;
 import com.infideap.drawerbehavior.AdvanceDrawerLayout;
 
-public class NavigationDrawer extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener{
+public class NavigationDrawer extends AppCompatActivity implements IDrawerListener, NavigationView.OnNavigationItemSelectedListener{
     BottomNavigationView navigation;
     private AdvanceDrawerLayout drawer;
     ImageView usrImg;
@@ -121,6 +121,11 @@ public class NavigationDrawer extends AppCompatActivity
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
         transaction.replace(R.id.nav_home, fragment);
         transaction.commit();
+    }
+
+    @Override
+    public void OpenDrawer() {
+        drawer.openDrawer(GravityCompat.START);
     }
 
 //    @Override
