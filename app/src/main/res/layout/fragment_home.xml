@@ -2,9 +2,9 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/home_activity_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/home_activity_layout"
     android:background="@color/colorPrimaryDark"
     tools:context=".home.HomeActivity">
 
@@ -15,6 +15,7 @@
         android:layout_height="60dp"
         android:layout_marginTop="32dp"
         android:background="@drawable/buttonhomeradius"
+        android:visibility="gone"
         app:layout_constraintStart_toStartOf="@+id/img_logo_activity_login"
         app:layout_constraintTop_toBottomOf="@+id/img_logo_activity_login"
         app:srcCompat="@drawable/ic_group_3" />
@@ -29,6 +30,7 @@
         android:text="Onaylanmayı Bekleyenler"
         android:textColor="#fff"
         android:textSize="12dp"
+        android:visibility="gone"
         app:layout_constraintStart_toStartOf="@+id/imageButton"
         app:layout_constraintTop_toBottomOf="@+id/imageButton" />
 
@@ -42,6 +44,7 @@
         android:text="Onayımı Bekleyenler"
         android:textColor="#fff"
         android:textSize="12dp"
+        android:visibility="gone"
         app:layout_constraintStart_toStartOf="@+id/imageButton2"
         app:layout_constraintTop_toBottomOf="@+id/imageButton2" />
 
@@ -55,6 +58,7 @@
         android:text="Geçmiş Aktiviteler"
         android:textColor="#fff"
         android:textSize="12dp"
+        android:visibility="gone"
         app:layout_constraintStart_toStartOf="@+id/imageButton3"
         app:layout_constraintTop_toBottomOf="@+id/imageButton3" />
 
@@ -68,6 +72,7 @@
         android:text="Tümünü Görüntüle"
         android:textColor="#fff"
         android:textSize="12dp"
+        android:visibility="gone"
         app:layout_constraintStart_toStartOf="@+id/imageButton4"
         app:layout_constraintTop_toBottomOf="@+id/imageButton4" />
 
@@ -78,6 +83,7 @@
         android:layout_marginStart="37dp"
         android:layout_marginTop="32dp"
         android:background="@drawable/buttonhomeradius"
+        android:visibility="gone"
         app:layout_constraintStart_toEndOf="@+id/imageButton"
         app:layout_constraintTop_toBottomOf="@+id/img_logo_activity_login"
         app:srcCompat="@drawable/ic_ok" />
@@ -89,6 +95,7 @@
         android:layout_marginStart="37dp"
         android:layout_marginTop="32dp"
         android:background="@drawable/buttonhomeradius"
+        android:visibility="gone"
         app:layout_constraintStart_toEndOf="@+id/imageButton2"
         app:layout_constraintTop_toBottomOf="@+id/img_logo_activity_login"
         app:srcCompat="@drawable/ic_history" />
@@ -100,6 +107,7 @@
         android:layout_marginStart="37dp"
         android:layout_marginTop="32dp"
         android:background="@drawable/buttonhomeradius"
+        android:visibility="gone"
         app:layout_constraintStart_toEndOf="@+id/imageButton3"
         app:layout_constraintTop_toBottomOf="@+id/img_logo_activity_login"
         app:srcCompat="@drawable/ic_diagram" />
@@ -121,24 +129,25 @@
         android:layout_height="34dp"
         android:layout_marginTop="25dp"
         android:layout_marginEnd="25dp"
-        android:clickable="true"
-
         android:background="@drawable/profilfoto"
+
+        android:clickable="true"
         android:visibility="visible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout2"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="200dp"
         android:background="@drawable/shapehomelayout"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3"
-        app:layout_constraintVertical_bias="0.0">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
 
         <TextView
             android:id="@+id/textView5"
@@ -353,6 +362,17 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:forceDarkAllowed="false"
+        app:itemBackground="@drawable/ic_toggle_bg"
+        app:itemHorizontalTranslationEnabled="false"
+        app:layout_constraintBottom_toTopOf="@+id/constraintLayout2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img_logo_activity_login"
+        app:menu="@menu/home_toggles_menu" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
