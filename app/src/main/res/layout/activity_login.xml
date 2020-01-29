@@ -145,12 +145,12 @@
 
         <TextView
             android:id="@+id/txt_yada_activity_login"
-            android:layout_width="wrap_content"
+            android:layout_width="52dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="194dp"
             android:layout_marginEnd="180dp"
             android:layout_marginBottom="20dp"
-            android:text="Yada"
+            android:text="Ya da"
             android:visibility="visible"
             app:layout_constraintBottom_toTopOf="@+id/btn_another_account_sign_in_activity_login"
             app:layout_constraintEnd_toEndOf="parent"

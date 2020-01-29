@@ -8,6 +8,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
@@ -21,16 +22,17 @@ import com.example.hr_thema.detail.DetailFragment;
 import com.example.hr_thema.home.HomeFragment;
 import com.example.hr_thema.menu.MenuFragment;
 import com.example.hr_thema.notification.NotificationFragment;
+import com.example.hr_thema.ongoin.OnGoingFragment;
 import com.example.hr_thema.settings.SettingsFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationView;
 import com.infideap.drawerbehavior.AdvanceDrawerLayout;
 
-public class NavigationDrawer extends AppCompatActivity implements IDrawerListener, NavigationView.OnNavigationItemSelectedListener{
+public class NavigationDrawer extends AppCompatActivity implements OnGoingFragment.ListenerOnGoingFragment,IDrawerListener, NavigationView.OnNavigationItemSelectedListener{
     BottomNavigationView navigation;
     private AdvanceDrawerLayout drawer;
     ImageView usrImg;
-
+    BottomNavigationView bottomNavigationView;
 
     // set status bar icon colors to dark
     public static void setLightStatusBar(View view, Activity activity) {
@@ -87,6 +89,8 @@ public class NavigationDrawer extends AppCompatActivity implements IDrawerListen
                 return true;
             }
         });
+
+
     }
 
     @Override
@@ -118,6 +122,12 @@ public class NavigationDrawer extends AppCompatActivity implements IDrawerListen
         drawer.openDrawer(GravityCompat.START);
     }
 
+    @Override
+    public void openDetail() {
+        HomeFragment homeFragment = new HomeFragment();
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        homeFragment.openDetailShow(fragmentManager);
+    }
 
 
 //    @Override
