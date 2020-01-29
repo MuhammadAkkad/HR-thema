@@ -7,10 +7,9 @@
     tools:context=".comment.CommentFragment" >
 
     <androidx.cardview.widget.CardView
-        android:layout_width="349dp"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="35dp"
         android:layout_marginEnd="32dp"
         app:cardCornerRadius="25dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -21,13 +20,17 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <ImageView
+            <de.hdodenhof.circleimageview.CircleImageView
                 android:id="@+id/imageView5"
                 android:layout_width="39dp"
                 android:layout_height="34dp"
                 android:layout_marginStart="16dp"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="15dp"
+                android:baselineAlignBottom="false"
+                android:elevation="10dp"
                 android:src="@drawable/profilfoto"
+                app:civ_border_color="#FFFF"
+                app:civ_border_width="2dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -42,6 +45,7 @@
                 app:layout_constraintStart_toEndOf="@+id/imageView5"
                 app:layout_constraintTop_toTopOf="@+id/imageView5" />
 
+
             <TextView
                 android:id="@+id/textView20"
                 android:layout_width="wrap_content"
@@ -50,6 +54,8 @@
                 android:text="Direktör"
                 android:textColor="#C6C7CB"
                 android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="@+id/textView19"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="@+id/textView19"
                 app:layout_constraintTop_toBottomOf="@+id/textView19" />
 
@@ -57,33 +63,48 @@
                 android:id="@+id/textView21"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="64dp"
+                android:layout_marginStart="67dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="15dp"
+                android:fontFamily="@font/lato"
                 android:text="01.02.2019 - 11:02"
                 android:textColor="#C6C7CB"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/textView19"
-                app:layout_constraintTop_toTopOf="@+id/imageView5" />
+                app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:id="@+id/textView22"
-                android:layout_width="315dp"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="65dp"
+                android:layout_marginBottom="15dp"
+                android:fontFamily="@font/lato"
                 android:text="9128399 numaralı istek ile 22.01.2020 tarihinde Boran Gökbulut tarafından 1000 TL bütçe talep edildi. Behiç Tanağardı onaylayabilir."
-                app:layout_constraintStart_toStartOf="@+id/imageView5"
+                android:textSize="11sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/imageView5" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
 
     <Button
         android:id="@+id/button6"
-        android:layout_width="358dp"
+        android:layout_width="0dp"
         android:layout_height="45dp"
-        android:layout_marginStart="26dp"
-        android:layout_marginEnd="26dp"
-        android:layout_marginBottom="26dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginBottom="28dp"
         android:background="@drawable/shapebuttonradious"
+        android:fontFamily="@font/lato"
         android:text="Geri"
+        android:textAllCaps="false"
         android:textColor="#fff"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
