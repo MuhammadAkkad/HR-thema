@@ -4,9 +4,22 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/tutorial"
     android:id="@+id/login_activity_layout"
     tools:context=".login.LoginActivity">
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="match_parent"
+        android:layout_height="288dp"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toTopOf="@+id/constraintLayout3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.5"
+        app:srcCompat="@drawable/group5" />
+
     <ImageView
         android:id="@+id/img_logo_activity_login"
         android:layout_width="wrap_content"
@@ -52,6 +65,7 @@
         app:layout_constraintTop_toBottomOf="@+id/txt_welcome_activity_login" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout3"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginTop="240dp"
@@ -97,20 +111,22 @@
             android:layout_marginTop="10dp"
             android:ems="17"
             android:hint="Password"
-            android:theme="@style/MyEditText"
             android:inputType="textPersonName"
+            android:theme="@style/MyEditText"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tv_user_name_activity_login" />
 
+
+
         <CheckBox
             android:id="@+id/cb_remember_me_activity_login"
-            android:theme="@style/MyEditText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
             android:text="Beni Hatırla"
             android:textColor="#B1B1B1"
+            android:theme="@style/MyEditText"
             app:layout_constraintStart_toStartOf="@+id/tv_password_activity_login"
             app:layout_constraintTop_toBottomOf="@+id/tv_password_activity_login" />
 
@@ -118,18 +134,17 @@
             android:id="@+id/txt_forgot_password_activity_login"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="150dp"
             android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
             android:text="Şifremi Unuttum"
             android:textColor="#B1B1B1"
             android:textSize="15dp"
             app:layout_constraintEnd_toEndOf="@+id/tv_password_activity_login"
-            app:layout_constraintStart_toEndOf="@+id/cb_remember_me_activity_login"
             app:layout_constraintTop_toBottomOf="@+id/tv_password_activity_login" />
 
         <Button
             android:id="@+id/btn_sign_in_activity_login"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="29dp"
             android:layout_marginEnd="30dp"
@@ -147,15 +162,13 @@
             android:id="@+id/txt_yada_activity_login"
             android:layout_width="52dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="194dp"
-            android:layout_marginEnd="180dp"
             android:layout_marginBottom="20dp"
             android:text="Ya da"
+            android:textColor="#DCDCDC"
             android:visibility="visible"
             app:layout_constraintBottom_toTopOf="@+id/btn_another_account_sign_in_activity_login"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.8"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintEnd_toEndOf="@+id/btn_sign_in_activity_login"
+            app:layout_constraintStart_toStartOf="@+id/btn_sign_in_activity_login" />
 
         <Button
             android:id="@+id/btn_another_account_sign_in_activity_login"

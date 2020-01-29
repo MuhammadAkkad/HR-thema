@@ -11,9 +11,6 @@
         <item name="colorControlActivated">@color/specialPurple</item>
     </style>
 
-
-
-    
     <style name="AppTheme.AppBarOverlay" parent="Theme.AppCompat.Light.NoActionBar" />
     <style name="AppTheme.PopupOverlay" parent="Theme.AppCompat.Light.NoActionBar" />
 
