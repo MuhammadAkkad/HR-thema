@@ -138,6 +138,7 @@
         android:layout_marginTop="25dp"
         android:layout_marginEnd="25dp"
         android:background="@drawable/profilfoto"
+        android:foreground="@drawable/profilfoto"
         android:clickable="true"
         android:visibility="visible"
         app:layout_constraintEnd_toEndOf="parent"
@@ -154,127 +155,9 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+
         app:layout_constraintVertical_bias="1.0">
 
-        <TextView
-            android:id="@+id/textView5"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="24dp"
-            android:layout_marginTop="16dp"
-
-            android:fontFamily="@font/lato_bold"
-            android:text="Onaylanmayı Bekleyenler"
-            android:textColor=" #3E4450"
-            android:textSize="20sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <EditText
-            android:id="@+id/textView6"
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:layout_marginStart="32dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="32dp"
-            android:background="@drawable/shapebuttonradiouswhite"
-            android:drawableLeft="@drawable/ic_search_black_24dp"
-            android:drawableTint="#D9DADC"
-            android:fontFamily="@font/lato"
-            android:gravity="center_horizontal|start|center_vertical"
-            android:hint="@android:string/search_go"
-            android:textColorHint="#D9DADC"
-            android:textSize="12sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="@+id/textView5"
-            app:layout_constraintTop_toBottomOf="@+id/textView5" />
-
-        <TextView
-            android:id="@+id/textView7"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:fontFamily="@font/lato"
-            android:paddingBottom="8dp"
-            android:text="Filtreler :"
-            android:textColor=" #3E4450"
-            android:textSize="20sp"
-            app:layout_constraintStart_toStartOf="@+id/textView6"
-            app:layout_constraintTop_toBottomOf="@+id/textView6" />
-
-
-        <HorizontalScrollView
-            android:id="@+id/horizontalScrollView1"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:scrollbars="none"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView7">
-
-            <LinearLayout
-                android:id="@+id/shapeLayout"
-                android:layout_width="fill_parent"
-                android:layout_height="match_parent">
-
-                <Button
-                    android:id="@+id/button2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="30dp"
-                    android:layout_marginLeft="36dp"
-                    android:background="@drawable/shapebuttonradiouswhite"
-                    android:capitalize="none"
-                    android:fontFamily="@font/lato"
-                    android:text="Hepsi"
-                    android:textAllCaps="false" />
-
-                <Button
-                    android:id="@+id/button3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="30dp"
-                    android:layout_marginStart="28dp"
-                    android:background="@drawable/shapebuttonradiouswhite"
-                    android:drawableLeft="@drawable/ic_up"
-                    android:fontFamily="@font/lato"
-                    android:text="Pahalıdan Ucuza"
-                    android:textAllCaps="false" />
-
-                <Button
-                    android:id="@+id/button"
-                    android:layout_width="wrap_content"
-                    android:layout_height="30dp"
-                    android:layout_marginStart="28dp"
-                    android:background="@drawable/shapebuttonradiouswhite"
-                    android:drawableLeft="@drawable/ic_down"
-                    android:fontFamily="@font/lato"
-                    android:text="Ucuzdan Pahalıya"
-                    android:textAllCaps="false" />
-
-                <Button
-                    android:id="@+id/button21"
-                    android:layout_width="wrap_content"
-                    android:layout_height="30dp"
-                    android:layout_marginStart="28dp"
-                    android:background="@drawable/shapebuttonradiouswhite"
-                    android:drawableLeft="@drawable/ic_down"
-                    android:fontFamily="@font/lato"
-                    android:text="Temp"
-                    android:textAllCaps="false" />
-            </LinearLayout>
-        </HorizontalScrollView>
-
-        <TextView
-            android:id="@+id/textView8"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:fontFamily="@font/lato"
-            android:text="Bugün"
-            android:textColor="#A9ABB0"
-            android:textSize="20sp"
-            app:layout_constraintStart_toStartOf="@+id/textView6"
-            app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView1" />
 
         <androidx.cardview.widget.CardView
             android:id="@+id/cardView"
@@ -286,93 +169,7 @@
             app:cardCornerRadius="35dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView8"
-            app:layout_constraintVertical_bias="0.110000014">
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="346dp"
-                android:layout_height="158dp">
-
-
-                <ImageView
-                    android:id="@+id/imageView2"
-                    android:layout_width="53dp"
-                    android:layout_height="51dp"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginTop="16dp"
-                    android:background="@drawable/rounded_fg"
-                    android:foreground="@drawable/ic_group_9"
-                    android:foregroundGravity="center"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <TextView
-                    android:id="@+id/textView11"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="4dp"
-                    android:fontFamily="@font/lato"
-                    android:text="22.01.2020"
-                    android:textColor="#C4C5C9"
-                    android:textSize="11dp"
-                    app:layout_constraintStart_toStartOf="@+id/imageView2"
-                    app:layout_constraintTop_toBottomOf="@+id/imageView2" />
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="12dp"
-                    android:layout_marginTop="16dp"
-                    android:orientation="vertical"
-                    app:layout_constraintStart_toEndOf="@+id/imageView2"
-                    app:layout_constraintTop_toTopOf="parent">
-
-                    <TextView
-                        android:id="@+id/textView9"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/lato"
-                        android:text="9128399"
-                        android:textColor=" #3E4450"
-                        android:textSize="17dp" />
-
-                    <TextView
-                        android:id="@+id/textView10"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/lato"
-                        android:text="\@BoranGökbulut"
-                        android:textColor=" #3E4450"
-                        android:textSize="12dp" />
-                </LinearLayout>
-
-                <TextView
-                    android:id="@+id/textView12"
-                    android:layout_width="294dp"
-                    android:layout_height="50dp"
-                    android:fontFamily="@font/lato"
-                    android:text="TextView"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.0"
-                    app:layout_constraintStart_toStartOf="@+id/imageView2"
-                    app:layout_constraintTop_toBottomOf="@+id/textView11" />
-
-                <Button
-                    android:id="@+id/button5"
-                    android:layout_width="10dp"
-                    android:layout_height="16dp"
-                    android:layout_marginStart="16dp"
-                    android:background="@drawable/ic_arrow_right"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/textView12"
-                    app:layout_constraintTop_toTopOf="@+id/textView12" />
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-        </androidx.cardview.widget.CardView>
+            app:layout_constraintStart_toStartOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-
-
 </androidx.constraintlayout.widget.ConstraintLayout>
