@@ -15,7 +15,7 @@
         android:layout_height="60dp"
         android:layout_marginTop="32dp"
         android:background="@drawable/buttonhomeradius"
-        android:visibility="gone"
+        android:visibility="visible"
         app:layout_constraintStart_toStartOf="@+id/img_logo_activity_login"
         app:layout_constraintTop_toBottomOf="@+id/img_logo_activity_login"
         app:srcCompat="@drawable/ic_group_3" />
@@ -28,9 +28,11 @@
         android:fontFamily="@font/lato"
         android:gravity="center"
         android:text="Onaylanmayı Bekleyenler"
+        android:textAlignment="center"
         android:textColor="#fff"
         android:textSize="12dp"
-        android:visibility="gone"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="@+id/imageButton"
         app:layout_constraintStart_toStartOf="@+id/imageButton"
         app:layout_constraintTop_toBottomOf="@+id/imageButton" />
 
@@ -42,9 +44,11 @@
         android:fontFamily="@font/lato"
         android:gravity="center"
         android:text="Onayımı Bekleyenler"
+        android:textAlignment="center"
         android:textColor="#fff"
         android:textSize="12dp"
-        android:visibility="gone"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="@+id/imageButton2"
         app:layout_constraintStart_toStartOf="@+id/imageButton2"
         app:layout_constraintTop_toBottomOf="@+id/imageButton2" />
 
@@ -56,9 +60,11 @@
         android:fontFamily="@font/lato"
         android:gravity="center"
         android:text="Geçmiş Aktiviteler"
+        android:textAlignment="center"
         android:textColor="#fff"
         android:textSize="12dp"
-        android:visibility="gone"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="@+id/imageButton3"
         app:layout_constraintStart_toStartOf="@+id/imageButton3"
         app:layout_constraintTop_toBottomOf="@+id/imageButton3" />
 
@@ -70,9 +76,11 @@
         android:fontFamily="@font/lato"
         android:gravity="center"
         android:text="Tümünü Görüntüle"
+        android:textAlignment="center"
         android:textColor="#fff"
         android:textSize="12dp"
-        android:visibility="gone"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="@+id/imageButton4"
         app:layout_constraintStart_toStartOf="@+id/imageButton4"
         app:layout_constraintTop_toBottomOf="@+id/imageButton4" />
 
@@ -83,7 +91,7 @@
         android:layout_marginStart="37dp"
         android:layout_marginTop="32dp"
         android:background="@drawable/buttonhomeradius"
-        android:visibility="gone"
+        android:visibility="visible"
         app:layout_constraintStart_toEndOf="@+id/imageButton"
         app:layout_constraintTop_toBottomOf="@+id/img_logo_activity_login"
         app:srcCompat="@drawable/ic_ok" />
@@ -95,7 +103,7 @@
         android:layout_marginStart="37dp"
         android:layout_marginTop="32dp"
         android:background="@drawable/buttonhomeradius"
-        android:visibility="gone"
+        android:visibility="visible"
         app:layout_constraintStart_toEndOf="@+id/imageButton2"
         app:layout_constraintTop_toBottomOf="@+id/img_logo_activity_login"
         app:srcCompat="@drawable/ic_history" />
@@ -107,7 +115,7 @@
         android:layout_marginStart="37dp"
         android:layout_marginTop="32dp"
         android:background="@drawable/buttonhomeradius"
-        android:visibility="gone"
+        android:visibility="visible"
         app:layout_constraintStart_toEndOf="@+id/imageButton3"
         app:layout_constraintTop_toBottomOf="@+id/img_logo_activity_login"
         app:srcCompat="@drawable/ic_diagram" />
@@ -130,7 +138,6 @@
         android:layout_marginTop="25dp"
         android:layout_marginEnd="25dp"
         android:background="@drawable/profilfoto"
-
         android:clickable="true"
         android:visibility="visible"
         app:layout_constraintEnd_toEndOf="parent"
@@ -217,8 +224,10 @@
                     android:layout_height="30dp"
                     android:layout_marginLeft="36dp"
                     android:background="@drawable/shapebuttonradiouswhite"
+                    android:capitalize="none"
                     android:fontFamily="@font/lato"
-                    android:text="Hepsi" />
+                    android:text="Hepsi"
+                    android:textAllCaps="false" />
 
                 <Button
                     android:id="@+id/button3"
@@ -228,7 +237,8 @@
                     android:background="@drawable/shapebuttonradiouswhite"
                     android:drawableLeft="@drawable/ic_up"
                     android:fontFamily="@font/lato"
-                    android:text="Pahalıdan Ucuza" />
+                    android:text="Pahalıdan Ucuza"
+                    android:textAllCaps="false" />
 
                 <Button
                     android:id="@+id/button"
@@ -238,7 +248,8 @@
                     android:background="@drawable/shapebuttonradiouswhite"
                     android:drawableLeft="@drawable/ic_down"
                     android:fontFamily="@font/lato"
-                    android:text="Ucuzdan Pahalıya" />
+                    android:text="Ucuzdan Pahalıya"
+                    android:textAllCaps="false" />
 
                 <Button
                     android:id="@+id/button21"
@@ -248,7 +259,8 @@
                     android:background="@drawable/shapebuttonradiouswhite"
                     android:drawableLeft="@drawable/ic_down"
                     android:fontFamily="@font/lato"
-                    android:text="Temp" />
+                    android:text="Temp"
+                    android:textAllCaps="false" />
             </LinearLayout>
         </HorizontalScrollView>
 
@@ -338,7 +350,7 @@
                 <TextView
                     android:id="@+id/textView12"
                     android:layout_width="294dp"
-                    android:layout_height="0dp"
+                    android:layout_height="50dp"
                     android:fontFamily="@font/lato"
                     android:text="TextView"
                     app:layout_constraintBottom_toBottomOf="parent"
@@ -361,18 +373,6 @@
         </androidx.cardview.widget.CardView>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:forceDarkAllowed="false"
-        app:itemBackground="@drawable/ic_toggle_bg"
-        app:itemHorizontalTranslationEnabled="false"
-        app:layout_constraintBottom_toTopOf="@+id/constraintLayout2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/img_logo_activity_login"
-        app:menu="@menu/home_toggles_menu" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
