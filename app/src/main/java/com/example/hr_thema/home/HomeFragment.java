@@ -74,7 +74,7 @@ public class HomeFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 // TODO: impalement your notification badge increment/decrement
-                badge.setNumber(3);
+                badge.setNumber(5);
             }
         });
 
