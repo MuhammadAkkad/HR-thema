@@ -11,13 +11,19 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingBottom="@dimen/activity_vertical_margin">
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="63dp"
-        android:layout_height="64dp"
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/images"
+        android:layout_width="82dp"
+        android:layout_height="82dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="15dp"
+        android:baselineAlignBottom="false"
+        android:elevation="10dp"
+        android:src="@drawable/profilfoto"
+        app:civ_border_color="#FFFF"
+        app:civ_border_width="2dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@android:drawable/sym_def_app_icon" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView92"
@@ -29,8 +35,8 @@
         android:text="@string/user_name"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textColor="@color/SideNavigationIconText"
-        app:layout_constraintStart_toEndOf="@+id/imageView"
-        app:layout_constraintTop_toTopOf="@+id/imageView" />
+        app:layout_constraintStart_toEndOf="@+id/images"
+        app:layout_constraintTop_toTopOf="@+id/images" />
 
     <TextView
         android:id="@+id/textView"
@@ -55,8 +61,7 @@
         style="@style/Widget.AppCompat.Button.Borderless"
         android:layout_width="22dp"
         android:layout_height="22dp"
-        android:layout_marginTop="6dp"
-        android:layout_marginEnd="4dp"
+        android:layout_marginTop="47dp"
         android:background="@drawable/ic_cogwheel"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
