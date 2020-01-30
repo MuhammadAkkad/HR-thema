@@ -1,12 +1,15 @@
 package com.example.hr_thema.ongoin;
 
+import android.app.Dialog;
 import android.content.Context;
+import android.graphics.drawable.ColorDrawable;
 import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.cardview.widget.CardView;
+import androidx.fragment.app.DialogFragment;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
@@ -39,17 +42,19 @@ public class OnGoingFragment extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
-
+    Dialog myDialog;
+    Dialog dialog;
     private OnFragmentInteractionListener mListener;
 
     public OnGoingFragment() {
         // Required empty public constructor
     }
     Button btn3;
+    Button btnFilter;
     @Override
-    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
-        btn3 = view.findViewById(R.id.button3);
-        btn3.getBackground().setAlpha(128);
+    public void onViewCreated(@NonNull final View view, @Nullable Bundle savedInstanceState) {
+       // btn3 = view.findViewById(R.id.button3);
+//        btn3.getBackground().setAlpha(128);
         cardView = view.findViewById(R.id.cardView);
         cardView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -58,12 +63,43 @@ public class OnGoingFragment extends Fragment {
                 listenerOnGoingFragment.openDetail();
             }
         });
+
+        btnFilter = view.findViewById(R.id.btn_filters);
+        btnFilter.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialogShow();
+               //openFilter(v);
+               //ListenerOnGoingFragment listenerOnGoingFragment = (ListenerOnGoingFragment) getActivity();
+               //listenerOnGoingFragment.openFilters(v);
+            }
+        });
     }
 
+    public void dialogShow(){
+        View child = getLayoutInflater().inflate(R.layout.activity_filter, null);
+        myDialog.setContentView(child);
 
+        // Window window = myDialog.getWindow();
+        // WindowManager.LayoutParams wlp = window.getAttributes();
+
+        // wlp.gravity = Gravity.CENTER;
+        // window.setAttributes(wlp);
+
+        myDialog.getWindow().setBackgroundDrawable(new ColorDrawable());
+        myDialog.show();
+    }
     public interface ListenerOnGoingFragment{
         void openDetail();
+        void openFilters(View v);
     }
+
+    public void openFilter(View view){
+        dialog.setContentView(R.layout.activity_filter);
+        dialog.getWindow().setBackgroundDrawable(new ColorDrawable());
+        dialog.show();
+    }
+
     /**
      * Use this factory method to create a new instance of
      * this fragment using the provided parameters.

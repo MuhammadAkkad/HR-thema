@@ -1,12 +1,16 @@
 package com.example.hr_thema.navigationDrawer;
 
 import android.app.Activity;
+import android.app.Dialog;
 import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.MenuItem;
 import android.view.View;
+
 import android.view.WindowManager;
+
 import android.widget.ImageView;
 
 import androidx.appcompat.app.ActionBarDrawerToggle;
@@ -17,6 +21,7 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import com.example.hr_thema.R;
+
 import com.example.hr_thema.home.HomeFragment;
 import com.example.hr_thema.menu.MenuFragment;
 import com.example.hr_thema.notification.NotificationFragment;
@@ -30,7 +35,11 @@ public class NavigationDrawer extends AppCompatActivity implements OnGoingFragme
     BottomNavigationView navigation;
     ImageView usrImg;
     BottomNavigationView bottomNavigationView;
+
     private AdvanceDrawerLayout drawer;
+
+    View v;
+
 
     // set status bar icon colors to dark
     public static void setLightStatusBar(View view, Activity activity) {
@@ -49,6 +58,9 @@ public class NavigationDrawer extends AppCompatActivity implements OnGoingFragme
         // side navigation slider
         //Toolbar toolbar = findViewById(R.id.toolbar);
         //setSupportActionBar(toolbar);
+
+        v = getWindow().getDecorView().findViewById(R.id.drawer_layout);
+
         drawer = findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
@@ -88,8 +100,6 @@ public class NavigationDrawer extends AppCompatActivity implements OnGoingFragme
                 return true;
             }
         });
-
-
     }
 
     @Override
@@ -127,21 +137,10 @@ public class NavigationDrawer extends AppCompatActivity implements OnGoingFragme
         FragmentManager fragmentManager = getSupportFragmentManager();
         homeFragment.openDetailShow(fragmentManager);
     }
+    Dialog dialog;
+    @Override
+    public void openFilters(View view) {
 
+    }
 
-//    @Override
-//    public boolean onCreateOptionsMenu(Menu menu) {
-//        getMenuInflater().inflate(R.menu.main, menu);
-//        return super.onCreateOptionsMenu(menu);
-//    }
-
-//    @Override
-//    public boolean onOptionsItemSelected(MenuItem item) {
-//        switch (item.getItemId()){
-//            case R.id.action_right_drawer:
-//                drawer.openDrawer(Gravity.END);
-//                return true;
-//        }
-//        return super.onOptionsItemSelected(item);
-//    }
 }

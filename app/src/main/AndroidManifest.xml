@@ -12,9 +12,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
-        <activity android:name=".popup.PopupExample"></activity>
-        <activity android:name=".navigationDrawer.NavigationDrawer"></activity>
+        <activity android:name=".filter.FilterActivity"></activity>
+        <activity android:name=".popup.PopupExample" />
+        <activity android:name=".navigationDrawer.NavigationDrawer" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -22,9 +22,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".login.LoginActivity"></activity>
-        <activity android:name=".home.HomeActivity"></activity>
-
+        <activity android:name=".login.LoginActivity" />
+        <activity android:name=".home.HomeActivity" />
 
         <meta-data
             android:name="preloaded_fonts"
