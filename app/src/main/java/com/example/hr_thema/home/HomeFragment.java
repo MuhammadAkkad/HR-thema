@@ -8,37 +8,35 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-
 import androidx.cardview.widget.CardView;
-import androidx.constraintlayout.widget.ConstraintLayout;
-import androidx.core.view.GravityCompat;
-
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
-import com.example.hr_thema.navigationDrawer.IDrawerListener;
 import com.example.hr_thema.R;
 import com.example.hr_thema.detail.DetailFragment;
+import com.example.hr_thema.navigationDrawer.IDrawerListener;
 import com.example.hr_thema.ongoin.OnGoingFragment;
+import com.nex3z.notificationbadge.NotificationBadge;
 
-public class HomeFragment extends Fragment{
+public class HomeFragment extends Fragment {
 
     View view;
     ImageView imageView;
-    CardView cardView;
     FragmentManager fragmentManager;
-    Context contextMain;
+    NotificationBadge badge;
+    ImageButton imageButton;
 
-    public HomeFragment(){
+    public HomeFragment() {
+    }
 
-    }
-    public HomeFragment(Context _context){
-    }
+
 
     // set status bar icon colors to dark
     public static void setLightStatusBar(View view, Activity activity) {
@@ -68,6 +66,17 @@ public class HomeFragment extends Fragment{
         fragmentTransaction.add(R.id.constraintLayout2, onGoingFragment);
         fragmentTransaction.commit();
 
+        badge = view.findViewById(R.id.badge);
+
+        // notification badge TEST
+        imageButton = view.findViewById(R.id.imageButton);
+        imageButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // TODO: impalement your notification badge increment/decrement
+                badge.setNumber(3);
+            }
+        });
 
         imageView = view.findViewById(R.id.img_profile_activity_login2);
 
@@ -88,15 +97,15 @@ public class HomeFragment extends Fragment{
     public void openDetailShow(FragmentManager fragmentManager) {
         DetailFragment detailFragment = new DetailFragment();
 
-     //   if(getFragmentManager().getFragments() != null){
-     //       for (Fragment fragment : getFragmentManager().getFragments()) {
-     //           if (fragment != null) {
-     //               getFragmentManager().beginTransaction().remove(fragment).commit();
-     //           }
-     //       }
-     //   }
+        //   if(getFragmentManager().getFragments() != null){
+        //       for (Fragment fragment : getFragmentManager().getFragments()) {
+        //           if (fragment != null) {
+        //               getFragmentManager().beginTransaction().remove(fragment).commit();
+        //           }
+        //       }
+        //   }
 
-        FragmentTransaction fragmentTransaction2= fragmentManager.beginTransaction();
+        FragmentTransaction fragmentTransaction2 = fragmentManager.beginTransaction();
         fragmentTransaction2.replace(R.id.constraintLayout2, detailFragment);
         fragmentTransaction2.commit();
     }

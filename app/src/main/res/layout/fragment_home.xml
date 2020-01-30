@@ -27,6 +27,7 @@
         android:layout_height="60dp"
         android:layout_marginTop="32dp"
         android:background="@drawable/buttonhomeradius"
+        android:clickable="true"
         android:visibility="visible"
         app:layout_constraintEnd_toStartOf="@+id/imageButton2"
         app:layout_constraintHorizontal_bias="0.5"
@@ -176,4 +177,19 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:barrierDirection="top" />
+
+    <com.nex3z.notificationbadge.NotificationBadge
+        android:id="@+id/badge"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginBottom="42dp"
+        android:elevation="5dp"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageButton"
+        app:layout_constraintStart_toStartOf="@+id/imageButton"
+        app:nbBackground="@drawable/shape_circle_notification_badge"
+        app:nbEllipsizeText="+99"
+        app:nbMaxTextLength="2" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
