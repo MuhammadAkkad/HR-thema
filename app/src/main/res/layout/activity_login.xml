@@ -43,15 +43,32 @@
         app:layout_constraintStart_toEndOf="@+id/img_profile_activity_login"
         app:layout_constraintTop_toBottomOf="@+id/img_logo_activity_login" />
 
-    <ImageView
+    <com.makeramen.roundedimageview.RoundedImageView
         android:id="@+id/img_profile_activity_login"
         android:layout_width="34dp"
         android:layout_height="34dp"
         android:layout_marginTop="40dp"
         android:background="@drawable/profilfoto"
+        android:scaleType="fitCenter"
         android:visibility="visible"
+        app:riv_corner_radius="5dip"
         app:layout_constraintStart_toStartOf="@+id/img_logo_activity_login"
         app:layout_constraintTop_toBottomOf="@+id/img_logo_activity_login" />
+
+<!--
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/img_profile_activity_login2"
+        android:layout_width="34dp"
+        android:layout_height="34dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="28dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/profilfoto"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:riv_corner_radius="5dip"
+        app:srcCompat="@mipmap/ic_launcher_round" />
+-->
 
     <TextView
         android:id="@+id/txt_welcome_description_activity_login"
