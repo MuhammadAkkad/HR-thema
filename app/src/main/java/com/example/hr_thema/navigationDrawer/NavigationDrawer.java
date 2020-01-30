@@ -6,19 +6,17 @@ import android.os.Bundle;
 import android.view.Gravity;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.ImageView;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.cardview.widget.CardView;
 import androidx.core.view.GravityCompat;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import com.example.hr_thema.R;
-import com.example.hr_thema.detail.DetailFragment;
 import com.example.hr_thema.home.HomeFragment;
 import com.example.hr_thema.menu.MenuFragment;
 import com.example.hr_thema.notification.NotificationFragment;
@@ -28,18 +26,19 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationView;
 import com.infideap.drawerbehavior.AdvanceDrawerLayout;
 
-public class NavigationDrawer extends AppCompatActivity implements OnGoingFragment.ListenerOnGoingFragment,IDrawerListener, NavigationView.OnNavigationItemSelectedListener{
+public class NavigationDrawer extends AppCompatActivity implements OnGoingFragment.ListenerOnGoingFragment, IDrawerListener, NavigationView.OnNavigationItemSelectedListener {
     BottomNavigationView navigation;
-    private AdvanceDrawerLayout drawer;
     ImageView usrImg;
     BottomNavigationView bottomNavigationView;
+    private AdvanceDrawerLayout drawer;
 
     // set status bar icon colors to dark
     public static void setLightStatusBar(View view, Activity activity) {
         view.setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_STABLE
                 | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
                 | View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);
-
+        activity.getWindow().setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS,
+                                     WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
         activity.getWindow().setStatusBarColor(Color.TRANSPARENT);
     }
 
@@ -55,7 +54,7 @@ public class NavigationDrawer extends AppCompatActivity implements OnGoingFragme
                 this, drawer, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
         toggle.syncState();
-
+        setLightStatusBar(this.findViewById(R.id.drawer_layout).getRootView(), this);
         NavigationView navigationView = findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
         drawer.setViewScale(Gravity.START, 0.8f);
