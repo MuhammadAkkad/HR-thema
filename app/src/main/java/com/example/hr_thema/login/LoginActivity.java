@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.Activity;
 import android.app.Dialog;
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
@@ -26,12 +27,14 @@ import com.example.hr_thema.navigationDrawer.NavigationDrawer;
 public class LoginActivity extends AppCompatActivity {
     Button btn_sign_in;
     Dialog myDialog;
+    Context context;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         setLightStatusBar(this.findViewById(R.id.login_activity_layout).getRootView(), this);
         btn_sign_in = findViewById(R.id.btn_sign_in_activity_login);
+        context = this;
         myDialog = new Dialog(this);
         btn_sign_in.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -40,13 +43,43 @@ public class LoginActivity extends AppCompatActivity {
              //  Intent i = new Intent(LoginActivity.this, PopupExample.class);
              //  startActivity(i);
                 //showPopup2(v);
-                home();
+                 home();
+
+               // dialogShow();
             }
         });
 
-
-
     }
+
+    public void dialogShow(){
+        myDialog.setContentView(R.layout.activity_filter);
+
+      // Window window = myDialog.getWindow();
+      // WindowManager.LayoutParams wlp = window.getAttributes();
+
+      // wlp.gravity = Gravity.CENTER;
+      // window.setAttributes(wlp);
+
+        myDialog.getWindow().setBackgroundDrawable(new ColorDrawable());
+        myDialog.show();
+    }
+
+    public void showPopup2(View v){
+        Button btnClose ;
+        myDialog.setContentView(R.layout.activity_popup_example);
+        btnClose = myDialog.findViewById(R.id.ibNegative);
+
+          btnClose.setOnClickListener(new View.OnClickListener() {
+              @Override
+              public void onClick(View v) {
+                  myDialog.dismiss();
+              }
+          });
+
+        myDialog.getWindow().setBackgroundDrawable(new ColorDrawable());
+        myDialog.show();
+    }
+
     void home (){
         Intent home = new Intent(this , NavigationDrawer.class);
         startActivity(home);
@@ -68,45 +101,5 @@ public class LoginActivity extends AppCompatActivity {
     }
 
 
-    public void showPopup2(View v){
-        Button btnClose ;
-        myDialog.setContentView(R.layout.activity_popup_example);
-//        btnClose = myDialog.findViewById(R.id.ibNegative);
 
-    //  btnClose.setOnClickListener(new View.OnClickListener() {
-    //      @Override
-    //      public void onClick(View v) {
-    //          myDialog.dismiss();
-    //      }
-    //  });
-
-        myDialog.getWindow().setBackgroundDrawable(new ColorDrawable());
-        myDialog.show();
-    }
-
-
-    public void showPopup(View view) {
-      // final View popupView = getLayoutInflater().inflate(R.layout.activity_popup_example, null);
-
-      // final PopupWindow popupWindow = new PopupWindow(popupView,WindowManager.LayoutParams.WRAP_CONTENT, WindowManager.LayoutParams.WRAP_CONTENT);
-      // //TextView tvStockName = (TextView) popupView.findViewById(R.id.tvStockName);
-      // //ImageButton ibNegative=(ImageButton)popupView.findViewById(R.id.ibNegative);
-
-      // ibNegative.setOnClickListener(new View.OnClickListener() {
-      //     @Override
-      //     public void onClick(View view) {
-      //         popupWindow.dismiss();
-      //     }
-      // });
-
-      // popupWindow.setFocusable(true);
-      // popupWindow.setBackgroundDrawable(new ColorDrawable());
-
-
-      // int location[] = new int[2];
-      // view.getLocationOnScreen(location);
-
-
-      // popupWindow.showAtLocation(view, Gravity.CENTER, 0, 0);
-    }
 }
