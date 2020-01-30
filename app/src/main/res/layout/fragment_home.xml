@@ -133,18 +133,6 @@
         app:srcCompat="@drawable/logo" />
 
 
-<!--    <ImageView-->
-<!--        android:id="@+id/img_profile_activity_login2"-->
-<!--        android:layout_width="34dp"-->
-<!--        android:layout_height="34dp"-->
-<!--        android:layout_marginTop="25dp"-->
-<!--        android:layout_marginEnd="25dp"-->
-<!--        android:background="@drawable/profilfoto"-->
-<!--        android:clickable="true"-->
-<!--        android:foreground="@drawable/profilfoto"-->
-<!--        android:visibility="visible"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintTop_toTopOf="parent" />-->
     <com.makeramen.roundedimageview.RoundedImageView
         android:id="@+id/img_profile_activity_login2"
         android:layout_width="34dp"
@@ -163,7 +151,6 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginTop="32dp"
-
         android:background="@drawable/shapehomelayout"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
