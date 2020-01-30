@@ -48,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
         sliderView.setAutoCycleDirection(SliderView.AUTO_CYCLE_DIRECTION_RIGHT);
         sliderView.setIndicatorSelectedColor(Color.WHITE);
         sliderView.setIndicatorUnselectedColor(Color.GRAY);
-        //sliderView.setAutoCycle(false);
+        sliderView.setAutoCycle(false);
 
         sliderView.setOnIndicatorClickListener(new DrawController.ClickListener() {
             @Override

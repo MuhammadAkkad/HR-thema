@@ -41,6 +41,7 @@
         android:layout_height="60dp"
         android:layout_marginTop="32dp"
         android:background="@drawable/buttonhomeradius"
+        android:clickable="true"
         android:visibility="visible"
         app:layout_constraintEnd_toStartOf="@+id/imageButton2"
         app:layout_constraintHorizontal_bias="0.5"
@@ -159,28 +160,16 @@
         app:srcCompat="@drawable/logo" />
 
 
-<!--    <ImageView-->
-<!--        android:id="@+id/img_profile_activity_login2"-->
-<!--        android:layout_width="34dp"-->
-<!--        android:layout_height="34dp"-->
-<!--        android:layout_marginTop="25dp"-->
-<!--        android:layout_marginEnd="25dp"-->
-<!--        android:background="@drawable/profilfoto"-->
-<!--        android:clickable="true"-->
-<!--        android:foreground="@drawable/profilfoto"-->
-<!--        android:visibility="visible"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintTop_toTopOf="parent" />-->
     <com.makeramen.roundedimageview.RoundedImageView
         android:id="@+id/img_profile_activity_login2"
         android:layout_width="34dp"
         android:layout_height="34dp"
         android:layout_marginTop="28dp"
         android:layout_marginEnd="28dp"
-        android:scaleType="fitCenter"
-        android:src="@drawable/profilfoto"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        android:scaleType="fitCenter"
+        android:src="@drawable/profilfoto"
         app:riv_corner_radius="5dip"
         app:srcCompat="@mipmap/ic_launcher_round" />
 
@@ -189,7 +178,6 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginTop="32dp"
-
         android:background="@drawable/shapehomelayout"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -203,4 +191,19 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:barrierDirection="top" />
+
+    <com.nex3z.notificationbadge.NotificationBadge
+        android:id="@+id/badge"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginBottom="42dp"
+        android:elevation="5dp"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageButton"
+        app:layout_constraintStart_toStartOf="@+id/imageButton"
+        app:nbBackground="@drawable/shape_circle_notification_badge"
+        app:nbEllipsizeText="..."
+        app:nbMaxTextLength="2" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

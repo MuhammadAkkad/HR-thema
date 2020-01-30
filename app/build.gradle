@@ -2,7 +2,7 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 29
-    buildToolsVersion "23.0.1"
+    buildToolsVersion "23.0.3"
     defaultConfig {
         applicationId "com.example.hr_thema"
         minSdkVersion 23
@@ -35,4 +35,5 @@ dependencies {
     implementation 'com.infideap.drawerbehavior:drawer-behavior:0.2.2'
     implementation 'de.hdodenhof:circleimageview:3.0.1'
     implementation 'com.makeramen:roundedimageview:2.3.0'
+    implementation 'com.nex3z:notification-badge:1.0.2'
 }
