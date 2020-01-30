@@ -43,7 +43,6 @@ public class NavigationDrawer extends AppCompatActivity implements OnGoingFragme
         activity.getWindow().setStatusBarColor(Color.TRANSPARENT);
     }
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -56,6 +55,7 @@ public class NavigationDrawer extends AppCompatActivity implements OnGoingFragme
                 this, drawer, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
         toggle.syncState();
+
         NavigationView navigationView = findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
         drawer.setViewScale(Gravity.START, 0.8f);

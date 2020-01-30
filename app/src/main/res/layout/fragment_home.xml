@@ -9,6 +9,18 @@
     tools:context=".home.HomeActivity">
 
 
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="0dp"
+        android:layout_height="270dp"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toTopOf="@+id/constraintLayout2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/group8" />
+
     <ImageButton
         android:id="@+id/imageButton"
         android:layout_width="60dp"
