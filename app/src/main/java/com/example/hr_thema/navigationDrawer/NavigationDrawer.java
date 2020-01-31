@@ -46,8 +46,8 @@ public class NavigationDrawer extends AppCompatActivity implements OnGoingFragme
         view.setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_STABLE
                 | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
                 | View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);
-        activity.getWindow().setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS,
-                                     WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
+//        activity.getWindow().setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS,
+//                                     WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
         activity.getWindow().setStatusBarColor(Color.TRANSPARENT);
     }
 

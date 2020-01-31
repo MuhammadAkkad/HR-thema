@@ -68,7 +68,7 @@ public class OnGoingFragment extends Fragment {
         btnFilter.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                dialogShow();
+                //dialogShow();
                //openFilter(v);
                //ListenerOnGoingFragment listenerOnGoingFragment = (ListenerOnGoingFragment) getActivity();
                //listenerOnGoingFragment.openFilters(v);
