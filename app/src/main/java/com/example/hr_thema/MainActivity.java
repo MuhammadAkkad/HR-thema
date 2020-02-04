@@ -1,6 +1,7 @@
 package com.example.hr_thema;
 
 import android.app.Activity;
+import android.app.ActivityOptions;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Build;
@@ -62,12 +63,13 @@ public class MainActivity extends AppCompatActivity {
         Intent loginPage = new Intent(this, LoginActivity.class);
         startActivity(loginPage);
     }
+
     // set status bar icon colors to dark
     public static void setLightStatusBar(View view, Activity activity) {
-            view.setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_STABLE
-                    | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
-                    | View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);
+        view.setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_STABLE
+                | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
+                | View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);
 
-            activity.getWindow().setStatusBarColor(Color.TRANSPARENT);
+        activity.getWindow().setStatusBarColor(Color.TRANSPARENT);
     }
 }

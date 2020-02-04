@@ -37,14 +37,14 @@
         app:layout_constraintTop_toTopOf="@+id/img_profile_activity_login2" />
 
     <ImageButton
-        android:id="@+id/imageButton"
+        android:id="@+id/btn_pending_approval"
         android:layout_width="60dp"
         android:layout_height="60dp"
         android:layout_marginTop="32dp"
         android:background="@drawable/buttonhomeradius"
         android:clickable="true"
         android:visibility="visible"
-        app:layout_constraintEnd_toStartOf="@+id/imageButton2"
+        app:layout_constraintEnd_toStartOf="@+id/btn_awaiting_my_approval"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/img_logo_activity_login"
@@ -62,9 +62,9 @@
         android:textColor="#fff"
         android:textSize="12dp"
         android:visibility="visible"
-        app:layout_constraintEnd_toEndOf="@+id/imageButton"
-        app:layout_constraintStart_toStartOf="@+id/imageButton"
-        app:layout_constraintTop_toBottomOf="@+id/imageButton" />
+        app:layout_constraintEnd_toEndOf="@+id/btn_pending_approval"
+        app:layout_constraintStart_toStartOf="@+id/btn_pending_approval"
+        app:layout_constraintTop_toBottomOf="@+id/btn_pending_approval" />
 
     <TextView
         android:id="@+id/textView2"
@@ -78,9 +78,9 @@
         android:textColor="#fff"
         android:textSize="12dp"
         android:visibility="visible"
-        app:layout_constraintEnd_toEndOf="@+id/imageButton2"
-        app:layout_constraintStart_toStartOf="@+id/imageButton2"
-        app:layout_constraintTop_toBottomOf="@+id/imageButton2" />
+        app:layout_constraintEnd_toEndOf="@+id/btn_awaiting_my_approval"
+        app:layout_constraintStart_toStartOf="@+id/btn_awaiting_my_approval"
+        app:layout_constraintTop_toBottomOf="@+id/btn_awaiting_my_approval" />
 
     <TextView
         android:id="@+id/textView3"
@@ -94,9 +94,9 @@
         android:textColor="#fff"
         android:textSize="12dp"
         android:visibility="visible"
-        app:layout_constraintEnd_toEndOf="@+id/imageButton3"
-        app:layout_constraintStart_toStartOf="@+id/imageButton3"
-        app:layout_constraintTop_toBottomOf="@+id/imageButton3" />
+        app:layout_constraintEnd_toEndOf="@+id/btn_past_activities"
+        app:layout_constraintStart_toStartOf="@+id/btn_past_activities"
+        app:layout_constraintTop_toBottomOf="@+id/btn_past_activities" />
 
     <TextView
         android:id="@+id/textView4"
@@ -110,44 +110,44 @@
         android:textColor="#fff"
         android:textSize="12dp"
         android:visibility="visible"
-        app:layout_constraintEnd_toEndOf="@+id/imageButton4"
-        app:layout_constraintStart_toStartOf="@+id/imageButton4"
-        app:layout_constraintTop_toBottomOf="@+id/imageButton4" />
+        app:layout_constraintEnd_toEndOf="@+id/btn_show_all_activities"
+        app:layout_constraintStart_toStartOf="@+id/btn_show_all_activities"
+        app:layout_constraintTop_toBottomOf="@+id/btn_show_all_activities" />
 
     <ImageButton
-        android:id="@+id/imageButton2"
+        android:id="@+id/btn_awaiting_my_approval"
         android:layout_width="60dp"
         android:layout_height="60dp"
         android:background="@drawable/buttonhomeradius"
         android:visibility="visible"
-        app:layout_constraintEnd_toStartOf="@+id/imageButton3"
+        app:layout_constraintEnd_toStartOf="@+id/btn_past_activities"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/imageButton"
-        app:layout_constraintTop_toTopOf="@+id/imageButton"
+        app:layout_constraintStart_toEndOf="@+id/btn_pending_approval"
+        app:layout_constraintTop_toTopOf="@+id/btn_pending_approval"
         app:srcCompat="@drawable/ic_ok" />
 
     <ImageButton
-        android:id="@+id/imageButton3"
+        android:id="@+id/btn_past_activities"
         android:layout_width="60dp"
         android:layout_height="60dp"
         android:background="@drawable/buttonhomeradius"
         android:visibility="visible"
-        app:layout_constraintEnd_toStartOf="@+id/imageButton4"
+        app:layout_constraintEnd_toStartOf="@+id/btn_show_all_activities"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/imageButton2"
-        app:layout_constraintTop_toTopOf="@+id/imageButton2"
+        app:layout_constraintStart_toEndOf="@+id/btn_awaiting_my_approval"
+        app:layout_constraintTop_toTopOf="@+id/btn_awaiting_my_approval"
         app:srcCompat="@drawable/ic_history" />
 
     <ImageButton
-        android:id="@+id/imageButton4"
+        android:id="@+id/btn_show_all_activities"
         android:layout_width="60dp"
         android:layout_height="60dp"
         android:background="@drawable/buttonhomeradius"
         android:visibility="visible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/imageButton3"
-        app:layout_constraintTop_toTopOf="@+id/imageButton3"
+        app:layout_constraintStart_toEndOf="@+id/btn_past_activities"
+        app:layout_constraintTop_toTopOf="@+id/btn_past_activities"
         app:srcCompat="@drawable/ic_diagram" />
 
     <ImageView
@@ -201,8 +201,8 @@
         android:layout_marginBottom="42dp"
         android:elevation="5dp"
         android:textSize="13sp"
-        app:layout_constraintBottom_toBottomOf="@+id/imageButton"
-        app:layout_constraintStart_toStartOf="@+id/imageButton"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_pending_approval"
+        app:layout_constraintStart_toStartOf="@+id/btn_pending_approval"
         app:nbBackground="@drawable/shape_circle_notification_badge"
         app:nbEllipsizeText="..."
         app:nbMaxTextLength="2" />

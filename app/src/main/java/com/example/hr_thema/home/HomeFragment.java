@@ -24,19 +24,17 @@ import com.example.hr_thema.navigationDrawer.IDrawerListener;
 import com.example.hr_thema.ongoin.OnGoingFragment;
 import com.nex3z.notificationbadge.NotificationBadge;
 
-public class HomeFragment extends Fragment {
+public class HomeFragment extends Fragment implements PopUpFilters {
 
     View view;
     ImageView drawer_trigger_btn;
     FragmentManager fragmentManager;
     NotificationBadge badge;
     ImageButton badge_trigger_btn;
-    ConstraintLayout container;
-    ImageButton popupTest;
+    ConstraintLayout poppContainer;
 
     public HomeFragment() {
     }
-
 
 
     // set status bar icon colors to dark
@@ -54,6 +52,7 @@ public class HomeFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.fragment_home, container, false);
         setLightStatusBar(container, getActivity());
+        poppContainer = view.findViewById(R.id.filter_popup_container);
 
         return view;
     }
@@ -67,23 +66,12 @@ public class HomeFragment extends Fragment {
         fragmentTransaction.commit();
 
 
-        // TODO : this is test implementation on pop up
-        container = view.findViewById(R.id.filter_popup_container);
-        container.setVisibility(View.GONE);
-        popupTest = view.findViewById(R.id.imageButton2);
-        popupTest.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                int vi = container.getVisibility();
-                if (vi == View.VISIBLE)
-                container.setVisibility(View.GONE);
-                else container.setVisibility(View.VISIBLE);
-            }
-        });
+
+
 
         // TODO : this is a test implementation for notification badge
         badge = view.findViewById(R.id.badge);
-        badge_trigger_btn = view.findViewById(R.id.imageButton);
+        badge_trigger_btn = view.findViewById(R.id.btn_pending_approval);
         badge_trigger_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -124,4 +112,10 @@ public class HomeFragment extends Fragment {
         fragmentTransaction2.commit();
     }
 
+    @Override
+    public void openPopUp() {
+        if (poppContainer.getVisibility() == View.VISIBLE)
+            poppContainer.setVisibility(View.GONE);
+        else poppContainer.setVisibility(View.VISIBLE);
+    }
 }
