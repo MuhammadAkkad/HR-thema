@@ -8,6 +8,8 @@ import android.os.Bundle;
 import android.view.Gravity;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageView;
 
@@ -56,6 +58,8 @@ public class NavigationDrawer extends AppCompatActivity implements OnGoingFragme
         //Toolbar toolbar = findViewById(R.id.toolbar);
         //setSupportActionBar(toolbar);
 
+
+
         v = getWindow().getDecorView().findViewById(R.id.drawer_layout);
 
         drawer = findViewById(R.id.drawer_layout);
@@ -66,7 +70,7 @@ public class NavigationDrawer extends AppCompatActivity implements OnGoingFragme
 
         NavigationView navigationView = findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
-        drawer.setViewScale(Gravity.START, 0.8f);
+        drawer.setViewScale(Gravity.START, 1);
         drawer.setRadius(Gravity.START, 35);
         drawer.setViewElevation(Gravity.START, 30);
 
@@ -97,6 +101,7 @@ public class NavigationDrawer extends AppCompatActivity implements OnGoingFragme
                 return true;
             }
         });
+
     }
 
     @Override

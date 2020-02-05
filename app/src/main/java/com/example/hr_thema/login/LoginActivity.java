@@ -19,6 +19,7 @@ import android.widget.ImageButton;
 import android.widget.PopupWindow;
 import android.widget.TextView;
 
+import com.bumptech.glide.load.model.ByteArrayLoader;
 import com.example.hr_thema.R;
 
 import com.example.hr_thema.navigationDrawer.NavigationDrawer;
@@ -32,6 +33,9 @@ public class LoginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+
+        getWindow().clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+
         setLightStatusBar(this.findViewById(R.id.login_activity_layout).getRootView(), this);
         btn_sign_in = findViewById(R.id.btn_sign_in_activity_login);
         context = this;
