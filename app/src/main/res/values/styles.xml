@@ -3,23 +3,18 @@
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
     <style name="MyEditText" parent="Theme.AppCompat.NoActionBar">
         <item name="colorControlNormal">@android:color/darker_gray</item>
         <item name="colorControlActivated">@color/specialPurple</item>
-
     </style>
-
-    <style name="AppTheme.AppBarOverlay" parent="Theme.AppCompat.Light.NoActionBar" />
-    <style name="AppTheme.PopupOverlay" parent="Theme.AppCompat.Light.NoActionBar" />
-
 
     <style name="CustomAlertDialog" parent="Theme.AppCompat.Light.Dialog.Alert">
         <item name="android:windowBackground">@drawable/popup_background</item>
     </style>
-
-
 
 </resources>

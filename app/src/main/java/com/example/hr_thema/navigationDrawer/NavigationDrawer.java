@@ -4,11 +4,13 @@ import android.app.Activity;
 import android.app.Dialog;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.MenuItem;
 import android.view.View;
 
+import android.view.Window;
 import android.view.WindowManager;
 
 import android.widget.ImageView;
@@ -41,23 +43,12 @@ public class NavigationDrawer extends AppCompatActivity implements OnGoingFragme
     View v;
 
 
-    // set status bar icon colors to dark
-    public static void setLightStatusBar(View view, Activity activity) {
-        view.setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_STABLE
-                | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
-                | View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);
-//        activity.getWindow().setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS,
-//                                     WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
-        activity.getWindow().setStatusBarColor(Color.TRANSPARENT);
-    }
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_navigation_drawer);
-        // side navigation slider
-        //Toolbar toolbar = findViewById(R.id.toolbar);
-        //setSupportActionBar(toolbar);
 
         v = getWindow().getDecorView().findViewById(R.id.drawer_layout);
 
@@ -66,12 +57,14 @@ public class NavigationDrawer extends AppCompatActivity implements OnGoingFragme
                 this, drawer, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
         toggle.syncState();
-        setLightStatusBar(this.findViewById(R.id.drawer_layout).getRootView(), this);
         NavigationView navigationView = findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
-        drawer.setViewScale(Gravity.START, 0.8f);
-        drawer.setRadius(Gravity.START, 35);
+        drawer.setViewScale(Gravity.START, 1);
+        drawer.setRadius(Gravity.START, 25);
         drawer.setViewElevation(Gravity.START, 30);
+
+
+
 
         loadFragment(new HomeFragment());
         //setLightStatusBar(this.findViewById(R.id.drawer_layout).getRootView(), this);
@@ -142,5 +135,4 @@ public class NavigationDrawer extends AppCompatActivity implements OnGoingFragme
     public void openFilters(View view) {
 
     }
-
 }

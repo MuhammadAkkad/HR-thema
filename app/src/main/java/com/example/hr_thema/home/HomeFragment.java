@@ -37,21 +37,9 @@ public class HomeFragment extends Fragment {
     }
 
 
-    // set status bar icon colors to dark
-    public static void setLightStatusBar(View view, Activity activity) {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-
-            int flags = view.getSystemUiVisibility();
-            flags |= View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR;
-            view.setSystemUiVisibility(flags);
-            activity.getWindow().setStatusBarColor(Color.TRANSPARENT);
-        }
-    }
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.fragment_home, container, false);
-        setLightStatusBar(container, getActivity());
         poppContainer = view.findViewById(R.id.filter_popup_container);
 
         return view;
@@ -95,15 +83,6 @@ public class HomeFragment extends Fragment {
 
     public void openDetailShow(FragmentManager fragmentManager) {
         DetailFragment detailFragment = new DetailFragment();
-
-        //   if(getFragmentManager().getFragments() != null){
-        //       for (Fragment fragment : getFragmentManager().getFragments()) {
-        //           if (fragment != null) {
-        //               getFragmentManager().beginTransaction().remove(fragment).commit();
-        //           }
-        //       }
-        //   }
-
         FragmentTransaction fragmentTransaction2 = fragmentManager.beginTransaction();
         fragmentTransaction2.replace(R.id.constraintLayout2, detailFragment);
         fragmentTransaction2.commit();
