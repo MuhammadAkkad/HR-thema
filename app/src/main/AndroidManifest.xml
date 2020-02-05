@@ -12,8 +12,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".filter.FilterActivity"></activity>
-        <activity android:name=".popup.PopupExample" />
+
         <activity android:name=".navigationDrawer.NavigationDrawer" />
         <activity android:name=".MainActivity">
             <intent-filter>

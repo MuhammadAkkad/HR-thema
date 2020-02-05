@@ -24,7 +24,7 @@ import com.example.hr_thema.navigationDrawer.IDrawerListener;
 import com.example.hr_thema.ongoin.OnGoingFragment;
 import com.nex3z.notificationbadge.NotificationBadge;
 
-public class HomeFragment extends Fragment implements PopUpFilters {
+public class HomeFragment extends Fragment {
 
     View view;
     ImageView drawer_trigger_btn;
@@ -64,9 +64,6 @@ public class HomeFragment extends Fragment implements PopUpFilters {
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         fragmentTransaction.add(R.id.constraintLayout2, onGoingFragment);
         fragmentTransaction.commit();
-
-
-
 
 
         // TODO : this is a test implementation for notification badge
@@ -110,12 +107,5 @@ public class HomeFragment extends Fragment implements PopUpFilters {
         FragmentTransaction fragmentTransaction2 = fragmentManager.beginTransaction();
         fragmentTransaction2.replace(R.id.constraintLayout2, detailFragment);
         fragmentTransaction2.commit();
-    }
-
-    @Override
-    public void openPopUp() {
-        if (poppContainer.getVisibility() == View.VISIBLE)
-            poppContainer.setVisibility(View.GONE);
-        else poppContainer.setVisibility(View.VISIBLE);
     }
 }

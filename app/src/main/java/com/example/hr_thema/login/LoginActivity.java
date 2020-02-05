@@ -39,13 +39,7 @@ public class LoginActivity extends AppCompatActivity {
         btn_sign_in.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-             //  Intent i = new Intent(LoginActivity.this, PopupExample.class);
-             //  startActivity(i);
-                //showPopup2(v);
                  home();
-
-               // dialogShow();
             }
         });
 
