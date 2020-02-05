@@ -136,6 +136,7 @@
                 android:elevation="10dp"
                 android:scaleType="centerInside"
                 android:src="@drawable/ic_group_3"
+
                 android:background="@drawable/shape_circle_notification_badge"
                 android:backgroundTint="#D8D8D8"
                 app:layout_constraintEnd_toEndOf="parent"

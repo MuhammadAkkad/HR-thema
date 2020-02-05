@@ -1,6 +1,7 @@
 package com.example.hr_thema;
 
 import android.app.Activity;
+import android.app.ActivityOptions;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Build;
@@ -42,7 +43,6 @@ public class MainActivity extends AppCompatActivity {
         adapter.setCount(3);
 
         sliderView.setSliderAdapter(adapter);
-        setLightStatusBar(this.findViewById(R.id.welcome_page_layout).getRootView(), this);
         sliderView.setIndicatorAnimation(IndicatorAnimations.SLIDE); //set indicator animation by using SliderLayout.IndicatorAnimations. :WORM or THIN_WORM or COLOR or DROP or FILL or NONE or SCALE or SCALE_DOWN or SLIDE and SWAP!!
         sliderView.setSliderTransformAnimation(SliderAnimations.SIMPLETRANSFORMATION);
         sliderView.setAutoCycleDirection(SliderView.AUTO_CYCLE_DIRECTION_RIGHT);
@@ -62,12 +62,5 @@ public class MainActivity extends AppCompatActivity {
         Intent loginPage = new Intent(this, LoginActivity.class);
         startActivity(loginPage);
     }
-    // set status bar icon colors to dark
-    public static void setLightStatusBar(View view, Activity activity) {
-            view.setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_STABLE
-                    | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
-                    | View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);
 
-            activity.getWindow().setStatusBarColor(Color.TRANSPARENT);
-    }
 }

@@ -16,7 +16,7 @@ import android.widget.ImageView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.cardview.widget.CardView;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
@@ -31,31 +31,20 @@ import com.nex3z.notificationbadge.NotificationBadge;
 public class HomeFragment extends Fragment {
 
     View view;
-    ImageView imageView;
+    ImageView drawer_trigger_btn;
     FragmentManager fragmentManager;
     NotificationBadge badge;
-    ImageButton imageButton;
+    ImageButton badge_trigger_btn;
+    ConstraintLayout poppContainer;
 
     public HomeFragment() {
     }
 
 
-
-    // set status bar icon colors to dark
-    public static void setLightStatusBar(View view, Activity activity) {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-
-            int flags = view.getSystemUiVisibility();
-            flags |= View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR;
-            view.setSystemUiVisibility(flags);
-            activity.getWindow().setStatusBarColor(Color.TRANSPARENT);
-        }
-    }
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.fragment_home, container, false);
-        setLightStatusBar(container, getActivity());
+        poppContainer = view.findViewById(R.id.filter_popup_container);
 
 
         return view;
@@ -70,11 +59,11 @@ public class HomeFragment extends Fragment {
         fragmentTransaction.add(R.id.constraintLayout2, onGoingFragment);
         fragmentTransaction.commit();
 
-        badge = view.findViewById(R.id.badge);
 
-        // notification badge TEST
-        imageButton = view.findViewById(R.id.imageButton);
-        imageButton.setOnClickListener(new View.OnClickListener() {
+        // TODO : this is a test implementation for notification badge
+        badge = view.findViewById(R.id.badge);
+        badge_trigger_btn = view.findViewById(R.id.btn_pending_approval);
+        badge_trigger_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 // TODO: impalement your notification badge increment/decrement
@@ -82,9 +71,9 @@ public class HomeFragment extends Fragment {
             }
         });
 
-        imageView = view.findViewById(R.id.img_profile_activity_login2);
-
-        imageView.setOnClickListener(new View.OnClickListener() {
+        // TODO : this is drawer trigger implementation
+        drawer_trigger_btn = view.findViewById(R.id.img_profile_activity_login2);
+        drawer_trigger_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 IDrawerListener iDrawerListener = (IDrawerListener) getActivity();
@@ -102,18 +91,8 @@ public class HomeFragment extends Fragment {
 
     public void openDetailShow(FragmentManager fragmentManager) {
         DetailFragment detailFragment = new DetailFragment();
-
-        //   if(getFragmentManager().getFragments() != null){
-        //       for (Fragment fragment : getFragmentManager().getFragments()) {
-        //           if (fragment != null) {
-        //               getFragmentManager().beginTransaction().remove(fragment).commit();
-        //           }
-        //       }
-        //   }
-
         FragmentTransaction fragmentTransaction2 = fragmentManager.beginTransaction();
         fragmentTransaction2.replace(R.id.constraintLayout2, detailFragment);
         fragmentTransaction2.commit();
     }
-
 }

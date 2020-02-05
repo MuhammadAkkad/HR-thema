@@ -1,27 +1,23 @@
 package com.example.hr_thema.ongoin;
 
 import android.app.Dialog;
-import android.content.Context;
+import android.content.DialogInterface;
 import android.graphics.drawable.ColorDrawable;
 import android.net.Uri;
 import android.os.Bundle;
-
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.cardview.widget.CardView;
-import androidx.fragment.app.DialogFragment;
-import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AlertDialog;
+import androidx.cardview.widget.CardView;
+import androidx.fragment.app.Fragment;
 
 import com.example.hr_thema.R;
-import com.example.hr_thema.detail.DetailFragment;
-import com.example.hr_thema.home.HomeFragment;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -33,71 +29,22 @@ import com.example.hr_thema.home.HomeFragment;
  */
 
 public class OnGoingFragment extends Fragment {
-    CardView cardView;
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
-
+    CardView cardView;
+    Dialog myDialog;
+    Button btn3;
+    Button btnFilter;
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
-    Dialog myDialog;
-    Dialog dialog;
     private OnFragmentInteractionListener mListener;
-
+    private AlertDialog.Builder dialog;
+    private AlertDialog alertDialog;
     public OnGoingFragment() {
         // Required empty public constructor
-    }
-    Button btn3;
-    Button btnFilter;
-    @Override
-    public void onViewCreated(@NonNull final View view, @Nullable Bundle savedInstanceState) {
-       // btn3 = view.findViewById(R.id.button3);
-//        btn3.getBackground().setAlpha(128);
-        cardView = view.findViewById(R.id.cardView);
-        cardView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                ListenerOnGoingFragment listenerOnGoingFragment = (ListenerOnGoingFragment) getActivity();
-                listenerOnGoingFragment.openDetail();
-            }
-        });
-
-        btnFilter = view.findViewById(R.id.btn_filters);
-        btnFilter.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                dialogShow();
-               //openFilter(v);
-               //ListenerOnGoingFragment listenerOnGoingFragment = (ListenerOnGoingFragment) getActivity();
-               //listenerOnGoingFragment.openFilters(v);
-            }
-        });
-    }
-
-    public void dialogShow(){
-        View child = getLayoutInflater().inflate(R.layout.activity_filter, null);
-        myDialog.setContentView(child);
-
-        // Window window = myDialog.getWindow();
-        // WindowManager.LayoutParams wlp = window.getAttributes();
-
-        // wlp.gravity = Gravity.CENTER;
-        // window.setAttributes(wlp);
-
-        myDialog.getWindow().setBackgroundDrawable(new ColorDrawable());
-        myDialog.show();
-    }
-    public interface ListenerOnGoingFragment{
-        void openDetail();
-        void openFilters(View v);
-    }
-
-    public void openFilter(View view){
-        dialog.setContentView(R.layout.activity_filter);
-        dialog.getWindow().setBackgroundDrawable(new ColorDrawable());
-        dialog.show();
     }
 
     /**
@@ -119,6 +66,52 @@ public class OnGoingFragment extends Fragment {
     }
 
     @Override
+    public void onViewCreated(@NonNull final View view, @Nullable Bundle savedInstanceState) {
+        // btn3 = view.findViewById(R.id.button3);
+//        btn3.getBackground().setAlpha(128);
+        cardView = view.findViewById(R.id.cardView);
+        cardView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ListenerOnGoingFragment listenerOnGoingFragment = (ListenerOnGoingFragment) getActivity();
+                listenerOnGoingFragment.openDetail();
+            }
+        });
+
+        btnFilter = view.findViewById(R.id.btn_filters);
+        btnFilter.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                alertDialog();
+                //dialogShow();
+                //openFilter(v);
+                //ListenerOnGoingFragment listenerOnGoingFragment = (ListenerOnGoingFragment) getActivity();
+                //listenerOnGoingFragment.openFilters(v);
+            }
+        });
+    }
+
+    public void dialogShow() {
+        View child = getLayoutInflater().inflate(R.layout.activity_filter, null);
+        myDialog.setContentView(child);
+
+        // Window window = myDialog.getWindow();
+        // WindowManager.LayoutParams wlp = window.getAttributes();
+
+        // wlp.gravity = Gravity.CENTER;
+        // window.setAttributes(wlp);
+
+        myDialog.getWindow().setBackgroundDrawable(new ColorDrawable());
+        myDialog.show();
+    }
+
+//    public void openFilter(View view) {
+//        dialog.setContentView(R.layout.activity_filter);
+//        dialog.getWindow().setBackgroundDrawable(new ColorDrawable());
+//        dialog.show();
+//    }
+
+    @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         if (getArguments() != null) {
@@ -131,6 +124,8 @@ public class OnGoingFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
+
+
         return inflater.inflate(R.layout.fragment_on_going, container, false);
     }
 
@@ -141,11 +136,37 @@ public class OnGoingFragment extends Fragment {
         }
     }
 
-
     @Override
     public void onDetach() {
         super.onDetach();
         mListener = null;
+    }
+
+    private void alertDialog() {
+        dialog = new AlertDialog.Builder(getActivity(), R.style.CustomAlertDialog);
+        LayoutInflater inflater = requireActivity().getLayoutInflater();
+        dialog.setView(inflater.inflate(R.layout.pop_up_layout, null));
+        dialog.setPositiveButton("YES",
+                new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog,
+                                        int which) {
+                        Toast.makeText(getContext(), "Yes is clicked", Toast.LENGTH_LONG).show();
+                    }
+                });
+        dialog.setNegativeButton("cancel", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                Toast.makeText(getContext(), "cancel is clicked", Toast.LENGTH_LONG).show();
+            }
+        });
+        alertDialog = dialog.create();
+        alertDialog.show();
+    }
+
+    public interface ListenerOnGoingFragment {
+        void openDetail();
+
+        void openFilters(View v);
     }
 
     /**
