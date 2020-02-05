@@ -37,12 +37,8 @@ public class OnGoingFragment extends Fragment {
     Dialog myDialog;
     Button btn3;
     Button btnFilter;
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
     private OnFragmentInteractionListener mListener;
-    private AlertDialog.Builder dialog;
-    private AlertDialog alertDialog;
+
     public OnGoingFragment() {
         // Required empty public constructor
     }
@@ -115,8 +111,9 @@ public class OnGoingFragment extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
+            // TODO: Rename and change types of parameters
+            String mParam1 = getArguments().getString(ARG_PARAM1);
+            String mParam2 = getArguments().getString(ARG_PARAM2);
         }
     }
 
@@ -143,7 +140,7 @@ public class OnGoingFragment extends Fragment {
     }
 
     private void alertDialog() {
-        dialog = new AlertDialog.Builder(getActivity(), R.style.CustomAlertDialog);
+        AlertDialog.Builder dialog = new AlertDialog.Builder(getActivity(), R.style.CustomAlertDialog);
         LayoutInflater inflater = requireActivity().getLayoutInflater();
         dialog.setView(inflater.inflate(R.layout.pop_up_layout, null));
         dialog.setPositiveButton("YES",
@@ -159,7 +156,7 @@ public class OnGoingFragment extends Fragment {
                 Toast.makeText(getContext(), "cancel is clicked", Toast.LENGTH_LONG).show();
             }
         });
-        alertDialog = dialog.create();
+        AlertDialog alertDialog = dialog.create();
         alertDialog.show();
     }
 
