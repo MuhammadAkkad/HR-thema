@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".home.HomeActivity">
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="322dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/group4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="31dp"
+        android:layout_height="31dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:scaleType="fitXY"
+        android:background="@color/transparentColor"
+        android:src="@drawable/top"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/textView6"
+        android:layout_width="0dp"
+        android:layout_height="31dp"
+        android:layout_marginStart="29dp"
+        android:background="@drawable/shapebuttonradiouswhite"
+        android:drawableLeft="@drawable/ic_search_black_24dp"
+        android:drawablePadding="5dp"
+        android:drawableTint="#D9DADC"
+        android:fontFamily="@font/lato"
+        android:gravity="center_horizontal|start|center_vertical"
+        android:hint="SEARCH"
+        android:paddingLeft="10dp"
+        android:paddingRight="15dp"
+        android:textColorHint="#D9DADC"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageButton"
+        app:layout_constraintEnd_toStartOf="@+id/btnFilter"
+        app:layout_constraintStart_toEndOf="@+id/imageButton"
+        app:layout_constraintTop_toTopOf="@+id/imageButton" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnFilter"
+        android:layout_width="40dp"
+        android:layout_height="31dp"
+        android:layout_marginEnd="15dp"
+        android:background="@drawable/filterbuttonradiouswhite"
+        android:drawableRight="@drawable/ic_funnel"
+        android:drawableTint="#D9DADC"
+        android:paddingRight="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView6"
+        app:layout_constraintTop_toTopOf="@+id/textView6" />
+
+    <TextView
+        android:id="@+id/textView23"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="29dp"
+        android:fontFamily="@font/lato"
+        android:text="Son Aktiviteler"
+        android:textColor="#FFFFFF"
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="@+id/imageButton"
+        app:layout_constraintTop_toBottomOf="@+id/imageButton" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="0dp"
+        android:layout_height="92dp"
+        android:layout_marginTop="14dp"
+        android:layout_marginEnd="24dp"
+        app:cardCornerRadius="19dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/textView23"
+        app:layout_constraintTop_toBottomOf="@+id/textView23">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/image2"
+                android:layout_width="30dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="11dp"
+                android:baselineAlignBottom="false"
+                android:elevation="10dp"
+                android:src="@drawable/profilfoto"
+                app:civ_border_color="#FFFF"
+                app:civ_border_width="2dp"
+                app:layout_constraintBottom_toBottomOf="@+id/image3"
+                app:layout_constraintStart_toStartOf="@+id/image3"
+                app:layout_constraintTop_toTopOf="@+id/image3" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/image3"
+                android:layout_width="30dp"
+                android:layout_height="20dp"
+                android:layout_marginEnd="12dp"
+                android:baselineAlignBottom="false"
+                android:elevation="10dp"
+                android:src="@drawable/profilfoto"
+                app:civ_border_color="#FFFF"
+                app:civ_border_width="2dp"
+                app:layout_constraintBottom_toBottomOf="@+id/linearLayout"
+                app:layout_constraintEnd_toStartOf="@+id/image4"
+                app:layout_constraintTop_toTopOf="@+id/linearLayout" />
+
+
+            <ImageButton
+                android:id="@+id/image4"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/shape_circle_notification_badge"
+                android:backgroundTint="#D8D8D8"
+                android:elevation="10dp"
+                android:scaleType="fitCenter"
+                android:padding="4dp"
+                android:src="@drawable/ic_group_3"
+                android:tint="#3E4450"
+                app:layout_constraintBottom_toBottomOf="@+id/image3"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/image3" />
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="34dp"
+                android:layout_height="34dp"
+                android:layout_marginStart="7dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/group11"
+                android:foregroundGravity="center"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="@+id/imageView2"
+                app:layout_constraintStart_toEndOf="@+id/imageView2"
+                app:layout_constraintTop_toTopOf="@+id/imageView2">
+
+                <TextView
+                    android:id="@+id/textView9"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/lato"
+                    android:text="9128399"
+                    android:textColor=" #3E4450"
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:id="@+id/textView10"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/lato"
+                    android:text="22.01.2020"
+                    android:textColor="#B5B7BC"
+                    android:textSize="10dp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textView12"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="52dp"
+                android:layout_marginBottom="8dp"
+                android:fontFamily="@font/lato"
+                android:text="klasfjasdkl jsdlfjasljfadklfjsdmf;ilasjkf[ioawfajksdfl[jkas[odfjaskldfjaiosjioasjdfasjdfio[aj[h'sklafji[sdf'as"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/imageView2"
+                app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -8,8 +8,6 @@ import com.example.hr_thema.R;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class HomeActivity extends AppCompatActivity {
-    BottomNavigationView navigation;
-//    Toolbar toolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

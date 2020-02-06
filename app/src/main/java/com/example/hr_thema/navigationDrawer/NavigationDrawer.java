@@ -1,6 +1,7 @@
 package com.example.hr_thema.navigationDrawer;
 
 import android.app.Dialog;
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.ColorFilter;
 import android.os.Bundle;
@@ -18,6 +19,8 @@ import androidx.fragment.app.FragmentTransaction;
 
 import com.example.hr_thema.R;
 
+import com.example.hr_thema.home.HomeActivity;
+import com.example.hr_thema.home.HomeFragment;
 import com.example.hr_thema.lastActivities.LastActiviesFragment;
 import com.example.hr_thema.menu.MenuFragment;
 import com.example.hr_thema.notification.NotificationFragment;
@@ -54,7 +57,7 @@ public class NavigationDrawer extends AppCompatActivity implements OnGoingFragme
         drawer.setViewElevation(Gravity.START, 30);
 
         // TODO: Homefragment deleted repace with home activity
-        //loadFragment(new HomeFragment());
+        loadFragment(new HomeFragment());
 
         navigation = findViewById(R.id.bottom_navigation);
         //navigation.setItemIconTintList(null);
@@ -64,16 +67,12 @@ public class NavigationDrawer extends AppCompatActivity implements OnGoingFragme
             public boolean onNavigationItemSelected(MenuItem menuItem) {
                 int id = menuItem.getItemId();
                 if (id == R.id.navigation_home) {
-
                     // TODO: notification implementation test
                     BadgeDrawable badgeDrawable = navigation.getOrCreateBadge(R.id.navigation_home);
                     badgeDrawable.setBackgroundColor(Color.rgb(157, 204, 82));
                     badgeDrawable.setNumber(51);
-                    //
 
-                    //toolbar.setTitle(getResources().getString(R.string.title_home));
-                    // TODO: Homefragment deleted repace with home activity
-                    //loadFragment(new HomeFragment());
+                    loadFragment(new HomeFragment());
                     return true;
                 } else if (id == R.id.navigation_menu) {
                     //toolbar.setTitle(getResources().getString(R.string.title_category));
@@ -114,6 +113,7 @@ public class NavigationDrawer extends AppCompatActivity implements OnGoingFragme
 
     public void loadFragment(Fragment fragment) {
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+        transaction.setCustomAnimations(android.R.animator.fade_in, android.R.animator.fade_out);
         transaction.replace(R.id.nav_home, fragment);
         transaction.commit();
     }
@@ -125,10 +125,10 @@ public class NavigationDrawer extends AppCompatActivity implements OnGoingFragme
 
     @Override
     public void openDetail() {
-       // HomeFragment homeFragment = new HomeFragment();
+       // HomeFragment HomeFragment = new HomeFragment();
         FragmentManager fragmentManager = getSupportFragmentManager();
         // TODO: Homefragment deleted repace with home activity
-        //homeFragment.openDetailShow(fragmentManager);
+        //HomeFragment.openDetailShow(fragmentManager);
     }
     Dialog dialog;
     @Override
