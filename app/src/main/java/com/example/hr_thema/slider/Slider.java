@@ -17,7 +17,10 @@ public class Slider extends
         SliderViewAdapter<Slider.SliderAdapterVH> {
     // temp strings
     String header = "Lorem Ipsum, dizgi";
-    String description = "Lorem Ipsum, dizgi ve baskı endüstrisi kullanılan mıgır metinlerdir. ";
+    String description = "Lorem Ipsum, dizgi ve baskı endüstrisi\n" +
+            "kullanılan mıgır metinlerdir. Lorem Ipsum, \n" +
+            "adı bilinmeyen bir matbaacının bir hurufat \n" +
+            "numune kitabı";
     private Context context;
     private int mCount;
 
@@ -48,7 +51,7 @@ public class Slider extends
                 viewHolder.textViewHeader.setText(header);
                 viewHolder.textViewDescription.setText(description);
                 Glide.with(viewHolder.itemView)
-                        .load(R.drawable.tutorial)
+                        .load(R.drawable.tutorial1)
                         .fitCenter()
                         .into(viewHolder.imageViewBackground);
                 break;
@@ -56,7 +59,7 @@ public class Slider extends
                 viewHolder.textViewHeader.setText(header);
                 viewHolder.textViewDescription.setText(description);
                 Glide.with(viewHolder.itemView)
-                        .load(R.drawable.tutorial_2)
+                        .load(R.drawable.tutorial2)
                         .fitCenter()
                         .into(viewHolder.imageViewBackground);
                 break;
@@ -64,7 +67,7 @@ public class Slider extends
                 viewHolder.textViewHeader.setText(header);
                 viewHolder.textViewDescription.setText(description);
                 Glide.with(viewHolder.itemView)
-                        .load(R.drawable.tutorial_3)
+                        .load(R.drawable.tutorial3)
                         .fitCenter()
                         .into(viewHolder.imageViewBackground);
                 break;
