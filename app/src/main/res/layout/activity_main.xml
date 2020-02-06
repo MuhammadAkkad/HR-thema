@@ -49,14 +49,14 @@
         app:srcCompat="@drawable/logo" />
 
 
-    <Button
+    <com.google.android.material.button.MaterialButton
             android:id="@+id/btn_login_activity_main"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
             android:width="355dp"
-            android:height="55dp"
-            android:background="@drawable/shapebuttonradious"
+            android:height="60dp"
+            app:cornerRadius="25dp"
             android:text="Giriş Yap"
             android:textColor="#FFF"
             app:layout_constraintBottom_toBottomOf="parent"

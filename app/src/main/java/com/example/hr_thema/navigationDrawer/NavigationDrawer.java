@@ -1,6 +1,8 @@
 package com.example.hr_thema.navigationDrawer;
 
 import android.app.Dialog;
+import android.graphics.Color;
+import android.graphics.ColorFilter;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.MenuItem;
@@ -21,7 +23,9 @@ import com.example.hr_thema.menu.MenuFragment;
 import com.example.hr_thema.notification.NotificationFragment;
 import com.example.hr_thema.ongoin.OnGoingFragment;
 import com.example.hr_thema.settings.SettingsFragment;
+import com.google.android.material.badge.BadgeDrawable;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.bottomnavigation.LabelVisibilityMode;
 import com.google.android.material.navigation.NavigationView;
 import com.infideap.drawerbehavior.AdvanceDrawerLayout;
 
@@ -51,7 +55,7 @@ public class NavigationDrawer extends AppCompatActivity implements OnGoingFragme
                 this, drawer, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
         toggle.syncState();
-        NavigationView navigationView = findViewById(R.id.nav_view);
+        final NavigationView navigationView = findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
         drawer.setViewScale(Gravity.START, 1);
         drawer.setRadius(Gravity.START, 25);
@@ -63,11 +67,24 @@ public class NavigationDrawer extends AppCompatActivity implements OnGoingFragme
         loadFragment(new HomeFragment());
         //setLightStatusBar(this.findViewById(R.id.drawer_layout).getRootView(), this);
         navigation = findViewById(R.id.bottom_navigation);
+        //navigation.setItemIconTintList(null);
+
+
+
+
+        navigation.setLabelVisibilityMode(LabelVisibilityMode.LABEL_VISIBILITY_UNLABELED);
         navigation.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(MenuItem menuItem) {
                 int id = menuItem.getItemId();
                 if (id == R.id.navigation_home) {
+
+                    // TODO: notification implementation test
+                    BadgeDrawable badgeDrawable = navigation.getOrCreateBadge(R.id.navigation_home);
+                    badgeDrawable.setBackgroundColor(Color.rgb(157, 204, 82));
+                    badgeDrawable.setNumber(51);
+                    //
+
                     //toolbar.setTitle(getResources().getString(R.string.title_home));
                     loadFragment(new HomeFragment());
                     return true;

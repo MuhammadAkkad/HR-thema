@@ -40,17 +40,14 @@
         app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_filters"
         android:layout_width="0dp"
         android:layout_height="37dp"
         android:layout_marginEnd="24dp"
-        android:background="@drawable/shapebuttonradiouswhite"
         android:drawableLeft="@drawable/ic_turkey"
-        android:drawablePadding="13dp"
         android:fontFamily="@font/lato"
-        android:paddingLeft="13dp"
-        android:text="Filtreler"
+        android:text="DELETED"
         android:textAllCaps="false"
         app:layout_constraintBottom_toBottomOf="@+id/textView6"
         app:layout_constraintEnd_toEndOf="parent"
