@@ -8,19 +8,25 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
+import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.hr_thema.R;
 import com.example.hr_thema.navigationDrawer.NavigationDrawer;
+import com.makeramen.roundedimageview.RoundedImageView;
 
 
 public class LoginActivity extends AppCompatActivity {
-    Button btn_sign_in;
+    Button btn_sign_in,btnOtherAccount;
     Dialog myDialog;
     Context context;
     CheckBox chbRemember;
+    RoundedImageView rivProfilPhoto;
+    TextView txtWelcome,txtFormDescription,txtEMail,txtPassword,txtOr;
+    EditText edtEMail,edtPassword;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,16 +44,34 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
+        txtWelcome = findViewById(R.id.txt_welcome_activity_login);
+        txtFormDescription = findViewById(R.id.txt_welcome_description_activity_login);
+        txtEMail = findViewById(R.id.txt_user_name_activity_login);
+        txtPassword = findViewById(R.id.txt_password_activity_login2);
+        txtOr = findViewById(R.id.txt_yada_activity_login);
+        edtEMail = findViewById(R.id.tv_user_name_activity_login);
+        edtPassword = findViewById(R.id.tv_password_activity_login);
+        btnOtherAccount = findViewById(R.id.btn_another_account_sign_in_activity_login);
+        rivProfilPhoto = findViewById(R.id.img_profile_activity_login);
+
         chbRemember = findViewById(R.id.cb_remember_me_activity_login);
 
         chbRemember.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if(isChecked == true){
-                    Toast.makeText(getApplicationContext(),"Checked",Toast.LENGTH_SHORT).show();
+                    txtWelcome.setText("Hoşgeldin,Emre");
+                    txtEMail.setVisibility(View.GONE);
+                    edtEMail.setVisibility(View.GONE);
                 }
                 else{
-                    Toast.makeText(getApplicationContext(),"UNChecked",Toast.LENGTH_SHORT).show();
+                    txtWelcome.setText("Hoşgeldin");
+                    rivProfilPhoto.setVisibility(View.GONE);
+                    txtEMail.setVisibility(View.VISIBLE);
+                    edtEMail.setVisibility(View.VISIBLE);
+                    txtPassword.setVisibility(View.GONE);
+                    txtOr.setVisibility(View.GONE);
+                    btnOtherAccount.setVisibility(View.GONE);
                 }
             }
         });

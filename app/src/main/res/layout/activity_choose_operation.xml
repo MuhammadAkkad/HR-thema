@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".lastActivities.LastActiviesFragment">
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="322dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/group4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="31dp"
+        android:layout_height="31dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/transparentColor"
+        android:scaleType="fitXY"
+        android:src="@drawable/top"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/appCompatButton"
+        android:layout_width="47dp"
+        android:layout_height="47dp"
+        android:layout_marginTop="41dp"
+        android:background="@drawable/group11"
+        app:layout_constraintStart_toStartOf="@+id/imageButton"
+        app:layout_constraintTop_toBottomOf="@+id/imageButton"></androidx.appcompat.widget.AppCompatButton>
+
+    <TextView
+        android:id="@+id/textView24"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:fontFamily="@font/lato"
+        android:text="9128399"
+        android:textColor="#FFF"
+        android:textSize="23dp"
+        app:layout_constraintStart_toEndOf="@+id/appCompatButton"
+        app:layout_constraintTop_toTopOf="@+id/appCompatButton" />
+
+    <TextView
+        android:id="@+id/textView25"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/lato"
+        android:text="\@BoranGökbulut"
+        android:textColor="#FFF"
+        android:textSize="11dp"
+        app:layout_constraintStart_toStartOf="@+id/textView24"
+        app:layout_constraintTop_toBottomOf="@+id/textView24" />
+
+    <TextView
+        android:id="@+id/textView26"
+        android:layout_width="0dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="28dp"
+        android:fontFamily="@font/lato"
+        android:text="9128399 numaralı istek ile 22.01.2020 tarihinde Boran Gökbulut tarafından 1000 TL bütçe talep edildi. Behiç Tanağardı onaylayabilir."
+        android:textColor="#FFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/appCompatButton"
+        app:layout_constraintTop_toBottomOf="@+id/appCompatButton" />
+
+    <TextView
+        android:id="@+id/textView27"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="67dp"
+        android:fontFamily="@font/lato"
+        android:text="Yapmak istediğiniz işlemi seçiniz"
+        android:textColor="#474D5A"
+        android:textSize="18dp"
+        app:layout_constraintStart_toStartOf="@+id/appCompatButton"
+        app:layout_constraintTop_toBottomOf="@+id/textView26" />
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="28dp"
+        android:background="@drawable/spinner_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/textView27"
+        app:layout_constraintTop_toBottomOf="@+id/textView27" />
+
+    <EditText
+        android:id="@+id/editText4"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="28dp"
+        android:background="@drawable/multilinetext_radious"
+        android:ems="10"
+        android:gravity="start|top"
+        android:hint="Açıklama Giriniz"
+        android:inputType="textMultiLine"
+        android:textColorHighlight="@color/transparentColor"
+        android:textColorHint="@color/transparentColor"
+        android:textColorLink="@color/transparentColor"
+        app:layout_constraintBottom_toTopOf="@+id/btn_sign_in_activity_login"
+        app:layout_constraintEnd_toEndOf="@+id/spinner"
+        app:layout_constraintStart_toStartOf="@+id/spinner"
+        app:layout_constraintTop_toBottomOf="@+id/spinner" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_sign_in_activity_login"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="28dp"
+        android:height="60dp"
+        android:backgroundTint="@color/colorPrimary"
+        android:fontFamily="@font/lato"
+        android:text="Gönder"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        app:cornerRadius="25dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

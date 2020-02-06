@@ -7,6 +7,21 @@
     android:id="@+id/login_activity_layout"
     tools:context=".login.LoginActivity">
 
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button"
+        android:layout_width="32dp"
+        android:layout_height="42dp"
+        android:layout_marginEnd="35dp"
+        android:backgroundTint="#FFFF"
+        android:padding="1dp"
+        android:text="TR"
+        android:textColor="#CE8FDD"
+        app:layout_constraintBottom_toBottomOf="@+id/img_logo_activity_login"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/img_logo_activity_login"
+        app:strokeColor="#CE8FDD"
+        app:strokeWidth="1dp" />
+
     <ImageView
         android:id="@+id/imageView7"
         android:layout_width="272dp"
@@ -18,21 +33,21 @@
 
     <ImageView
         android:id="@+id/img_logo_activity_login"
-        android:layout_width="wrap_content"
+        android:layout_width="144dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="17dp"
         android:layout_marginTop="25dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.09"
-        app:layout_constraintStart_toStartOf="parent"
         android:scaleType="fitCenter"
+        app:layout_constraintStart_toEndOf="@+id/imageView7"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/logo" />
 
     <TextView
         android:id="@+id/txt_welcome_activity_login"
-        android:layout_width="189dp"
+        android:layout_width="wrap_content"
         android:layout_height="35dp"
-        android:layout_marginStart="16dp"
+        android:layout_marginStart="17dp"
         android:layout_marginTop="80dp"
         android:text="Hoşgeldin, Emre"
         android:textColor="#000000"
@@ -44,7 +59,7 @@
         android:id="@+id/img_profile_activity_login"
         android:layout_width="34dp"
         android:layout_height="34dp"
-        android:layout_marginStart="25dp"
+        android:layout_marginStart="17dp"
         android:layout_marginTop="80dp"
         android:scaleType="fitCenter"
         android:src="@drawable/profilfoto"
@@ -150,95 +165,70 @@
             app:layout_constraintStart_toStartOf="@+id/tv_password_activity_login"
             app:layout_constraintTop_toBottomOf="@+id/tv_password_activity_login" />
 
-        <TextView
-            android:id="@+id/txt_forgot_password_activity_login"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:layout_marginEnd="20dp"
-            android:fontFamily="@font/lato"
-            android:text="Şifremi Unuttum"
-            android:textColor="#B1B1B1"
-            android:textSize="15dp"
-            app:layout_constraintEnd_toEndOf="@+id/tv_password_activity_login"
-            app:layout_constraintTop_toBottomOf="@+id/tv_password_activity_login" />
+    <TextView
+        android:id="@+id/txt_forgot_password_activity_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/lato"
+        android:text="Şifremi Unuttum"
+        android:textColor="#B1B1B1"
+        android:textSize="15dp"
+        app:layout_constraintBottom_toBottomOf="@+id/cb_remember_me_activity_login"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/cb_remember_me_activity_login" />
 
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btn_sign_in_activity_login"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="30dp"
-            android:layout_marginEnd="30dp"
-            android:layout_marginBottom="25dp"
-            android:height="60dp"
-            android:backgroundTint="@color/colorPrimary"
-            android:fontFamily="@font/lato"
-            android:text="Giriş Yap"
-            android:textAllCaps="false"
-            android:textColor="#FFFFFF"
-            android:textSize="20sp"
-            app:cornerRadius="25dp"
-            app:layout_constraintBottom_toTopOf="@+id/txt_yada_activity_login"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_sign_in_activity_login"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="150dp"
+        android:height="60dp"
+        android:backgroundTint="@color/colorPrimary"
+        android:fontFamily="@font/lato"
+        android:text="Giriş Yap"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        app:cornerRadius="25dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
-        <TextView
-            android:id="@+id/txt_yada_activity_login"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="3dp"
-            android:layout_marginBottom="20dp"
-            android:fontFamily="@font/lato"
-            android:text="Yada"
-            android:textColor="#DCDCDC"
-            android:textSize="15sp"
-            android:visibility="visible"
-            app:layout_constraintBottom_toTopOf="@+id/btn_another_account_sign_in_activity_login"
-            app:layout_constraintEnd_toEndOf="@+id/btn_another_account_sign_in_activity_login"
-            app:layout_constraintStart_toStartOf="@+id/btn_another_account_sign_in_activity_login" />
+    <TextView
+        android:id="@+id/txt_yada_activity_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="3dp"
+        android:layout_marginBottom="20dp"
+        android:fontFamily="@font/lato"
+        android:text="Yada"
+        android:textColor="#DCDCDC"
+        android:textSize="15sp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/btn_another_account_sign_in_activity_login"
+        app:layout_constraintEnd_toEndOf="@+id/btn_another_account_sign_in_activity_login"
+        app:layout_constraintStart_toStartOf="@+id/btn_another_account_sign_in_activity_login" />
 
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btn_another_account_sign_in_activity_login"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="30dp"
-            android:width="355dp"
-            android:height="60dp"
-            app:cornerRadius="25dp"
-            android:fontFamily="@font/lato"
-            android:text="Başka bir kullanıcı ile giriş yap"
-            android:textAllCaps="false"
-            android:textColor="#838383"
-            android:textSize="18sp"
-            android:visibility="visible"
-            android:backgroundTint="#FFFFFF"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="@+id/btn_sign_in_activity_login"
-            app:layout_constraintStart_toStartOf="@+id/btn_sign_in_activity_login" />
-
-        <View
-            android:id="@+id/divider"
-            android:layout_width="0dp"
-            android:layout_height="1dp"
-            android:layout_marginStart="28dp"
-            android:layout_marginEnd="37dp"
-            android:background="#F5F6F7"
-            app:layout_constraintBottom_toBottomOf="@+id/txt_yada_activity_login"
-            app:layout_constraintEnd_toStartOf="@+id/txt_yada_activity_login"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/txt_yada_activity_login" />
-
-        <View
-            android:id="@+id/divider2"
-            android:layout_width="0dp"
-            android:layout_height="1dp"
-            android:layout_marginStart="37dp"
-            android:layout_marginEnd="28dp"
-            android:background="#F5F6F7"
-            app:layout_constraintBottom_toBottomOf="@+id/txt_yada_activity_login"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/txt_yada_activity_login"
-            app:layout_constraintTop_toTopOf="@+id/txt_yada_activity_login" />
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_another_account_sign_in_activity_login"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:width="355dp"
+        android:height="60dp"
+        android:backgroundTint="#FFFFFF"
+        android:fontFamily="@font/lato"
+        android:text="Başka bir kullanıcı ile giriş yap"
+        android:textAllCaps="false"
+        android:textColor="#838383"
+        android:textSize="18sp"
+        android:visibility="visible"
+        app:cornerRadius="25dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/btn_sign_in_activity_login"
+        app:layout_constraintStart_toStartOf="@+id/btn_sign_in_activity_login" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
