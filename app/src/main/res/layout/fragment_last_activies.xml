@@ -32,7 +32,7 @@
 
     <EditText
         android:id="@+id/textView6"
-        android:layout_width="265dp"
+        android:layout_width="0dp"
         android:layout_height="31dp"
         android:layout_marginStart="29dp"
         android:background="@drawable/shapebuttonradiouswhite"
@@ -47,12 +47,13 @@
         android:textColorHint="#D9DADC"
         android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="@+id/imageButton"
+        app:layout_constraintEnd_toStartOf="@+id/btnFilter"
         app:layout_constraintStart_toEndOf="@+id/imageButton"
         app:layout_constraintTop_toTopOf="@+id/imageButton" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btnFilter"
-        android:layout_width="0dp"
+        android:layout_width="40dp"
         android:layout_height="31dp"
         android:layout_marginEnd="15dp"
         android:background="@drawable/filterbuttonradiouswhite"

@@ -9,18 +9,12 @@
 
     <ImageView
         android:id="@+id/imageView7"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_width="272dp"
+        android:layout_height="296dp"
         android:scaleType="fitXY"
-        app:layout_constraintBottom_toTopOf="@+id/constraintLayout3"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHeight_percent="0.5"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
-        app:layout_constraintWidth_percent="0.5"
-        app:srcCompat="@drawable/group5" />
+        app:srcCompat="@drawable/group2" />
 
     <ImageView
         android:id="@+id/img_logo_activity_login"
@@ -30,29 +24,32 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.09"
         app:layout_constraintStart_toStartOf="parent"
+        android:scaleType="fitCenter"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/logo" />
 
     <TextView
         android:id="@+id/txt_welcome_activity_login"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="189dp"
+        android:layout_height="35dp"
         android:layout_marginStart="16dp"
+        android:layout_marginTop="80dp"
         android:text="Hoşgeldin, Emre"
-        android:textColor="#FFF"
+        android:textColor="#000000"
         android:textSize="26dp"
-        app:layout_constraintBottom_toBottomOf="@+id/img_profile_activity_login"
         app:layout_constraintStart_toEndOf="@+id/img_profile_activity_login"
-        app:layout_constraintTop_toTopOf="@+id/img_profile_activity_login" />
+        app:layout_constraintTop_toBottomOf="@+id/img_logo_activity_login" />
 
     <com.makeramen.roundedimageview.RoundedImageView
         android:id="@+id/img_profile_activity_login"
         android:layout_width="34dp"
         android:layout_height="34dp"
-        android:layout_marginTop="52dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="80dp"
         android:scaleType="fitCenter"
         android:src="@drawable/profilfoto"
-        app:layout_constraintStart_toStartOf="@+id/img_logo_activity_login"
+        android:visibility="visible"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/img_logo_activity_login"
         app:riv_corner_radius="5dip"
         app:srcCompat="@mipmap/ic_launcher_round" />
@@ -64,55 +61,63 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="42dp"
         android:text="Aşağıdaki formu doldurarak giriş yapabilirsin."
-        android:textColor="#C5C9CE"
+        android:textColor="#A1A5AF"
         android:textSize="21dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/txt_welcome_activity_login"
         app:layout_constraintTop_toBottomOf="@+id/txt_welcome_activity_login" />
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/constraintLayout3"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="240dp"
-        android:background="@drawable/shapeloginlayout"
+
+    <TextView
+        android:id="@+id/txt_user_name_activity_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:fontFamily="@font/lato"
+        android:text="E-Mail"
+        android:textColor="#2BB8E1"
+        android:textSize="20sp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/btn_sign_in_activity_login"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.655" />
 
-        <TextView
-            android:id="@+id/txt_user_name_activity_login"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:fontFamily="@font/lato"
-            android:text="User Name"
-            android:textColor="#AE48C7"
-            android:textSize="20sp"
-            android:visibility="visible"
-            app:layout_constraintBottom_toTopOf="@+id/btn_sign_in_activity_login"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.07999998" />
+    <TextView
+        android:id="@+id/txt_password_activity_login2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:fontFamily="@font/lato"
+        android:text="Password"
+        android:textColor="#2BB8E1"
+        android:textSize="20sp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/btn_sign_in_activity_login"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.655" />
 
-        <EditText
-            android:id="@+id/tv_user_name_activity_login"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:ems="17"
-            android:fontFamily="@font/lato"
-            android:hint="User Name"
-            android:inputType="textPersonName"
-            android:textColorHighlight="#A1A5AF"
-            android:textColorLink="#A1A5AF"
-            android:textCursorDrawable="@color/SideNavigationIconText"
-            android:theme="@style/MyEditText"
-            android:visibility="visible"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="@+id/txt_user_name_activity_login"
-            app:layout_constraintTop_toBottomOf="@+id/txt_user_name_activity_login" />
+    <EditText
+        android:id="@+id/tv_user_name_activity_login"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ems="17"
+        android:fontFamily="@font/lato"
+        android:hint="E-Mail"
+        android:inputType="textPersonName"
+        android:textColorHighlight="#A1A5AF"
+        android:textColorLink="#A1A5AF"
+        android:textCursorDrawable="@color/SideNavigationIconText"
+        android:theme="@style/MyEditText"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/txt_user_name_activity_login"
+        app:layout_constraintTop_toBottomOf="@+id/txt_user_name_activity_login" />
 
         <EditText
             android:id="@+id/tv_password_activity_login"
@@ -206,7 +211,7 @@
             android:textColor="#838383"
             android:textSize="18sp"
             android:visibility="visible"
-
+            android:backgroundTint="#FFFFFF"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="@+id/btn_sign_in_activity_login"
             app:layout_constraintStart_toStartOf="@+id/btn_sign_in_activity_login" />
@@ -235,6 +240,5 @@
             app:layout_constraintStart_toEndOf="@+id/txt_yada_activity_login"
             app:layout_constraintTop_toTopOf="@+id/txt_yada_activity_login" />
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -6,6 +6,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.CompoundButton;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -17,7 +20,7 @@ public class LoginActivity extends AppCompatActivity {
     Button btn_sign_in;
     Dialog myDialog;
     Context context;
-
+    CheckBox chbRemember;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +38,19 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
+        chbRemember = findViewById(R.id.cb_remember_me_activity_login);
+
+        chbRemember.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if(isChecked == true){
+                    Toast.makeText(getApplicationContext(),"Checked",Toast.LENGTH_SHORT).show();
+                }
+                else{
+                    Toast.makeText(getApplicationContext(),"UNChecked",Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
     }
     void home() {
         Intent home = new Intent(this, NavigationDrawer.class);
