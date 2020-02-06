@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="false"
-    android:background="@drawable/gradiant_background"
+    android:background="@drawable/gradiant_bad_fix"
     tools:openDrawer="start">
 
     <include

@@ -1,19 +1,14 @@
 package com.example.hr_thema;
 
-import android.app.Activity;
-import android.app.ActivityOptions;
 import android.content.Intent;
 import android.graphics.Color;
-import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.hr_thema.home.HomeFragment;
 import com.example.hr_thema.login.LoginActivity;
-import com.example.hr_thema.navigationDrawer.NavigationDrawer;
 import com.example.hr_thema.slider.Slider;
 import com.smarteist.autoimageslider.IndicatorAnimations;
 import com.smarteist.autoimageslider.IndicatorView.draw.controller.DrawController;

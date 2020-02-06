@@ -1,16 +1,10 @@
 package com.example.hr_thema.home;
 
-import android.app.Activity;
 import android.content.Context;
-import android.graphics.Color;
-import android.os.Build;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.Window;
-import android.view.WindowManager;
-import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 
@@ -24,7 +18,6 @@ import androidx.fragment.app.FragmentTransaction;
 import com.example.hr_thema.R;
 import com.example.hr_thema.detail.DetailFragment;
 import com.example.hr_thema.navigationDrawer.IDrawerListener;
-import com.example.hr_thema.navigationDrawer.NavigationDrawer;
 import com.example.hr_thema.ongoin.OnGoingFragment;
 import com.nex3z.notificationbadge.NotificationBadge;
 
@@ -53,7 +46,6 @@ public class HomeFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         OnGoingFragment onGoingFragment = new OnGoingFragment();
-        someMethodThatUsesActivity(getActivity());
         fragmentManager = getFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         fragmentTransaction.add(R.id.constraintLayout2, onGoingFragment);
@@ -80,9 +72,6 @@ public class HomeFragment extends Fragment {
                 iDrawerListener.OpenDrawer();
             }
         });
-    }
-    void someMethodThatUsesActivity(Activity myActivityReference) {
-        myActivityReference.getWindow().setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS, WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
     }
     @Override
     public void onAttach(@NonNull Context context) {
