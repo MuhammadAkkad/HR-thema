@@ -12,7 +12,7 @@
 
     <style name="MyEditText" parent="Theme.AppCompat.NoActionBar">
         <item name="colorControlNormal">@android:color/darker_gray</item>
-        <item name="colorControlActivated">@color/specialPurple</item>
+        <item name="colorControlActivated">@color/specialGreen</item>
     </style>
 
     <style name="AppTheme.AppBarOverlay" parent="Theme.AppCompat.Light.NoActionBar" />

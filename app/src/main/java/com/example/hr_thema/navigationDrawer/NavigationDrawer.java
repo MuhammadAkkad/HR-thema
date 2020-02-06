@@ -26,6 +26,7 @@ import androidx.fragment.app.FragmentTransaction;
 import com.example.hr_thema.R;
 
 import com.example.hr_thema.home.HomeFragment;
+import com.example.hr_thema.lastActivities.LastActiviesFragment;
 import com.example.hr_thema.menu.MenuFragment;
 import com.example.hr_thema.notification.NotificationFragment;
 import com.example.hr_thema.ongoin.OnGoingFragment;
@@ -38,20 +39,12 @@ public class NavigationDrawer extends AppCompatActivity implements OnGoingFragme
     BottomNavigationView navigation;
     ImageView usrImg;
     BottomNavigationView bottomNavigationView;
-
     private AdvanceDrawerLayout drawer;
-
     View v;
-
-
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_navigation_drawer);
-
-
 
         v = getWindow().getDecorView().findViewById(R.id.drawer_layout);
 
@@ -65,9 +58,6 @@ public class NavigationDrawer extends AppCompatActivity implements OnGoingFragme
         drawer.setViewScale(Gravity.START, 1);
         drawer.setRadius(Gravity.START, 25);
         drawer.setViewElevation(Gravity.START, 30);
-
-
-
 
         loadFragment(new HomeFragment());
         //setLightStatusBar(this.findViewById(R.id.drawer_layout).getRootView(), this);
@@ -90,7 +80,7 @@ public class NavigationDrawer extends AppCompatActivity implements OnGoingFragme
                     return true;
                 } else if (id == R.id.navigation_settings) {
                     //toolbar.setTitle(getResources().getString(R.string.title_profile));
-                    loadFragment(new SettingsFragment());
+                    loadFragment(new LastActiviesFragment());
                     return true;
                 }
                 return true;
