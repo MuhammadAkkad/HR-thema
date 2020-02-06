@@ -1,15 +1,17 @@
 package com.example.hr_thema.home;
 
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.hr_thema.R;
-import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.example.hr_thema.navigationDrawer.IDrawerListener;
+
 
 public class HomeActivity extends AppCompatActivity {
-    BottomNavigationView navigation;
-//    Toolbar toolbar;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,5 +19,4 @@ public class HomeActivity extends AppCompatActivity {
         setContentView(R.layout.activity_home);
 
     }
-
 }
