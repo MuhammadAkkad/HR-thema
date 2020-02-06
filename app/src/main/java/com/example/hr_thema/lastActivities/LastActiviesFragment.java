@@ -34,22 +34,4 @@ public class LastActiviesFragment extends Fragment {
         return inflater.inflate(R.layout.fragment_last_activies, container, false);
     }
 
-    @Override
-    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
-        btnFilter = view.findViewById(R.id.btnFilter);
-        btnFilter.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                PopupMenu popup = new PopupMenu(requireContext(), btnFilter);
-                popup.getMenuInflater().inflate(R.menu.filter_menu, popup.getMenu());
-                popup.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
-                    public boolean onMenuItemClick(MenuItem item) {
-                        Toast.makeText(requireContext(),"You Clicked : " + item.getTitle(), Toast.LENGTH_SHORT).show();
-                        return true;
-                    }
-                });
-                popup.show();
-            }
-        });
-    }
 }

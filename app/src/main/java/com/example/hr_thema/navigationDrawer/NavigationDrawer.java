@@ -60,8 +60,8 @@ public class NavigationDrawer extends AppCompatActivity implements OnGoingFragme
         loadFragment(new HomeFragment());
 
         navigation = findViewById(R.id.bottom_navigation);
-        //navigation.setItemIconTintList(null);
-        navigation.setLabelVisibilityMode(LabelVisibilityMode.LABEL_VISIBILITY_UNLABELED);
+        navigation.setItemIconTintList(null);
+        //navigation.setLabelVisibilityMode(LabelVisibilityMode.LABEL_VISIBILITY_UNLABELED);
         navigation.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(MenuItem menuItem) {
@@ -71,6 +71,8 @@ public class NavigationDrawer extends AppCompatActivity implements OnGoingFragme
                     BadgeDrawable badgeDrawable = navigation.getOrCreateBadge(R.id.navigation_home);
                     badgeDrawable.setBackgroundColor(Color.rgb(157, 204, 82));
                     badgeDrawable.setNumber(51);
+
+
 
                     loadFragment(new HomeFragment());
                     return true;

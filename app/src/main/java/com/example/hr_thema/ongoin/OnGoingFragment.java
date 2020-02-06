@@ -65,7 +65,7 @@ public class OnGoingFragment extends Fragment {
     public void onViewCreated(@NonNull final View view, @Nullable Bundle savedInstanceState) {
         // btn3 = view.findViewById(R.id.button3);
 //        btn3.getBackground().setAlpha(128);
-        cardView = view.findViewById(R.id.cardView);
+        cardView = view.findViewById(R.id.activity_card_view);
         cardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
