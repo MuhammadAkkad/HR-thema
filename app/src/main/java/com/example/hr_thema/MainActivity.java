@@ -38,11 +38,14 @@ public class MainActivity extends AppCompatActivity {
         adapter.setCount(3);
 
         sliderView.setSliderAdapter(adapter);
-        sliderView.setIndicatorAnimation(IndicatorAnimations.SLIDE); //set indicator animation by using SliderLayout.IndicatorAnimations. :WORM or THIN_WORM or COLOR or DROP or FILL or NONE or SCALE or SCALE_DOWN or SLIDE and SWAP!!
+        // Indicator
+        sliderView.setIndicatorAnimation(IndicatorAnimations.SLIDE);
+        sliderView.setIndicatorSelectedColor(Color.rgb(40, 190, 228));
+        sliderView.setIndicatorUnselectedColor(Color.rgb(205, 205, 205));
+
         sliderView.setSliderTransformAnimation(SliderAnimations.SIMPLETRANSFORMATION);
         sliderView.setAutoCycleDirection(SliderView.AUTO_CYCLE_DIRECTION_RIGHT);
-        sliderView.setIndicatorSelectedColor(Color.WHITE);
-        sliderView.setIndicatorUnselectedColor(Color.GRAY);
+
         sliderView.setAutoCycle(false);
 
         sliderView.setOnIndicatorClickListener(new DrawController.ClickListener() {
