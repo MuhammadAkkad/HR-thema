@@ -19,7 +19,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageButton
-        android:id="@+id/imageButton"
+        android:id="@+id/btn_trigger_drawer"
         android:layout_width="31dp"
         android:layout_height="31dp"
         android:layout_marginStart="16dp"
@@ -46,10 +46,10 @@
         android:paddingRight="15dp"
         android:textColorHint="#D9DADC"
         android:textSize="14sp"
-        app:layout_constraintBottom_toBottomOf="@+id/imageButton"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_trigger_drawer"
         app:layout_constraintEnd_toStartOf="@+id/btnFilter"
-        app:layout_constraintStart_toEndOf="@+id/imageButton"
-        app:layout_constraintTop_toTopOf="@+id/imageButton" />
+        app:layout_constraintStart_toEndOf="@+id/btn_trigger_drawer"
+        app:layout_constraintTop_toTopOf="@+id/btn_trigger_drawer" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btnFilter"
@@ -73,8 +73,8 @@
         android:text="Son Aktiviteler"
         android:textColor="#FFFFFF"
         android:textSize="20dp"
-        app:layout_constraintStart_toStartOf="@+id/imageButton"
-        app:layout_constraintTop_toBottomOf="@+id/imageButton" />
+        app:layout_constraintStart_toStartOf="@+id/btn_trigger_drawer"
+        app:layout_constraintTop_toBottomOf="@+id/btn_trigger_drawer" />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView"
