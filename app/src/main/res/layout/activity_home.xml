@@ -1,8 +1,294 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/home_activity_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
     tools:context=".home.HomeActivity">
+
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="0dp"
+        android:layout_height="270dp"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toTopOf="@+id/constraintLayout2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/group8" />
+
+    <Spinner
+        android:id="@+id/spinner3"
+        android:layout_width="50dp"
+        android:layout_height="25dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/spinner_flag_background"
+        android:foreground="@drawable/turkey_radius"
+        android:foregroundGravity="left"
+        app:layout_constraintBottom_toBottomOf="@+id/img_profile_activity_login2"
+        app:layout_constraintCircleRadius="515dp"
+        app:layout_constraintEnd_toStartOf="@+id/img_profile_activity_login2"
+        app:layout_constraintTop_toTopOf="@+id/img_profile_activity_login2" />
+
+    <ImageButton
+        android:id="@+id/btn_pending_approval"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/buttonhomeradius"
+        android:clickable="true"
+        android:visibility="visible"
+        app:layout_constraintEnd_toStartOf="@+id/btn_awaiting_my_approval"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img_logo_activity_login"
+        app:srcCompat="@drawable/ic_group_3" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="75dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/lato"
+        android:gravity="center"
+        android:text="Onaylanmayı Bekleyenler"
+        android:textAlignment="center"
+        android:textColor="#fff"
+        android:textSize="12dp"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="@+id/btn_pending_approval"
+        app:layout_constraintStart_toStartOf="@+id/btn_pending_approval"
+        app:layout_constraintTop_toBottomOf="@+id/btn_pending_approval" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="65dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/lato"
+        android:gravity="center"
+        android:text="Onayımı Bekleyenler"
+        android:textAlignment="center"
+        android:textColor="#fff"
+        android:textSize="12dp"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="@+id/btn_awaiting_my_approval"
+        app:layout_constraintStart_toStartOf="@+id/btn_awaiting_my_approval"
+        app:layout_constraintTop_toBottomOf="@+id/btn_awaiting_my_approval" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="65dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/lato"
+        android:gravity="center"
+        android:text="Geçmiş Aktiviteler"
+        android:textAlignment="center"
+        android:textColor="#fff"
+        android:textSize="12dp"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="@+id/btn_past_activities"
+        app:layout_constraintStart_toStartOf="@+id/btn_past_activities"
+        app:layout_constraintTop_toBottomOf="@+id/btn_past_activities" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="65dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/lato"
+        android:gravity="center"
+        android:text="Tümünü Görüntüle"
+        android:textAlignment="center"
+        android:textColor="#fff"
+        android:textSize="12dp"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="@+id/btn_show_all_activities"
+        app:layout_constraintStart_toStartOf="@+id/btn_show_all_activities"
+        app:layout_constraintTop_toBottomOf="@+id/btn_show_all_activities" />
+
+    <ImageButton
+        android:id="@+id/btn_awaiting_my_approval"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="@drawable/buttonhomeradius"
+        android:visibility="visible"
+        app:layout_constraintEnd_toStartOf="@+id/btn_past_activities"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btn_pending_approval"
+        app:layout_constraintTop_toTopOf="@+id/btn_pending_approval"
+        app:srcCompat="@drawable/ic_ok" />
+
+    <ImageButton
+        android:id="@+id/btn_past_activities"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="@drawable/buttonhomeradius"
+        android:visibility="visible"
+        app:layout_constraintEnd_toStartOf="@+id/btn_show_all_activities"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btn_awaiting_my_approval"
+        app:layout_constraintTop_toTopOf="@+id/btn_awaiting_my_approval"
+        app:srcCompat="@drawable/ic_history" />
+
+    <ImageButton
+        android:id="@+id/btn_show_all_activities"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="@drawable/buttonhomeradius"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btn_past_activities"
+        app:layout_constraintTop_toTopOf="@+id/btn_past_activities"
+        app:srcCompat="@drawable/ic_diagram" />
+
+    <ImageView
+        android:id="@+id/img_logo_activity_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="25dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo" />
+
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/img_profile_activity_login2"
+        android:layout_width="34dp"
+        android:layout_height="34dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="28dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/profilfoto"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:riv_corner_radius="5dip"
+        app:srcCompat="@mipmap/ic_launcher_round" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/shapehomelayout"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView">
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="top" />
+
+    <com.nex3z.notificationbadge.NotificationBadge
+        android:id="@+id/badge"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginBottom="42dp"
+        android:elevation="5dp"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_pending_approval"
+        app:layout_constraintStart_toStartOf="@+id/btn_pending_approval"
+        app:nbBackground="@drawable/shape_circle_notification_badge"
+        app:nbEllipsizeText="..."
+        app:nbMaxTextLength="2" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/filter_popup_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#74000000"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView3"
+            android:layout_width="0dp"
+            android:layout_height="160dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="208dp"
+            android:layout_marginEnd="25dp"
+            app:cardCornerRadius="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/textView7"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="28dp"
+                    android:layout_marginTop="27dp"
+                    android:fontFamily="@font/lato_bold"
+                    android:text="Onaylanmayı Bekleyenler"
+                    android:textColor="#3E4450"
+                    android:textSize="22sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <RadioGroup
+                    android:layout_width="0dp"
+                    android:layout_height="68dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="25dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/textView7"
+                    app:layout_constraintTop_toBottomOf="@+id/textView7">
+
+                    <RadioButton
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:layout_margin="4dp"
+                        android:background="#F6F6F6"
+                        android:drawableLeft="@drawable/ic_up"
+                        android:drawablePadding="8dp"
+                        android:layoutDirection="rtl"
+                        android:text="Ucuzdan Pahalıya"
+                        android:textAlignment="textStart"
+                        android:textColor="#3E4450"
+                        android:textSize="14sp"
+                        android:theme="@style/MyEditText" />
+
+                    <RadioButton
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:layout_margin="4dp"
+                        android:background="#F6F6F6"
+                        android:drawableLeft="@drawable/ic_down"
+                        android:drawablePadding="8dp"
+                        android:layoutDirection="rtl"
+                        android:text="Pahalıdan Ucuza"
+                        android:textAlignment="textStart"
+                        android:textColor="#3E4450"
+                        android:textSize="14sp"
+                        android:theme="@style/MyEditText" />
+                </RadioGroup>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

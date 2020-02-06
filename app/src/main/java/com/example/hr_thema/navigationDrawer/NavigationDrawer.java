@@ -18,7 +18,6 @@ import androidx.fragment.app.FragmentTransaction;
 
 import com.example.hr_thema.R;
 
-import com.example.hr_thema.home.HomeFragment;
 import com.example.hr_thema.lastActivities.LastActiviesFragment;
 import com.example.hr_thema.menu.MenuFragment;
 import com.example.hr_thema.notification.NotificationFragment;
@@ -54,14 +53,11 @@ public class NavigationDrawer extends AppCompatActivity implements OnGoingFragme
         drawer.setRadius(Gravity.START, 25);
         drawer.setViewElevation(Gravity.START, 30);
 
-        loadFragment(new HomeFragment());
-        //setLightStatusBar(this.findViewById(R.id.drawer_layout).getRootView(), this);
+        // TODO: Homefragment deleted repace with home activity
+        //loadFragment(new HomeFragment());
+
         navigation = findViewById(R.id.bottom_navigation);
         //navigation.setItemIconTintList(null);
-
-
-
-
         navigation.setLabelVisibilityMode(LabelVisibilityMode.LABEL_VISIBILITY_UNLABELED);
         navigation.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
@@ -76,7 +72,8 @@ public class NavigationDrawer extends AppCompatActivity implements OnGoingFragme
                     //
 
                     //toolbar.setTitle(getResources().getString(R.string.title_home));
-                    loadFragment(new HomeFragment());
+                    // TODO: Homefragment deleted repace with home activity
+                    //loadFragment(new HomeFragment());
                     return true;
                 } else if (id == R.id.navigation_menu) {
                     //toolbar.setTitle(getResources().getString(R.string.title_category));
@@ -128,9 +125,10 @@ public class NavigationDrawer extends AppCompatActivity implements OnGoingFragme
 
     @Override
     public void openDetail() {
-        HomeFragment homeFragment = new HomeFragment();
+       // HomeFragment homeFragment = new HomeFragment();
         FragmentManager fragmentManager = getSupportFragmentManager();
-        homeFragment.openDetailShow(fragmentManager);
+        // TODO: Homefragment deleted repace with home activity
+        //homeFragment.openDetailShow(fragmentManager);
     }
     Dialog dialog;
     @Override
