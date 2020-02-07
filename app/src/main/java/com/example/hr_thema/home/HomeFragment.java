@@ -13,8 +13,10 @@ import android.widget.Toast;
 
 import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 
 import com.example.hr_thema.R;
+import com.example.hr_thema.detail.DetailFragment;
 import com.example.hr_thema.navigationDrawer.IDrawerListener;
 
 
@@ -24,6 +26,9 @@ public class HomeFragment extends Fragment {
     ImageButton drawer_trigger;
     View view;
     CardView activity;
+
+
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -36,6 +41,7 @@ public class HomeFragment extends Fragment {
             public void onClick(View v) {
                 IDrawerListener drawerListener = (IDrawerListener) getActivity();
                 drawerListener.OpenDrawer();
+
 
             }
         });
@@ -62,13 +68,16 @@ public class HomeFragment extends Fragment {
         activity.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getContext(), "Implement activity of islemler", Toast.LENGTH_LONG).show();
+                FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
+                DetailFragment detailFragment= new DetailFragment();
+                transaction.setCustomAnimations(android.R.animator.fade_in, android.R.animator.fade_out);
+                transaction.replace(R.id.nav_home, detailFragment);
+                transaction.commit();
             }
         });
 
-
-
-
         return view;
     }
+
+
 }

@@ -25,7 +25,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView92"
+        android:id="@+id/txt_operation_title_detail_fragment"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -45,10 +45,10 @@
         android:text="@string/user_title"
         android:textColor="#99FFFFFF"
         android:textSize="14sp"
-        app:layout_constraintEnd_toEndOf="@+id/textView92"
+        app:layout_constraintEnd_toEndOf="@+id/txt_operation_title_detail_fragment"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/textView92"
-        app:layout_constraintTop_toBottomOf="@+id/textView92" />
+        app:layout_constraintStart_toStartOf="@+id/txt_operation_title_detail_fragment"
+        app:layout_constraintTop_toBottomOf="@+id/txt_operation_title_detail_fragment" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline"
