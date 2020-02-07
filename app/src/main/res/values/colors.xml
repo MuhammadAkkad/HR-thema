@@ -5,6 +5,7 @@
     <color name="colorAccent">#D81B60</color>
     <color name="specialGreen">#6DD400</color>
     <color name="navigationText">#505050</color>
+    <color name="tabGreen">#6DD400</color>
 
 
     <color name="bottomNavigationIconSelected">#505050</color>

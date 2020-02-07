@@ -79,6 +79,15 @@ public class DetailFragment extends Fragment {
 
         viewPager.setAdapter(viewPagerAdapter);
         tabLayout.setupWithViewPager(viewPager);
+
+        for(int i=0; i < tabLayout.getTabCount(); i++) {
+            if (i == 1){
+            View tab = ((ViewGroup) tabLayout.getChildAt(0)).getChildAt(i);
+            ViewGroup.MarginLayoutParams p = (ViewGroup.MarginLayoutParams) tab.getLayoutParams();
+            p.setMargins(50, 0, 0, 0);
+            tab.requestLayout();
+            }
+        }
     }
 
 

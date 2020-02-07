@@ -19,6 +19,7 @@ import androidx.fragment.app.FragmentTransaction;
 
 import com.example.hr_thema.R;
 
+import com.example.hr_thema.detail.DetailFragment;
 import com.example.hr_thema.home.HomeActivity;
 import com.example.hr_thema.home.HomeFragment;
 import com.example.hr_thema.lastActivities.LastActiviesFragment;
@@ -82,7 +83,7 @@ public class NavigationDrawer extends AppCompatActivity implements OnGoingFragme
                     return true;
                 } else if (id == R.id.navigation_notifications) {
                     //toolbar.setTitle(getResources().getString(R.string.title_notifications));
-                    loadFragment(new NotificationFragment());
+                    loadFragment(new DetailFragment());
                     return true;
                 } else if (id == R.id.navigation_settings) {
                     //toolbar.setTitle(getResources().getString(R.string.title_profile));
