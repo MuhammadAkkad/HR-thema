@@ -7,6 +7,7 @@
     android:id="@+id/login_activity_layout"
     tools:context=".login.LoginActivity">
 
+
     <com.google.android.material.button.MaterialButton
         android:id="@+id/button"
         android:layout_width="32dp"
@@ -33,8 +34,8 @@
 
     <ImageView
         android:id="@+id/imageView6"
-        android:layout_width="304dp"
-        android:layout_height="192dp"
+        android:layout_width="236dp"
+        android:layout_height="144dp"
         android:scaleType="fitXY"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -139,20 +140,20 @@
         app:layout_constraintStart_toStartOf="@+id/txt_user_name_activity_login"
         app:layout_constraintTop_toBottomOf="@+id/txt_user_name_activity_login" />
 
-        <EditText
-            android:id="@+id/tv_password_activity_login"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="10dp"
-            android:ems="17"
-            android:fontFamily="@font/lato"
-            android:hint="Password"
-            android:inputType="textPersonName"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tv_user_name_activity_login" />
-
+    <EditText
+        android:id="@+id/tv_password_activity_login"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:password="true"
+        android:fontFamily="@font/lato"
+        android:hint="Password"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_user_name_activity_login" />
 
         <CheckBox
             android:id="@+id/cb_remember_me_activity_login"

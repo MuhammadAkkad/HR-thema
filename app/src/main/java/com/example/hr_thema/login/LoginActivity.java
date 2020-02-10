@@ -56,6 +56,15 @@ public class LoginActivity extends AppCompatActivity {
 
         chbRemember = findViewById(R.id.cb_remember_me_activity_login);
 
+        txtWelcome.setText("Hoşgeldin");
+        rivProfilPhoto.setVisibility(View.GONE);
+        txtEMail.setVisibility(View.VISIBLE);
+        edtEMail.setVisibility(View.VISIBLE);
+        txtPassword.setVisibility(View.GONE);
+        txtOr.setVisibility(View.GONE);
+        btnOtherAccount.setVisibility(View.GONE);
+
+
         chbRemember.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
@@ -63,6 +72,10 @@ public class LoginActivity extends AppCompatActivity {
                     txtWelcome.setText("Hoşgeldin,Emre");
                     txtEMail.setVisibility(View.GONE);
                     edtEMail.setVisibility(View.GONE);
+                    rivProfilPhoto.setVisibility(View.VISIBLE);
+                    txtOr.setVisibility(View.VISIBLE);
+                    btnOtherAccount.setVisibility(View.VISIBLE);
+                    txtPassword.setVisibility(View.VISIBLE);
                 }
                 else{
                     txtWelcome.setText("Hoşgeldin");
