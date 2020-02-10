@@ -7,24 +7,21 @@
     android:id="@+id/welcome_page_layout"
     tools:context=".MainActivity">
 
+
     <com.smarteist.autoimageslider.SliderView
         android:id="@+id/imageSlider"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_alignParentBottom="true"
-        android:onClick="LoginPage"
         android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
-        app:sliderAnimationDuration="900"
+        app:sliderAnimationDuration="800"
         app:sliderAutoCycleDirection="back_and_forth"
         app:sliderAutoCycleEnabled="true"
         app:sliderCircularHandlerEnabled="true"
-        app:sliderIndicatorAnimationDuration="900"
+        app:sliderIndicatorAnimationDuration="800"
         app:sliderIndicatorGravity="center_horizontal|bottom"
         app:sliderIndicatorMargin="90dp"
         app:sliderIndicatorOrientation="horizontal"
@@ -33,8 +30,7 @@
         app:sliderIndicatorSelectedColor="#FFFFFF"
         app:sliderIndicatorUnselectedColor="#7D817A"
         app:sliderScrollTimeInSec="4"
-        app:sliderStartAutoCycle="true">
-    </com.smarteist.autoimageslider.SliderView>
+         />
 
 
     <ImageView
@@ -48,21 +44,20 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/logo" />
 
-
-    <com.google.android.material.button.MaterialButton
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn_login_activity_main"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
-        android:width="355dp"
-        android:height="60dp"
-        android:text="Giriş Yap"
-        android:textAllCaps="false"
-        android:textColor="#FFF"
-        app:cornerRadius="25dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="27dp"
+        android:layout_marginEnd="17dp"
+        android:fontFamily="@font/lato"
+        android:text="GEÇ"
+        android:textColor="#66FFFFFF"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:rippleColor="@color/colorPrimary" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
