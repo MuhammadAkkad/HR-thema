@@ -21,6 +21,574 @@
 
             <FrameLayout
                 android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_marginStart="13dp"
+                        android:layout_marginEnd="29dp"
+                        android:layout_marginBottom="30dp"
+                        android:orientation="vertical"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/img_operation_icon_fragment_operation"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <TextView
+                            android:id="@+id/txt_operation_author_fragment_operation"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/lato_bold"
+                            android:text="Boran GÖKBULUT"
+                            android:textColor="#3E4450"
+                            android:textSize="13sp" />
+
+                        <TextView
+                            android:id="@+id/txt_operation_title_fragment_operation"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/lato"
+                            android:text="Direktör"
+                            android:textColor=" #9A9A9A"
+                            android:textSize="9sp" />
+
+                        <TextView
+                            android:id="@+id/txt_operation_content_fragment_operation"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:fontFamily="@font/lato_italic"
+                            android:inputType="textMultiLine"
+                            android:text="Gönderilen talep Boran Gökbulut tarafından onaylandı."
+                            android:textColor="#505765"
+                            android:textSize="9sp" />
+                    </LinearLayout>
+
+                    <View
+                        android:id="@+id/divider"
+                        android:layout_width="2dp"
+                        android:layout_height="60dp"
+                        android:background="#C8C8C8"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="@+id/img_operation_icon_fragment_operation"
+                        app:layout_constraintStart_toStartOf="@+id/img_operation_icon_fragment_operation"
+                        app:layout_constraintTop_toBottomOf="@+id/img_operation_icon_fragment_operation" />
+
+                    <ImageView
+                        android:id="@+id/img_operation_icon_fragment_operation"
+                        android:layout_width="26dp"
+                        android:layout_height="26dp"
+                        android:layout_marginStart="35dp"
+                        android:src="@drawable/ic_wating"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_marginStart="13dp"
+                        android:layout_marginEnd="29dp"
+                        android:layout_marginBottom="30dp"
+                        android:orientation="vertical"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/img_operation_icon_fragment_operation3"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <TextView
+                            android:id="@+id/txt_operation_author_fragment_operation3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/lato_bold"
+                            android:text="Boran GÖKBULUT"
+                            android:textColor="#3E4450"
+                            android:textSize="13sp" />
+
+                        <TextView
+                            android:id="@+id/txt_operation_title_fragment_operation3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/lato"
+                            android:text="Direktör"
+                            android:textColor=" #9A9A9A"
+                            android:textSize="9sp" />
+
+                        <TextView
+                            android:id="@+id/txt_operation_content_fragment_operation3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:fontFamily="@font/lato_italic"
+                            android:inputType="textMultiLine"
+                            android:text="Gönderilen talep Boran Gökbulut tarafından onaylandı."
+                            android:textColor="#505765"
+                            android:textSize="9sp" />
+                    </LinearLayout>
+
+                    <View
+                        android:id="@+id/divider3"
+                        android:layout_width="2dp"
+                        android:layout_height="60dp"
+                        android:background="#C8C8C8"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="@+id/img_operation_icon_fragment_operation3"
+                        app:layout_constraintStart_toStartOf="@+id/img_operation_icon_fragment_operation3"
+                        app:layout_constraintTop_toBottomOf="@+id/img_operation_icon_fragment_operation3" />
+
+                    <ImageView
+                        android:id="@+id/img_operation_icon_fragment_operation3"
+                        android:layout_width="26dp"
+                        android:layout_height="26dp"
+                        android:layout_marginStart="35dp"
+                        android:src="@drawable/ic_wating"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_marginStart="13dp"
+                        android:layout_marginEnd="29dp"
+                        android:layout_marginBottom="30dp"
+                        android:orientation="vertical"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/img_operation_icon_fragment_operation2"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <TextView
+                            android:id="@+id/txt_operation_author_fragment_operation2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/lato_bold"
+                            android:text="Boran GÖKBULUT"
+                            android:textColor="#3E4450"
+                            android:textSize="13sp" />
+
+                        <TextView
+                            android:id="@+id/txt_operation_title_fragment_operation2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/lato"
+                            android:text="Direktör"
+                            android:textColor=" #9A9A9A"
+                            android:textSize="9sp" />
+
+                        <TextView
+                            android:id="@+id/txt_operation_content_fragment_operation2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:fontFamily="@font/lato_italic"
+                            android:inputType="textMultiLine"
+                            android:text="Gönderilen talep Boran Gökbulut tarafından onaylandı."
+                            android:textColor="#505765"
+                            android:textSize="9sp" />
+                    </LinearLayout>
+
+                    <View
+                        android:id="@+id/divider2"
+                        android:layout_width="2dp"
+                        android:layout_height="60dp"
+                        android:background="#C8C8C8"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="@+id/img_operation_icon_fragment_operation2"
+                        app:layout_constraintStart_toStartOf="@+id/img_operation_icon_fragment_operation2"
+                        app:layout_constraintTop_toBottomOf="@+id/img_operation_icon_fragment_operation2" />
+
+                    <ImageView
+                        android:id="@+id/img_operation_icon_fragment_operation2"
+                        android:layout_width="26dp"
+                        android:layout_height="26dp"
+                        android:layout_marginStart="35dp"
+                        android:src="@drawable/ic_done"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="13dp"
+                        android:layout_marginEnd="29dp"
+                        android:layout_marginBottom="30dp"
+                        android:orientation="vertical"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/img_operation_icon_fragment_operation1"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <TextView
+                            android:id="@+id/txt_operation_author_fragment_operation1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/lato_bold"
+                            android:text="Behiç TANAĞARDI"
+                            android:textColor="#3E4450"
+                            android:textSize="13sp" />
+
+                        <TextView
+                            android:id="@+id/txt_operation_title_fragment_operation1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/lato"
+                            android:text="Direktör"
+                            android:textColor=" #9A9A9A"
+                            android:textSize="9sp" />
+
+                        <TextView
+                            android:id="@+id/txt_operation_content_fragment_operation1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:fontFamily="@font/lato_italic"
+                            android:inputType="textMultiLine"
+                            android:text="Gönderilen talep aşağıdaki ilgili sebeple Behiç TANAĞARDI tarafından reddedildi.  Lorem Ipsum, dizgi ve baskı endüstrisinde kullanılan mıgır metinlerdir. Lorem Ipsum,  adı bilinmeyen bir matbaacının bir hurufat numune kitabı oluşturmak üzere bir yazı  galerisini alarak karıştırdığı 1500'lerden beri endüstri standardı"
+                            android:textColor="#505765"
+                            android:textSize="9sp" />
+                    </LinearLayout>
+
+                    <View
+                        android:id="@+id/divider1"
+                        android:layout_width="2dp"
+                        android:layout_height="0dp"
+                        android:background="#C8C8C8"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="@+id/img_operation_icon_fragment_operation1"
+                        app:layout_constraintStart_toStartOf="@+id/img_operation_icon_fragment_operation1"
+                        app:layout_constraintTop_toBottomOf="@+id/img_operation_icon_fragment_operation1" />
+
+                    <ImageView
+                        android:id="@+id/img_operation_icon_fragment_operation1"
+                        android:layout_width="26dp"
+                        android:layout_height="26dp"
+                        android:layout_marginStart="35dp"
+                        android:src="@drawable/ic_error"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_marginStart="13dp"
+                        android:layout_marginEnd="29dp"
+                        android:layout_marginBottom="30dp"
+                        android:orientation="vertical"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/img_operation_icon_fragment_operation"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <TextView
+                            android:id="@+id/txt_operation_author_fragment_operation"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/lato_bold"
+                            android:text="Boran GÖKBULUT"
+                            android:textColor="#3E4450"
+                            android:textSize="13sp" />
+
+                        <TextView
+                            android:id="@+id/txt_operation_title_fragment_operation"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/lato"
+                            android:text="Direktör"
+                            android:textColor=" #9A9A9A"
+                            android:textSize="9sp" />
+
+                        <TextView
+                            android:id="@+id/txt_operation_content_fragment_operation"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:fontFamily="@font/lato_italic"
+                            android:inputType="textMultiLine"
+                            android:text="Gönderilen talep Boran Gökbulut tarafından onaylandı."
+                            android:textColor="#505765"
+                            android:textSize="9sp" />
+                    </LinearLayout>
+
+                    <View
+                        android:id="@+id/divider"
+                        android:layout_width="2dp"
+                        android:layout_height="60dp"
+                        android:background="#C8C8C8"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="@+id/img_operation_icon_fragment_operation"
+                        app:layout_constraintStart_toStartOf="@+id/img_operation_icon_fragment_operation"
+                        app:layout_constraintTop_toBottomOf="@+id/img_operation_icon_fragment_operation" />
+
+                    <ImageView
+                        android:id="@+id/img_operation_icon_fragment_operation"
+                        android:layout_width="26dp"
+                        android:layout_height="26dp"
+                        android:layout_marginStart="35dp"
+                        android:src="@drawable/ic_wating"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_marginStart="13dp"
+                        android:layout_marginEnd="29dp"
+                        android:layout_marginBottom="30dp"
+                        android:orientation="vertical"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/img_operation_icon_fragment_operation3"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <TextView
+                            android:id="@+id/txt_operation_author_fragment_operation3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/lato_bold"
+                            android:text="Boran GÖKBULUT"
+                            android:textColor="#3E4450"
+                            android:textSize="13sp" />
+
+                        <TextView
+                            android:id="@+id/txt_operation_title_fragment_operation3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/lato"
+                            android:text="Direktör"
+                            android:textColor=" #9A9A9A"
+                            android:textSize="9sp" />
+
+                        <TextView
+                            android:id="@+id/txt_operation_content_fragment_operation3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:fontFamily="@font/lato_italic"
+                            android:inputType="textMultiLine"
+                            android:text="Gönderilen talep Boran Gökbulut tarafından onaylandı."
+                            android:textColor="#505765"
+                            android:textSize="9sp" />
+                    </LinearLayout>
+
+                    <View
+                        android:id="@+id/divider3"
+                        android:layout_width="2dp"
+                        android:layout_height="60dp"
+                        android:background="#C8C8C8"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="@+id/img_operation_icon_fragment_operation3"
+                        app:layout_constraintStart_toStartOf="@+id/img_operation_icon_fragment_operation3"
+                        app:layout_constraintTop_toBottomOf="@+id/img_operation_icon_fragment_operation3" />
+
+                    <ImageView
+                        android:id="@+id/img_operation_icon_fragment_operation3"
+                        android:layout_width="26dp"
+                        android:layout_height="26dp"
+                        android:layout_marginStart="35dp"
+                        android:src="@drawable/ic_wating"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_marginStart="13dp"
+                        android:layout_marginEnd="29dp"
+                        android:layout_marginBottom="30dp"
+                        android:orientation="vertical"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/img_operation_icon_fragment_operation2"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <TextView
+                            android:id="@+id/txt_operation_author_fragment_operation2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/lato_bold"
+                            android:text="Boran GÖKBULUT"
+                            android:textColor="#3E4450"
+                            android:textSize="13sp" />
+
+                        <TextView
+                            android:id="@+id/txt_operation_title_fragment_operation2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/lato"
+                            android:text="Direktör"
+                            android:textColor=" #9A9A9A"
+                            android:textSize="9sp" />
+
+                        <TextView
+                            android:id="@+id/txt_operation_content_fragment_operation2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:fontFamily="@font/lato_italic"
+                            android:inputType="textMultiLine"
+                            android:text="Gönderilen talep Boran Gökbulut tarafından onaylandı."
+                            android:textColor="#505765"
+                            android:textSize="9sp" />
+                    </LinearLayout>
+
+                    <View
+                        android:id="@+id/divider2"
+                        android:layout_width="2dp"
+                        android:layout_height="60dp"
+                        android:background="#C8C8C8"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="@+id/img_operation_icon_fragment_operation2"
+                        app:layout_constraintStart_toStartOf="@+id/img_operation_icon_fragment_operation2"
+                        app:layout_constraintTop_toBottomOf="@+id/img_operation_icon_fragment_operation2" />
+
+                    <ImageView
+                        android:id="@+id/img_operation_icon_fragment_operation2"
+                        android:layout_width="26dp"
+                        android:layout_height="26dp"
+                        android:layout_marginStart="35dp"
+                        android:src="@drawable/ic_done"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="13dp"
+                        android:layout_marginEnd="29dp"
+                        android:layout_marginBottom="30dp"
+                        android:orientation="vertical"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/img_operation_icon_fragment_operation1"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <TextView
+                            android:id="@+id/txt_operation_author_fragment_operation1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/lato_bold"
+                            android:text="Behiç TANAĞARDI"
+                            android:textColor="#3E4450"
+                            android:textSize="13sp" />
+
+                        <TextView
+                            android:id="@+id/txt_operation_title_fragment_operation1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/lato"
+                            android:text="Direktör"
+                            android:textColor=" #9A9A9A"
+                            android:textSize="9sp" />
+
+                        <TextView
+                            android:id="@+id/txt_operation_content_fragment_operation1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:fontFamily="@font/lato_italic"
+                            android:inputType="textMultiLine"
+                            android:text="Gönderilen talep aşağıdaki ilgili sebeple Behiç TANAĞARDI tarafından reddedildi.  Lorem Ipsum, dizgi ve baskı endüstrisinde kullanılan mıgır metinlerdir. Lorem Ipsum,  adı bilinmeyen bir matbaacının bir hurufat numune kitabı oluşturmak üzere bir yazı  galerisini alarak karıştırdığı 1500'lerden beri endüstri standardı"
+                            android:textColor="#505765"
+                            android:textSize="9sp" />
+                    </LinearLayout>
+
+                    <View
+                        android:id="@+id/divider1"
+                        android:layout_width="2dp"
+                        android:layout_height="0dp"
+                        android:background="#C8C8C8"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="@+id/img_operation_icon_fragment_operation1"
+                        app:layout_constraintStart_toStartOf="@+id/img_operation_icon_fragment_operation1"
+                        app:layout_constraintTop_toBottomOf="@+id/img_operation_icon_fragment_operation1" />
+
+                    <ImageView
+                        android:id="@+id/img_operation_icon_fragment_operation1"
+                        android:layout_width="26dp"
+                        android:layout_height="26dp"
+                        android:layout_marginStart="35dp"
+                        android:src="@drawable/ic_error"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
