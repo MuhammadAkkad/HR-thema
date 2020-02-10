@@ -1,5 +1,7 @@
 package com.example.hr_thema.detail;
 
+import android.app.Activity;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 
@@ -15,6 +17,7 @@ import android.view.ViewGroup;
 
 import com.example.hr_thema.R;
 import com.example.hr_thema.comment.CommentFragment;
+import com.example.hr_thema.navigationDrawer.NavigationDrawer;
 import com.example.hr_thema.operation.OperationsFragment;
 import com.google.android.material.tabs.TabLayout;
 
@@ -65,6 +68,17 @@ public class DetailFragment extends Fragment {
     public interface OnFragmentInteractionListener {
         // TODO: Update argument type and name
         void onFragmentInteraction(Uri uri);
+    }
+
+    @Override
+    public void onDetach() {
+//        getActivity().onBackPressed();
+        super.onDetach();
+    }
+
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
     }
 
     @Override

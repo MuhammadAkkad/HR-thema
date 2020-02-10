@@ -39,6 +39,7 @@ public class NavigationDrawer extends AppCompatActivity implements OnGoingFragme
     BottomNavigationView bottomNavigationView;
     private AdvanceDrawerLayout drawer;
     View v;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -98,11 +99,13 @@ public class NavigationDrawer extends AppCompatActivity implements OnGoingFragme
 
     @Override
     public void onBackPressed() {
-        if (drawer.isDrawerOpen(GravityCompat.START)) {
-            drawer.closeDrawer(GravityCompat.START);
-        } else {
-            super.onBackPressed();
-        }
+        Intent i = new Intent(this,NavigationDrawer.class);
+        startActivity(i);
+//        if (drawer.isDrawerOpen(GravityCompat.START)) {
+//            drawer.closeDrawer(GravityCompat.START);
+//        } else {
+//            super.onBackPressed();
+//        }
     }
 
     @SuppressWarnings("StatementWithEmptyBody")
