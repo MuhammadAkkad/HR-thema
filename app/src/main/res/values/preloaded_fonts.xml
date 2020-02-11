@@ -4,6 +4,7 @@
         <item>@font/lato</item>
         <item>@font/lato_bold</item>
         <item>@font/lato_italic</item>
+        <item>@font/lato_light</item>
         <item>@font/lato_thin</item>
     </array>
 </resources>

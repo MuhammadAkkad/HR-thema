@@ -59,6 +59,7 @@
         android:layout_height="35dp"
         android:layout_marginStart="17dp"
         android:layout_marginTop="80dp"
+        android:fontFamily="@font/lato_bold"
         android:text="Hoşgeldin, Emre"
         android:textColor="#000000"
         android:textSize="26dp"
@@ -85,6 +86,7 @@
         android:layout_height="50dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="42dp"
+        android:fontFamily="@font/lato_light"
         android:text="Aşağıdaki formu doldurarak giriş yapabilirsin."
         android:textColor="#A1A5AF"
         android:textSize="21dp"
@@ -99,6 +101,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:fontFamily="@font/lato"
+        android:paddingStart="2dp"
         android:text="E-Mail"
         android:textColor="#2BB8E1"
         android:textSize="20sp"
@@ -112,13 +115,16 @@
 
 
     <EditText
-        android:focusable="true"
         android:id="@+id/tv_user_name_activity_login"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="-1dp"
+        android:backgroundTint=" #A1A5AF"
         android:ems="17"
-        android:fontFamily="@font/lato"
+        android:focusable="true"
+        android:fontFamily="@font/lato_light"
         android:inputType="textPersonName"
+        android:textSize="26sp"
         android:visibility="visible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/txt_user_name_activity_login"
@@ -131,6 +137,7 @@
         android:layout_marginStart="20dp"
         android:layout_marginTop="8dp"
         android:fontFamily="@font/lato"
+        android:paddingStart="2dp"
         android:text="Password"
         android:textColor="#808080"
         android:textSize="20sp"
@@ -139,15 +146,17 @@
         app:layout_constraintTop_toBottomOf="@+id/tv_user_name_activity_login" />
 
     <EditText
-        android:focusable="true"
         android:id="@+id/tv_password_activity_login"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
+        android:backgroundTint=" #A1A5AF"
         android:ems="10"
-        android:fontFamily="@font/lato"
+        android:focusable="true"
+        android:fontFamily="@font/lato_light"
         android:inputType="textPersonName"
         android:password="true"
+        android:textSize="26sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txt_password_activity_login2" />
@@ -156,11 +165,12 @@
         android:id="@+id/cb_remember_me_activity_login"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="18dp"
         android:fontFamily="@font/lato"
         android:text="Beni Hatırla"
         android:textColor="#B1B1B1"
         android:theme="@style/MyEditText"
-        app:layout_constraintStart_toStartOf="@+id/tv_password_activity_login"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_password_activity_login" />
 
     <TextView
