@@ -148,8 +148,10 @@
             app:layout_constraintTop_toBottomOf="@+id/txt_operation_summery_detail_fragment"
             app:tabBackground="@drawable/tabitem_selected"
             app:tabIndicatorColor="@color/transparentColor"
+            app:tabRippleColor="@color/transparentColor"
             app:tabSelectedTextColor="#FFF"
-            app:tabTextColor="#A79BB8">
+            app:tabTextColor="#A79BB8"
+            app:tabUnboundedRipple="false">
 
             <com.google.android.material.tabs.TabItem
                 android:id="@+id/tabItem"

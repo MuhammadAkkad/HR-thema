@@ -20,4 +20,9 @@
     <style name="CustomAlertDialog" parent="Theme.MaterialComponents.Light.Dialog.Alert">
         <item name="android:windowBackground">@drawable/popup_background</item>
     </style>
+
+    <style name="fontFamily" parent="@style/Widget.Design.NavigationView">
+        <item name="fontFamily">@font/lato</item>
+        <item name="android:background"> @color/transparentColor</item>
+    </style>
 </resources>
