@@ -14,7 +14,6 @@
         android:id="@+id/images"
         android:layout_width="82dp"
         android:layout_height="82dp"
-        android:layout_marginStart="16dp"
         android:layout_marginTop="15dp"
         android:baselineAlignBottom="false"
         android:elevation="10dp"
@@ -49,13 +48,6 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/txt_operation_title_detail_fragment"
         app:layout_constraintTop_toBottomOf="@+id/txt_operation_title_detail_fragment" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_begin="16dp" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

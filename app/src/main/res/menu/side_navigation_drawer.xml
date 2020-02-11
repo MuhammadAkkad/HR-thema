@@ -25,11 +25,19 @@
         <item
             android:id="@+id/Yönetim"
             android:icon="@drawable/ic_group_4_copy"
-            android:title="Notification" />
+            android:title="Yönetim" />
         <item
             android:id="@+id/Organizasyon_Şeması"
             android:icon="@drawable/ic_cogwheel"
-            android:title="Notification" />
+            android:title="Organizasyon Şeması" />
+
+    </group>
+
+    <group>
+        <item
+            android:id="@+id/Ayarlar"
+            android:icon="@drawable/ic_cogwheel"
+            android:title="Ayarlar" />
     </group>
 
 <!--    <?xml version="1.0" encoding="utf-8"?>-->

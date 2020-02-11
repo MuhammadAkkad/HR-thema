@@ -20,11 +20,29 @@
         android:layout_height="match_parent"
         android:layout_gravity="start"
         android:background="@drawable/gradiant_background"
+        android:paddingStart="20dp"
         android:visibility="visible"
         app:headerLayout="@layout/nav_header_main"
         app:itemIconTint="@color/SideNavigationIconText"
         app:itemTextColor="@color/SideNavigationIconText"
-        app:menu="@menu/side_navigation_drawer" />
+        app:menu="@menu/side_navigation_drawer" >
+
+        <Button
+            android:id="@+id/btn_signout"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginStart="6dp"
+            android:layout_marginBottom="34dp"
+            android:backgroundTint="#00FFFFFF"
+            android:fontFamily="@font/lato"
+            android:text="Çıkış yap"
+            android:textAllCaps="false"
+            android:textSize="15sp"
+            app:icon="@drawable/ic_cogwheel"
+            app:iconSize="15dp" />
+    </com.google.android.material.navigation.NavigationView>
 
 
 </com.infideap.drawerbehavior.AdvanceDrawerLayout>
