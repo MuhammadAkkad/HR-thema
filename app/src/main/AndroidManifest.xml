@@ -12,6 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".chooseOperation.ChooseOperationActivity">
+
         </activity>
         <activity android:name=".navigationDrawer.NavigationDrawer" />
         <activity android:name=".MainActivity">

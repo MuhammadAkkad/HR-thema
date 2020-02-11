@@ -37,7 +37,6 @@ public class Slider extends
     @Override
     public void onBindViewHolder(SliderAdapterVH viewHolder, final int position) {
 
-
         viewHolder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -76,9 +75,7 @@ public class Slider extends
                 viewHolder.textViewDescription.setText(description);
                 Glide.with(viewHolder.itemView);
                 break;
-
         }
-
     }
 
     @Override

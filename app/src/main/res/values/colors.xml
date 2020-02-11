@@ -15,6 +15,8 @@
     <color name="SideNavigationIconText">#FFFFFF</color>
     <color name="SideNavigationBackgroundColor">#4353C7</color>
     <color name="transparentColor">#00FFFFFF</color>
+    <color name="specialBlue">#2BB8E1</color>
+    <color name="specialGray">#808080</color>
 
 
 </resources>

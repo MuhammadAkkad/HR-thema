@@ -19,6 +19,7 @@ import androidx.fragment.app.FragmentTransaction;
 
 import com.example.hr_thema.R;
 
+import com.example.hr_thema.chooseOperation.ChooseOperationActivity;
 import com.example.hr_thema.detail.DetailFragment;
 import com.example.hr_thema.home.HomeActivity;
 import com.example.hr_thema.home.HomeFragment;
@@ -88,7 +89,9 @@ public class NavigationDrawer extends AppCompatActivity implements OnGoingFragme
                     return true;
                 } else if (id == R.id.navigation_settings) {
                     //toolbar.setTitle(getResources().getString(R.string.title_profile));
-                    loadFragment(new LastActiviesFragment());
+//                    loadFragment(new LastActiviesFragment());
+                    Intent i = new Intent(getApplicationContext(), ChooseOperationActivity.class);
+                    startActivity(i);
                     return true;
                 }
                 return true;

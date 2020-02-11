@@ -22,7 +22,7 @@
         android:id="@+id/imageButton"
         android:layout_width="31dp"
         android:layout_height="31dp"
-        android:layout_marginStart="16dp"
+        android:layout_marginStart="28dp"
         android:layout_marginTop="20dp"
         android:background="@color/transparentColor"
         android:scaleType="fitXY"
@@ -140,5 +140,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent" />
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

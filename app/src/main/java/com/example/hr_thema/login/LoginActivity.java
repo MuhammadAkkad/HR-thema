@@ -1,5 +1,6 @@
 package com.example.hr_thema.login;
 
+import android.annotation.SuppressLint;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
@@ -13,6 +14,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 
 import com.example.hr_thema.R;
 import com.example.hr_thema.navigationDrawer.NavigationDrawer;
@@ -32,7 +34,6 @@ public class LoginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-
 
         btn_sign_in = findViewById(R.id.btn_sign_in_activity_login);
         context = this;
@@ -60,15 +61,32 @@ public class LoginActivity extends AppCompatActivity {
         rivProfilPhoto.setVisibility(View.GONE);
         txtEMail.setVisibility(View.VISIBLE);
         edtEMail.setVisibility(View.VISIBLE);
-        txtPassword.setVisibility(View.GONE);
+        txtPassword.setVisibility(View.VISIBLE);
         txtOr.setVisibility(View.GONE);
         btnOtherAccount.setVisibility(View.GONE);
+
+        edtPassword.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+            @Override
+            public void onFocusChange(View v, boolean hasFocus) {
+                txtPassword.setTextColor(ContextCompat.getColor(context, R.color.specialBlue));
+                txtEMail.setTextColor(ContextCompat.getColor(context, R.color.specialGray));
+            }
+        });
+
+       edtEMail.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+           @Override
+           public void onFocusChange(View v, boolean hasFocus) {
+               txtPassword.setTextColor(ContextCompat.getColor(context, R.color.specialGray));
+               txtEMail.setTextColor(ContextCompat.getColor(context, R.color.specialBlue));
+           }
+       });
 
 
         chbRemember.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if(isChecked == true){
+                    txtPassword.setTextColor(ContextCompat.getColor(context, R.color.specialBlue));
                     txtWelcome.setText("Hoşgeldin,Emre");
                     txtEMail.setVisibility(View.GONE);
                     edtEMail.setVisibility(View.GONE);
@@ -78,11 +96,12 @@ public class LoginActivity extends AppCompatActivity {
                     txtPassword.setVisibility(View.VISIBLE);
                 }
                 else{
+                    txtPassword.setTextColor(ContextCompat.getColor(context, R.color.specialGray));
                     txtWelcome.setText("Hoşgeldin");
                     rivProfilPhoto.setVisibility(View.GONE);
                     txtEMail.setVisibility(View.VISIBLE);
                     edtEMail.setVisibility(View.VISIBLE);
-                    txtPassword.setVisibility(View.GONE);
+                    txtPassword.setVisibility(View.VISIBLE);
                     txtOr.setVisibility(View.GONE);
                     btnOtherAccount.setVisibility(View.GONE);
                 }
