@@ -1,4 +1,4 @@
-package com.example.hr_thema.menu;
+package com.example.hr_thema.bottomNav.menu;
 
 
 import android.os.Bundle;

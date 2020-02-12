@@ -6,8 +6,8 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 
-import com.example.hr_thema.comment.CommentFragment;
-import com.example.hr_thema.operation.OperationsFragment;
+import com.example.hr_thema.detail.comment.CommentFragment;
+import com.example.hr_thema.detail.operation.OperationsFragment;
 
 import java.util.ArrayList;
 import java.util.List;

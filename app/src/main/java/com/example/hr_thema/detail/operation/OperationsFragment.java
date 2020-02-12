@@ -1,4 +1,4 @@
-package com.example.hr_thema.operation;
+package com.example.hr_thema.detail.operation;
 
 import android.net.Uri;
 import android.os.Bundle;

@@ -15,10 +15,10 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
 import com.example.hr_thema.R;
-import com.example.hr_thema.chooseOperation.ChooseOperationActivity;
+import com.example.hr_thema.detail.chooseOperation.ChooseOperationActivity;
 import com.example.hr_thema.detail.DetailFragment;
-import com.example.hr_thema.home.HomeFragment;
-import com.example.hr_thema.menu.MenuFragment;
+import com.example.hr_thema.bottomNav.lastActivities.LastActivitiesFragment;
+import com.example.hr_thema.bottomNav.menu.MenuFragment;
 import com.google.android.material.badge.BadgeDrawable;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationView;
@@ -50,7 +50,7 @@ public class NavigationDrawer extends AppCompatActivity implements IDrawerListen
         drawer.setViewElevation(Gravity.START, 30);
 
         // TODO: Homefragment deleted repace with home activity
-        loadFragment(new HomeFragment());
+        loadFragment(new LastActivitiesFragment());
 
         navigation = findViewById(R.id.bottom_navigation);
         navigation.setItemIconTintList(null);
@@ -65,7 +65,7 @@ public class NavigationDrawer extends AppCompatActivity implements IDrawerListen
                     badgeDrawable.setNumber(51);
 
 
-                    loadFragment(new HomeFragment());
+                    loadFragment(new LastActivitiesFragment());
                     return true;
                 } else if (id == R.id.navigation_menu) {
                     loadFragment(new MenuFragment());

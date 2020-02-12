@@ -1,9 +1,8 @@
-package com.example.hr_thema.chooseOperation;
+package com.example.hr_thema.detail.chooseOperation;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
-import android.widget.EditText;
 
 import com.example.hr_thema.R;
 

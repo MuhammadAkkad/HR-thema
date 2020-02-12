@@ -11,7 +11,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".chooseOperation.ChooseOperationActivity">
+        <activity android:name=".detail.chooseOperation.ChooseOperationActivity">
 
         </activity>
         <activity android:name=".navigationDrawer.NavigationDrawer" />
@@ -23,7 +23,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".login.LoginActivity" />
-        <activity android:name=".home.HomeActivity" />
+        <activity android:name=".bottomNav.lastActivities.LastActivitiesActivity" />
 
         <meta-data
             android:name="preloaded_fonts"

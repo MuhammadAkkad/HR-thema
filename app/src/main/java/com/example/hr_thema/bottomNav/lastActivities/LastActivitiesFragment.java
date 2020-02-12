@@ -1,6 +1,5 @@
-package com.example.hr_thema.home;
+package com.example.hr_thema.bottomNav.lastActivities;
 
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
@@ -20,19 +19,16 @@ import com.example.hr_thema.detail.DetailFragment;
 import com.example.hr_thema.navigationDrawer.IDrawerListener;
 
 
-public class HomeFragment extends Fragment {
+public class LastActivitiesFragment extends Fragment {
 
     Button btnFilter;
     ImageButton drawer_trigger;
     View view;
     CardView activity;
 
-
-
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        view = inflater.inflate(R.layout.fragment_home, container, false);
+        view = inflater.inflate(R.layout.fragment_last_activities, container, false);
 
         // Opens navigation drawer
         drawer_trigger = view.findViewById(R.id.btn_trigger_drawer);

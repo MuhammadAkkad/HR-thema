@@ -1,4 +1,4 @@
-package com.example.hr_thema.comment;
+package com.example.hr_thema.detail.comment;
 
 import android.net.Uri;
 import android.os.Bundle;
