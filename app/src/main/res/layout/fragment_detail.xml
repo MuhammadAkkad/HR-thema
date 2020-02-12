@@ -8,7 +8,6 @@
     tools:context=".detail.DetailFragment">
 
     <ImageView
-        android:id="@+id/imageView3"
         android:layout_width="0dp"
         android:layout_height="340dp"
         android:scaleType="centerCrop"
@@ -166,36 +165,6 @@
                 android:text="YORUMLAR" />
 
         </com.google.android.material.tabs.TabLayout>
-
-        <!--
-        <com.google.android.material.tabs.TabLayout
-            android:id="@+id/tabLayout"
-            android:layout_width="0dp"
-            android:layout_height="40dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-
-            app:tabSelectedTextColor="#FFF"
-            app:tabTextColor="#A79BB8">
-
-            <com.google.android.material.tabs.TabItem
-                android:id="@+id/tabItem"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="İŞLEMLER" />
-
-            <com.google.android.material.tabs.TabItem
-                android:id="@+id/tabItem2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="YORUMLAR" />
-
-        </com.google.android.material.tabs.TabLayout>
-
-
--->
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

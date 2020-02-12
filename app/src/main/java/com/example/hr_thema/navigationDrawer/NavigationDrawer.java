@@ -1,9 +1,7 @@
 package com.example.hr_thema.navigationDrawer;
 
-import android.app.Dialog;
 import android.content.Intent;
 import android.graphics.Color;
-import android.graphics.ColorFilter;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.MenuItem;
@@ -14,32 +12,24 @@ import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.view.GravityCompat;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import com.example.hr_thema.R;
-
 import com.example.hr_thema.chooseOperation.ChooseOperationActivity;
 import com.example.hr_thema.detail.DetailFragment;
-import com.example.hr_thema.home.HomeActivity;
 import com.example.hr_thema.home.HomeFragment;
-import com.example.hr_thema.lastActivities.LastActiviesFragment;
 import com.example.hr_thema.menu.MenuFragment;
-import com.example.hr_thema.notification.NotificationFragment;
-import com.example.hr_thema.ongoin.OnGoingFragment;
-import com.example.hr_thema.settings.SettingsFragment;
 import com.google.android.material.badge.BadgeDrawable;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
-import com.google.android.material.bottomnavigation.LabelVisibilityMode;
 import com.google.android.material.navigation.NavigationView;
 import com.infideap.drawerbehavior.AdvanceDrawerLayout;
 
-public class NavigationDrawer extends AppCompatActivity implements OnGoingFragment.ListenerOnGoingFragment, IDrawerListener, NavigationView.OnNavigationItemSelectedListener {
+public class NavigationDrawer extends AppCompatActivity implements IDrawerListener, NavigationView.OnNavigationItemSelectedListener {
     BottomNavigationView navigation;
     ImageView usrImg;
     BottomNavigationView bottomNavigationView;
-    private AdvanceDrawerLayout drawer;
     View v;
+    private AdvanceDrawerLayout drawer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -75,7 +65,6 @@ public class NavigationDrawer extends AppCompatActivity implements OnGoingFragme
                     badgeDrawable.setNumber(51);
 
 
-
                     loadFragment(new HomeFragment());
                     return true;
                 } else if (id == R.id.navigation_menu) {
@@ -97,7 +86,7 @@ public class NavigationDrawer extends AppCompatActivity implements OnGoingFragme
 
     @Override
     public void onBackPressed() {
-        Intent i = new Intent(this,NavigationDrawer.class);
+        Intent i = new Intent(this, NavigationDrawer.class);
         startActivity(i);
     }
 
@@ -120,10 +109,5 @@ public class NavigationDrawer extends AppCompatActivity implements OnGoingFragme
     @Override
     public void OpenDrawer() {
         drawer.openDrawer(GravityCompat.START);
-    }
-
-    @Override
-    public void openDetail() {
-
     }
 }
