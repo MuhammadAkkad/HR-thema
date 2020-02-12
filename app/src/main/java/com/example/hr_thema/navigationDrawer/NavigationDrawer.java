@@ -64,7 +64,6 @@ public class NavigationDrawer extends AppCompatActivity implements OnGoingFragme
 
         navigation = findViewById(R.id.bottom_navigation);
         navigation.setItemIconTintList(null);
-        //navigation.setLabelVisibilityMode(LabelVisibilityMode.LABEL_VISIBILITY_UNLABELED);
         navigation.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(MenuItem menuItem) {
@@ -80,16 +79,12 @@ public class NavigationDrawer extends AppCompatActivity implements OnGoingFragme
                     loadFragment(new HomeFragment());
                     return true;
                 } else if (id == R.id.navigation_menu) {
-                    //toolbar.setTitle(getResources().getString(R.string.title_category));
                     loadFragment(new MenuFragment());
                     return true;
                 } else if (id == R.id.navigation_notifications) {
-                    //toolbar.setTitle(getResources().getString(R.string.title_notifications));
                     loadFragment(new DetailFragment());
                     return true;
                 } else if (id == R.id.navigation_settings) {
-                    //toolbar.setTitle(getResources().getString(R.string.title_profile));
-//                    loadFragment(new LastActiviesFragment());
                     Intent i = new Intent(getApplicationContext(), ChooseOperationActivity.class);
                     startActivity(i);
                     return true;
@@ -104,11 +99,6 @@ public class NavigationDrawer extends AppCompatActivity implements OnGoingFragme
     public void onBackPressed() {
         Intent i = new Intent(this,NavigationDrawer.class);
         startActivity(i);
-//        if (drawer.isDrawerOpen(GravityCompat.START)) {
-//            drawer.closeDrawer(GravityCompat.START);
-//        } else {
-//            super.onBackPressed();
-//        }
     }
 
     @SuppressWarnings("StatementWithEmptyBody")
@@ -134,14 +124,6 @@ public class NavigationDrawer extends AppCompatActivity implements OnGoingFragme
 
     @Override
     public void openDetail() {
-       // HomeFragment HomeFragment = new HomeFragment();
-        FragmentManager fragmentManager = getSupportFragmentManager();
-        // TODO: Homefragment deleted repace with home activity
-        //HomeFragment.openDetailShow(fragmentManager);
-    }
-    Dialog dialog;
-    @Override
-    public void openFilters(View view) {
 
     }
 }

@@ -1,19 +1,13 @@
 package com.example.hr_thema.ongoin;
 
-import android.app.Dialog;
-import android.content.DialogInterface;
-import android.graphics.drawable.ColorDrawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.appcompat.app.AlertDialog;
 import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 
@@ -34,9 +28,6 @@ public class OnGoingFragment extends Fragment {
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
     CardView cardView;
-    Dialog myDialog;
-    Button btn3;
-    Button btnFilter;
     private OnFragmentInteractionListener mListener;
 
     public OnGoingFragment() {
@@ -74,38 +65,8 @@ public class OnGoingFragment extends Fragment {
             }
         });
 
-        btnFilter = view.findViewById(R.id.btn_filters);
-        btnFilter.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                alertDialog();
-                //dialogShow();
-                //openFilter(v);
-                //ListenerOnGoingFragment listenerOnGoingFragment = (ListenerOnGoingFragment) getActivity();
-                //listenerOnGoingFragment.openFilters(v);
-            }
-        });
     }
 
-    public void dialogShow() {
-        View child = getLayoutInflater().inflate(R.layout.activity_filter, null);
-        myDialog.setContentView(child);
-
-        // Window window = myDialog.getWindow();
-        // WindowManager.LayoutParams wlp = window.getAttributes();
-
-        // wlp.gravity = Gravity.CENTER;
-        // window.setAttributes(wlp);
-
-        myDialog.getWindow().setBackgroundDrawable(new ColorDrawable());
-        myDialog.show();
-    }
-
-//    public void openFilter(View view) {
-//        dialog.setContentView(R.layout.activity_filter);
-//        dialog.getWindow().setBackgroundDrawable(new ColorDrawable());
-//        dialog.show();
-//    }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -120,17 +81,9 @@ public class OnGoingFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
 
 
         return inflater.inflate(R.layout.fragment_on_going, container, false);
-    }
-
-    // TODO: Rename method, update argument and hook method into UI event
-    public void onButtonPressed(Uri uri) {
-        if (mListener != null) {
-            mListener.onFragmentInteraction(uri);
-        }
     }
 
     @Override
@@ -139,43 +92,12 @@ public class OnGoingFragment extends Fragment {
         mListener = null;
     }
 
-    private void alertDialog() {
-        AlertDialog.Builder dialog = new AlertDialog.Builder(getActivity(), R.style.CustomAlertDialog);
-        LayoutInflater inflater = requireActivity().getLayoutInflater();
-        dialog.setView(inflater.inflate(R.layout.pop_up_layout, null));
-        dialog.setPositiveButton("YES",
-                new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog,
-                                        int which) {
-                        Toast.makeText(getContext(), "Yes is clicked", Toast.LENGTH_LONG).show();
-                    }
-                });
-        dialog.setNegativeButton("cancel", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                Toast.makeText(getContext(), "cancel is clicked", Toast.LENGTH_LONG).show();
-            }
-        });
-        AlertDialog alertDialog = dialog.create();
-        alertDialog.show();
-    }
-
     public interface ListenerOnGoingFragment {
         void openDetail();
 
-        void openFilters(View v);
     }
 
-    /**
-     * This interface must be implemented by activities that contain this
-     * fragment to allow an interaction in this fragment to be communicated
-     * to the activity and potentially other fragments contained in that
-     * activity.
-     * <p>
-     * See the Android Training lesson <a href=
-     * "http://developer.android.com/training/basics/fragments/communicating.html"
-     * >Communicating with Other Fragments</a> for more information.
-     */
+
     public interface OnFragmentInteractionListener {
         // TODO: Update argument type and name
         void onFragmentInteraction(Uri uri);
