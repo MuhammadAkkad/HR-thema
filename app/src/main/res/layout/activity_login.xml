@@ -227,11 +227,12 @@
         android:id="@+id/btn_another_account_sign_in_activity_login"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="30dp"
+        android:layout_marginBottom="28dp"
         android:width="355dp"
         android:height="60dp"
         android:backgroundTint="#FFFFFF"
         android:fontFamily="@font/lato"
+        android:ems="1"
         android:text="Başka bir kullanıcı ile giriş yap"
         android:textAllCaps="false"
         android:textColor="#838383"
@@ -240,6 +241,7 @@
         app:cornerRadius="25dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/btn_sign_in_activity_login"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/btn_sign_in_activity_login" />
 
 

@@ -1,5 +1,7 @@
 package com.example.hr_thema.bottomNav.lastActivities;
 
+import android.animation.Animator;
+import android.animation.AnimatorListenerAdapter;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
@@ -8,6 +10,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.PopupMenu;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.cardview.widget.CardView;
@@ -26,6 +29,10 @@ public class LastActivitiesFragment extends Fragment {
     View view;
     CardView activity;
 
+    ImageButton arrow;
+    TextView testText;
+    private int shortAnimationDuration;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.fragment_last_activities, container, false);
@@ -37,8 +44,6 @@ public class LastActivitiesFragment extends Fragment {
             public void onClick(View v) {
                 IDrawerListener drawerListener = (IDrawerListener) getActivity();
                 drawerListener.OpenDrawer();
-
-
             }
         });
 
@@ -59,6 +64,27 @@ public class LastActivitiesFragment extends Fragment {
             }
         });
 
+
+        arrow = view.findViewById(R.id.imageView4);
+        testText = view.findViewById(R.id.textView4);
+        testText.setVisibility(View.GONE);
+
+
+
+        arrow.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getContext(), "Clicked", Toast.LENGTH_SHORT).show();
+                if(testText.getVisibility() == View.GONE){
+                    crossfade();}
+                else {
+                    crossfade();
+                }
+            }
+        });
+
+
+
         // TODO : open one activity from son aktiviteler
         activity = view.findViewById(R.id.activity_card_view);
         activity.setOnClickListener(new View.OnClickListener() {
@@ -73,6 +99,24 @@ public class LastActivitiesFragment extends Fragment {
         });
 
         return view;
+    }
+
+
+    private void crossfade() {
+        shortAnimationDuration = getResources().getInteger(
+                android.R.integer.config_longAnimTime);
+        // Set the content view to 0% opacity but visible, so that it is visible
+        // (but fully transparent) during the animation.
+        testText.setAlpha(0f);
+        testText.setVisibility(View.VISIBLE);
+
+        // Animate the content view to 100% opacity, and clear any animation
+        // listener set on the view.
+        testText.animate()
+                .alpha(1f)
+                .setDuration(shortAnimationDuration)
+                .setListener(null);
+
     }
 
 
