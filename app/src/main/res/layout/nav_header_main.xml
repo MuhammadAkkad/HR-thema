@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="@dimen/nav_header_height"
     android:gravity="bottom"
@@ -42,12 +43,24 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/user_title"
-        android:textColor="#99FFFFFF"
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="@+id/txt_operation_title_detail_fragment"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/txt_operation_title_detail_fragment"
         app:layout_constraintTop_toBottomOf="@+id/txt_operation_title_detail_fragment" />
 
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="32dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="13dp"
+        android:backgroundTint="#FFFF"
+        android:padding="1dp"
+        android:text="TR"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toBottomOf="@+id/textView"
+        app:layout_constraintStart_toEndOf="@+id/txt_operation_title_detail_fragment"
+        app:layout_constraintTop_toTopOf="@+id/txt_operation_title_detail_fragment"
+        app:strokeColor="#000000"
+        app:strokeWidth="1dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

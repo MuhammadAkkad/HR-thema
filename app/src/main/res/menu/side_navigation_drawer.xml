@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/anasayfa"
@@ -30,13 +29,10 @@
             android:id="@+id/Organizasyon_Şeması"
             android:icon="@drawable/ic_cogwheel"
             android:title="Organizasyon Şeması" />
-
-    </group>
-
-    <group>
         <item
-            android:id="@+id/Ayarlar"
+            android:id="@+id/cikis_yap"
             android:icon="@drawable/ic_cogwheel"
-            android:title="Ayarlar" />
+            android:title="Çıkış Yap" />
+
     </group>
 </menu>

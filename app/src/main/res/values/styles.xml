@@ -24,5 +24,6 @@
     <style name="fontFamily" parent="@style/Widget.Design.NavigationView">
         <item name="fontFamily">@font/lato</item>
         <item name="android:background"> @color/transparentColor</item>
+        <item name="android:textSize">19dp</item>
     </style>
 </resources>

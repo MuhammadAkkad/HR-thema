@@ -46,7 +46,7 @@ public class NavigationDrawer extends AppCompatActivity implements IDrawerListen
         final NavigationView navigationView = findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
         drawer.setViewScale(Gravity.START, 1);
-        drawer.setRadius(Gravity.START, 25);
+        drawer.setRadius(Gravity.START, 0);
         drawer.setViewElevation(Gravity.START, 30);
 
         // TODO: Homefragment deleted repace with home activity
@@ -63,7 +63,6 @@ public class NavigationDrawer extends AppCompatActivity implements IDrawerListen
                     BadgeDrawable badgeDrawable = navigation.getOrCreateBadge(R.id.navigation_home);
                     badgeDrawable.setBackgroundColor(Color.rgb(157, 204, 82));
                     badgeDrawable.setNumber(51);
-
 
                     loadFragment(new LastActivitiesFragment());
                     return true;

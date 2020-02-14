@@ -6,7 +6,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="false"
-    android:background="@drawable/gradiant_bad_fix"
     tools:openDrawer="start">
 
     <include
@@ -16,34 +15,18 @@
 
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/nav_view"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:theme="@style/fontFamily"
         android:layout_gravity="start"
         android:background="@drawable/gradiant_background"
         android:paddingStart="20dp"
+        android:theme="@style/fontFamily"
         android:visibility="visible"
         app:headerLayout="@layout/nav_header_main"
+        app:itemIconSize="30dp"
         app:itemIconTint="@color/SideNavigationIconText"
         app:itemTextColor="@color/SideNavigationIconText"
-        app:menu="@menu/side_navigation_drawer" >
-
-        <Button
-            android:id="@+id/btn_signout"
-            style="@style/Widget.AppCompat.Button.Borderless"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom"
-            android:layout_marginStart="6dp"
-            android:layout_marginBottom="34dp"
-            android:backgroundTint="#00FFFFFF"
-            android:fontFamily="@font/lato"
-            android:text="Çıkış yap"
-            android:textAllCaps="false"
-            android:textSize="15sp"
-            app:icon="@drawable/ic_cogwheel"
-            app:iconSize="15dp" />
-    </com.google.android.material.navigation.NavigationView>
+        app:menu="@menu/side_navigation_drawer"></com.google.android.material.navigation.NavigationView>
 
 
 </com.infideap.drawerbehavior.AdvanceDrawerLayout>

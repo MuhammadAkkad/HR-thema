@@ -12,7 +12,7 @@
     <color name="BottomNavigationIcon">#D8D8D8</color>
 
 
-    <color name="SideNavigationIconText">#FFFFFF</color>
+    <color name="SideNavigationIconText">#3E4450</color>
     <color name="SideNavigationBackgroundColor">#4353C7</color>
     <color name="transparentColor">#00FFFFFF</color>
     <color name="specialBlue">#2BB8E1</color>
