@@ -2,188 +2,109 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/login_activity_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/login_activity_layout"
+    android:background="@drawable/bg_2"
     tools:context=".login.LoginActivity">
-
-    <com.google.android.material.button.MaterialButton
-        android:layout_width="32dp"
-        android:layout_height="42dp"
-        android:layout_marginEnd="35dp"
-        android:backgroundTint="#FFFF"
-        android:padding="1dp"
-        android:text="TR"
-        android:textColor="#CE8FDD"
-        app:layout_constraintBottom_toBottomOf="@+id/img_logo_activity_login"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/img_logo_activity_login"
-        app:strokeColor="#CE8FDD"
-        app:strokeWidth="1dp" />
-
-    <ImageView
-        android:id="@+id/imageView7"
-        android:layout_width="272dp"
-        android:layout_height="296dp"
-        android:scaleType="fitXY"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/group2" />
-
-    <ImageView
-        android:id="@+id/imageView6"
-        android:layout_width="236dp"
-        android:layout_height="144dp"
-        android:scaleType="fitXY"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:srcCompat="@drawable/group213" />
 
     <ImageView
         android:id="@+id/img_logo_activity_login"
         android:layout_width="144dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="17dp"
-        android:layout_marginTop="25dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="60dp"
         android:scaleType="fitCenter"
-        app:layout_constraintStart_toEndOf="@+id/imageView7"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/logo" />
-
-    <TextView
-        android:id="@+id/txt_welcome_activity_login"
-        android:layout_width="wrap_content"
-        android:layout_height="35dp"
-        android:layout_marginStart="17dp"
-        android:layout_marginTop="80dp"
-        android:fontFamily="@font/lato_bold"
-        android:text="Hoşgeldin, Emre"
-        android:textColor="#000000"
-        android:textSize="26dp"
-        app:layout_constraintStart_toEndOf="@+id/img_profile_activity_login"
-        app:layout_constraintTop_toBottomOf="@+id/img_logo_activity_login" />
-
-    <com.makeramen.roundedimageview.RoundedImageView
-        android:id="@+id/img_profile_activity_login"
-        android:layout_width="34dp"
-        android:layout_height="34dp"
-        android:layout_marginStart="17dp"
-        android:layout_marginTop="80dp"
-        android:scaleType="fitCenter"
-        android:src="@drawable/profilfoto"
-        android:visibility="visible"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/img_logo_activity_login"
-        app:riv_corner_radius="5dip"
-        app:srcCompat="@mipmap/ic_launcher_round" />
-
-    <TextView
-        android:id="@+id/txt_welcome_description_activity_login"
-        android:layout_width="0dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="42dp"
-        android:fontFamily="@font/lato_light"
-        android:text="Aşağıdaki formu doldurarak giriş yapabilirsin."
-        android:textColor="#A1A5AF"
-        android:textSize="21dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/txt_welcome_activity_login"
-        app:layout_constraintTop_toBottomOf="@+id/txt_welcome_activity_login" />
+        app:srcCompat="@drawable/logoblack" />
 
 
-    <TextView
-        android:id="@+id/txt_user_name_activity_login"
-        android:layout_width="wrap_content"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout2"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:fontFamily="@font/lato"
-        android:paddingStart="2dp"
-        android:text="E-Mail"
-        android:textColor="#2BB8E1"
-        android:textSize="20sp"
-        android:visibility="visible"
-        app:layout_constraintBottom_toTopOf="@+id/btn_sign_in_activity_login"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.58000004" />
-
-    <EditText
-        android:id="@+id/tv_user_name_activity_login"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="-1dp"
-        android:background="@drawable/rounded_button"
-        android:backgroundTint=" #A1A5AF"
-        android:ems="17"
-        android:focusable="true"
-        android:fontFamily="@font/lato_light"
-        android:inputType="textPersonName"
-        android:textSize="26sp"
-        android:visibility="visible"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/txt_user_name_activity_login"
-        app:layout_constraintTop_toBottomOf="@+id/txt_user_name_activity_login" />
-
-    <TextView
-        android:id="@+id/txt_password_activity_login2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="8dp"
-        android:fontFamily="@font/lato"
-        android:paddingStart="2dp"
-        android:text="Password"
-        android:textColor="#808080"
-        android:textSize="20sp"
-        android:visibility="visible"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_user_name_activity_login" />
-
-    <EditText
-        android:id="@+id/tv_password_activity_login"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:backgroundTint="#A1A5AF"
-        android:ems="10"
-        android:focusable="true"
-        android:fontFamily="@font/lato_light"
-        android:inputType="textPersonName"
-        android:password="true"
-        android:textSize="26sp"
+        android:layout_marginTop="104dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_password_activity_login2" />
+        app:layout_constraintTop_toBottomOf="@+id/textView5">
 
-    <CheckBox
-        android:id="@+id/cb_remember_me_activity_login"
-        android:layout_width="wrap_content"
+        <EditText
+            android:id="@+id/tv_email_activity_login"
+            android:layout_width="360dp"
+            android:layout_height="55dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/rounded_button"
+            android:fontFamily="@font/lato_bold"
+            android:paddingLeft="5dp"
+            android:textColor="#000000"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txt_user_name_activity_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:background="#ffffff"
+            android:text="Kullanıcı adı / E - Posta"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@+id/tv_email_activity_login"
+            app:layout_constraintStart_toStartOf="@+id/tv_email_activity_login"
+            app:layout_constraintTop_toTopOf="@+id/tv_email_activity_login" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout3"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="18dp"
-        android:fontFamily="@font/lato"
-        android:text="Beni Hatırla"
-        android:textColor="#B1B1B1"
-        android:theme="@style/MyEditText"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_password_activity_login" />
+        android:layout_marginTop="7dp"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout2"
+        tools:layout_editor_absoluteX="0dp">
+
+        <EditText
+            android:id="@+id/tv_password_activity_login"
+            android:layout_width="360dp"
+            android:layout_height="55dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/rounded_button"
+            android:fontFamily="@font/lato_bold"
+            android:paddingLeft="5dp"
+            android:textColor="#000000"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txt_password_activity_login2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:background="#ffffff"
+            android:text="Şifre"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="@+id/tv_password_activity_login"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <TextView
         android:id="@+id/txt_forgot_password_activity_login"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
+        android:layout_marginTop="13dp"
+        android:layout_marginEnd="27dp"
+        android:clickable="true"
         android:fontFamily="@font/lato"
         android:text="Şifremi Unuttum"
         android:textColor="#B1B1B1"
         android:textSize="15dp"
-        app:layout_constraintBottom_toBottomOf="@+id/cb_remember_me_activity_login"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/cb_remember_me_activity_login"
-        app:layout_constraintVertical_bias="0.444" />
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout3" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_sign_in_activity_login"
@@ -191,9 +112,9 @@
         android:layout_height="60dp"
         android:layout_marginStart="30dp"
         android:layout_marginEnd="30dp"
-        android:layout_marginBottom="108dp"
+        android:layout_marginBottom="25dp"
         android:height="60dp"
-        android:backgroundTint="@color/colorPrimary"
+        android:backgroundTint="#CE8FDD"
         android:fontFamily="@font/lato"
         android:text="Giriş Yap"
         android:textAllCaps="false"
@@ -202,44 +123,21 @@
         app:cornerRadius="25dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/txt_yada_activity_login"
+        android:id="@+id/textView5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="3dp"
-        android:layout_marginTop="25dp"
-        android:layout_marginBottom="30dp"
-        android:fontFamily="@font/lato"
-        android:text="Yada"
-        android:textColor="#DCDCDC"
-        android:textSize="15sp"
-        android:visibility="visible"
-        app:layout_constraintBottom_toTopOf="@+id/btn_another_account_sign_in_activity_login"
-        app:layout_constraintEnd_toEndOf="@+id/btn_another_account_sign_in_activity_login"
-        app:layout_constraintStart_toStartOf="@+id/btn_another_account_sign_in_activity_login"
-        app:layout_constraintTop_toBottomOf="@+id/btn_sign_in_activity_login" />
-
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/btn_another_account_sign_in_activity_login"
-        android:layout_width="0dp"
-        android:layout_height="60dp"
-        android:layout_marginBottom="30dp"
-        android:width="355dp"
-        android:height="60dp"
-        android:backgroundTint="#FFFFFF"
-        android:fontFamily="@font/lato"
-        android:text="Başka bir kullanıcı ile giriş yap"
-        android:textAllCaps="false"
-        android:textColor="#838383"
-        android:textSize="18sp"
-        android:visibility="visible"
-        app:cornerRadius="25dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/btn_sign_in_activity_login"
-        app:layout_constraintStart_toStartOf="@+id/btn_sign_in_activity_login" />
+        android:layout_marginTop="116dp"
+        android:fontFamily="@font/lato_bold"
+        android:text="Giriş Yap"
+        android:textColor="#000000"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img_logo_activity_login" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
