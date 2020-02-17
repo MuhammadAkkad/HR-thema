@@ -3,6 +3,3 @@
     <item android:state_selected="true" android:drawable="@drawable/tabitem_selected_radius" />
     <item android:drawable="@drawable/tabitem_unselected_radius" />
 </selector>
-
-
-

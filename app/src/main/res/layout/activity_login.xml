@@ -116,6 +116,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="-1dp"
+        android:background="@drawable/rounded_button"
         android:backgroundTint=" #A1A5AF"
         android:ems="17"
         android:focusable="true"

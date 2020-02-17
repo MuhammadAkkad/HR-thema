@@ -14,13 +14,15 @@
         <activity android:name=".detail.chooseOperation.ChooseOperationActivity">
 
         </activity>
-        <activity android:name=".navigationDrawer.NavigationDrawer" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".navigationDrawer.NavigationDrawer" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity android:name=".MainActivity">
+
         </activity>
         <activity android:name=".login.LoginActivity" />
         <activity android:name=".bottomNav.lastActivities.LastActivitiesActivity" />

@@ -36,7 +36,6 @@ public class LastActivitiesFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.fragment_last_activities, container, false);
-
         // Opens navigation drawer
         drawer_trigger = view.findViewById(R.id.btn_trigger_drawer);
         drawer_trigger.setOnClickListener(new View.OnClickListener() {
@@ -116,7 +115,6 @@ public class LastActivitiesFragment extends Fragment {
                 .alpha(1f)
                 .setDuration(shortAnimationDuration)
                 .setListener(null);
-
     }
 
 

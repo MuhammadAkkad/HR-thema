@@ -26,7 +26,10 @@
         app:itemIconSize="30dp"
         app:itemIconTint="@color/SideNavigationIconText"
         app:itemTextColor="@color/SideNavigationIconText"
-        app:menu="@menu/side_navigation_drawer"></com.google.android.material.navigation.NavigationView>
+        app:itemBackground="@drawable/tabitem_selected"
+        app:menu="@menu/side_navigation_drawer">
+
+    </com.google.android.material.navigation.NavigationView>
 
 
 </com.infideap.drawerbehavior.AdvanceDrawerLayout>
