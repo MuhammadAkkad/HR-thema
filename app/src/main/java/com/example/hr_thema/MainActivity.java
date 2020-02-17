@@ -22,6 +22,16 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+        // Splash screen demo
+        long start = System.currentTimeMillis();
+        long end = start + 2*1000; // 60 seconds * 1000 ms/sec
+        while (System.currentTimeMillis() < end)
+        {
+            // run
+        }
+
+        setTheme(R.style.AppTheme);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         btn_login = findViewById(R.id.btn_login_activity_main);
