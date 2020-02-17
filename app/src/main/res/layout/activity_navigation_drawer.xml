@@ -19,9 +19,13 @@
         android:layout_height="match_parent"
         android:layout_gravity="start"
         android:background="@drawable/gradiant_background"
-        android:paddingStart="20dp"
+        android:paddingStart="18dp"
         android:theme="@style/fontFamily"
         android:visibility="visible"
+        app:itemIconPadding="21dp"
+        android:layout_marginEnd="-65dp"
+        android:layout_marginRight="-65dp"
+        app:itemHorizontalPadding="20dp"
         app:headerLayout="@layout/nav_header_main"
         app:itemIconSize="30dp"
         app:itemIconTint="@color/SideNavigationIconText"
@@ -30,6 +34,5 @@
         app:menu="@menu/side_navigation_drawer">
 
     </com.google.android.material.navigation.NavigationView>
-
 
 </com.infideap.drawerbehavior.AdvanceDrawerLayout>

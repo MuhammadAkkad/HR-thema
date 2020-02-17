@@ -26,8 +26,6 @@ import com.infideap.drawerbehavior.AdvanceDrawerLayout;
 
 public class NavigationDrawer extends AppCompatActivity implements IDrawerListener, NavigationView.OnNavigationItemSelectedListener {
     BottomNavigationView navigation;
-    ImageView usrImg;
-    BottomNavigationView bottomNavigationView;
     View v;
     private AdvanceDrawerLayout drawer;
 
@@ -59,10 +57,8 @@ public class NavigationDrawer extends AppCompatActivity implements IDrawerListen
             public boolean onNavigationItemSelected(MenuItem menuItem) {
                 int id = menuItem.getItemId();
                 if (id == R.id.navigation_home) {
-                    // TODO: notification implementation test
-                    BadgeDrawable badgeDrawable = navigation.getOrCreateBadge(R.id.navigation_home);
-                    badgeDrawable.setBackgroundColor(Color.rgb(157, 204, 82));
-                    badgeDrawable.setNumber(51);
+
+                    badgeControl();
 
                     loadFragment(new LastActivitiesFragment());
                     return true;
@@ -103,6 +99,13 @@ public class NavigationDrawer extends AppCompatActivity implements IDrawerListen
         transaction.setCustomAnimations(android.R.animator.fade_in, android.R.animator.fade_out);
         transaction.replace(R.id.nav_home, fragment);
         transaction.commit();
+    }
+
+    public void badgeControl(){
+        // TODO: notification implementation test
+        BadgeDrawable badgeDrawable = navigation.getOrCreateBadge(R.id.navigation_home);
+        badgeDrawable.setBackgroundColor(Color.rgb(157, 204, 82));
+        badgeDrawable.setNumber(51);
     }
 
     @Override
