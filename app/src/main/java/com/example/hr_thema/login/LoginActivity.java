@@ -54,7 +54,7 @@ public class LoginActivity extends AppCompatActivity {
         edtPassword = findViewById(R.id.tv_password_activity_login);
 
 
-        textView = (TextView) findViewById(R.id.textView5);
+        textView = findViewById(R.id.textView5);
 
         TextPaint paint = textView.getPaint();
         float width = paint.measureText("Giriş Yap");
@@ -68,6 +68,8 @@ public class LoginActivity extends AppCompatActivity {
                         Color.parseColor("#F39663"),
                 }, null, Shader.TileMode.CLAMP);
         textView.getPaint().setShader(textShader);
+        textView.setAlpha(1f);
+
 
     }
     void home() {
