@@ -32,6 +32,7 @@ public class LoginActivity extends AppCompatActivity {
     EditText txtEMail;
     EditText edtPassword;
     TextView textView;
+    TextView forgetPassword;
 
 
     @Override
@@ -49,6 +50,13 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
+        forgetPassword = findViewById(R.id.txt_forgot_password_activity_login);
+        forgetPassword.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                LoggedInUser();
+            }
+        });
 
         txtEMail = findViewById(R.id.tv_email_activity_login);
         edtPassword = findViewById(R.id.tv_password_activity_login);
@@ -68,12 +76,15 @@ public class LoginActivity extends AppCompatActivity {
                         Color.parseColor("#F39663"),
                 }, null, Shader.TileMode.CLAMP);
         textView.getPaint().setShader(textShader);
-        textView.setAlpha(1f);
-
 
     }
     void home() {
         Intent home = new Intent(this, NavigationDrawer.class);
         startActivity(home);
+    }
+
+    void LoggedInUser(){
+        Intent i = new Intent(this, LoggedInActivity.class);
+        startActivity(i);
     }
 }
