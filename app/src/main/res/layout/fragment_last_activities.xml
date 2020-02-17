@@ -106,7 +106,9 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:paddingTop="2dp"
+                android:paddingBottom="2dp">
 
                 <androidx.cardview.widget.CardView
                     android:id="@+id/activity_card_view"
@@ -115,7 +117,7 @@
                     android:layout_marginStart="4dp"
                     android:layout_marginTop="5dp"
                     android:layout_marginEnd="4dp"
-                    app:cardCornerRadius="19dp"
+                    app:cardCornerRadius="10dp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="@+id/textView23"
                     app:layout_constraintTop_toBottomOf="@+id/textView23">
@@ -125,105 +127,72 @@
                         android:layout_height="match_parent">
 
 
-                        <de.hdodenhof.circleimageview.CircleImageView
-                            android:id="@+id/image2"
-                            android:layout_width="30dp"
-                            android:layout_height="20dp"
-                            android:layout_marginStart="11dp"
-                            android:baselineAlignBottom="false"
-                            android:elevation="10dp"
-                            android:src="@drawable/profilfoto"
-                            app:civ_border_color="#FFFF"
-                            app:civ_border_width="2dp"
-                            app:layout_constraintBottom_toBottomOf="@+id/image3"
-                            app:layout_constraintStart_toStartOf="@+id/image3"
-                            app:layout_constraintTop_toTopOf="@+id/image3" />
-
-                        <de.hdodenhof.circleimageview.CircleImageView
-                            android:id="@+id/image3"
-                            android:layout_width="30dp"
-                            android:layout_height="20dp"
-                            android:layout_marginEnd="12dp"
-                            android:baselineAlignBottom="false"
-                            android:elevation="10dp"
-                            android:src="@drawable/profilfoto"
-                            app:civ_border_color="#FFFF"
-                            app:civ_border_width="2dp"
-                            app:layout_constraintBottom_toBottomOf="@+id/linearLayout"
-                            app:layout_constraintEnd_toStartOf="@+id/image4"
-                            app:layout_constraintTop_toTopOf="@+id/linearLayout" />
-
-
-                        <ImageButton
-                            android:id="@+id/image4"
-                            android:layout_width="20dp"
-                            android:layout_height="20dp"
-                            android:layout_marginEnd="10dp"
-                            android:background="@drawable/shape_circle_notification_badge"
-                            android:backgroundTint="#D8D8D8"
-                            android:elevation="10dp"
-                            android:padding="4dp"
-                            android:scaleType="fitCenter"
-                            android:src="@drawable/ic_group_3"
-                            android:tint="#3E4450"
-                            app:layout_constraintBottom_toBottomOf="@+id/image3"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintTop_toTopOf="@+id/image3" />
-
                         <ImageView
-                            android:id="@+id/imageView2"
-                            android:layout_width="34dp"
-                            android:layout_height="34dp"
-                            android:layout_marginStart="7dp"
+                            android:id="@+id/imageView3"
+                            android:layout_width="26dp"
+                            android:layout_height="26dp"
                             android:layout_marginTop="10dp"
-                            android:background="@drawable/group11"
-                            android:foregroundGravity="center"
+                            android:layout_marginEnd="14dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:srcCompat="@drawable/ic_wating" />
+
+                        <TextView
+                            android:id="@+id/textView2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="14dp"
+                            android:fontFamily="@font/lato"
+                            android:text="Masraf Formu @BoranGökbulut"
+                            android:textColor="#3E4450"
+                            android:textSize="16sp"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent" />
 
-                        <LinearLayout
-                            android:id="@+id/linearLayout"
+                        <TextView
+                            android:id="@+id/textView3"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginStart="12dp"
-                            android:orientation="vertical"
-                            app:layout_constraintBottom_toBottomOf="@+id/imageView2"
-                            app:layout_constraintStart_toEndOf="@+id/imageView2"
-                            app:layout_constraintTop_toTopOf="@+id/imageView2">
-
-                            <TextView
-                                android:id="@+id/textView9"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:fontFamily="@font/lato"
-                                android:text="9128399"
-                                android:textColor=" #3E4450"
-                                android:textSize="16dp" />
-
-                            <TextView
-                                android:id="@+id/textView10"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:fontFamily="@font/lato"
-                                android:text="22.01.2020"
-                                android:textColor="#B5B7BC"
-                                android:textSize="10dp" />
-                        </LinearLayout>
-
-                        <TextView
-                            android:id="@+id/textView12"
-                            android:layout_width="0dp"
-                            android:layout_height="35dp"
-                            android:layout_marginStart="4dp"
-                            android:layout_marginEnd="52dp"
-                            android:layout_marginBottom="8dp"
+                            android:layout_marginBottom="22dp"
                             android:fontFamily="@font/lato"
-                            android:text="klasfjasdkl jsdlfjasljfadklfjsdmf;ilasjkf[ioawfajksdfl[jkas[odfjaskldfjaiosjioasjdfasjdfio[aj[h'sklafji[sdf'as"
+                            android:text="22.01.2020"
+                            android:textColor="#C5C7CA"
+                            android:textSize="10sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="@+id/textView2"
+                            app:layout_constraintTop_toBottomOf="@+id/textView2"
+                            app:layout_constraintVertical_bias="0.0" />
+
+                        <ImageButton
+                            android:id="@+id/imageView4"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="176dp"
+                            android:layout_marginEnd="176dp"
+                            android:layout_marginBottom="2dp"
+                            android:background="#00000000"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintHorizontal_bias="0.0"
-                            app:layout_constraintStart_toStartOf="@+id/imageView2"
-                            app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:srcCompat="@drawable/ic_arrow_down" />
+
+                        <TextView
+                            android:id="@+id/textView4"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginEnd="16dp"
+                            android:layout_marginBottom="8dp"
+                            android:fontFamily="@font/lato"
+                            android:text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum"
+                            android:visibility="gone"
+                            app:layout_constraintBottom_toTopOf="@+id/imageView4"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/textView3"
+                            app:layout_constraintVertical_bias="0.060000002" />
 
                     </androidx.constraintlayout.widget.ConstraintLayout>
                 </androidx.cardview.widget.CardView>
@@ -235,7 +204,7 @@
                     android:layout_marginStart="4dp"
                     android:layout_marginTop="5dp"
                     android:layout_marginEnd="4dp"
-                    app:cardCornerRadius="19dp"
+                    app:cardCornerRadius="10dp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="@+id/textView23"
                     app:layout_constraintTop_toBottomOf="@+id/textView23">
@@ -245,105 +214,72 @@
                         android:layout_height="match_parent">
 
 
-                        <de.hdodenhof.circleimageview.CircleImageView
-                            android:id="@+id/image2"
-                            android:layout_width="30dp"
-                            android:layout_height="20dp"
-                            android:layout_marginStart="11dp"
-                            android:baselineAlignBottom="false"
-                            android:elevation="10dp"
-                            android:src="@drawable/profilfoto"
-                            app:civ_border_color="#FFFF"
-                            app:civ_border_width="2dp"
-                            app:layout_constraintBottom_toBottomOf="@+id/image3"
-                            app:layout_constraintStart_toStartOf="@+id/image3"
-                            app:layout_constraintTop_toTopOf="@+id/image3" />
-
-                        <de.hdodenhof.circleimageview.CircleImageView
-                            android:id="@+id/image3"
-                            android:layout_width="30dp"
-                            android:layout_height="20dp"
-                            android:layout_marginEnd="12dp"
-                            android:baselineAlignBottom="false"
-                            android:elevation="10dp"
-                            android:src="@drawable/profilfoto"
-                            app:civ_border_color="#FFFF"
-                            app:civ_border_width="2dp"
-                            app:layout_constraintBottom_toBottomOf="@+id/linearLayout"
-                            app:layout_constraintEnd_toStartOf="@+id/image4"
-                            app:layout_constraintTop_toTopOf="@+id/linearLayout" />
-
-
-                        <ImageButton
-                            android:id="@+id/image4"
-                            android:layout_width="20dp"
-                            android:layout_height="20dp"
-                            android:layout_marginEnd="10dp"
-                            android:background="@drawable/shape_circle_notification_badge"
-                            android:backgroundTint="#D8D8D8"
-                            android:elevation="10dp"
-                            android:padding="4dp"
-                            android:scaleType="fitCenter"
-                            android:src="@drawable/ic_group_3"
-                            android:tint="#3E4450"
-                            app:layout_constraintBottom_toBottomOf="@+id/image3"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintTop_toTopOf="@+id/image3" />
-
                         <ImageView
-                            android:id="@+id/imageView2"
-                            android:layout_width="34dp"
-                            android:layout_height="34dp"
-                            android:layout_marginStart="7dp"
+                            android:id="@+id/imageView3"
+                            android:layout_width="26dp"
+                            android:layout_height="26dp"
                             android:layout_marginTop="10dp"
-                            android:background="@drawable/group11"
-                            android:foregroundGravity="center"
+                            android:layout_marginEnd="14dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:srcCompat="@drawable/ic_wating" />
+
+                        <TextView
+                            android:id="@+id/textView2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="14dp"
+                            android:fontFamily="@font/lato"
+                            android:text="Masraf Formu @BoranGökbulut"
+                            android:textColor="#3E4450"
+                            android:textSize="16sp"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent" />
 
-                        <LinearLayout
-                            android:id="@+id/linearLayout"
+                        <TextView
+                            android:id="@+id/textView3"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginStart="12dp"
-                            android:orientation="vertical"
-                            app:layout_constraintBottom_toBottomOf="@+id/imageView2"
-                            app:layout_constraintStart_toEndOf="@+id/imageView2"
-                            app:layout_constraintTop_toTopOf="@+id/imageView2">
-
-                            <TextView
-                                android:id="@+id/textView9"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:fontFamily="@font/lato"
-                                android:text="9128399"
-                                android:textColor=" #3E4450"
-                                android:textSize="16dp" />
-
-                            <TextView
-                                android:id="@+id/textView10"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:fontFamily="@font/lato"
-                                android:text="22.01.2020"
-                                android:textColor="#B5B7BC"
-                                android:textSize="10dp" />
-                        </LinearLayout>
-
-                        <TextView
-                            android:id="@+id/textView12"
-                            android:layout_width="0dp"
-                            android:layout_height="35dp"
-                            android:layout_marginStart="4dp"
-                            android:layout_marginEnd="52dp"
-                            android:layout_marginBottom="8dp"
+                            android:layout_marginBottom="22dp"
                             android:fontFamily="@font/lato"
-                            android:text="klasfjasdkl jsdlfjasljfadklfjsdmf;ilasjkf[ioawfajksdfl[jkas[odfjaskldfjaiosjioasjdfasjdfio[aj[h'sklafji[sdf'as"
+                            android:text="22.01.2020"
+                            android:textColor="#C5C7CA"
+                            android:textSize="10sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="@+id/textView2"
+                            app:layout_constraintTop_toBottomOf="@+id/textView2"
+                            app:layout_constraintVertical_bias="0.0" />
+
+                        <ImageButton
+                            android:id="@+id/imageView4"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="176dp"
+                            android:layout_marginEnd="176dp"
+                            android:layout_marginBottom="2dp"
+                            android:background="#00000000"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintHorizontal_bias="0.0"
-                            app:layout_constraintStart_toStartOf="@+id/imageView2"
-                            app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:srcCompat="@drawable/ic_arrow_down" />
+
+                        <TextView
+                            android:id="@+id/textView4"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginEnd="16dp"
+                            android:layout_marginBottom="8dp"
+                            android:fontFamily="@font/lato"
+                            android:text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum"
+                            android:visibility="gone"
+                            app:layout_constraintBottom_toTopOf="@+id/imageView4"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/textView3"
+                            app:layout_constraintVertical_bias="0.060000002" />
 
                     </androidx.constraintlayout.widget.ConstraintLayout>
                 </androidx.cardview.widget.CardView>
@@ -355,7 +291,7 @@
                     android:layout_marginStart="4dp"
                     android:layout_marginTop="5dp"
                     android:layout_marginEnd="4dp"
-                    app:cardCornerRadius="19dp"
+                    app:cardCornerRadius="10dp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="@+id/textView23"
                     app:layout_constraintTop_toBottomOf="@+id/textView23">
@@ -365,105 +301,72 @@
                         android:layout_height="match_parent">
 
 
-                        <de.hdodenhof.circleimageview.CircleImageView
-                            android:id="@+id/image2"
-                            android:layout_width="30dp"
-                            android:layout_height="20dp"
-                            android:layout_marginStart="11dp"
-                            android:baselineAlignBottom="false"
-                            android:elevation="10dp"
-                            android:src="@drawable/profilfoto"
-                            app:civ_border_color="#FFFF"
-                            app:civ_border_width="2dp"
-                            app:layout_constraintBottom_toBottomOf="@+id/image3"
-                            app:layout_constraintStart_toStartOf="@+id/image3"
-                            app:layout_constraintTop_toTopOf="@+id/image3" />
-
-                        <de.hdodenhof.circleimageview.CircleImageView
-                            android:id="@+id/image3"
-                            android:layout_width="30dp"
-                            android:layout_height="20dp"
-                            android:layout_marginEnd="12dp"
-                            android:baselineAlignBottom="false"
-                            android:elevation="10dp"
-                            android:src="@drawable/profilfoto"
-                            app:civ_border_color="#FFFF"
-                            app:civ_border_width="2dp"
-                            app:layout_constraintBottom_toBottomOf="@+id/linearLayout"
-                            app:layout_constraintEnd_toStartOf="@+id/image4"
-                            app:layout_constraintTop_toTopOf="@+id/linearLayout" />
-
-
-                        <ImageButton
-                            android:id="@+id/image4"
-                            android:layout_width="20dp"
-                            android:layout_height="20dp"
-                            android:layout_marginEnd="10dp"
-                            android:background="@drawable/shape_circle_notification_badge"
-                            android:backgroundTint="#D8D8D8"
-                            android:elevation="10dp"
-                            android:padding="4dp"
-                            android:scaleType="fitCenter"
-                            android:src="@drawable/ic_group_3"
-                            android:tint="#3E4450"
-                            app:layout_constraintBottom_toBottomOf="@+id/image3"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintTop_toTopOf="@+id/image3" />
-
                         <ImageView
-                            android:id="@+id/imageView2"
-                            android:layout_width="34dp"
-                            android:layout_height="34dp"
-                            android:layout_marginStart="7dp"
+                            android:id="@+id/imageView3"
+                            android:layout_width="26dp"
+                            android:layout_height="26dp"
                             android:layout_marginTop="10dp"
-                            android:background="@drawable/group11"
-                            android:foregroundGravity="center"
+                            android:layout_marginEnd="14dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:srcCompat="@drawable/ic_wating" />
+
+                        <TextView
+                            android:id="@+id/textView2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="14dp"
+                            android:fontFamily="@font/lato"
+                            android:text="Masraf Formu @BoranGökbulut"
+                            android:textColor="#3E4450"
+                            android:textSize="16sp"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent" />
 
-                        <LinearLayout
-                            android:id="@+id/linearLayout"
+                        <TextView
+                            android:id="@+id/textView3"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginStart="12dp"
-                            android:orientation="vertical"
-                            app:layout_constraintBottom_toBottomOf="@+id/imageView2"
-                            app:layout_constraintStart_toEndOf="@+id/imageView2"
-                            app:layout_constraintTop_toTopOf="@+id/imageView2">
-
-                            <TextView
-                                android:id="@+id/textView9"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:fontFamily="@font/lato"
-                                android:text="9128399"
-                                android:textColor=" #3E4450"
-                                android:textSize="16dp" />
-
-                            <TextView
-                                android:id="@+id/textView10"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:fontFamily="@font/lato"
-                                android:text="22.01.2020"
-                                android:textColor="#B5B7BC"
-                                android:textSize="10dp" />
-                        </LinearLayout>
-
-                        <TextView
-                            android:id="@+id/textView12"
-                            android:layout_width="0dp"
-                            android:layout_height="35dp"
-                            android:layout_marginStart="4dp"
-                            android:layout_marginEnd="52dp"
-                            android:layout_marginBottom="8dp"
+                            android:layout_marginBottom="22dp"
                             android:fontFamily="@font/lato"
-                            android:text="klasfjasdkl jsdlfjasljfadklfjsdmf;ilasjkf[ioawfajksdfl[jkas[odfjaskldfjaiosjioasjdfasjdfio[aj[h'sklafji[sdf'as"
+                            android:text="22.01.2020"
+                            android:textColor="#C5C7CA"
+                            android:textSize="10sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="@+id/textView2"
+                            app:layout_constraintTop_toBottomOf="@+id/textView2"
+                            app:layout_constraintVertical_bias="0.0" />
+
+                        <ImageButton
+                            android:id="@+id/imageView4"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="176dp"
+                            android:layout_marginEnd="176dp"
+                            android:layout_marginBottom="2dp"
+                            android:background="#00000000"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintHorizontal_bias="0.0"
-                            app:layout_constraintStart_toStartOf="@+id/imageView2"
-                            app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:srcCompat="@drawable/ic_arrow_down" />
+
+                        <TextView
+                            android:id="@+id/textView4"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginEnd="16dp"
+                            android:layout_marginBottom="8dp"
+                            android:fontFamily="@font/lato"
+                            android:text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum"
+                            android:visibility="gone"
+                            app:layout_constraintBottom_toTopOf="@+id/imageView4"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/textView3"
+                            app:layout_constraintVertical_bias="0.060000002" />
 
                     </androidx.constraintlayout.widget.ConstraintLayout>
                 </androidx.cardview.widget.CardView>
@@ -475,7 +378,7 @@
                     android:layout_marginStart="4dp"
                     android:layout_marginTop="5dp"
                     android:layout_marginEnd="4dp"
-                    app:cardCornerRadius="19dp"
+                    app:cardCornerRadius="10dp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="@+id/textView23"
                     app:layout_constraintTop_toBottomOf="@+id/textView23">
@@ -485,105 +388,72 @@
                         android:layout_height="match_parent">
 
 
-                        <de.hdodenhof.circleimageview.CircleImageView
-                            android:id="@+id/image2"
-                            android:layout_width="30dp"
-                            android:layout_height="20dp"
-                            android:layout_marginStart="11dp"
-                            android:baselineAlignBottom="false"
-                            android:elevation="10dp"
-                            android:src="@drawable/profilfoto"
-                            app:civ_border_color="#FFFF"
-                            app:civ_border_width="2dp"
-                            app:layout_constraintBottom_toBottomOf="@+id/image3"
-                            app:layout_constraintStart_toStartOf="@+id/image3"
-                            app:layout_constraintTop_toTopOf="@+id/image3" />
-
-                        <de.hdodenhof.circleimageview.CircleImageView
-                            android:id="@+id/image3"
-                            android:layout_width="30dp"
-                            android:layout_height="20dp"
-                            android:layout_marginEnd="12dp"
-                            android:baselineAlignBottom="false"
-                            android:elevation="10dp"
-                            android:src="@drawable/profilfoto"
-                            app:civ_border_color="#FFFF"
-                            app:civ_border_width="2dp"
-                            app:layout_constraintBottom_toBottomOf="@+id/linearLayout"
-                            app:layout_constraintEnd_toStartOf="@+id/image4"
-                            app:layout_constraintTop_toTopOf="@+id/linearLayout" />
-
-
-                        <ImageButton
-                            android:id="@+id/image4"
-                            android:layout_width="20dp"
-                            android:layout_height="20dp"
-                            android:layout_marginEnd="10dp"
-                            android:background="@drawable/shape_circle_notification_badge"
-                            android:backgroundTint="#D8D8D8"
-                            android:elevation="10dp"
-                            android:padding="4dp"
-                            android:scaleType="fitCenter"
-                            android:src="@drawable/ic_group_3"
-                            android:tint="#3E4450"
-                            app:layout_constraintBottom_toBottomOf="@+id/image3"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintTop_toTopOf="@+id/image3" />
-
                         <ImageView
-                            android:id="@+id/imageView2"
-                            android:layout_width="34dp"
-                            android:layout_height="34dp"
-                            android:layout_marginStart="7dp"
+                            android:id="@+id/imageView3"
+                            android:layout_width="26dp"
+                            android:layout_height="26dp"
                             android:layout_marginTop="10dp"
-                            android:background="@drawable/group11"
-                            android:foregroundGravity="center"
+                            android:layout_marginEnd="14dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:srcCompat="@drawable/ic_wating" />
+
+                        <TextView
+                            android:id="@+id/textView2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="14dp"
+                            android:fontFamily="@font/lato"
+                            android:text="Masraf Formu @BoranGökbulut"
+                            android:textColor="#3E4450"
+                            android:textSize="16sp"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent" />
 
-                        <LinearLayout
-                            android:id="@+id/linearLayout"
+                        <TextView
+                            android:id="@+id/textView3"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginStart="12dp"
-                            android:orientation="vertical"
-                            app:layout_constraintBottom_toBottomOf="@+id/imageView2"
-                            app:layout_constraintStart_toEndOf="@+id/imageView2"
-                            app:layout_constraintTop_toTopOf="@+id/imageView2">
-
-                            <TextView
-                                android:id="@+id/textView9"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:fontFamily="@font/lato"
-                                android:text="9128399"
-                                android:textColor=" #3E4450"
-                                android:textSize="16dp" />
-
-                            <TextView
-                                android:id="@+id/textView10"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:fontFamily="@font/lato"
-                                android:text="22.01.2020"
-                                android:textColor="#B5B7BC"
-                                android:textSize="10dp" />
-                        </LinearLayout>
-
-                        <TextView
-                            android:id="@+id/textView12"
-                            android:layout_width="0dp"
-                            android:layout_height="35dp"
-                            android:layout_marginStart="4dp"
-                            android:layout_marginEnd="52dp"
-                            android:layout_marginBottom="8dp"
+                            android:layout_marginBottom="22dp"
                             android:fontFamily="@font/lato"
-                            android:text="klasfjasdkl jsdlfjasljfadklfjsdmf;ilasjkf[ioawfajksdfl[jkas[odfjaskldfjaiosjioasjdfasjdfio[aj[h'sklafji[sdf'as"
+                            android:text="22.01.2020"
+                            android:textColor="#C5C7CA"
+                            android:textSize="10sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="@+id/textView2"
+                            app:layout_constraintTop_toBottomOf="@+id/textView2"
+                            app:layout_constraintVertical_bias="0.0" />
+
+                        <ImageButton
+                            android:id="@+id/imageView4"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="176dp"
+                            android:layout_marginEnd="176dp"
+                            android:layout_marginBottom="2dp"
+                            android:background="#00000000"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintHorizontal_bias="0.0"
-                            app:layout_constraintStart_toStartOf="@+id/imageView2"
-                            app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:srcCompat="@drawable/ic_arrow_down" />
+
+                        <TextView
+                            android:id="@+id/textView4"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginEnd="16dp"
+                            android:layout_marginBottom="8dp"
+                            android:fontFamily="@font/lato"
+                            android:text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum"
+                            android:visibility="gone"
+                            app:layout_constraintBottom_toTopOf="@+id/imageView4"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/textView3"
+                            app:layout_constraintVertical_bias="0.060000002" />
 
                     </androidx.constraintlayout.widget.ConstraintLayout>
                 </androidx.cardview.widget.CardView>
@@ -595,7 +465,7 @@
                     android:layout_marginStart="4dp"
                     android:layout_marginTop="5dp"
                     android:layout_marginEnd="4dp"
-                    app:cardCornerRadius="19dp"
+                    app:cardCornerRadius="10dp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="@+id/textView23"
                     app:layout_constraintTop_toBottomOf="@+id/textView23">
@@ -605,105 +475,72 @@
                         android:layout_height="match_parent">
 
 
-                        <de.hdodenhof.circleimageview.CircleImageView
-                            android:id="@+id/image2"
-                            android:layout_width="30dp"
-                            android:layout_height="20dp"
-                            android:layout_marginStart="11dp"
-                            android:baselineAlignBottom="false"
-                            android:elevation="10dp"
-                            android:src="@drawable/profilfoto"
-                            app:civ_border_color="#FFFF"
-                            app:civ_border_width="2dp"
-                            app:layout_constraintBottom_toBottomOf="@+id/image3"
-                            app:layout_constraintStart_toStartOf="@+id/image3"
-                            app:layout_constraintTop_toTopOf="@+id/image3" />
-
-                        <de.hdodenhof.circleimageview.CircleImageView
-                            android:id="@+id/image3"
-                            android:layout_width="30dp"
-                            android:layout_height="20dp"
-                            android:layout_marginEnd="12dp"
-                            android:baselineAlignBottom="false"
-                            android:elevation="10dp"
-                            android:src="@drawable/profilfoto"
-                            app:civ_border_color="#FFFF"
-                            app:civ_border_width="2dp"
-                            app:layout_constraintBottom_toBottomOf="@+id/linearLayout"
-                            app:layout_constraintEnd_toStartOf="@+id/image4"
-                            app:layout_constraintTop_toTopOf="@+id/linearLayout" />
-
-
-                        <ImageButton
-                            android:id="@+id/image4"
-                            android:layout_width="20dp"
-                            android:layout_height="20dp"
-                            android:layout_marginEnd="10dp"
-                            android:background="@drawable/shape_circle_notification_badge"
-                            android:backgroundTint="#D8D8D8"
-                            android:elevation="10dp"
-                            android:padding="4dp"
-                            android:scaleType="fitCenter"
-                            android:src="@drawable/ic_group_3"
-                            android:tint="#3E4450"
-                            app:layout_constraintBottom_toBottomOf="@+id/image3"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintTop_toTopOf="@+id/image3" />
-
                         <ImageView
-                            android:id="@+id/imageView2"
-                            android:layout_width="34dp"
-                            android:layout_height="34dp"
-                            android:layout_marginStart="7dp"
+                            android:id="@+id/imageView3"
+                            android:layout_width="26dp"
+                            android:layout_height="26dp"
                             android:layout_marginTop="10dp"
-                            android:background="@drawable/group11"
-                            android:foregroundGravity="center"
+                            android:layout_marginEnd="14dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:srcCompat="@drawable/ic_wating" />
+
+                        <TextView
+                            android:id="@+id/textView2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="14dp"
+                            android:fontFamily="@font/lato"
+                            android:text="Masraf Formu @BoranGökbulut"
+                            android:textColor="#3E4450"
+                            android:textSize="16sp"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent" />
 
-                        <LinearLayout
-                            android:id="@+id/linearLayout"
+                        <TextView
+                            android:id="@+id/textView3"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginStart="12dp"
-                            android:orientation="vertical"
-                            app:layout_constraintBottom_toBottomOf="@+id/imageView2"
-                            app:layout_constraintStart_toEndOf="@+id/imageView2"
-                            app:layout_constraintTop_toTopOf="@+id/imageView2">
-
-                            <TextView
-                                android:id="@+id/textView9"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:fontFamily="@font/lato"
-                                android:text="9128399"
-                                android:textColor=" #3E4450"
-                                android:textSize="16dp" />
-
-                            <TextView
-                                android:id="@+id/textView10"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:fontFamily="@font/lato"
-                                android:text="22.01.2020"
-                                android:textColor="#B5B7BC"
-                                android:textSize="10dp" />
-                        </LinearLayout>
-
-                        <TextView
-                            android:id="@+id/textView12"
-                            android:layout_width="0dp"
-                            android:layout_height="35dp"
-                            android:layout_marginStart="4dp"
-                            android:layout_marginEnd="52dp"
-                            android:layout_marginBottom="8dp"
+                            android:layout_marginBottom="22dp"
                             android:fontFamily="@font/lato"
-                            android:text="klasfjasdkl jsdlfjasljfadklfjsdmf;ilasjkf[ioawfajksdfl[jkas[odfjaskldfjaiosjioasjdfasjdfio[aj[h'sklafji[sdf'as"
+                            android:text="22.01.2020"
+                            android:textColor="#C5C7CA"
+                            android:textSize="10sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="@+id/textView2"
+                            app:layout_constraintTop_toBottomOf="@+id/textView2"
+                            app:layout_constraintVertical_bias="0.0" />
+
+                        <ImageButton
+                            android:id="@+id/imageView4"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="176dp"
+                            android:layout_marginEnd="176dp"
+                            android:layout_marginBottom="2dp"
+                            android:background="#00000000"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintHorizontal_bias="0.0"
-                            app:layout_constraintStart_toStartOf="@+id/imageView2"
-                            app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:srcCompat="@drawable/ic_arrow_down" />
+
+                        <TextView
+                            android:id="@+id/textView4"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginEnd="16dp"
+                            android:layout_marginBottom="8dp"
+                            android:fontFamily="@font/lato"
+                            android:text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum"
+                            android:visibility="gone"
+                            app:layout_constraintBottom_toTopOf="@+id/imageView4"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/textView3"
+                            app:layout_constraintVertical_bias="0.060000002" />
 
                     </androidx.constraintlayout.widget.ConstraintLayout>
                 </androidx.cardview.widget.CardView>
@@ -715,7 +552,7 @@
                     android:layout_marginStart="4dp"
                     android:layout_marginTop="5dp"
                     android:layout_marginEnd="4dp"
-                    app:cardCornerRadius="19dp"
+                    app:cardCornerRadius="10dp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="@+id/textView23"
                     app:layout_constraintTop_toBottomOf="@+id/textView23">
@@ -725,105 +562,72 @@
                         android:layout_height="match_parent">
 
 
-                        <de.hdodenhof.circleimageview.CircleImageView
-                            android:id="@+id/image2"
-                            android:layout_width="30dp"
-                            android:layout_height="20dp"
-                            android:layout_marginStart="11dp"
-                            android:baselineAlignBottom="false"
-                            android:elevation="10dp"
-                            android:src="@drawable/profilfoto"
-                            app:civ_border_color="#FFFF"
-                            app:civ_border_width="2dp"
-                            app:layout_constraintBottom_toBottomOf="@+id/image3"
-                            app:layout_constraintStart_toStartOf="@+id/image3"
-                            app:layout_constraintTop_toTopOf="@+id/image3" />
-
-                        <de.hdodenhof.circleimageview.CircleImageView
-                            android:id="@+id/image3"
-                            android:layout_width="30dp"
-                            android:layout_height="20dp"
-                            android:layout_marginEnd="12dp"
-                            android:baselineAlignBottom="false"
-                            android:elevation="10dp"
-                            android:src="@drawable/profilfoto"
-                            app:civ_border_color="#FFFF"
-                            app:civ_border_width="2dp"
-                            app:layout_constraintBottom_toBottomOf="@+id/linearLayout"
-                            app:layout_constraintEnd_toStartOf="@+id/image4"
-                            app:layout_constraintTop_toTopOf="@+id/linearLayout" />
-
-
-                        <ImageButton
-                            android:id="@+id/image4"
-                            android:layout_width="20dp"
-                            android:layout_height="20dp"
-                            android:layout_marginEnd="10dp"
-                            android:background="@drawable/shape_circle_notification_badge"
-                            android:backgroundTint="#D8D8D8"
-                            android:elevation="10dp"
-                            android:padding="4dp"
-                            android:scaleType="fitCenter"
-                            android:src="@drawable/ic_group_3"
-                            android:tint="#3E4450"
-                            app:layout_constraintBottom_toBottomOf="@+id/image3"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintTop_toTopOf="@+id/image3" />
-
                         <ImageView
-                            android:id="@+id/imageView2"
-                            android:layout_width="34dp"
-                            android:layout_height="34dp"
-                            android:layout_marginStart="7dp"
+                            android:id="@+id/imageView3"
+                            android:layout_width="26dp"
+                            android:layout_height="26dp"
                             android:layout_marginTop="10dp"
-                            android:background="@drawable/group11"
-                            android:foregroundGravity="center"
+                            android:layout_marginEnd="14dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:srcCompat="@drawable/ic_wating" />
+
+                        <TextView
+                            android:id="@+id/textView2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="14dp"
+                            android:fontFamily="@font/lato"
+                            android:text="Masraf Formu @BoranGökbulut"
+                            android:textColor="#3E4450"
+                            android:textSize="16sp"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent" />
 
-                        <LinearLayout
-                            android:id="@+id/linearLayout"
+                        <TextView
+                            android:id="@+id/textView3"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginStart="12dp"
-                            android:orientation="vertical"
-                            app:layout_constraintBottom_toBottomOf="@+id/imageView2"
-                            app:layout_constraintStart_toEndOf="@+id/imageView2"
-                            app:layout_constraintTop_toTopOf="@+id/imageView2">
-
-                            <TextView
-                                android:id="@+id/textView9"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:fontFamily="@font/lato"
-                                android:text="9128399"
-                                android:textColor=" #3E4450"
-                                android:textSize="16dp" />
-
-                            <TextView
-                                android:id="@+id/textView10"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:fontFamily="@font/lato"
-                                android:text="22.01.2020"
-                                android:textColor="#B5B7BC"
-                                android:textSize="10dp" />
-                        </LinearLayout>
-
-                        <TextView
-                            android:id="@+id/textView12"
-                            android:layout_width="0dp"
-                            android:layout_height="35dp"
-                            android:layout_marginStart="4dp"
-                            android:layout_marginEnd="52dp"
-                            android:layout_marginBottom="8dp"
+                            android:layout_marginBottom="22dp"
                             android:fontFamily="@font/lato"
-                            android:text="klasfjasdkl jsdlfjasljfadklfjsdmf;ilasjkf[ioawfajksdfl[jkas[odfjaskldfjaiosjioasjdfasjdfio[aj[h'sklafji[sdf'as"
+                            android:text="22.01.2020"
+                            android:textColor="#C5C7CA"
+                            android:textSize="10sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="@+id/textView2"
+                            app:layout_constraintTop_toBottomOf="@+id/textView2"
+                            app:layout_constraintVertical_bias="0.0" />
+
+                        <ImageButton
+                            android:id="@+id/imageView4"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="176dp"
+                            android:layout_marginEnd="176dp"
+                            android:layout_marginBottom="2dp"
+                            android:background="#00000000"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintHorizontal_bias="0.0"
-                            app:layout_constraintStart_toStartOf="@+id/imageView2"
-                            app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:srcCompat="@drawable/ic_arrow_down" />
+
+                        <TextView
+                            android:id="@+id/textView4"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginEnd="16dp"
+                            android:layout_marginBottom="8dp"
+                            android:fontFamily="@font/lato"
+                            android:text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum"
+                            android:visibility="gone"
+                            app:layout_constraintBottom_toTopOf="@+id/imageView4"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/textView3"
+                            app:layout_constraintVertical_bias="0.060000002" />
 
                     </androidx.constraintlayout.widget.ConstraintLayout>
                 </androidx.cardview.widget.CardView>
@@ -835,7 +639,7 @@
                     android:layout_marginStart="4dp"
                     android:layout_marginTop="5dp"
                     android:layout_marginEnd="4dp"
-                    app:cardCornerRadius="19dp"
+                    app:cardCornerRadius="10dp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="@+id/textView23"
                     app:layout_constraintTop_toBottomOf="@+id/textView23">
@@ -845,105 +649,72 @@
                         android:layout_height="match_parent">
 
 
-                        <de.hdodenhof.circleimageview.CircleImageView
-                            android:id="@+id/image2"
-                            android:layout_width="30dp"
-                            android:layout_height="20dp"
-                            android:layout_marginStart="11dp"
-                            android:baselineAlignBottom="false"
-                            android:elevation="10dp"
-                            android:src="@drawable/profilfoto"
-                            app:civ_border_color="#FFFF"
-                            app:civ_border_width="2dp"
-                            app:layout_constraintBottom_toBottomOf="@+id/image3"
-                            app:layout_constraintStart_toStartOf="@+id/image3"
-                            app:layout_constraintTop_toTopOf="@+id/image3" />
-
-                        <de.hdodenhof.circleimageview.CircleImageView
-                            android:id="@+id/image3"
-                            android:layout_width="30dp"
-                            android:layout_height="20dp"
-                            android:layout_marginEnd="12dp"
-                            android:baselineAlignBottom="false"
-                            android:elevation="10dp"
-                            android:src="@drawable/profilfoto"
-                            app:civ_border_color="#FFFF"
-                            app:civ_border_width="2dp"
-                            app:layout_constraintBottom_toBottomOf="@+id/linearLayout"
-                            app:layout_constraintEnd_toStartOf="@+id/image4"
-                            app:layout_constraintTop_toTopOf="@+id/linearLayout" />
-
-
-                        <ImageButton
-                            android:id="@+id/image4"
-                            android:layout_width="20dp"
-                            android:layout_height="20dp"
-                            android:layout_marginEnd="10dp"
-                            android:background="@drawable/shape_circle_notification_badge"
-                            android:backgroundTint="#D8D8D8"
-                            android:elevation="10dp"
-                            android:padding="4dp"
-                            android:scaleType="fitCenter"
-                            android:src="@drawable/ic_group_3"
-                            android:tint="#3E4450"
-                            app:layout_constraintBottom_toBottomOf="@+id/image3"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintTop_toTopOf="@+id/image3" />
-
                         <ImageView
-                            android:id="@+id/imageView2"
-                            android:layout_width="34dp"
-                            android:layout_height="34dp"
-                            android:layout_marginStart="7dp"
+                            android:id="@+id/imageView3"
+                            android:layout_width="26dp"
+                            android:layout_height="26dp"
                             android:layout_marginTop="10dp"
-                            android:background="@drawable/group11"
-                            android:foregroundGravity="center"
+                            android:layout_marginEnd="14dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:srcCompat="@drawable/ic_wating" />
+
+                        <TextView
+                            android:id="@+id/textView2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="14dp"
+                            android:fontFamily="@font/lato"
+                            android:text="Masraf Formu @BoranGökbulut"
+                            android:textColor="#3E4450"
+                            android:textSize="16sp"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent" />
 
-                        <LinearLayout
-                            android:id="@+id/linearLayout"
+                        <TextView
+                            android:id="@+id/textView3"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginStart="12dp"
-                            android:orientation="vertical"
-                            app:layout_constraintBottom_toBottomOf="@+id/imageView2"
-                            app:layout_constraintStart_toEndOf="@+id/imageView2"
-                            app:layout_constraintTop_toTopOf="@+id/imageView2">
-
-                            <TextView
-                                android:id="@+id/textView9"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:fontFamily="@font/lato"
-                                android:text="9128399"
-                                android:textColor=" #3E4450"
-                                android:textSize="16dp" />
-
-                            <TextView
-                                android:id="@+id/textView10"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:fontFamily="@font/lato"
-                                android:text="22.01.2020"
-                                android:textColor="#B5B7BC"
-                                android:textSize="10dp" />
-                        </LinearLayout>
-
-                        <TextView
-                            android:id="@+id/textView12"
-                            android:layout_width="0dp"
-                            android:layout_height="35dp"
-                            android:layout_marginStart="4dp"
-                            android:layout_marginEnd="52dp"
-                            android:layout_marginBottom="8dp"
+                            android:layout_marginBottom="22dp"
                             android:fontFamily="@font/lato"
-                            android:text="klasfjasdkl jsdlfjasljfadklfjsdmf;ilasjkf[ioawfajksdfl[jkas[odfjaskldfjaiosjioasjdfasjdfio[aj[h'sklafji[sdf'as"
+                            android:text="22.01.2020"
+                            android:textColor="#C5C7CA"
+                            android:textSize="10sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="@+id/textView2"
+                            app:layout_constraintTop_toBottomOf="@+id/textView2"
+                            app:layout_constraintVertical_bias="0.0" />
+
+                        <ImageButton
+                            android:id="@+id/imageView4"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="176dp"
+                            android:layout_marginEnd="176dp"
+                            android:layout_marginBottom="2dp"
+                            android:background="#00000000"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintHorizontal_bias="0.0"
-                            app:layout_constraintStart_toStartOf="@+id/imageView2"
-                            app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:srcCompat="@drawable/ic_arrow_down" />
+
+                        <TextView
+                            android:id="@+id/textView4"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginEnd="16dp"
+                            android:layout_marginBottom="8dp"
+                            android:fontFamily="@font/lato"
+                            android:text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum"
+                            android:visibility="gone"
+                            app:layout_constraintBottom_toTopOf="@+id/imageView4"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/textView3"
+                            app:layout_constraintVertical_bias="0.060000002" />
 
                     </androidx.constraintlayout.widget.ConstraintLayout>
                 </androidx.cardview.widget.CardView>
@@ -955,7 +726,7 @@
                     android:layout_marginStart="4dp"
                     android:layout_marginTop="5dp"
                     android:layout_marginEnd="4dp"
-                    app:cardCornerRadius="19dp"
+                    app:cardCornerRadius="10dp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="@+id/textView23"
                     app:layout_constraintTop_toBottomOf="@+id/textView23">
@@ -965,105 +736,72 @@
                         android:layout_height="match_parent">
 
 
-                        <de.hdodenhof.circleimageview.CircleImageView
-                            android:id="@+id/image2"
-                            android:layout_width="30dp"
-                            android:layout_height="20dp"
-                            android:layout_marginStart="11dp"
-                            android:baselineAlignBottom="false"
-                            android:elevation="10dp"
-                            android:src="@drawable/profilfoto"
-                            app:civ_border_color="#FFFF"
-                            app:civ_border_width="2dp"
-                            app:layout_constraintBottom_toBottomOf="@+id/image3"
-                            app:layout_constraintStart_toStartOf="@+id/image3"
-                            app:layout_constraintTop_toTopOf="@+id/image3" />
-
-                        <de.hdodenhof.circleimageview.CircleImageView
-                            android:id="@+id/image3"
-                            android:layout_width="30dp"
-                            android:layout_height="20dp"
-                            android:layout_marginEnd="12dp"
-                            android:baselineAlignBottom="false"
-                            android:elevation="10dp"
-                            android:src="@drawable/profilfoto"
-                            app:civ_border_color="#FFFF"
-                            app:civ_border_width="2dp"
-                            app:layout_constraintBottom_toBottomOf="@+id/linearLayout"
-                            app:layout_constraintEnd_toStartOf="@+id/image4"
-                            app:layout_constraintTop_toTopOf="@+id/linearLayout" />
-
-
-                        <ImageButton
-                            android:id="@+id/image4"
-                            android:layout_width="20dp"
-                            android:layout_height="20dp"
-                            android:layout_marginEnd="10dp"
-                            android:background="@drawable/shape_circle_notification_badge"
-                            android:backgroundTint="#D8D8D8"
-                            android:elevation="10dp"
-                            android:padding="4dp"
-                            android:scaleType="fitCenter"
-                            android:src="@drawable/ic_group_3"
-                            android:tint="#3E4450"
-                            app:layout_constraintBottom_toBottomOf="@+id/image3"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintTop_toTopOf="@+id/image3" />
-
                         <ImageView
-                            android:id="@+id/imageView2"
-                            android:layout_width="34dp"
-                            android:layout_height="34dp"
-                            android:layout_marginStart="7dp"
+                            android:id="@+id/imageView3"
+                            android:layout_width="26dp"
+                            android:layout_height="26dp"
                             android:layout_marginTop="10dp"
-                            android:background="@drawable/group11"
-                            android:foregroundGravity="center"
+                            android:layout_marginEnd="14dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:srcCompat="@drawable/ic_wating" />
+
+                        <TextView
+                            android:id="@+id/textView2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="14dp"
+                            android:fontFamily="@font/lato"
+                            android:text="Masraf Formu @BoranGökbulut"
+                            android:textColor="#3E4450"
+                            android:textSize="16sp"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent" />
 
-                        <LinearLayout
-                            android:id="@+id/linearLayout"
+                        <TextView
+                            android:id="@+id/textView3"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginStart="12dp"
-                            android:orientation="vertical"
-                            app:layout_constraintBottom_toBottomOf="@+id/imageView2"
-                            app:layout_constraintStart_toEndOf="@+id/imageView2"
-                            app:layout_constraintTop_toTopOf="@+id/imageView2">
-
-                            <TextView
-                                android:id="@+id/textView9"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:fontFamily="@font/lato"
-                                android:text="9128399"
-                                android:textColor=" #3E4450"
-                                android:textSize="16dp" />
-
-                            <TextView
-                                android:id="@+id/textView10"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:fontFamily="@font/lato"
-                                android:text="22.01.2020"
-                                android:textColor="#B5B7BC"
-                                android:textSize="10dp" />
-                        </LinearLayout>
-
-                        <TextView
-                            android:id="@+id/textView12"
-                            android:layout_width="0dp"
-                            android:layout_height="35dp"
-                            android:layout_marginStart="4dp"
-                            android:layout_marginEnd="52dp"
-                            android:layout_marginBottom="8dp"
+                            android:layout_marginBottom="22dp"
                             android:fontFamily="@font/lato"
-                            android:text="klasfjasdkl jsdlfjasljfadklfjsdmf;ilasjkf[ioawfajksdfl[jkas[odfjaskldfjaiosjioasjdfasjdfio[aj[h'sklafji[sdf'as"
+                            android:text="22.01.2020"
+                            android:textColor="#C5C7CA"
+                            android:textSize="10sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="@+id/textView2"
+                            app:layout_constraintTop_toBottomOf="@+id/textView2"
+                            app:layout_constraintVertical_bias="0.0" />
+
+                        <ImageButton
+                            android:id="@+id/imageView4"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="176dp"
+                            android:layout_marginEnd="176dp"
+                            android:layout_marginBottom="2dp"
+                            android:background="#00000000"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintHorizontal_bias="0.0"
-                            app:layout_constraintStart_toStartOf="@+id/imageView2"
-                            app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:srcCompat="@drawable/ic_arrow_down" />
+
+                        <TextView
+                            android:id="@+id/textView4"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginEnd="16dp"
+                            android:layout_marginBottom="8dp"
+                            android:fontFamily="@font/lato"
+                            android:text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum"
+                            android:visibility="gone"
+                            app:layout_constraintBottom_toTopOf="@+id/imageView4"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/textView3"
+                            app:layout_constraintVertical_bias="0.060000002" />
 
                     </androidx.constraintlayout.widget.ConstraintLayout>
                 </androidx.cardview.widget.CardView>
@@ -1071,11 +809,11 @@
                 <androidx.cardview.widget.CardView
                     android:id="@+id/activity_card_view"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
                     android:layout_marginStart="4dp"
                     android:layout_marginTop="5dp"
                     android:layout_marginEnd="4dp"
-                    app:cardCornerRadius="19dp"
+                    app:cardCornerRadius="10dp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="@+id/textView23"
                     app:layout_constraintTop_toBottomOf="@+id/textView23">
@@ -1085,229 +823,76 @@
                         android:layout_height="match_parent">
 
 
-                        <de.hdodenhof.circleimageview.CircleImageView
-                            android:id="@+id/image2"
-                            android:layout_width="30dp"
-                            android:layout_height="20dp"
-                            android:layout_marginStart="11dp"
-                            android:baselineAlignBottom="false"
-                            android:elevation="10dp"
-                            android:src="@drawable/profilfoto"
-                            app:civ_border_color="#FFFF"
-                            app:civ_border_width="2dp"
-                            app:layout_constraintBottom_toBottomOf="@+id/image3"
-                            app:layout_constraintStart_toStartOf="@+id/image3"
-                            app:layout_constraintTop_toTopOf="@+id/image3" />
-
-                        <de.hdodenhof.circleimageview.CircleImageView
-                            android:id="@+id/image3"
-                            android:layout_width="30dp"
-                            android:layout_height="20dp"
-                            android:layout_marginEnd="12dp"
-                            android:baselineAlignBottom="false"
-                            android:elevation="10dp"
-                            android:src="@drawable/profilfoto"
-                            app:civ_border_color="#FFFF"
-                            app:civ_border_width="2dp"
-                            app:layout_constraintBottom_toBottomOf="@+id/linearLayout"
-                            app:layout_constraintEnd_toStartOf="@+id/image4"
-                            app:layout_constraintTop_toTopOf="@+id/linearLayout" />
-
-
-                        <ImageButton
-                            android:id="@+id/image4"
-                            android:layout_width="20dp"
-                            android:layout_height="20dp"
-                            android:layout_marginEnd="10dp"
-                            android:background="@drawable/shape_circle_notification_badge"
-                            android:backgroundTint="#D8D8D8"
-                            android:elevation="10dp"
-                            android:padding="4dp"
-                            android:scaleType="fitCenter"
-                            android:src="@drawable/ic_group_3"
-                            android:tint="#3E4450"
-                            app:layout_constraintBottom_toBottomOf="@+id/image3"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintTop_toTopOf="@+id/image3" />
-
                         <ImageView
-                            android:id="@+id/imageView2"
-                            android:layout_width="34dp"
-                            android:layout_height="34dp"
-                            android:layout_marginStart="7dp"
+                            android:id="@+id/imageView3"
+                            android:layout_width="26dp"
+                            android:layout_height="26dp"
                             android:layout_marginTop="10dp"
-                            android:background="@drawable/group11"
-                            android:foregroundGravity="center"
+                            android:layout_marginEnd="14dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:srcCompat="@drawable/ic_wating" />
+
+                        <TextView
+                            android:id="@+id/textView2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="14dp"
+                            android:fontFamily="@font/lato"
+                            android:text="Masraf Formu @BoranGökbulut"
+                            android:textColor="#3E4450"
+                            android:textSize="16sp"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent" />
 
-                        <LinearLayout
-                            android:id="@+id/linearLayout"
+                        <TextView
+                            android:id="@+id/textView3"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginStart="12dp"
-                            android:orientation="vertical"
-                            app:layout_constraintBottom_toBottomOf="@+id/imageView2"
-                            app:layout_constraintStart_toEndOf="@+id/imageView2"
-                            app:layout_constraintTop_toTopOf="@+id/imageView2">
-
-                            <TextView
-                                android:id="@+id/textView9"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:fontFamily="@font/lato"
-                                android:text="9128399"
-                                android:textColor=" #3E4450"
-                                android:textSize="16dp" />
-
-                            <TextView
-                                android:id="@+id/textView10"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:fontFamily="@font/lato"
-                                android:text="22.01.2020"
-                                android:textColor="#B5B7BC"
-                                android:textSize="10dp" />
-                        </LinearLayout>
-
-                        <TextView
-                            android:id="@+id/textView12"
-                            android:layout_width="0dp"
-                            android:layout_height="35dp"
-                            android:layout_marginStart="4dp"
-                            android:layout_marginEnd="52dp"
-                            android:layout_marginBottom="8dp"
+                            android:layout_marginBottom="22dp"
                             android:fontFamily="@font/lato"
-                            android:text="klasfjasdkl jsdlfjasljfadklfjsdmf;ilasjkf[ioawfajksdfl[jkas[odfjaskldfjaiosjioasjdfasjdfio[aj[h'sklafji[sdf'as"
+                            android:text="22.01.2020"
+                            android:textColor="#C5C7CA"
+                            android:textSize="10sp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="@+id/textView2"
+                            app:layout_constraintTop_toBottomOf="@+id/textView2"
+                            app:layout_constraintVertical_bias="0.0" />
+
+                        <ImageButton
+                            android:id="@+id/imageView4"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="176dp"
+                            android:layout_marginEnd="176dp"
+                            android:layout_marginBottom="2dp"
+                            android:background="#00000000"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintHorizontal_bias="0.0"
-                            app:layout_constraintStart_toStartOf="@+id/imageView2"
-                            app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:srcCompat="@drawable/ic_arrow_down" />
+
+                        <TextView
+                            android:id="@+id/textView4"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginEnd="16dp"
+                            android:layout_marginBottom="8dp"
+                            android:fontFamily="@font/lato"
+                            android:text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum"
+                            android:visibility="gone"
+                            app:layout_constraintBottom_toTopOf="@+id/imageView4"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/textView3"
+                            app:layout_constraintVertical_bias="0.060000002" />
 
                     </androidx.constraintlayout.widget.ConstraintLayout>
                 </androidx.cardview.widget.CardView>
 
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/activity_card_view"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginStart="4dp"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginEnd="4dp"
-                    android:layout_marginBottom="5dp"
-                    app:cardCornerRadius="19dp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="@+id/textView23"
-                    app:layout_constraintTop_toBottomOf="@+id/textView23">
-
-                    <androidx.constraintlayout.widget.ConstraintLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent">
-
-
-                        <de.hdodenhof.circleimageview.CircleImageView
-                            android:id="@+id/image2"
-                            android:layout_width="30dp"
-                            android:layout_height="20dp"
-                            android:layout_marginStart="11dp"
-                            android:baselineAlignBottom="false"
-                            android:elevation="10dp"
-                            android:src="@drawable/profilfoto"
-                            app:civ_border_color="#FFFF"
-                            app:civ_border_width="2dp"
-                            app:layout_constraintBottom_toBottomOf="@+id/image3"
-                            app:layout_constraintStart_toStartOf="@+id/image3"
-                            app:layout_constraintTop_toTopOf="@+id/image3" />
-
-                        <de.hdodenhof.circleimageview.CircleImageView
-                            android:id="@+id/image3"
-                            android:layout_width="30dp"
-                            android:layout_height="20dp"
-                            android:layout_marginEnd="12dp"
-                            android:baselineAlignBottom="false"
-                            android:elevation="10dp"
-                            android:src="@drawable/profilfoto"
-                            app:civ_border_color="#FFFF"
-                            app:civ_border_width="2dp"
-                            app:layout_constraintBottom_toBottomOf="@+id/linearLayout"
-                            app:layout_constraintEnd_toStartOf="@+id/image4"
-                            app:layout_constraintTop_toTopOf="@+id/linearLayout" />
-
-
-                        <ImageButton
-                            android:id="@+id/image4"
-                            android:layout_width="20dp"
-                            android:layout_height="20dp"
-                            android:layout_marginEnd="10dp"
-                            android:background="@drawable/shape_circle_notification_badge"
-                            android:backgroundTint="#D8D8D8"
-                            android:elevation="10dp"
-                            android:padding="4dp"
-                            android:scaleType="fitCenter"
-                            android:src="@drawable/ic_group_3"
-                            android:tint="#3E4450"
-                            app:layout_constraintBottom_toBottomOf="@+id/image3"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintTop_toTopOf="@+id/image3" />
-
-                        <ImageView
-                            android:id="@+id/imageView2"
-                            android:layout_width="34dp"
-                            android:layout_height="34dp"
-                            android:layout_marginStart="7dp"
-                            android:layout_marginTop="10dp"
-                            android:background="@drawable/group11"
-                            android:foregroundGravity="center"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent" />
-
-                        <LinearLayout
-                            android:id="@+id/linearLayout"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="12dp"
-                            android:orientation="vertical"
-                            app:layout_constraintBottom_toBottomOf="@+id/imageView2"
-                            app:layout_constraintStart_toEndOf="@+id/imageView2"
-                            app:layout_constraintTop_toTopOf="@+id/imageView2">
-
-                            <TextView
-                                android:id="@+id/textView9"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:fontFamily="@font/lato"
-                                android:text="9128399"
-                                android:textColor=" #3E4450"
-                                android:textSize="16dp" />
-
-                            <TextView
-                                android:id="@+id/textView10"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:fontFamily="@font/lato"
-                                android:text="22.01.2020"
-                                android:textColor="#B5B7BC"
-                                android:textSize="10dp" />
-                        </LinearLayout>
-
-                        <TextView
-                            android:id="@+id/textView12"
-                            android:layout_width="0dp"
-                            android:layout_height="35dp"
-                            android:layout_marginStart="4dp"
-                            android:layout_marginEnd="52dp"
-                            android:layout_marginBottom="8dp"
-                            android:fontFamily="@font/lato"
-                            android:text="klasfjasdkl jsdlfjasljfadklfjsdmf;ilasjkf[ioawfajksdfl[jkas[odfjaskldfjaiosjioasjdfasjdfio[aj[h'sklafji[sdf'as"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintHorizontal_bias="0.0"
-                            app:layout_constraintStart_toStartOf="@+id/imageView2"
-                            app:layout_constraintTop_toBottomOf="@+id/imageView2" />
-
-                    </androidx.constraintlayout.widget.ConstraintLayout>
-                </androidx.cardview.widget.CardView>
             </LinearLayout>
         </ScrollView>
     </androidx.constraintlayout.widget.ConstraintLayout>
