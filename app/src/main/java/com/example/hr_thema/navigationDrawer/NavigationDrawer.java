@@ -6,7 +6,6 @@ import android.os.Bundle;
 import android.view.Gravity;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.ImageView;
 
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
@@ -15,17 +14,16 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
 import com.example.hr_thema.R;
-import com.example.hr_thema.detail.chooseOperation.ChooseOperationActivity;
-import com.example.hr_thema.detail.DetailFragment;
 import com.example.hr_thema.bottomNav.lastActivities.LastActivitiesFragment;
 import com.example.hr_thema.bottomNav.menu.MenuFragment;
+import com.example.hr_thema.detail.DetailFragment;
 import com.google.android.material.badge.BadgeDrawable;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationView;
 import com.infideap.drawerbehavior.AdvanceDrawerLayout;
 
 public class NavigationDrawer extends AppCompatActivity implements IDrawerListener, NavigationView.OnNavigationItemSelectedListener {
-    BottomNavigationView navigation;
+    BottomNavigationView bottomNavigationView;
     View v;
     private AdvanceDrawerLayout drawer;
 
@@ -50,14 +48,13 @@ public class NavigationDrawer extends AppCompatActivity implements IDrawerListen
         // TODO: Homefragment deleted repace with home activity
         loadFragment(new LastActivitiesFragment());
 
-        navigation = findViewById(R.id.bottom_navigation);
-        navigation.setItemIconTintList(null);
-        navigation.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+        bottomNavigationView = findViewById(R.id.bottom_navigation);
+        bottomNavigationView.setItemIconTintList(null);
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(MenuItem menuItem) {
                 int id = menuItem.getItemId();
                 if (id == R.id.navigation_home) {
-
                     badgeControl();
 
                     loadFragment(new LastActivitiesFragment());
@@ -68,11 +65,13 @@ public class NavigationDrawer extends AppCompatActivity implements IDrawerListen
                 } else if (id == R.id.navigation_notifications) {
                     loadFragment(new DetailFragment());
                     return true;
-                } else if (id == R.id.navigation_settings) {
-                    Intent i = new Intent(getApplicationContext(), ChooseOperationActivity.class);
-                    startActivity(i);
-                    return true;
                 }
+
+//                } else if (id == R.id.navigation_settings) {
+//                    Intent i = new Intent(getApplicationContext(), ChooseOperationActivity.class);
+//                    startActivity(i);
+//                    return true;
+//                }
                 return true;
             }
         });
@@ -88,7 +87,7 @@ public class NavigationDrawer extends AppCompatActivity implements IDrawerListen
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
-        // Handle navigation view item clicks here.
+        // Handle bottomNavigationView view item clicks here.
 
         drawer.closeDrawer(GravityCompat.START);
         return true;
@@ -101,9 +100,9 @@ public class NavigationDrawer extends AppCompatActivity implements IDrawerListen
         transaction.commit();
     }
 
-    public void badgeControl(){
+    public void badgeControl() {
         // TODO: notification implementation test
-        BadgeDrawable badgeDrawable = navigation.getOrCreateBadge(R.id.navigation_home);
+        BadgeDrawable badgeDrawable = bottomNavigationView.getOrCreateBadge(R.id.navigation_home);
         badgeDrawable.setBackgroundColor(Color.rgb(157, 204, 82));
         badgeDrawable.setNumber(51);
     }
