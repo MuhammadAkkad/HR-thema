@@ -29,7 +29,6 @@ public class LastActivitiesFragment extends Fragment {
     View view;
     CardView activity;
 
-    ImageButton arrow;
     TextView testText;
     private int shortAnimationDuration;
 
