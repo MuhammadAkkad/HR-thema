@@ -29,7 +29,6 @@ public class LastActivitiesFragment extends Fragment {
     View view;
     CardView activity;
 
-    ImageButton arrow;
     TextView testText;
     private int shortAnimationDuration;
 
@@ -64,23 +63,11 @@ public class LastActivitiesFragment extends Fragment {
         });
 
 
-        arrow = view.findViewById(R.id.imageView4);
         testText = view.findViewById(R.id.textView4);
         testText.setVisibility(View.GONE);
 
 
 
-        arrow.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(getContext(), "Clicked", Toast.LENGTH_SHORT).show();
-                if(testText.getVisibility() == View.GONE){
-                    crossfade();}
-                else {
-                    crossfade();
-                }
-            }
-        });
 
 
 
