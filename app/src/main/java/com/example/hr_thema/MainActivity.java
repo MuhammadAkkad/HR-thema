@@ -18,12 +18,10 @@ import com.smarteist.autoimageslider.SliderView;
 
 public class MainActivity extends AppCompatActivity {
     SliderView sliderView;
-    Button btn_login;
-    LinearLayout linear_gec_btn;
+    Button btn_login,btn_gec;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        setContentView(R.layout.activity_main);
 
         // Splash screen demo
         long start = System.currentTimeMillis();
@@ -32,18 +30,19 @@ public class MainActivity extends AppCompatActivity {
         {
             // run
         }
-        linear_gec_btn = findViewById(R.id.linear_gec_btn);
         setTheme(R.style.AppTheme);
         super.onCreate(savedInstanceState);
-        //btn_login = findViewById(R.id.btn_login_activity_main);
-       // btn_login.setOnClickListener(new View.OnClickListener() {
-       //     @Override
-       //     public void onClick(View v) {
-       //         LoginPage(v);
-       //     }
-       // });
+        setContentView(R.layout.activity_main);
+        btn_login = findViewById(R.id.btn_login_activity_main);
+        btn_login.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                LoginPage(v);
+            }
+        });
 
-        linear_gec_btn.setOnClickListener(new View.OnClickListener() {
+        btn_gec = findViewById(R.id.btn_login_activity_main);
+        btn_gec.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 LoginPage(v);
