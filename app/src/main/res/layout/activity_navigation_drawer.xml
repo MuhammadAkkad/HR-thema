@@ -27,9 +27,9 @@
         app:itemIconSize="42dp"
         app:itemHorizontalPadding="20dp"
         app:headerLayout="@layout/nav_header_main"
-        app:itemIconTint="#000000"
-        app:itemTextColor="#000000"
-        app:menu="@menu/side_navigation_drawer"/>
+        app:itemIconTint="@color/SideNavigationIconText"
+        app:itemTextColor="@color/SideNavigationIconText"
+        app:menu="@menu/side_navigation_drawer" />
 
 
 </com.infideap.drawerbehavior.AdvanceDrawerLayout>
