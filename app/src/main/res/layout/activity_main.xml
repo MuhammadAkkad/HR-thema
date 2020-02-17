@@ -8,6 +8,55 @@
     tools:context=".MainActivity">
 
 
+    <ImageView
+        android:id="@+id/img_logo_activity_main"
+        android:layout_width="144dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="60dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logoblack" />
+
+    <LinearLayout
+        android:id="@+id/linear_gec_btn"
+        android:layout_width="70dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="20dp"
+        android:clickable="true"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:clickable="false"
+            android:id="@+id/button"
+            android:layout_width="15dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/transparentColor"
+            android:fontFamily="@font/lato_bold"
+            android:gravity="center"
+            android:shadowColor="@color/transparentColor"
+            android:text="Geç"
+            android:textAllCaps="false"
+            android:textColor="#A3A3A3"
+            android:textSize="18dp" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="2dp"
+            android:layout_weight="1"
+            android:tint="#A3A3A3"
+            app:srcCompat="@drawable/ic_arrow_right" />
+    </LinearLayout>
+
+
     <com.smarteist.autoimageslider.SliderView
         android:id="@+id/imageSlider"
         android:layout_width="0dp"
@@ -23,41 +72,18 @@
         app:sliderCircularHandlerEnabled="true"
         app:sliderIndicatorAnimationDuration="800"
         app:sliderIndicatorGravity="center_horizontal|bottom"
-        app:sliderIndicatorMargin="90dp"
+        app:sliderIndicatorMargin="40dp"
         app:sliderIndicatorOrientation="horizontal"
         app:sliderIndicatorPadding="10dp"
         app:sliderIndicatorRadius="2dp"
-        app:sliderIndicatorSelectedColor="#FFFFFF"
-        app:sliderIndicatorUnselectedColor="#7D817A"
+        app:sliderIndicatorSelectedColor="#F0BA3A"
+        app:sliderIndicatorUnselectedColor="#E5E5E5"
         app:sliderScrollTimeInSec="4"
-         />
+         >
+
+    </com.smarteist.autoimageslider.SliderView>
 
 
-    <ImageView
-        android:id="@+id/img_logo_activity_main"
-        android:layout_width="144dp"
-        android:layout_height="42dp"
-        android:layout_marginTop="25dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.09"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/logoblack" />
-
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btn_login_activity_main"
-        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="27dp"
-        android:layout_marginEnd="17dp"
-        android:fontFamily="@font/lato"
-        android:text="GEÇ"
-        android:textColor="#66FFFFFF"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:rippleColor="@color/colorPrimary" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

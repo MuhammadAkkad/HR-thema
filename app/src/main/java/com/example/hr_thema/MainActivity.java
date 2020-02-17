@@ -5,6 +5,7 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.LinearLayout;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -18,10 +19,11 @@ import com.smarteist.autoimageslider.SliderView;
 public class MainActivity extends AppCompatActivity {
     SliderView sliderView;
     Button btn_login;
-
+    LinearLayout linear_gec_btn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        setContentView(R.layout.activity_main);
 
         // Splash screen demo
         long start = System.currentTimeMillis();
@@ -30,18 +32,23 @@ public class MainActivity extends AppCompatActivity {
         {
             // run
         }
-
+        linear_gec_btn = findViewById(R.id.linear_gec_btn);
         setTheme(R.style.AppTheme);
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        btn_login = findViewById(R.id.btn_login_activity_main);
-        btn_login.setOnClickListener(new View.OnClickListener() {
+        //btn_login = findViewById(R.id.btn_login_activity_main);
+       // btn_login.setOnClickListener(new View.OnClickListener() {
+       //     @Override
+       //     public void onClick(View v) {
+       //         LoginPage(v);
+       //     }
+       // });
+
+        linear_gec_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 LoginPage(v);
             }
         });
-
         sliderView = findViewById(R.id.imageSlider);
 
         final Slider adapter = new Slider(this);
@@ -50,8 +57,8 @@ public class MainActivity extends AppCompatActivity {
         sliderView.setSliderAdapter(adapter);
         // Indicator
         sliderView.setIndicatorAnimation(IndicatorAnimations.SLIDE);
-        sliderView.setIndicatorSelectedColor(Color.rgb(40, 190, 228));
-        sliderView.setIndicatorUnselectedColor(Color.rgb(205, 205, 205));
+        //sliderView.setIndicatorSelectedColor(Color.rgb(40, 190, 228));
+        //sliderView.setIndicatorUnselectedColor(Color.rgb(205, 205, 205));
 
         sliderView.setSliderTransformAnimation(SliderAnimations.SIMPLETRANSFORMATION);
         sliderView.setAutoCycleDirection(SliderView.AUTO_CYCLE_DIRECTION_RIGHT);

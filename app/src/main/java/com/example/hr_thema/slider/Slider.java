@@ -17,7 +17,15 @@ public class Slider extends
         SliderViewAdapter<Slider.SliderAdapterVH> {
     // temp strings
     String header = "Lorem Ipsum, dizgi";
-    String description = "Lorem Ipsum, dizgi ve baskı endüstrisi\n" +
+    String description1 = "Lorem Ipsum, dizgi ve baskı endüstrisi\n" +
+            "kullanılan mıgır metinlerdir. Lorem Ipsum, \n" +
+            "adı bilinmeyen bir matbaacının bir hurufat \n" +
+            "numune kitabı";
+    String description2 = "Lorem Ipsum, dizgi ve baskı endüstrisi\n" +
+            "kullanılan mıgır metinlerdir. Lorem Ipsum, \n" +
+            "adı bilinmeyen bir matbaacının bir hurufat \n" +
+            "numune kitabı";
+    String description3 = "Lorem Ipsum, dizgi ve baskı endüstrisi\n" +
             "kullanılan mıgır metinlerdir. Lorem Ipsum, \n" +
             "adı bilinmeyen bir matbaacının bir hurufat \n" +
             "numune kitabı";
@@ -48,31 +56,31 @@ public class Slider extends
         switch (position) {
             case 0:
                 viewHolder.textViewHeader.setText(header);
-                viewHolder.textViewDescription.setText(description);
+                viewHolder.textViewDescription.setText(description1);
                 Glide.with(viewHolder.itemView)
-                        .load(R.drawable.tutorial1)
+                        .load(R.drawable.image_slider1)
                         .fitCenter()
                         .into(viewHolder.imageViewBackground);
                 break;
             case 1:
                 viewHolder.textViewHeader.setText(header);
-                viewHolder.textViewDescription.setText(description);
+                viewHolder.textViewDescription.setText(description2);
                 Glide.with(viewHolder.itemView)
-                        .load(R.drawable.tutorial2)
+                        .load(R.drawable.image_slider2)
                         .fitCenter()
                         .into(viewHolder.imageViewBackground);
                 break;
             case 2:
                 viewHolder.textViewHeader.setText(header);
-                viewHolder.textViewDescription.setText(description);
+                viewHolder.textViewDescription.setText(description3);
                 Glide.with(viewHolder.itemView)
-                        .load(R.drawable.tutorial3)
+                        .load(R.drawable.image_slider3)
                         .fitCenter()
                         .into(viewHolder.imageViewBackground);
                 break;
             default:
                 viewHolder.textViewHeader.setText(header);
-                viewHolder.textViewDescription.setText(description);
+                viewHolder.textViewDescription.setText(description1);
                 Glide.with(viewHolder.itemView);
                 break;
         }
