@@ -32,7 +32,7 @@ public class NavigationDrawer extends AppCompatActivity implements IDrawerListen
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_navigation_drawer);
 
-        v = getWindow().getDecorView().findViewById(R.id.drawer_layout);
+        //v = getWindow().getDecorView().findViewById(R.id.drawer_layout);
 
         drawer = findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -45,9 +45,8 @@ public class NavigationDrawer extends AppCompatActivity implements IDrawerListen
         drawer.setRadius(Gravity.START, 0);
         drawer.setViewElevation(Gravity.START, 30);
 
-        // TODO: Homefragment deleted repace with home activity
-        loadFragment(new LastActivitiesFragment());
 
+        loadFragment(new LastActivitiesFragment());
         bottomNavigationView = findViewById(R.id.bottom_navigation);
         bottomNavigationView.setItemIconTintList(null);
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -56,7 +55,6 @@ public class NavigationDrawer extends AppCompatActivity implements IDrawerListen
                 int id = menuItem.getItemId();
                 if (id == R.id.navigation_home) {
                     badgeControl();
-
                     loadFragment(new LastActivitiesFragment());
                     return true;
                 } else if (id == R.id.navigation_menu) {
@@ -66,12 +64,6 @@ public class NavigationDrawer extends AppCompatActivity implements IDrawerListen
                     loadFragment(new DetailFragment());
                     return true;
                 }
-
-//                } else if (id == R.id.navigation_settings) {
-//                    Intent i = new Intent(getApplicationContext(), ChooseOperationActivity.class);
-//                    startActivity(i);
-//                    return true;
-//                }
                 return true;
             }
         });

@@ -65,7 +65,8 @@
         app:cornerRadius="25dp"
         app:layout_constraintBottom_toTopOf="@+id/btn_another_user_login_logged_in_activity"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        style="?android:attr/borderlessButtonStyle"/>
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_another_user_login_logged_in_activity"
@@ -85,7 +86,8 @@
         app:cornerRadius="25dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        style="?android:attr/borderlessButtonStyle"/>
 
     <TextView
         android:id="@+id/textView14"

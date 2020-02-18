@@ -2,6 +2,7 @@ package com.example.hr_thema;
 
 import android.content.Intent;
 import android.graphics.Color;
+import android.media.Image;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -18,7 +19,7 @@ import com.smarteist.autoimageslider.SliderView;
 
 public class MainActivity extends AppCompatActivity {
     SliderView sliderView;
-    Button btn_login,btn_gec;
+    Button btn_login;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,13 +42,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        btn_gec = findViewById(R.id.btn_login_activity_main);
-        btn_gec.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                LoginPage(v);
-            }
-        });
+
         sliderView = findViewById(R.id.imageSlider);
 
         final Slider adapter = new Slider(this);

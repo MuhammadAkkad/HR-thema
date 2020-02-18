@@ -16,19 +16,17 @@ import com.smarteist.autoimageslider.SliderViewAdapter;
 public class Slider extends
         SliderViewAdapter<Slider.SliderAdapterVH> {
     // temp strings
-    String header = "Lorem Ipsum, dizgi";
-    String description1 = "Lorem Ipsum, dizgi ve baskı endüstrisi\n" +
-            "kullanılan mıgır metinlerdir. Lorem Ipsum, \n" +
-            "adı bilinmeyen bir matbaacının bir hurufat \n" +
-            "numune kitabı";
-    String description2 = "Lorem Ipsum, dizgi ve baskı endüstrisi\n" +
-            "kullanılan mıgır metinlerdir. Lorem Ipsum, \n" +
-            "adı bilinmeyen bir matbaacının bir hurufat \n" +
-            "numune kitabı";
-    String description3 = "Lorem Ipsum, dizgi ve baskı endüstrisi\n" +
-            "kullanılan mıgır metinlerdir. Lorem Ipsum, \n" +
-            "adı bilinmeyen bir matbaacının bir hurufat \n" +
-            "numune kitabı";
+    String header1 = "Üzerindeki İşlemleri\n" +
+            "Gör, Filtrele, Yönet";
+    String description1 = "Lorem Ipsum, dizgi ve baskı endüstrisinde kullanılan mıgır metinlerdir. Lorem Ipsum, adı bilinmeyen bir matbaacının bir hurufat numune kitabı oluşturmak üzere.";
+
+    String header2 = "İşlemlerinizi Planlayın\n" +
+            "Hatırlatıcılar Oluşturun";
+    String description2 = "Lorem Ipsum, dizgi ve baskı endüstrisinde kullanılan mıgır metinlerdir. Lorem Ipsum, adı bilinmeyen bir matbaacının bir hurufat numune kitabı oluşturmak üzere.";
+
+    String header3 = "Giriş yap, Güvenli \n" +
+            "işlemler Oluştur";
+    String description3 = "Lorem Ipsum, dizgi ve baskı endüstrisinde kullanılan mıgır metinlerdir. Lorem Ipsum, adı bilinmeyen bir matbaacının bir hurufat numune kitabı oluşturmak üzere.";
     private Context context;
     private int mCount;
 
@@ -55,7 +53,7 @@ public class Slider extends
 
         switch (position) {
             case 0:
-                viewHolder.textViewHeader.setText(header);
+                viewHolder.textViewHeader.setText(header1);
                 viewHolder.textViewDescription.setText(description1);
                 Glide.with(viewHolder.itemView)
                         .load(R.drawable.image_slider1)
@@ -63,7 +61,7 @@ public class Slider extends
                         .into(viewHolder.imageViewBackground);
                 break;
             case 1:
-                viewHolder.textViewHeader.setText(header);
+                viewHolder.textViewHeader.setText(header2);
                 viewHolder.textViewDescription.setText(description2);
                 Glide.with(viewHolder.itemView)
                         .load(R.drawable.image_slider2)
@@ -71,7 +69,7 @@ public class Slider extends
                         .into(viewHolder.imageViewBackground);
                 break;
             case 2:
-                viewHolder.textViewHeader.setText(header);
+                viewHolder.textViewHeader.setText(header3);
                 viewHolder.textViewDescription.setText(description3);
                 Glide.with(viewHolder.itemView)
                         .load(R.drawable.image_slider3)
@@ -79,7 +77,7 @@ public class Slider extends
                         .into(viewHolder.imageViewBackground);
                 break;
             default:
-                viewHolder.textViewHeader.setText(header);
+                viewHolder.textViewHeader.setText(header1);
                 viewHolder.textViewDescription.setText(description1);
                 Glide.with(viewHolder.itemView);
                 break;
