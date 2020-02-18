@@ -39,11 +39,13 @@ public class ViewPagerAdapter extends FragmentPagerAdapter {
         return fragmentList.size();
     }
 
-    @Nullable
-    @Override
-    public CharSequence getPageTitle(int position) {
-        return baslikListesi.get(position);
-    }
+//    @Nullable
+//    @Override
+//    public CharSequence getPageTitle(int position) {
+//        return baslikListesi.get(position);
+//    }
+
+
 
     public void addFragment(Fragment fragment, String title){
         fragmentList.add(fragment);

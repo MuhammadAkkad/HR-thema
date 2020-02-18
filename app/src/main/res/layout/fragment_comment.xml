@@ -10,7 +10,6 @@
         android:id="@+id/nestedScrollView2"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginTop="15dp"
         android:fillViewport="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -20,616 +19,520 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:showDividers="end">
 
-            <androidx.cardview.widget.CardView
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="32dp"
-                android:layout_marginTop="5dp"
-                android:layout_marginEnd="32dp"
-                app:cardCornerRadius="19dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
+                android:layout_height="wrap_content">
 
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/imageView5"
+                    android:layout_width="39dp"
+                    android:layout_height="34dp"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginTop="9dp"
+                    android:baselineAlignBottom="false"
+                    android:elevation="10dp"
+                    android:src="@drawable/profilfoto"
+                    app:civ_border_color="#FFFF"
+                    app:civ_border_width="2dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-                    <de.hdodenhof.circleimageview.CircleImageView
-                        android:id="@+id/imageView5"
-                        android:layout_width="39dp"
-                        android:layout_height="34dp"
-                        android:layout_marginStart="9dp"
-                        android:layout_marginTop="9dp"
-                        android:baselineAlignBottom="false"
-                        android:elevation="10dp"
-                        android:src="@drawable/profilfoto"
-                        app:civ_border_color="#FFFF"
-                        app:civ_border_width="2dp"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
-
-                    <TextView
-                        android:id="@+id/textView19"
-                        android:layout_width="wrap_content"
-                        android:layout_height="17dp"
-                        android:layout_marginStart="9dp"
-                        android:fontFamily="@font/lato"
-                        android:text="Boran Gökbulut"
-                        android:textColor="#424853"
-                        app:layout_constraintStart_toEndOf="@+id/imageView5"
-                        app:layout_constraintTop_toTopOf="@+id/imageView5" />
+                <TextView
+                    android:id="@+id/textView19"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="9dp"
+                    android:fontFamily="@font/lato_bold"
+                    android:text="Boran Gökbulut"
+                    android:textColor="#424853"
+                    android:textSize="22dp"
+                    app:layout_constraintStart_toEndOf="@+id/imageView5"
+                    app:layout_constraintTop_toTopOf="@+id/imageView5" />
 
 
-                    <TextView
-                        android:id="@+id/textView20"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/lato"
-                        android:text="Direktör"
-                        android:textColor="#C6C7CB"
-                        android:textSize="12sp"
-                        app:layout_constraintEnd_toEndOf="@+id/textView19"
-                        app:layout_constraintHorizontal_bias="0.0"
-                        app:layout_constraintStart_toStartOf="@+id/textView19"
-                        app:layout_constraintTop_toBottomOf="@+id/textView19" />
+                <TextView
+                    android:id="@+id/textView21"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="23dp"
+                    android:layout_marginBottom="10dp"
+                    android:fontFamily="@font/lato"
+                    android:text="24 Saat önce"
+                    android:textColor="#C6C7CB"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/textView19"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-                    <TextView
-                        android:id="@+id/textView21"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="67dp"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginEnd="10dp"
-                        android:fontFamily="@font/lato"
-                        android:text="01.02.2019 - 11:02"
-                        android:textColor="#C6C7CB"
-                        android:textSize="12sp"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toEndOf="@+id/textView19"
-                        app:layout_constraintTop_toTopOf="parent" />
+                <TextView
+                    android:id="@+id/textView22"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="20dp"
+                    android:fontFamily="@font/lato"
+                    android:text="Lorem Ipsum, dizgi ve baskı endüstrisinde kullanılan mıgır metinlerdir. Lorem Ipsum, adı bilinmeyen bir matbaacının bir hurufat numune kitabı oluşturmak üzere bir yazı galerisini alarak karıştırdığı 1500'lerden beri endüstri standardı sahte metinler olarak kullanılmıştır."
+                    android:textColor="#515151"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/imageView5"
+                    app:layout_constraintTop_toBottomOf="@+id/imageView5" />
 
-                    <TextView
-                        android:id="@+id/textView22"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginTop="17dp"
-                        android:layout_marginEnd="10dp"
-                        android:layout_marginBottom="12dp"
-                        android:fontFamily="@font/lato"
-                        android:text="9128399 numaralı istek ile 22.01.2020 tarihinde Boran Gökbulut tarafından 1000 TL bütçe talep edildi. Behiç Tanağardı onaylayabilir."
-                        android:textSize="11sp"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/imageView5" />
-                </androidx.constraintlayout.widget.ConstraintLayout>
-            </androidx.cardview.widget.CardView>
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
-            <androidx.cardview.widget.CardView
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="32dp"
-                android:layout_marginTop="5dp"
-                android:layout_marginEnd="32dp"
-                app:cardCornerRadius="19dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
+                android:layout_height="wrap_content">
 
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/imageView5"
+                    android:layout_width="39dp"
+                    android:layout_height="34dp"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginTop="9dp"
+                    android:baselineAlignBottom="false"
+                    android:elevation="10dp"
+                    android:src="@drawable/profilfoto"
+                    app:civ_border_color="#FFFF"
+                    app:civ_border_width="2dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-                    <de.hdodenhof.circleimageview.CircleImageView
-                        android:id="@+id/imageView5"
-                        android:layout_width="39dp"
-                        android:layout_height="34dp"
-                        android:layout_marginStart="9dp"
-                        android:layout_marginTop="9dp"
-                        android:baselineAlignBottom="false"
-                        android:elevation="10dp"
-                        android:src="@drawable/profilfoto"
-                        app:civ_border_color="#FFFF"
-                        app:civ_border_width="2dp"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
-
-                    <TextView
-                        android:id="@+id/textView19"
-                        android:layout_width="wrap_content"
-                        android:layout_height="17dp"
-                        android:layout_marginStart="9dp"
-                        android:fontFamily="@font/lato"
-                        android:text="Boran Gökbulut"
-                        android:textColor="#424853"
-                        app:layout_constraintStart_toEndOf="@+id/imageView5"
-                        app:layout_constraintTop_toTopOf="@+id/imageView5" />
+                <TextView
+                    android:id="@+id/textView19"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="9dp"
+                    android:fontFamily="@font/lato_bold"
+                    android:text="Boran Gökbulut"
+                    android:textColor="#424853"
+                    android:textSize="22dp"
+                    app:layout_constraintStart_toEndOf="@+id/imageView5"
+                    app:layout_constraintTop_toTopOf="@+id/imageView5" />
 
 
-                    <TextView
-                        android:id="@+id/textView20"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/lato"
-                        android:text="Direktör"
-                        android:textColor="#C6C7CB"
-                        android:textSize="12sp"
-                        app:layout_constraintEnd_toEndOf="@+id/textView19"
-                        app:layout_constraintHorizontal_bias="0.0"
-                        app:layout_constraintStart_toStartOf="@+id/textView19"
-                        app:layout_constraintTop_toBottomOf="@+id/textView19" />
+                <TextView
+                    android:id="@+id/textView21"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="23dp"
+                    android:layout_marginBottom="10dp"
+                    android:fontFamily="@font/lato"
+                    android:text="24 Saat önce"
+                    android:textColor="#C6C7CB"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/textView19"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-                    <TextView
-                        android:id="@+id/textView21"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="67dp"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginEnd="10dp"
-                        android:fontFamily="@font/lato"
-                        android:text="01.02.2019 - 11:02"
-                        android:textColor="#C6C7CB"
-                        android:textSize="12sp"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toEndOf="@+id/textView19"
-                        app:layout_constraintTop_toTopOf="parent" />
+                <TextView
+                    android:id="@+id/textView22"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="20dp"
+                    android:fontFamily="@font/lato"
+                    android:text="Lorem Ipsum, dizgi ve baskı endüstrisinde kullanılan mıgır metinlerdir. Lorem Ipsum, adı bilinmeyen bir matbaacının bir hurufat numune kitabı oluşturmak üzere bir yazı galerisini alarak karıştırdığı 1500'lerden beri endüstri standardı sahte metinler olarak kullanılmıştır."
+                    android:textColor="#515151"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/imageView5"
+                    app:layout_constraintTop_toBottomOf="@+id/imageView5" />
 
-                    <TextView
-                        android:id="@+id/textView22"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginTop="17dp"
-                        android:layout_marginEnd="10dp"
-                        android:layout_marginBottom="12dp"
-                        android:fontFamily="@font/lato"
-                        android:text="9128399 numaralı istek ile 22.01.2020 tarihinde Boran Gökbulut tarafından 1000 TL bütçe talep edildi. Behiç Tanağardı onaylayabilir."
-                        android:textSize="11sp"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/imageView5" />
-                </androidx.constraintlayout.widget.ConstraintLayout>
-            </androidx.cardview.widget.CardView>
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
-            <androidx.cardview.widget.CardView
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="32dp"
-                android:layout_marginTop="5dp"
-                android:layout_marginEnd="32dp"
-                app:cardCornerRadius="19dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
+                android:layout_height="wrap_content">
 
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/imageView5"
+                    android:layout_width="39dp"
+                    android:layout_height="34dp"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginTop="9dp"
+                    android:baselineAlignBottom="false"
+                    android:elevation="10dp"
+                    android:src="@drawable/profilfoto"
+                    app:civ_border_color="#FFFF"
+                    app:civ_border_width="2dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-                    <de.hdodenhof.circleimageview.CircleImageView
-                        android:id="@+id/imageView5"
-                        android:layout_width="39dp"
-                        android:layout_height="34dp"
-                        android:layout_marginStart="9dp"
-                        android:layout_marginTop="9dp"
-                        android:baselineAlignBottom="false"
-                        android:elevation="10dp"
-                        android:src="@drawable/profilfoto"
-                        app:civ_border_color="#FFFF"
-                        app:civ_border_width="2dp"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
-
-                    <TextView
-                        android:id="@+id/textView19"
-                        android:layout_width="wrap_content"
-                        android:layout_height="17dp"
-                        android:layout_marginStart="9dp"
-                        android:fontFamily="@font/lato"
-                        android:text="Boran Gökbulut"
-                        android:textColor="#424853"
-                        app:layout_constraintStart_toEndOf="@+id/imageView5"
-                        app:layout_constraintTop_toTopOf="@+id/imageView5" />
+                <TextView
+                    android:id="@+id/textView19"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="9dp"
+                    android:fontFamily="@font/lato_bold"
+                    android:text="Boran Gökbulut"
+                    android:textColor="#424853"
+                    android:textSize="22dp"
+                    app:layout_constraintStart_toEndOf="@+id/imageView5"
+                    app:layout_constraintTop_toTopOf="@+id/imageView5" />
 
 
-                    <TextView
-                        android:id="@+id/textView20"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/lato"
-                        android:text="Direktör"
-                        android:textColor="#C6C7CB"
-                        android:textSize="12sp"
-                        app:layout_constraintEnd_toEndOf="@+id/textView19"
-                        app:layout_constraintHorizontal_bias="0.0"
-                        app:layout_constraintStart_toStartOf="@+id/textView19"
-                        app:layout_constraintTop_toBottomOf="@+id/textView19" />
+                <TextView
+                    android:id="@+id/textView21"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="23dp"
+                    android:layout_marginBottom="10dp"
+                    android:fontFamily="@font/lato"
+                    android:text="24 Saat önce"
+                    android:textColor="#C6C7CB"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/textView19"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-                    <TextView
-                        android:id="@+id/textView21"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="67dp"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginEnd="10dp"
-                        android:fontFamily="@font/lato"
-                        android:text="01.02.2019 - 11:02"
-                        android:textColor="#C6C7CB"
-                        android:textSize="12sp"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toEndOf="@+id/textView19"
-                        app:layout_constraintTop_toTopOf="parent" />
+                <TextView
+                    android:id="@+id/textView22"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="20dp"
+                    android:fontFamily="@font/lato"
+                    android:text="Lorem Ipsum, dizgi ve baskı endüstrisinde kullanılan mıgır metinlerdir. Lorem Ipsum, adı bilinmeyen bir matbaacının bir hurufat numune kitabı oluşturmak üzere bir yazı galerisini alarak karıştırdığı 1500'lerden beri endüstri standardı sahte metinler olarak kullanılmıştır."
+                    android:textColor="#515151"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/imageView5"
+                    app:layout_constraintTop_toBottomOf="@+id/imageView5" />
 
-                    <TextView
-                        android:id="@+id/textView22"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginTop="17dp"
-                        android:layout_marginEnd="10dp"
-                        android:layout_marginBottom="12dp"
-                        android:fontFamily="@font/lato"
-                        android:text="9128399 numaralı istek ile 22.01.2020 tarihinde Boran Gökbulut tarafından 1000 TL bütçe talep edildi. Behiç Tanağardı onaylayabilir."
-                        android:textSize="11sp"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/imageView5" />
-                </androidx.constraintlayout.widget.ConstraintLayout>
-            </androidx.cardview.widget.CardView>
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
-            <androidx.cardview.widget.CardView
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="32dp"
-                android:layout_marginTop="5dp"
-                android:layout_marginEnd="32dp"
-                app:cardCornerRadius="19dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
+                android:layout_height="wrap_content">
 
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/imageView5"
+                    android:layout_width="39dp"
+                    android:layout_height="34dp"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginTop="9dp"
+                    android:baselineAlignBottom="false"
+                    android:elevation="10dp"
+                    android:src="@drawable/profilfoto"
+                    app:civ_border_color="#FFFF"
+                    app:civ_border_width="2dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-                    <de.hdodenhof.circleimageview.CircleImageView
-                        android:id="@+id/imageView5"
-                        android:layout_width="39dp"
-                        android:layout_height="34dp"
-                        android:layout_marginStart="9dp"
-                        android:layout_marginTop="9dp"
-                        android:baselineAlignBottom="false"
-                        android:elevation="10dp"
-                        android:src="@drawable/profilfoto"
-                        app:civ_border_color="#FFFF"
-                        app:civ_border_width="2dp"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
-
-                    <TextView
-                        android:id="@+id/textView19"
-                        android:layout_width="wrap_content"
-                        android:layout_height="17dp"
-                        android:layout_marginStart="9dp"
-                        android:fontFamily="@font/lato"
-                        android:text="Boran Gökbulut"
-                        android:textColor="#424853"
-                        app:layout_constraintStart_toEndOf="@+id/imageView5"
-                        app:layout_constraintTop_toTopOf="@+id/imageView5" />
+                <TextView
+                    android:id="@+id/textView19"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="9dp"
+                    android:fontFamily="@font/lato_bold"
+                    android:text="Boran Gökbulut"
+                    android:textColor="#424853"
+                    android:textSize="22dp"
+                    app:layout_constraintStart_toEndOf="@+id/imageView5"
+                    app:layout_constraintTop_toTopOf="@+id/imageView5" />
 
 
-                    <TextView
-                        android:id="@+id/textView20"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/lato"
-                        android:text="Direktör"
-                        android:textColor="#C6C7CB"
-                        android:textSize="12sp"
-                        app:layout_constraintEnd_toEndOf="@+id/textView19"
-                        app:layout_constraintHorizontal_bias="0.0"
-                        app:layout_constraintStart_toStartOf="@+id/textView19"
-                        app:layout_constraintTop_toBottomOf="@+id/textView19" />
+                <TextView
+                    android:id="@+id/textView21"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="23dp"
+                    android:layout_marginBottom="10dp"
+                    android:fontFamily="@font/lato"
+                    android:text="24 Saat önce"
+                    android:textColor="#C6C7CB"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/textView19"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-                    <TextView
-                        android:id="@+id/textView21"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="67dp"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginEnd="10dp"
-                        android:fontFamily="@font/lato"
-                        android:text="01.02.2019 - 11:02"
-                        android:textColor="#C6C7CB"
-                        android:textSize="12sp"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toEndOf="@+id/textView19"
-                        app:layout_constraintTop_toTopOf="parent" />
+                <TextView
+                    android:id="@+id/textView22"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="20dp"
+                    android:fontFamily="@font/lato"
+                    android:text="Lorem Ipsum, dizgi ve baskı endüstrisinde kullanılan mıgır metinlerdir. Lorem Ipsum, adı bilinmeyen bir matbaacının bir hurufat numune kitabı oluşturmak üzere bir yazı galerisini alarak karıştırdığı 1500'lerden beri endüstri standardı sahte metinler olarak kullanılmıştır."
+                    android:textColor="#515151"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/imageView5"
+                    app:layout_constraintTop_toBottomOf="@+id/imageView5" />
 
-                    <TextView
-                        android:id="@+id/textView22"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginTop="17dp"
-                        android:layout_marginEnd="10dp"
-                        android:layout_marginBottom="12dp"
-                        android:fontFamily="@font/lato"
-                        android:text="9128399 numaralı istek ile 22.01.2020 tarihinde Boran Gökbulut tarafından 1000 TL bütçe talep edildi. Behiç Tanağardı onaylayabilir."
-                        android:textSize="11sp"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/imageView5" />
-                </androidx.constraintlayout.widget.ConstraintLayout>
-            </androidx.cardview.widget.CardView>
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
-            <androidx.cardview.widget.CardView
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="32dp"
-                android:layout_marginTop="5dp"
-                android:layout_marginEnd="32dp"
-                app:cardCornerRadius="19dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
+                android:layout_height="wrap_content">
 
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/imageView5"
+                    android:layout_width="39dp"
+                    android:layout_height="34dp"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginTop="9dp"
+                    android:baselineAlignBottom="false"
+                    android:elevation="10dp"
+                    android:src="@drawable/profilfoto"
+                    app:civ_border_color="#FFFF"
+                    app:civ_border_width="2dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-                    <de.hdodenhof.circleimageview.CircleImageView
-                        android:id="@+id/imageView5"
-                        android:layout_width="39dp"
-                        android:layout_height="34dp"
-                        android:layout_marginStart="9dp"
-                        android:layout_marginTop="9dp"
-                        android:baselineAlignBottom="false"
-                        android:elevation="10dp"
-                        android:src="@drawable/profilfoto"
-                        app:civ_border_color="#FFFF"
-                        app:civ_border_width="2dp"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
-
-                    <TextView
-                        android:id="@+id/textView19"
-                        android:layout_width="wrap_content"
-                        android:layout_height="17dp"
-                        android:layout_marginStart="9dp"
-                        android:fontFamily="@font/lato"
-                        android:text="Boran Gökbulut"
-                        android:textColor="#424853"
-                        app:layout_constraintStart_toEndOf="@+id/imageView5"
-                        app:layout_constraintTop_toTopOf="@+id/imageView5" />
+                <TextView
+                    android:id="@+id/textView19"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="9dp"
+                    android:fontFamily="@font/lato_bold"
+                    android:text="Boran Gökbulut"
+                    android:textColor="#424853"
+                    android:textSize="22dp"
+                    app:layout_constraintStart_toEndOf="@+id/imageView5"
+                    app:layout_constraintTop_toTopOf="@+id/imageView5" />
 
 
-                    <TextView
-                        android:id="@+id/textView20"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/lato"
-                        android:text="Direktör"
-                        android:textColor="#C6C7CB"
-                        android:textSize="12sp"
-                        app:layout_constraintEnd_toEndOf="@+id/textView19"
-                        app:layout_constraintHorizontal_bias="0.0"
-                        app:layout_constraintStart_toStartOf="@+id/textView19"
-                        app:layout_constraintTop_toBottomOf="@+id/textView19" />
+                <TextView
+                    android:id="@+id/textView21"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="23dp"
+                    android:layout_marginBottom="10dp"
+                    android:fontFamily="@font/lato"
+                    android:text="24 Saat önce"
+                    android:textColor="#C6C7CB"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/textView19"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-                    <TextView
-                        android:id="@+id/textView21"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="67dp"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginEnd="10dp"
-                        android:fontFamily="@font/lato"
-                        android:text="01.02.2019 - 11:02"
-                        android:textColor="#C6C7CB"
-                        android:textSize="12sp"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toEndOf="@+id/textView19"
-                        app:layout_constraintTop_toTopOf="parent" />
+                <TextView
+                    android:id="@+id/textView22"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="20dp"
+                    android:fontFamily="@font/lato"
+                    android:text="Lorem Ipsum, dizgi ve baskı endüstrisinde kullanılan mıgır metinlerdir. Lorem Ipsum, adı bilinmeyen bir matbaacının bir hurufat numune kitabı oluşturmak üzere bir yazı galerisini alarak karıştırdığı 1500'lerden beri endüstri standardı sahte metinler olarak kullanılmıştır."
+                    android:textColor="#515151"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/imageView5"
+                    app:layout_constraintTop_toBottomOf="@+id/imageView5" />
 
-                    <TextView
-                        android:id="@+id/textView22"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginTop="17dp"
-                        android:layout_marginEnd="10dp"
-                        android:layout_marginBottom="12dp"
-                        android:fontFamily="@font/lato"
-                        android:text="9128399 numaralı istek ile 22.01.2020 tarihinde Boran Gökbulut tarafından 1000 TL bütçe talep edildi. Behiç Tanağardı onaylayabilir."
-                        android:textSize="11sp"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/imageView5" />
-                </androidx.constraintlayout.widget.ConstraintLayout>
-            </androidx.cardview.widget.CardView>
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
-            <androidx.cardview.widget.CardView
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="32dp"
-                android:layout_marginTop="5dp"
-                android:layout_marginEnd="32dp"
-                app:cardCornerRadius="19dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
+                android:layout_height="wrap_content">
 
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/imageView5"
+                    android:layout_width="39dp"
+                    android:layout_height="34dp"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginTop="9dp"
+                    android:baselineAlignBottom="false"
+                    android:elevation="10dp"
+                    android:src="@drawable/profilfoto"
+                    app:civ_border_color="#FFFF"
+                    app:civ_border_width="2dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-                    <de.hdodenhof.circleimageview.CircleImageView
-                        android:id="@+id/imageView5"
-                        android:layout_width="39dp"
-                        android:layout_height="34dp"
-                        android:layout_marginStart="9dp"
-                        android:layout_marginTop="9dp"
-                        android:baselineAlignBottom="false"
-                        android:elevation="10dp"
-                        android:src="@drawable/profilfoto"
-                        app:civ_border_color="#FFFF"
-                        app:civ_border_width="2dp"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
-
-                    <TextView
-                        android:id="@+id/textView19"
-                        android:layout_width="wrap_content"
-                        android:layout_height="17dp"
-                        android:layout_marginStart="9dp"
-                        android:fontFamily="@font/lato"
-                        android:text="Boran Gökbulut"
-                        android:textColor="#424853"
-                        app:layout_constraintStart_toEndOf="@+id/imageView5"
-                        app:layout_constraintTop_toTopOf="@+id/imageView5" />
+                <TextView
+                    android:id="@+id/textView19"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="9dp"
+                    android:fontFamily="@font/lato_bold"
+                    android:text="Boran Gökbulut"
+                    android:textColor="#424853"
+                    android:textSize="22dp"
+                    app:layout_constraintStart_toEndOf="@+id/imageView5"
+                    app:layout_constraintTop_toTopOf="@+id/imageView5" />
 
 
-                    <TextView
-                        android:id="@+id/textView20"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/lato"
-                        android:text="Direktör"
-                        android:textColor="#C6C7CB"
-                        android:textSize="12sp"
-                        app:layout_constraintEnd_toEndOf="@+id/textView19"
-                        app:layout_constraintHorizontal_bias="0.0"
-                        app:layout_constraintStart_toStartOf="@+id/textView19"
-                        app:layout_constraintTop_toBottomOf="@+id/textView19" />
+                <TextView
+                    android:id="@+id/textView21"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="23dp"
+                    android:layout_marginBottom="10dp"
+                    android:fontFamily="@font/lato"
+                    android:text="24 Saat önce"
+                    android:textColor="#C6C7CB"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/textView19"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-                    <TextView
-                        android:id="@+id/textView21"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="67dp"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginEnd="10dp"
-                        android:fontFamily="@font/lato"
-                        android:text="01.02.2019 - 11:02"
-                        android:textColor="#C6C7CB"
-                        android:textSize="12sp"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toEndOf="@+id/textView19"
-                        app:layout_constraintTop_toTopOf="parent" />
+                <TextView
+                    android:id="@+id/textView22"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="20dp"
+                    android:fontFamily="@font/lato"
+                    android:text="Lorem Ipsum, dizgi ve baskı endüstrisinde kullanılan mıgır metinlerdir. Lorem Ipsum, adı bilinmeyen bir matbaacının bir hurufat numune kitabı oluşturmak üzere bir yazı galerisini alarak karıştırdığı 1500'lerden beri endüstri standardı sahte metinler olarak kullanılmıştır."
+                    android:textColor="#515151"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/imageView5"
+                    app:layout_constraintTop_toBottomOf="@+id/imageView5" />
 
-                    <TextView
-                        android:id="@+id/textView22"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginTop="17dp"
-                        android:layout_marginEnd="10dp"
-                        android:layout_marginBottom="12dp"
-                        android:fontFamily="@font/lato"
-                        android:text="9128399 numaralı istek ile 22.01.2020 tarihinde Boran Gökbulut tarafından 1000 TL bütçe talep edildi. Behiç Tanağardı onaylayabilir."
-                        android:textSize="11sp"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/imageView5" />
-                </androidx.constraintlayout.widget.ConstraintLayout>
-            </androidx.cardview.widget.CardView>
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
-            <androidx.cardview.widget.CardView
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="32dp"
-                android:layout_marginTop="5dp"
-                android:layout_marginEnd="32dp"
-                app:cardCornerRadius="19dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
+                android:layout_height="wrap_content">
 
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/imageView5"
+                    android:layout_width="39dp"
+                    android:layout_height="34dp"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginTop="9dp"
+                    android:baselineAlignBottom="false"
+                    android:elevation="10dp"
+                    android:src="@drawable/profilfoto"
+                    app:civ_border_color="#FFFF"
+                    app:civ_border_width="2dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-                    <de.hdodenhof.circleimageview.CircleImageView
-                        android:id="@+id/imageView5"
-                        android:layout_width="39dp"
-                        android:layout_height="34dp"
-                        android:layout_marginStart="9dp"
-                        android:layout_marginTop="9dp"
-                        android:baselineAlignBottom="false"
-                        android:elevation="10dp"
-                        android:src="@drawable/profilfoto"
-                        app:civ_border_color="#FFFF"
-                        app:civ_border_width="2dp"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
-
-                    <TextView
-                        android:id="@+id/textView19"
-                        android:layout_width="wrap_content"
-                        android:layout_height="17dp"
-                        android:layout_marginStart="9dp"
-                        android:fontFamily="@font/lato"
-                        android:text="Boran Gökbulut"
-                        android:textColor="#424853"
-                        app:layout_constraintStart_toEndOf="@+id/imageView5"
-                        app:layout_constraintTop_toTopOf="@+id/imageView5" />
+                <TextView
+                    android:id="@+id/textView19"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="9dp"
+                    android:fontFamily="@font/lato_bold"
+                    android:text="Boran Gökbulut"
+                    android:textColor="#424853"
+                    android:textSize="22dp"
+                    app:layout_constraintStart_toEndOf="@+id/imageView5"
+                    app:layout_constraintTop_toTopOf="@+id/imageView5" />
 
 
-                    <TextView
-                        android:id="@+id/textView20"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/lato"
-                        android:text="Direktör"
-                        android:textColor="#C6C7CB"
-                        android:textSize="12sp"
-                        app:layout_constraintEnd_toEndOf="@+id/textView19"
-                        app:layout_constraintHorizontal_bias="0.0"
-                        app:layout_constraintStart_toStartOf="@+id/textView19"
-                        app:layout_constraintTop_toBottomOf="@+id/textView19" />
+                <TextView
+                    android:id="@+id/textView21"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="23dp"
+                    android:layout_marginBottom="10dp"
+                    android:fontFamily="@font/lato"
+                    android:text="24 Saat önce"
+                    android:textColor="#C6C7CB"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/textView19"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-                    <TextView
-                        android:id="@+id/textView21"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="67dp"
-                        android:layout_marginTop="10dp"
-                        android:layout_marginEnd="10dp"
-                        android:fontFamily="@font/lato"
-                        android:text="01.02.2019 - 11:02"
-                        android:textColor="#C6C7CB"
-                        android:textSize="12sp"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toEndOf="@+id/textView19"
-                        app:layout_constraintTop_toTopOf="parent" />
+                <TextView
+                    android:id="@+id/textView22"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="20dp"
+                    android:fontFamily="@font/lato"
+                    android:text="Lorem Ipsum, dizgi ve baskı endüstrisinde kullanılan mıgır metinlerdir. Lorem Ipsum, adı bilinmeyen bir matbaacının bir hurufat numune kitabı oluşturmak üzere bir yazı galerisini alarak karıştırdığı 1500'lerden beri endüstri standardı sahte metinler olarak kullanılmıştır."
+                    android:textColor="#515151"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/imageView5"
+                    app:layout_constraintTop_toBottomOf="@+id/imageView5" />
 
-                    <TextView
-                        android:id="@+id/textView22"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginTop="17dp"
-                        android:layout_marginEnd="10dp"
-                        android:layout_marginBottom="12dp"
-                        android:fontFamily="@font/lato"
-                        android:text="9128399 numaralı istek ile 22.01.2020 tarihinde Boran Gökbulut tarafından 1000 TL bütçe talep edildi. Behiç Tanağardı onaylayabilir."
-                        android:textSize="11sp"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/imageView5" />
-                </androidx.constraintlayout.widget.ConstraintLayout>
-            </androidx.cardview.widget.CardView>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/imageView5"
+                    android:layout_width="39dp"
+                    android:layout_height="34dp"
+                    android:layout_marginStart="25dp"
+                    android:layout_marginTop="9dp"
+                    android:baselineAlignBottom="false"
+                    android:elevation="10dp"
+                    android:src="@drawable/profilfoto"
+                    app:civ_border_color="#FFFF"
+                    app:civ_border_width="2dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView19"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="9dp"
+                    android:fontFamily="@font/lato_bold"
+                    android:text="Boran Gökbulut"
+                    android:textColor="#424853"
+                    android:textSize="22dp"
+                    app:layout_constraintStart_toEndOf="@+id/imageView5"
+                    app:layout_constraintTop_toTopOf="@+id/imageView5" />
+
+
+                <TextView
+                    android:id="@+id/textView21"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="23dp"
+                    android:layout_marginBottom="10dp"
+                    android:fontFamily="@font/lato"
+                    android:text="24 Saat önce"
+                    android:textColor="#C6C7CB"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/textView19"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView22"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="20dp"
+                    android:fontFamily="@font/lato"
+                    android:text="Lorem Ipsum, dizgi ve baskı endüstrisinde kullanılan mıgır metinlerdir. Lorem Ipsum, adı bilinmeyen bir matbaacının bir hurufat numune kitabı oluşturmak üzere bir yazı galerisini alarak karıştırdığı 1500'lerden beri endüstri standardı sahte metinler olarak kullanılmıştır."
+                    android:textColor="#515151"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/imageView5"
+                    app:layout_constraintTop_toBottomOf="@+id/imageView5" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>
