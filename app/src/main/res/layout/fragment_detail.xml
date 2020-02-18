@@ -4,9 +4,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorAccent"
+    android:background="@drawable/bg2"
     tools:context=".detail.DetailFragment">
 
+
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/bg22"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout"
@@ -32,6 +42,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
 
+
         <ImageView
             android:id="@+id/img_operation_icon_detail_fragment"
             android:layout_width="47dp"
@@ -39,11 +50,11 @@
             android:layout_marginStart="28dp"
             android:layout_marginTop="38dp"
             android:background="@drawable/rounded_fg"
-            android:foregroundGravity="center"
-            android:src="@drawable/group11"
             android:visibility="visible"
+            android:src="@drawable/group11"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/btn_trigger_drawer_detain_fragment" />
+
 
         <TextView
             android:id="@+id/txt_operation_title_detail_fragment"
@@ -87,35 +98,27 @@
         <com.google.android.material.tabs.TabLayout
             android:id="@+id/tabLayout"
             android:layout_width="0dp"
-            android:layout_height="32dp"
-            android:layout_marginStart="28dp"
-            android:layout_marginTop="30dp"
-            android:layout_marginEnd="28dp"
-            android:background="@android:color/transparent"
+            android:layout_height="39dp"
+            android:layout_marginTop="41dp"
+            android:background="@color/transparentColor"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/txt_operation_summery_detail_fragment"
-            app:tabBackground="@string/fab_transformation_scrim_behavior"
+            app:tabIndicator="@drawable/tabitem_selected"
             app:tabIndicatorColor="@color/transparentColor"
-            app:tabRippleColor="@color/transparentColor"
-            app:tabSelectedTextColor="#FFF"
-            app:tabTextColor="#A79BB8"
+            app:tabIndicatorHeight="2dp"
             app:tabUnboundedRipple="false">
 
             <com.google.android.material.tabs.TabItem
                 android:id="@+id/tabItem"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:icon="@drawable/group8"
-                />
+                android:layout_height="wrap_content" />
 
             <com.google.android.material.tabs.TabItem
                 android:id="@+id/tabItem2"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:icon="@drawable/group81"
-                 />
+                android:layout_height="wrap_content" />
 
         </com.google.android.material.tabs.TabLayout>
 
@@ -136,27 +139,51 @@
             android:id="@+id/textView17"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="3dp"
+            android:layout_marginStart="5dp"
             android:fontFamily="@font/lato"
-            android:text="TextView"
-            android:textSize="18sp"
+            android:textSize="18dp"
+            android:text="01.02.2019"
             app:layout_constraintBottom_toBottomOf="@+id/txt_operation_title_detail_fragment"
             app:layout_constraintStart_toEndOf="@+id/txt_operation_title_detail_fragment"
             app:layout_constraintTop_toTopOf="@+id/txt_operation_title_detail_fragment"
-            app:layout_constraintVertical_bias="0.0"
             tools:text="01.02.2019" />
 
         <TextView
             android:id="@+id/textView18"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="3dp"
-            android:text="TextView"
-            android:textSize="18sp"
+            android:layout_marginStart="5dp"
+            android:fontFamily="@font/lato"
+            android:text="Boran Gökbulut"
+            android:textSize="18dp"
             app:layout_constraintBottom_toBottomOf="@+id/txt_operation_author_detail_fragment"
             app:layout_constraintStart_toEndOf="@+id/txt_operation_author_detail_fragment"
-            app:layout_constraintTop_toBottomOf="@+id/txt_operation_title_detail_fragment"
-            tools:text="Boran Gökbulut" />
+            app:layout_constraintTop_toBottomOf="@+id/txt_operation_title_detail_fragment" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="3dp"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tabLayout">
+
+            <ImageView
+                android:id="@+id/tab0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:src="@drawable/line" />
+
+            <ImageView
+                android:id="@+id/tab1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:src="@drawable/line"
+                android:visibility="invisible" />
+        </LinearLayout>
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
@@ -173,10 +200,13 @@
             android:id="@+id/viewPager"
             android:layout_width="0dp"
             android:layout_height="0dp"
+            android:background="#FFF"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent">
+
+        </androidx.viewpager.widget.ViewPager>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

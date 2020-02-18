@@ -168,7 +168,7 @@
                         <TextView
                             android:id="@+id/textView12"
                             android:layout_width="0dp"
-                            android:layout_height="match_parent"
+                            android:layout_height="wrap_content"
                             android:layout_marginTop="17dp"
                             android:layout_marginBottom="16dp"
                             android:text="9128399 numaralı istek ile 22.01.2020 tarihinnde Boran Gökbulut tarafından 1000 …   "
@@ -258,7 +258,7 @@
                         <TextView
                             android:id="@+id/textView12"
                             android:layout_width="0dp"
-                            android:layout_height="43dp"
+                            android:layout_height="wrap_content"
                             android:layout_marginTop="17dp"
                             android:layout_marginBottom="16dp"
                             android:text="9128399 numaralı istek ile 22.01.2020 tarihinnde Boran Gökbulut tarafından 1000 …   "
@@ -348,7 +348,7 @@
                         <TextView
                             android:id="@+id/textView12"
                             android:layout_width="0dp"
-                            android:layout_height="43dp"
+                            android:layout_height="wrap_content"
                             android:layout_marginTop="17dp"
                             android:layout_marginBottom="16dp"
                             android:text="9128399 numaralı istek ile 22.01.2020 tarihinnde Boran Gökbulut tarafından 1000 …   "
@@ -438,7 +438,7 @@
                         <TextView
                             android:id="@+id/textView12"
                             android:layout_width="0dp"
-                            android:layout_height="43dp"
+                            android:layout_height="wrap_content"
                             android:layout_marginTop="17dp"
                             android:layout_marginBottom="16dp"
                             android:text="9128399 numaralı istek ile 22.01.2020 tarihinnde Boran Gökbulut tarafından 1000 …   "
@@ -528,7 +528,7 @@
                         <TextView
                             android:id="@+id/textView12"
                             android:layout_width="0dp"
-                            android:layout_height="43dp"
+                            android:layout_height="wrap_content"
                             android:layout_marginTop="17dp"
                             android:layout_marginBottom="16dp"
                             android:text="9128399 numaralı istek ile 22.01.2020 tarihinnde Boran Gökbulut tarafından 1000 …   "
@@ -618,7 +618,7 @@
                         <TextView
                             android:id="@+id/textView12"
                             android:layout_width="0dp"
-                            android:layout_height="43dp"
+                            android:layout_height="wrap_content"
                             android:layout_marginTop="17dp"
                             android:layout_marginBottom="16dp"
                             android:text="9128399 numaralı istek ile 22.01.2020 tarihinnde Boran Gökbulut tarafından 1000 …   "
