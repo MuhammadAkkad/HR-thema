@@ -56,22 +56,7 @@ public class PopUpClass {
             public boolean onTouch(View v, MotionEvent event) {
 
                 //Close the window when clicked
-                //popupWindow.dismiss();
-                popupWindow.setOnDismissListener(new PopupWindow.OnDismissListener() {
-                    @Override
-                    public void onDismiss() {
-                        new CountDownTimer(3000, 10) {
-                            public void onTick(long millisUntilFinished) {
-                                popupView.setAnimation(AnimationUtils.loadAnimation(view.getContext(), R.animator.popupanim_dismiss));
-
-                            }
-
-                            public void onFinish() {
-                                popupWindow.dismiss();
-                            }
-                        }.start();
-                    }
-                });
+                popupWindow.dismiss();
                 return true;
             }
         });
