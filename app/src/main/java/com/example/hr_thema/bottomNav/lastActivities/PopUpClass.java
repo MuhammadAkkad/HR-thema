@@ -1,15 +1,16 @@
 package com.example.hr_thema.bottomNav.lastActivities;
 
 import android.annotation.SuppressLint;
-import android.os.CountDownTimer;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.animation.AnimationUtils;
+import android.widget.CompoundButton;
 import android.widget.LinearLayout;
 import android.widget.PopupWindow;
 import android.widget.Switch;
+import android.widget.Toast;
 
 import com.example.hr_thema.R;
 
@@ -48,6 +49,21 @@ public class PopUpClass {
         Switch aSwitch3 = popupView.findViewById(R.id.switch3);
         Switch aSwitch4 = popupView.findViewById(R.id.switch4);
         Switch aSwitch5 = popupView.findViewById(R.id.switch5);
+
+
+
+        // TODO: check uncheck implementation test.
+        aSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (isChecked)
+                    Toast.makeText(view.getContext(), "Checked", Toast.LENGTH_SHORT).show();
+                else
+                    Toast.makeText(view.getContext(), "Unchecked", Toast.LENGTH_SHORT).show();
+            }
+
+        });
+
 
         //Handler for clicking on the inactive zone of the window
 
