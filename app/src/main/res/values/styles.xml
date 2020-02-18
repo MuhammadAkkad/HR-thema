@@ -33,4 +33,7 @@
         <item name="android:textSize">19dp</item>
     </style>
 
+    <style name="SwitchCompatTheme" >
+        <item name="colorControlActivated">#2FD475</item>
+    </style>
 </resources>

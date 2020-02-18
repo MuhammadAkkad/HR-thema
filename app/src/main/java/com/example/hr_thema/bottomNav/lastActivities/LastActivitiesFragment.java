@@ -1,8 +1,7 @@
 package com.example.hr_thema.bottomNav.lastActivities;
 
-import android.animation.Animator;
-import android.animation.AnimatorListenerAdapter;
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
@@ -50,15 +49,19 @@ public class LastActivitiesFragment extends Fragment {
         btnFilter.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                PopupMenu popup = new PopupMenu(requireContext(), btnFilter);
-                popup.getMenuInflater().inflate(R.menu.filter_menu, popup.getMenu());
-                popup.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
-                    public boolean onMenuItemClick(MenuItem item) {
-                        Toast.makeText(requireContext(), "You Clicked : " + item.getTitle(), Toast.LENGTH_SHORT).show();
-                        return true;
-                    }
-                });
-                popup.show();
+                //PopupMenu popup = new PopupMenu(requireContext(), btnFilter);
+                //popup.setGravity(Gravity.TOP+2);
+                //popup.getMenuInflater().inflate(R.menu.filter_menu, popup.getMenu());
+//                popup.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
+//                    public boolean onMenuItemClick(MenuItem item) {
+//                        Toast.makeText(requireContext(), "You Clicked : " + item.getTitle(), Toast.LENGTH_SHORT).show();
+//                        return true;
+//                    }
+//                });
+//                popup.show();
+
+                PopUpClass popUpClass = new PopUpClass();
+                popUpClass.showPopupWindow(v);
             }
         });
 
@@ -66,7 +69,6 @@ public class LastActivitiesFragment extends Fragment {
 //        arrow = view.findViewById(R.id.imageView4);
         testText = view.findViewById(R.id.textView4);
         testText.setVisibility(View.GONE);
-
 
 
 //        arrow.setOnClickListener(new View.OnClickListener() {
@@ -82,14 +84,13 @@ public class LastActivitiesFragment extends Fragment {
 //        });
 
 
-
         // TODO : open one activity from son aktiviteler
         activity = view.findViewById(R.id.activity_card_view);
         activity.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
-                DetailFragment detailFragment= new DetailFragment();
+                DetailFragment detailFragment = new DetailFragment();
                 transaction.setCustomAnimations(android.R.animator.fade_in, android.R.animator.fade_out);
                 transaction.replace(R.id.nav_home, detailFragment);
                 transaction.commit();
