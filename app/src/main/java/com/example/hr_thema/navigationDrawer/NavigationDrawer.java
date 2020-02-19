@@ -49,22 +49,40 @@ public class NavigationDrawer extends AppCompatActivity implements IDrawerListen
         loadFragment(new LastActivitiesFragment());
         bottomNavigationView = findViewById(R.id.bottom_navigation);
         bottomNavigationView.setItemIconTintList(null);
+
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(MenuItem menuItem) {
+
                 int id = menuItem.getItemId();
-                if (id == R.id.navigation_home) {
+                if (id == R.id.navigation_clock) {
+                    bottomNavigationView.getMenu().getItem(0).setIcon(R.drawable.clock);
+                    bottomNavigationView.getMenu().getItem(1).setIcon(R.drawable.checked_black);
+                    bottomNavigationView.getMenu().getItem(2).setIcon(R.drawable.history_black);
+
                     badgeControl();
                     loadFragment(new LastActivitiesFragment());
                     return true;
-                } else if (id == R.id.navigation_menu) {
+                } else if (id == R.id.navigation_checked) {
+                    bottomNavigationView.getMenu().getItem(0).setIcon(R.drawable.clock_black);
+                    bottomNavigationView.getMenu().getItem(1).setIcon(R.drawable.checked);
+                    bottomNavigationView.getMenu().getItem(2).setIcon(R.drawable.history_black);
+
                     loadFragment(new MenuFragment());
                     return true;
-                } else if (id == R.id.navigation_notifications) {
+                } else {
+                    bottomNavigationView.getMenu().getItem(0).setIcon(R.drawable.clock_black);
+                    bottomNavigationView.getMenu().getItem(1).setIcon(R.drawable.checked_black);
+                    bottomNavigationView.getMenu().getItem(2).setIcon(R.drawable.history1);
+
                     loadFragment(new DetailFragment());
                     return true;
                 }
-                return true;
             }
         });
 
@@ -94,7 +112,7 @@ public class NavigationDrawer extends AppCompatActivity implements IDrawerListen
 
     public void badgeControl() {
         // TODO: notification implementation test
-        BadgeDrawable badgeDrawable = bottomNavigationView.getOrCreateBadge(R.id.navigation_home);
+        BadgeDrawable badgeDrawable = bottomNavigationView.getOrCreateBadge(R.id.navigation_clock);
         badgeDrawable.setBackgroundColor(Color.rgb(157, 204, 82));
         badgeDrawable.setNumber(51);
     }
