@@ -103,7 +103,7 @@
         android:text="TR"
         android:textColor="#000000"
         app:layout_constraintBottom_toBottomOf="@+id/textView"
-        app:layout_constraintStart_toEndOf="@+id/txt_operation_title_detail_fragment"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/txt_operation_title_detail_fragment"
         app:strokeColor="#000000"
         app:strokeWidth="1dp" />
