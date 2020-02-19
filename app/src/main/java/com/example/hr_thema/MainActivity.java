@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
 
         // Splash screen demo
         long start = System.currentTimeMillis();
-        long end = start + 2*1000; // 60 seconds * 1000 ms/sec
+        long end = start + 6*1000; // 60 seconds * 1000 ms/sec
         while (System.currentTimeMillis() < end)
         {
             // run
