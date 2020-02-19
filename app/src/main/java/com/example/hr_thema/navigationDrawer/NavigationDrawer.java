@@ -23,7 +23,6 @@ import com.infideap.drawerbehavior.AdvanceDrawerLayout;
 
 public class NavigationDrawer extends AppCompatActivity implements IDrawerListener, NavigationView.OnNavigationItemSelectedListener {
     BottomNavigationView bottomNavigationView;
-    int backPressCount = 0;
     boolean doubleBackToExitPressedOnce = false;
     private AdvanceDrawerLayout drawer;
 
@@ -54,6 +53,34 @@ public class NavigationDrawer extends AppCompatActivity implements IDrawerListen
     @Override
     protected void onResume() {
         super.onResume();
+    }
+
+// TODO : on back pressed exit app
+//    @Override
+//    public void onBackPressed() {
+//        // if back pressed twice exit app
+//        if (doubleBackToExitPressedOnce) {
+//            super.onBackPressed();
+//            finishAffinity();
+//            return;
+//        }
+//
+//        this.doubleBackToExitPressedOnce = true;
+//        Toast.makeText(this, "Please click BACK again to exit", Toast.LENGTH_SHORT).show();
+//
+//        new Handler().postDelayed(new Runnable() {
+//
+//            @Override
+//            public void run() {
+//                doubleBackToExitPressedOnce = false;
+//            }
+//        }, 2000);
+//    }
+
+    @SuppressWarnings("StatementWithEmptyBody")
+    @Override
+    public boolean onNavigationItemSelected(MenuItem item) {
+        // Handle bottomNavigationView view item clicks here.
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(MenuItem menuItem) {
@@ -84,34 +111,6 @@ public class NavigationDrawer extends AppCompatActivity implements IDrawerListen
                 }
             }
         });
-
-    }
-
-    @Override
-    public void onBackPressed() {
-        // if back pressed twice exit app
-        if (doubleBackToExitPressedOnce) {
-            super.onBackPressed();
-            finishAffinity();
-            return;
-        }
-
-        this.doubleBackToExitPressedOnce = true;
-        Toast.makeText(this, "Please click BACK again to exit", Toast.LENGTH_SHORT).show();
-
-        new Handler().postDelayed(new Runnable() {
-
-            @Override
-            public void run() {
-                doubleBackToExitPressedOnce = false;
-            }
-        }, 2000);
-    }
-
-    @SuppressWarnings("StatementWithEmptyBody")
-    @Override
-    public boolean onNavigationItemSelected(MenuItem item) {
-        // Handle bottomNavigationView view item clicks here.
 
         drawer.closeDrawer(GravityCompat.START);
         return true;
