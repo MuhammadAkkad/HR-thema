@@ -19,6 +19,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.example.hr_thema.R;
 import com.example.hr_thema.detail.comment.CommentFragment;
@@ -32,8 +33,8 @@ public class DetailFragment extends Fragment {
     private static final String ARG_PARAM2 = "param2";
     TabLayout tabLayout;
     ViewPager viewPager;
-    ImageView tab0,tab1;
-
+    ImageView tab0,tab1,imgDown;
+    TextView txt_operation_summery_detail_fragment;
 
     private OnFragmentInteractionListener mListener;
 
@@ -92,6 +93,16 @@ public class DetailFragment extends Fragment {
         tabLayout = view.findViewById(R.id.tabLayout);
         tab0 = view.findViewById(R.id.tab0);
         tab1 = view.findViewById(R.id.tab1);
+        imgDown = view.findViewById(R.id.imgDown);
+        txt_operation_summery_detail_fragment = view.findViewById(R.id.txt_operation_summery_detail_fragment);
+
+        imgDown.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                imgDown.setVisibility(View.GONE);
+                txt_operation_summery_detail_fragment.setVisibility(View.VISIBLE);
+            }
+        });
 
         FragmentManager fragmentManager = getFragmentManager();
         ViewPagerAdapter viewPagerAdapter = new ViewPagerAdapter(fragmentManager);

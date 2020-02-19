@@ -52,6 +52,7 @@
         app:layout_constraintStart_toEndOf="@+id/btn_trigger_drawer"
         app:layout_constraintTop_toTopOf="@+id/btn_trigger_drawer" />
 
+
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btnFilter"
         android:layout_width="33dp"
@@ -59,9 +60,8 @@
         android:layout_marginStart="7dp"
         android:layout_marginEnd="18dp"
         android:background="@drawable/filter_oval_ring"
-        android:drawableRight="@drawable/ic_funnel"
-        android:drawableTint="#D9DADC"
-        android:paddingRight="7dp"
+        android:drawableStart="@drawable/filternew"
+        android:paddingLeft="5dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/textView6"
         app:layout_constraintTop_toTopOf="@+id/textView6" />
