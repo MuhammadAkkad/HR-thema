@@ -45,11 +45,9 @@ public class NavigationDrawer extends AppCompatActivity implements IDrawerListen
         drawer.setRadius(Gravity.START, 0);
         drawer.setViewElevation(Gravity.START, 30);
 
-
         loadFragment(new LastActivitiesFragment());
         bottomNavigationView = findViewById(R.id.bottom_navigation);
         bottomNavigationView.setItemIconTintList(null);
-
     }
 
     @Override
