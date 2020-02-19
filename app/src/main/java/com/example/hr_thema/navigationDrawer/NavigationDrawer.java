@@ -1,13 +1,12 @@
 package com.example.hr_thema.navigationDrawer;
 
-import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.Gravity;
 import android.view.MenuItem;
-import android.view.View;
+import android.widget.Toast;
 
-import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.view.GravityCompat;
 import androidx.fragment.app.Fragment;
@@ -24,7 +23,8 @@ import com.infideap.drawerbehavior.AdvanceDrawerLayout;
 
 public class NavigationDrawer extends AppCompatActivity implements IDrawerListener, NavigationView.OnNavigationItemSelectedListener {
     BottomNavigationView bottomNavigationView;
-    View v;
+    int backPressCount = 0;
+    boolean doubleBackToExitPressedOnce = false;
     private AdvanceDrawerLayout drawer;
 
     @Override
@@ -32,13 +32,12 @@ public class NavigationDrawer extends AppCompatActivity implements IDrawerListen
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_navigation_drawer);
 
-        //v = getWindow().getDecorView().findViewById(R.id.drawer_layout);
-
         drawer = findViewById(R.id.drawer_layout);
-        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
-                this, drawer, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
-        drawer.addDrawerListener(toggle);
-        toggle.syncState();
+        // TODO use this code to open drawer.
+        //        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
+        //                this, drawer, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+        //        drawer.addDrawerListener(toggle);
+        //        toggle.syncState();
         final NavigationView navigationView = findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
         drawer.setViewScale(Gravity.START, 0);
@@ -90,8 +89,23 @@ public class NavigationDrawer extends AppCompatActivity implements IDrawerListen
 
     @Override
     public void onBackPressed() {
-        Intent i = new Intent(this, NavigationDrawer.class);
-        startActivity(i);
+        // if back pressed twice exit app
+        if (doubleBackToExitPressedOnce) {
+            super.onBackPressed();
+            finishAffinity();
+            return;
+        }
+
+        this.doubleBackToExitPressedOnce = true;
+        Toast.makeText(this, "Please click BACK again to exit", Toast.LENGTH_SHORT).show();
+
+        new Handler().postDelayed(new Runnable() {
+
+            @Override
+            public void run() {
+                doubleBackToExitPressedOnce = false;
+            }
+        }, 2000);
     }
 
     @SuppressWarnings("StatementWithEmptyBody")
