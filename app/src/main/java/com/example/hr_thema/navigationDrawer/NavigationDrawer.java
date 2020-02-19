@@ -61,6 +61,8 @@ public class NavigationDrawer extends AppCompatActivity implements IDrawerListen
 
                 int id = menuItem.getItemId();
                 if (id == R.id.navigation_clock) {
+                    menuItem.setIcon(R.drawable.checked);
+
                     bottomNavigationView.getMenu().getItem(0).setIcon(R.drawable.clock);
                     bottomNavigationView.getMenu().getItem(1).setIcon(R.drawable.checked_black);
                     bottomNavigationView.getMenu().getItem(2).setIcon(R.drawable.history_black);
@@ -69,6 +71,8 @@ public class NavigationDrawer extends AppCompatActivity implements IDrawerListen
                     loadFragment(new LastActivitiesFragment());
                     return true;
                 } else if (id == R.id.navigation_checked) {
+                    //menuItem.setIcon(R.drawable.checked);
+
                     bottomNavigationView.getMenu().getItem(0).setIcon(R.drawable.clock_black);
                     bottomNavigationView.getMenu().getItem(1).setIcon(R.drawable.checked);
                     bottomNavigationView.getMenu().getItem(2).setIcon(R.drawable.history_black);
@@ -76,6 +80,8 @@ public class NavigationDrawer extends AppCompatActivity implements IDrawerListen
                     loadFragment(new MenuFragment());
                     return true;
                 } else {
+                    //menuItem.setIcon(R.drawable.checked);
+
                     bottomNavigationView.getMenu().getItem(0).setIcon(R.drawable.clock_black);
                     bottomNavigationView.getMenu().getItem(1).setIcon(R.drawable.checked_black);
                     bottomNavigationView.getMenu().getItem(2).setIcon(R.drawable.history1);
