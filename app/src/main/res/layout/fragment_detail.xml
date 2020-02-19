@@ -90,10 +90,11 @@
             android:text="İşlem Detayı : 9128399 numaralı istek ile 22.01.2020 tarihinnde Boran Gökbulut tarafından 1000 TL bütçe talep edildi. Behiç Tanağardı onaylayabilir.  "
             android:textColor="#000000"
             android:textSize="18sp"
+            android:visibility="gone"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txt_operation_author_detail_fragment" />
+            app:layout_constraintTop_toBottomOf="@+id/imgDown" />
 
         <com.google.android.material.tabs.TabLayout
             android:id="@+id/tabLayout"
@@ -184,6 +185,18 @@
                 android:src="@drawable/line"
                 android:visibility="invisible" />
         </LinearLayout>
+
+        <ImageView
+            android:id="@+id/imgDown"
+            android:layout_width="28dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:src="@drawable/rightchevron"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="@+id/textView18"
+            app:layout_constraintHorizontal_bias="0.504"
+            app:layout_constraintStart_toStartOf="@+id/txt_operation_author_detail_fragment"
+            app:layout_constraintTop_toBottomOf="@+id/txt_operation_author_detail_fragment" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
