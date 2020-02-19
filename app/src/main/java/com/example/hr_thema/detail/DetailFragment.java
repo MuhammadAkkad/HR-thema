@@ -104,7 +104,7 @@ public class DetailFragment extends Fragment {
             }
         });
 
-        FragmentManager fragmentManager = getFragmentManager();
+        FragmentManager fragmentManager = getChildFragmentManager();
         ViewPagerAdapter viewPagerAdapter = new ViewPagerAdapter(fragmentManager);
         viewPagerAdapter.addFragment(new OperationsFragment(),"İŞLEMLER");
         viewPagerAdapter.addFragment(new CommentFragment(),"YORUMLAR");

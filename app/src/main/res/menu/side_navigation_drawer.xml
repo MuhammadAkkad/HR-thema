@@ -30,37 +30,13 @@
             android:icon="@drawable/group311"
             android:title="Organizasyon Şeması" />
         <item
-            android:id="@+id/anasayfa"
+            android:id="@+id/Ayarlar"
             android:icon="@drawable/group401"
-            android:title="Anasayfa" />
+            android:title="Ayarlar" />
         <item
-            android:id="@+id/onaylanmayı_bekleyen"
-            android:icon="@drawable/ic_group_4_copy"
+            android:id="@+id/cikisyap"
+            android:icon="@drawable/signout"
             android:title="Onaylanmayı_Bekleyen" />
-        <item
-            android:id="@+id/Gelen_kutusu"
-            android:icon="@drawable/ic_group_4_copy"
-            android:title="Gelen Kutusu" />
-        <item
-            android:id="@+id/Kişiler"
-            android:icon="@drawable/ic_cogwheel"
-            android:title="Kişiler" />
-        <item
-            android:id="@+id/Çalışma_Alanı_Yönetimi"
-            android:icon="@drawable/ic_group_3_copy"
-            android:title="Çalışma Alanı Yönetimi" />
-        <item
-            android:id="@+id/Yönetim"
-            android:icon="@drawable/ic_group_4_copy"
-            android:title="Yönetim" />
-        <item
-            android:id="@+id/Organizasyon_Şeması"
-            android:icon="@drawable/ic_cogwheel"
-            android:title="Organizasyon Şeması" />
-        <item
-            android:id="@+id/cikis_yap"
-            android:icon="@drawable/ic_cogwheel"
-            android:title="Çıkış Yap" />
 
     </group>
 </menu>

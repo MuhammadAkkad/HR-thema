@@ -5,29 +5,33 @@
     android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/nav_bg"
     android:fitsSystemWindows="false"
     tools:openDrawer="start">
 
     <include
         layout="@layout/app_bar_default"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        android:background="@drawable/nav_bg" />
 
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/nav_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_gravity="start"
+        android:layout_marginEnd="-65dp"
+        android:layout_marginRight="-65dp"
+        android:background="@android:color/transparent"
         android:paddingStart="16dp"
         android:theme="@style/fontFamily"
         android:visibility="visible"
+        app:headerLayout="@layout/nav_header_main"
+        app:itemHorizontalPadding="20dp"
         app:itemIconPadding="27dp"
-        android:layout_marginEnd="-65dp"
-        android:layout_marginRight="-65dp"
         app:itemIconSize="42dp"
         app:itemBackground="@drawable/navigation_drawer_selector"
-        app:itemHorizontalPadding="20dp"
-        app:headerLayout="@layout/nav_header_main"
+        app:itemIconTint="@color/SideNavigationIconText"
         app:itemTextColor="@color/SideNavigationIconText"
         app:menu="@menu/side_navigation_drawer" >
     </com.google.android.material.navigation.NavigationView>
