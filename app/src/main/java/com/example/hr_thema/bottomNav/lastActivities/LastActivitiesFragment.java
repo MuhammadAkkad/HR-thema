@@ -1,16 +1,12 @@
 package com.example.hr_thema.bottomNav.lastActivities;
 
 import android.os.Bundle;
-import android.view.Gravity;
 import android.view.LayoutInflater;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageButton;
-import android.widget.PopupMenu;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
@@ -49,39 +45,14 @@ public class LastActivitiesFragment extends Fragment {
         btnFilter.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //PopupMenu popup = new PopupMenu(requireContext(), btnFilter);
-                //popup.setGravity(Gravity.TOP+2);
-                //popup.getMenuInflater().inflate(R.menu.filter_menu, popup.getMenu());
-//                popup.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
-//                    public boolean onMenuItemClick(MenuItem item) {
-//                        Toast.makeText(requireContext(), "You Clicked : " + item.getTitle(), Toast.LENGTH_SHORT).show();
-//                        return true;
-//                    }
-//                });
-//                popup.show();
-
                 PopUpClass popUpClass = new PopUpClass();
                 popUpClass.showPopupWindow(v);
             }
         });
 
 
-//        arrow = view.findViewById(R.id.imageView4);
         testText = view.findViewById(R.id.textView4);
         testText.setVisibility(View.GONE);
-
-
-//        arrow.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Toast.makeText(getContext(), "Clicked", Toast.LENGTH_SHORT).show();
-//                if(testText.getVisibility() == View.GONE){
-//                    crossfade();}
-//                else {
-//                    crossfade();
-//                }
-//            }
-//        });
 
 
         // TODO : open one activity from son aktiviteler
@@ -100,7 +71,6 @@ public class LastActivitiesFragment extends Fragment {
         return view;
     }
 
-
     private void crossfade() {
         shortAnimationDuration = getResources().getInteger(
                 android.R.integer.config_longAnimTime);
@@ -116,6 +86,4 @@ public class LastActivitiesFragment extends Fragment {
                 .setDuration(shortAnimationDuration)
                 .setListener(null);
     }
-
-
 }
