@@ -54,39 +54,6 @@ public class NavigationDrawer extends AppCompatActivity implements IDrawerListen
         bottomNavigationView.getMenu().getItem(1).setIcon(R.drawable.checked_black);
         bottomNavigationView.getMenu().getItem(2).setIcon(R.drawable.history_black);
 
-    }
-
-    @Override
-    protected void onResume() {
-        super.onResume();
-    }
-
-// TODO : on back pressed exit app
-//    @Override
-//    public void onBackPressed() {
-//        // if back pressed twice exit app
-//        if (doubleBackToExitPressedOnce) {
-//            super.onBackPressed();
-//            finishAffinity();
-//            return;
-//        }
-//
-//        this.doubleBackToExitPressedOnce = true;
-//        Toast.makeText(this, "Please click BACK again to exit", Toast.LENGTH_SHORT).show();
-//
-//        new Handler().postDelayed(new Runnable() {
-//
-//            @Override
-//            public void run() {
-//                doubleBackToExitPressedOnce = false;
-//            }
-//        }, 2000);
-//    }
-
-    @SuppressWarnings("StatementWithEmptyBody")
-    @Override
-    public boolean onNavigationItemSelected(MenuItem item) {
-        // Handle bottomNavigationView view item clicks here.
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(MenuItem menuItem) {
@@ -118,6 +85,35 @@ public class NavigationDrawer extends AppCompatActivity implements IDrawerListen
             }
         });
 
+    }
+
+
+// TODO : on back pressed exit app
+//    @Override
+//    public void onBackPressed() {
+//        // if back pressed twice exit app
+//        if (doubleBackToExitPressedOnce) {
+//            super.onBackPressed();
+//            finishAffinity();
+//            return;
+//        }
+//
+//        this.doubleBackToExitPressedOnce = true;
+//        Toast.makeText(this, "Please click BACK again to exit", Toast.LENGTH_SHORT).show();
+//
+//        new Handler().postDelayed(new Runnable() {
+//
+//            @Override
+//            public void run() {
+//                doubleBackToExitPressedOnce = false;
+//            }
+//        }, 2000);
+//    }
+
+    @SuppressWarnings("StatementWithEmptyBody")
+    @Override
+    public boolean onNavigationItemSelected(MenuItem item) {
+        // Handle bottomNavigationView view item clicks here.
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
