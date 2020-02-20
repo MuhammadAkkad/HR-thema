@@ -99,11 +99,12 @@
 
     <com.google.android.material.button.MaterialButton
         android:layout_width="32dp"
-        android:layout_height="32dp"
+        android:layout_height="42dp"
         android:backgroundTint="#FFFF"
         android:padding="1dp"
         android:text="TR"
         android:textColor="#000000"
+        android:textSize="12dp"
         app:layout_constraintBottom_toBottomOf="@+id/textView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/txt_operation_title_detail_fragment"

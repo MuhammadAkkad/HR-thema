@@ -37,6 +37,5 @@
             android:id="@+id/cikisyap"
             android:icon="@drawable/signout"
             android:title="Çıkış Yap" />
-
     </group>
 </menu>
