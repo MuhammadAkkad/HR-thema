@@ -33,6 +33,7 @@ public class NavigationDrawer extends AppCompatActivity implements IDrawerListen
         setContentView(R.layout.activity_navigation_drawer);
 
         drawer = findViewById(R.id.drawer_layout);
+
         // TODO use this code to open drawer.
         //        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
         //                this, drawer, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
@@ -49,6 +50,9 @@ public class NavigationDrawer extends AppCompatActivity implements IDrawerListen
         loadFragment(new LastActivitiesFragment());
         bottomNavigationView = findViewById(R.id.bottom_navigation);
         bottomNavigationView.setItemIconTintList(null);
+        bottomNavigationView.getMenu().getItem(0).setIcon(R.drawable.clock);
+        bottomNavigationView.getMenu().getItem(1).setIcon(R.drawable.checked_black);
+        bottomNavigationView.getMenu().getItem(2).setIcon(R.drawable.history_black);
 
     }
 

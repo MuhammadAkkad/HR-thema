@@ -20,13 +20,12 @@
 
     <ImageButton
         android:id="@+id/btn_trigger_drawer"
-        android:layout_width="31dp"
-        android:layout_height="31dp"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="35dp"
+        android:layout_height="25dp"
         android:layout_marginStart="18dp"
         android:layout_marginTop="20dp"
-        android:background="@color/colorAccent"
-        android:scaleType="fitXY"
-        android:src="@drawable/top"
+        android:src="@drawable/baseline_menu_black_18dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
