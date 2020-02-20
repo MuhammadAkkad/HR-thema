@@ -32,7 +32,9 @@
         app:itemHorizontalPadding="20dp"
         app:itemIconPadding="27dp"
         app:itemIconSize="42dp"
-        app:menu="@menu/side_navigation_drawer"></com.google.android.material.navigation.NavigationView>
+        app:menu="@menu/side_navigation_drawer">
+
+    </com.google.android.material.navigation.NavigationView>
 
 
 </com.infideap.drawerbehavior.AdvanceDrawerLayout>

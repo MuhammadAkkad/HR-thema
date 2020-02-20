@@ -8,7 +8,7 @@
         <item
             android:id="@+id/onaylanmayı_bekleyen"
             android:icon="@drawable/group25"
-            android:title="Onaylanmayı_Bekleyen" />
+            android:title="Onaylanmayı Bekleyen" />
         <item
             android:id="@+id/Gelen_kutusu"
             android:icon="@drawable/group27"
@@ -36,7 +36,6 @@
         <item
             android:id="@+id/cikisyap"
             android:icon="@drawable/group41"
-            android:title="Çıkış yap" />
-
+            android:title="Çıkış Yap" />
     </group>
 </menu>
