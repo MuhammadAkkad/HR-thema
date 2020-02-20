@@ -3,40 +3,40 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/anasayfa"
-            android:icon="@drawable/group381"
+            android:icon="@drawable/group38"
             android:title="Anasayfa" />
         <item
             android:id="@+id/onaylanmayı_bekleyen"
-            android:icon="@drawable/group251"
+            android:icon="@drawable/group25"
             android:title="Onaylanmayı_Bekleyen" />
         <item
             android:id="@+id/Gelen_kutusu"
-            android:icon="@drawable/group271"
+            android:icon="@drawable/group27"
             android:title="Gelen Kutusu" />
         <item
             android:id="@+id/Kişiler"
-            android:icon="@drawable/group281"
+            android:icon="@drawable/group28"
             android:title="Kişiler" />
         <item
             android:id="@+id/Çalışma_Alanı_Yönetimi"
-            android:icon="@drawable/group291"
+            android:icon="@drawable/group29"
             android:title="Çalışma Alanı Yönetimi" />
         <item
             android:id="@+id/Yönetim"
-            android:icon="@drawable/group301"
+            android:icon="@drawable/group30"
             android:title="Yönetim" />
         <item
             android:id="@+id/Organizasyon_Şeması"
-            android:icon="@drawable/group311"
+            android:icon="@drawable/group31"
             android:title="Organizasyon Şeması" />
         <item
             android:id="@+id/Ayarlar"
-            android:icon="@drawable/group401"
+            android:icon="@drawable/group40"
             android:title="Ayarlar" />
         <item
             android:id="@+id/cikisyap"
-            android:icon="@drawable/signout"
-            android:title="Onaylanmayı_Bekleyen" />
+            android:icon="@drawable/group41"
+            android:title="Çıkış yap" />
 
     </group>
 </menu>

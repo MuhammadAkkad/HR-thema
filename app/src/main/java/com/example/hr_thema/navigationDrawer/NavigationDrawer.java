@@ -4,6 +4,7 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.Gravity;
+import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
 
@@ -42,6 +43,7 @@ public class NavigationDrawer extends AppCompatActivity implements IDrawerListen
         drawer.setViewScale(Gravity.START, 0);
         drawer.setRadius(Gravity.START, 0);
         drawer.setViewElevation(Gravity.START, 30);
+
 
 
         loadFragment(new LastActivitiesFragment());
