@@ -24,14 +24,14 @@
         android:background="#00FAFAFA"
         android:paddingStart="16dp"
         android:theme="@style/fontFamily"
+        app:itemIconTint="@drawable/navigation_drawer_selector"
+        app:itemTextColor="#000000"
         android:visibility="visible"
         app:headerLayout="@layout/nav_header_main"
-        app:itemBackground="@drawable/navigation_drawer_selector"
+        app:itemBackground="@color/transparentColor"
         app:itemHorizontalPadding="20dp"
-
         app:itemIconPadding="27dp"
         app:itemIconSize="42dp"
-        app:itemTextColor="@color/SideNavigationIconText"
         app:menu="@menu/side_navigation_drawer">
 
     </com.google.android.material.navigation.NavigationView>
