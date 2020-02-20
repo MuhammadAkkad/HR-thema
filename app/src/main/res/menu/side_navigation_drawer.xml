@@ -36,7 +36,7 @@
         <item
             android:id="@+id/cikisyap"
             android:icon="@drawable/signout"
-            android:title="Onaylanmayı_Bekleyen" />
+            android:title="Çıkış Yap" />
 
     </group>
 </menu>
