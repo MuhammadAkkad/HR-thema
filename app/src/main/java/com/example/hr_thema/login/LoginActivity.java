@@ -76,7 +76,6 @@ public class LoginActivity extends AppCompatActivity {
                         Color.parseColor("#F39663"),
                 }, null, Shader.TileMode.CLAMP);
         textView.getPaint().setShader(textShader);
-
     }
     void home() {
         Intent home = new Intent(this, NavigationDrawer.class);
