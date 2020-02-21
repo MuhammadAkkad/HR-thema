@@ -9,6 +9,7 @@ import android.graphics.LinearGradient;
 import android.graphics.Shader;
 import android.os.Bundle;
 import android.text.TextPaint;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
@@ -21,8 +22,21 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 
 import com.example.hr_thema.R;
+import com.example.hr_thema.api.APIService;
+import com.example.hr_thema.api.APIUrl;
+import com.example.hr_thema.api.Token;
+import com.example.hr_thema.api.User;
 import com.example.hr_thema.navigationDrawer.NavigationDrawer;
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 import com.makeramen.roundedimageview.RoundedImageView;
+
+import okhttp3.RequestBody;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
 
 
 public class LoginActivity extends AppCompatActivity {
@@ -76,7 +90,32 @@ public class LoginActivity extends AppCompatActivity {
                         Color.parseColor("#F39663"),
                 }, null, Shader.TileMode.CLAMP);
         textView.getPaint().setShader(textShader);
+
+        gam();
     }
+
+    //API
+    public void gam() {
+        Gson gson = new GsonBuilder().setLenient().create();
+
+
+        Retrofit retrofit = new Retrofit.Builder().baseUrl(APIUrl.BASE_URL).addConverterFactory(GsonConverterFactory.create(gson)).build();
+
+        APIService apis = retrofit.create(APIService.class);
+        Call<Token> call = apis.getToken("boran","123","password");
+        call.enqueue(new Callback<Token>() {
+            @Override
+            public void onResponse(Call<Token> call, Response<Token> response) {
+                Toast.makeText(getApplicationContext(),response.body().toString(),Toast.LENGTH_LONG).show();
+            }
+
+            @Override
+            public void onFailure(Call<Token> call, Throwable t) {
+                Toast.makeText(getApplicationContext(),t.getMessage(),Toast.LENGTH_LONG).show();
+            }
+        });
+    }
+
     void home() {
         Intent home = new Intent(this, NavigationDrawer.class);
         startActivity(home);
