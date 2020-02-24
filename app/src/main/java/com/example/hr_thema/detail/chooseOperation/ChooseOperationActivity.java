@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 
 import com.example.hr_thema.R;
+import com.example.hr_thema.bottomNav.lastActivities.LastActivitiesFragment;
 
 public class ChooseOperationActivity extends AppCompatActivity {
     @Override

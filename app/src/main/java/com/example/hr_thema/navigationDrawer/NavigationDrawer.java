@@ -89,27 +89,27 @@ public class NavigationDrawer extends AppCompatActivity implements IDrawerListen
     }
 
 
-// TODO : on back pressed exit app
-//    @Override
-//    public void onBackPressed() {
-//        // if back pressed twice exit app
-//        if (doubleBackToExitPressedOnce) {
-//            super.onBackPressed();
-//            finishAffinity();
-//            return;
-//        }
-//
-//        this.doubleBackToExitPressedOnce = true;
-//        Toast.makeText(this, "Please click BACK again to exit", Toast.LENGTH_SHORT).show();
-//
-//        new Handler().postDelayed(new Runnable() {
-//
-//            @Override
-//            public void run() {
-//                doubleBackToExitPressedOnce = false;
-//            }
-//        }, 2000);
-//    }
+ //TODO : on back pressed exit app
+    @Override
+    public void onBackPressed() {
+        // if back pressed twice exit app
+        if (doubleBackToExitPressedOnce) {
+            super.onBackPressed();
+            finishAffinity();
+            return;
+        }
+
+        this.doubleBackToExitPressedOnce = true;
+        Toast.makeText(this, "Please click BACK again to exit", Toast.LENGTH_SHORT).show();
+
+        new Handler().postDelayed(new Runnable() {
+
+            @Override
+            public void run() {
+                doubleBackToExitPressedOnce = false;
+            }
+        }, 2000);
+    }
 
     @SuppressWarnings("StatementWithEmptyBody")
     @Override

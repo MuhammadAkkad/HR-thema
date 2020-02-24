@@ -3,6 +3,7 @@ package com.example.hr_thema;
 import android.content.Intent;
 import android.graphics.Color;
 import android.media.Image;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -26,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
 
         // Splash screen demo
         long start = System.currentTimeMillis();
-        long end = start + 6*1000; // 60 seconds * 1000 ms/sec
+        long end = start + 1*1000; // 60 seconds * 1000 ms/sec
         while (System.currentTimeMillis() < end)
         {
             // run
@@ -42,6 +43,8 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        MediaPlayer mp = MediaPlayer.create(this, R.raw.allah);
+        mp.start();
 
         sliderView = findViewById(R.id.imageSlider);
 
