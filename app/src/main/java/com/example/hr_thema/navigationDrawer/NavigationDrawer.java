@@ -9,6 +9,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.view.GravityCompat;
 import androidx.fragment.app.Fragment;
@@ -23,17 +24,19 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationView;
 import com.infideap.drawerbehavior.AdvanceDrawerLayout;
 
-public class NavigationDrawer extends AppCompatActivity implements IDrawerListener,  NavigationView.OnNavigationItemSelectedListener {
+public class NavigationDrawer extends AppCompatActivity implements IDrawerListener {
     BottomNavigationView bottomNavigationView;
     boolean doubleBackToExitPressedOnce = false;
     private AdvanceDrawerLayout drawer;
-
+    NavigationView navigationView;
+    MenuItem menuItemAnasayfa,onaylanmayiBekleyen;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_navigation_drawer);
 
         drawer = findViewById(R.id.drawer_layout);
+        navigationView = findViewById(R.id.nav_view);
 
         // TODO use this code to open drawer.
         //        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -41,12 +44,9 @@ public class NavigationDrawer extends AppCompatActivity implements IDrawerListen
         //        drawer.addDrawerListener(toggle);
         //        toggle.syncState();
         final NavigationView navigationView = findViewById(R.id.nav_view);
-        navigationView.setNavigationItemSelectedListener(this);
         drawer.setViewScale(Gravity.START, 0);
         drawer.setRadius(Gravity.START, 0);
         drawer.setViewElevation(Gravity.START, 30);
-
-
 
         loadFragment(new LastActivitiesFragment());
         bottomNavigationView = findViewById(R.id.bottom_navigation);
@@ -54,6 +54,124 @@ public class NavigationDrawer extends AppCompatActivity implements IDrawerListen
         bottomNavigationView.getMenu().getItem(0).setIcon(R.drawable.clock);
         bottomNavigationView.getMenu().getItem(1).setIcon(R.drawable.checked_black);
         bottomNavigationView.getMenu().getItem(2).setIcon(R.drawable.history_black);
+
+        onaylanmayiBekleyen = findViewById(R.id.onaylanmayı_bekleyen);
+
+        navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                navigationView.setItemIconTintList(null);
+                if (item.getItemId() == R.id.anasayfa){
+                    item.setIcon(R.drawable.group38_black);
+                    navigationView.getMenu().getItem(1).setIcon(R.drawable.group25);
+                    navigationView.getMenu().getItem(2).setIcon(R.drawable.group27);
+                    navigationView.getMenu().getItem(3).setIcon(R.drawable.group28);
+                    navigationView.getMenu().getItem(4).setIcon(R.drawable.group29);
+                    navigationView.getMenu().getItem(5).setIcon(R.drawable.group30);
+                    navigationView.getMenu().getItem(6).setIcon(R.drawable.group31);
+                    navigationView.getMenu().getItem(7).setIcon(R.drawable.group40);
+                    navigationView.getMenu().getItem(8).setIcon(R.drawable.group41);
+                    drawer.closeDrawer(GravityCompat.START);
+                }
+                if (item.getItemId() == R.id.onaylanmayı_bekleyen){
+                    item.setIcon(R.drawable.group25_black);
+                    navigationView.getMenu().getItem(0).setIcon(R.drawable.group38);
+                    navigationView.getMenu().getItem(2).setIcon(R.drawable.group27);
+                    navigationView.getMenu().getItem(3).setIcon(R.drawable.group28);
+                    navigationView.getMenu().getItem(4).setIcon(R.drawable.group29);
+                    navigationView.getMenu().getItem(5).setIcon(R.drawable.group30);
+                    navigationView.getMenu().getItem(6).setIcon(R.drawable.group31);
+                    navigationView.getMenu().getItem(7).setIcon(R.drawable.group40);
+                    navigationView.getMenu().getItem(8).setIcon(R.drawable.group41);
+                    drawer.closeDrawer(GravityCompat.START);
+                }
+                if (item.getItemId() == R.id.Gelen_kutusu){
+                    item.setIcon(R.drawable.group27_black);
+                    navigationView.getMenu().getItem(0).setIcon(R.drawable.group38);
+                    navigationView.getMenu().getItem(1).setIcon(R.drawable.group25);
+                    navigationView.getMenu().getItem(3).setIcon(R.drawable.group28);
+                    navigationView.getMenu().getItem(4).setIcon(R.drawable.group29);
+                    navigationView.getMenu().getItem(5).setIcon(R.drawable.group30);
+                    navigationView.getMenu().getItem(6).setIcon(R.drawable.group31);
+                    navigationView.getMenu().getItem(7).setIcon(R.drawable.group40);
+                    navigationView.getMenu().getItem(8).setIcon(R.drawable.group41);
+                    drawer.closeDrawer(GravityCompat.START);
+                }
+                if (item.getItemId() == R.id.Kişiler){
+                    item.setIcon(R.drawable.group28_black);
+                    navigationView.getMenu().getItem(0).setIcon(R.drawable.group38);
+                    navigationView.getMenu().getItem(1).setIcon(R.drawable.group25);
+                    navigationView.getMenu().getItem(2).setIcon(R.drawable.group27);
+                    navigationView.getMenu().getItem(4).setIcon(R.drawable.group29);
+                    navigationView.getMenu().getItem(5).setIcon(R.drawable.group30);
+                    navigationView.getMenu().getItem(6).setIcon(R.drawable.group31);
+                    navigationView.getMenu().getItem(7).setIcon(R.drawable.group40);
+                    navigationView.getMenu().getItem(8).setIcon(R.drawable.group41);
+                    drawer.closeDrawer(GravityCompat.START);
+                }
+                if (item.getItemId() == R.id.Çalışma_Alanı_Yönetimi){
+                    item.setIcon(R.drawable.group29_black);
+                    navigationView.getMenu().getItem(0).setIcon(R.drawable.group38);
+                    navigationView.getMenu().getItem(1).setIcon(R.drawable.group25);
+                    navigationView.getMenu().getItem(2).setIcon(R.drawable.group27);
+                    navigationView.getMenu().getItem(3).setIcon(R.drawable.group28);
+                    navigationView.getMenu().getItem(5).setIcon(R.drawable.group30);
+                    navigationView.getMenu().getItem(6).setIcon(R.drawable.group31);
+                    navigationView.getMenu().getItem(7).setIcon(R.drawable.group40);
+                    navigationView.getMenu().getItem(8).setIcon(R.drawable.group41);
+                    drawer.closeDrawer(GravityCompat.START);
+                }
+                if (item.getItemId() == R.id.Yönetim){
+                    item.setIcon(R.drawable.group30_black);
+                    navigationView.getMenu().getItem(0).setIcon(R.drawable.group38);
+                    navigationView.getMenu().getItem(1).setIcon(R.drawable.group25);
+                    navigationView.getMenu().getItem(2).setIcon(R.drawable.group27);
+                    navigationView.getMenu().getItem(3).setIcon(R.drawable.group38);
+                    navigationView.getMenu().getItem(4).setIcon(R.drawable.group29);
+                    navigationView.getMenu().getItem(6).setIcon(R.drawable.group31);
+                    navigationView.getMenu().getItem(7).setIcon(R.drawable.group40);
+                    navigationView.getMenu().getItem(8).setIcon(R.drawable.group41);
+                    drawer.closeDrawer(GravityCompat.START);
+                }
+                if (item.getItemId() == R.id.Organizasyon_Şeması){
+                    item.setIcon(R.drawable.group31_black);
+                    navigationView.getMenu().getItem(0).setIcon(R.drawable.group38);
+                    navigationView.getMenu().getItem(1).setIcon(R.drawable.group25);
+                    navigationView.getMenu().getItem(2).setIcon(R.drawable.group27);
+                    navigationView.getMenu().getItem(3).setIcon(R.drawable.group38);
+                    navigationView.getMenu().getItem(4).setIcon(R.drawable.group29);
+                    navigationView.getMenu().getItem(5).setIcon(R.drawable.group30);
+                    navigationView.getMenu().getItem(7).setIcon(R.drawable.group40);
+                    navigationView.getMenu().getItem(8).setIcon(R.drawable.group41);
+                    drawer.closeDrawer(GravityCompat.START);
+                }
+                if (item.getItemId() == R.id.Ayarlar){
+                    item.setIcon(R.drawable.group40_black);
+                    navigationView.getMenu().getItem(0).setIcon(R.drawable.group38);
+                    navigationView.getMenu().getItem(1).setIcon(R.drawable.group25);
+                    navigationView.getMenu().getItem(2).setIcon(R.drawable.group27);
+                    navigationView.getMenu().getItem(3).setIcon(R.drawable.group28);
+                    navigationView.getMenu().getItem(4).setIcon(R.drawable.group29);
+                    navigationView.getMenu().getItem(5).setIcon(R.drawable.group30);
+                    navigationView.getMenu().getItem(6).setIcon(R.drawable.group31);
+                    navigationView.getMenu().getItem(8).setIcon(R.drawable.group41);
+                    drawer.closeDrawer(GravityCompat.START);
+                }
+                if (item.getItemId() == R.id.cikisyap){
+                    item.setIcon(R.drawable.group41_black);
+                    navigationView.getMenu().getItem(0).setIcon(R.drawable.group38);
+                    navigationView.getMenu().getItem(1).setIcon(R.drawable.group25);
+                    navigationView.getMenu().getItem(2).setIcon(R.drawable.group27);
+                    navigationView.getMenu().getItem(3).setIcon(R.drawable.group38);
+                    navigationView.getMenu().getItem(4).setIcon(R.drawable.group29);
+                    navigationView.getMenu().getItem(5).setIcon(R.drawable.group30);
+                    navigationView.getMenu().getItem(6).setIcon(R.drawable.group31);
+                    navigationView.getMenu().getItem(7).setIcon(R.drawable.group40);
+                    drawer.closeDrawer(GravityCompat.START);
+                }
+                return false;
+            }
+        });
 
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
@@ -86,8 +204,14 @@ public class NavigationDrawer extends AppCompatActivity implements IDrawerListen
             }
         });
 
+        drawer.closeDrawer(GravityCompat.START);
+
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+    }
 
  //TODO : on back pressed exit app
     @Override
@@ -111,13 +235,7 @@ public class NavigationDrawer extends AppCompatActivity implements IDrawerListen
         }, 2000);
     }
 
-    @SuppressWarnings("StatementWithEmptyBody")
-    @Override
-    public boolean onNavigationItemSelected(MenuItem item) {
-        // Handle bottomNavigationView view item clicks here.
-        drawer.closeDrawer(GravityCompat.START);
-        return true;
-    }
+
 
     public void loadFragment(Fragment fragment) {
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
