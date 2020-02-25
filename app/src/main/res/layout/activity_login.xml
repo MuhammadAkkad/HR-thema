@@ -36,6 +36,7 @@
             android:layout_marginTop="15dp"
             android:background="@drawable/rounded_button"
             android:fontFamily="@font/lato_light"
+            android:inputType="textEmailAddress"
             android:paddingLeft="24dp"
             android:textColor="#000000"
             app:layout_constraintBottom_toBottomOf="parent"
