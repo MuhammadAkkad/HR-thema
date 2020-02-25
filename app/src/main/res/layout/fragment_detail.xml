@@ -188,7 +188,7 @@
 
         <ImageView
             android:id="@+id/imgDown"
-            android:layout_width="28dp"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
             android:src="@drawable/rightchevron"

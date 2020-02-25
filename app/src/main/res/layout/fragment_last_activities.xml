@@ -60,7 +60,7 @@
         android:layout_marginEnd="18dp"
         android:background="@drawable/filter_oval_ring"
         android:drawableStart="@drawable/filternew"
-        android:paddingLeft="5dp"
+        android:paddingLeft="6dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/textView6"
         app:layout_constraintTop_toTopOf="@+id/textView6" />
