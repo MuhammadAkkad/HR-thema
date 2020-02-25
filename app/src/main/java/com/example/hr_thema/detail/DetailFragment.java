@@ -1,6 +1,7 @@
 package com.example.hr_thema.detail;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.LinearGradient;
 import android.graphics.PorterDuff;
@@ -18,12 +19,15 @@ import androidx.viewpager.widget.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.hr_thema.R;
+import com.example.hr_thema.bottomNav.lastActivities.LastActivitiesFragment;
 import com.example.hr_thema.detail.comment.CommentFragment;
 import com.example.hr_thema.detail.operation.OperationsFragment;
+import com.example.hr_thema.navigationDrawer.NavigationDrawer;
 import com.google.android.material.tabs.TabLayout;
 
 
@@ -35,6 +39,7 @@ public class DetailFragment extends Fragment {
     ViewPager viewPager;
     ImageView tab0,tab1,imgDown;
     TextView txt_operation_summery_detail_fragment;
+    ImageButton back;
 
     private OnFragmentInteractionListener mListener;
 
@@ -99,8 +104,28 @@ public class DetailFragment extends Fragment {
         imgDown.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+                imgDown.animate().alpha(0f).setDuration(400);
                 imgDown.setVisibility(View.GONE);
+
+
+                txt_operation_summery_detail_fragment.setAlpha(0f);
                 txt_operation_summery_detail_fragment.setVisibility(View.VISIBLE);
+
+                txt_operation_summery_detail_fragment.animate()
+                        .translationY(txt_operation_summery_detail_fragment.getHeight())
+                        .alpha(1f)
+                        .setDuration(400);
+            }
+        });
+
+
+        back = view.findViewById(R.id.btn_trigger_drawer_detain_fragment);
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent goback = new Intent(getContext(), NavigationDrawer.class);
+                startActivity(goback);
             }
         });
 

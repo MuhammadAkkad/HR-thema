@@ -44,7 +44,7 @@ public class NavigationDrawer extends AppCompatActivity implements IDrawerListen
         //        drawer.addDrawerListener(toggle);
         //        toggle.syncState();
         final NavigationView navigationView = findViewById(R.id.nav_view);
-        drawer.setViewScale(Gravity.START, 0);
+        drawer.setViewScale(Gravity.START, 1);
         drawer.setRadius(Gravity.START, 0);
         drawer.setViewElevation(Gravity.START, 30);
 
