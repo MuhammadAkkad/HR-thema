@@ -82,6 +82,7 @@
         <TextView
             android:id="@+id/txt_operation_summery_detail_fragment"
             android:layout_width="0dp"
+            android:animateLayoutChanges="true"
             android:layout_height="wrap_content"
             android:layout_marginStart="28dp"
             android:layout_marginTop="17dp"
@@ -188,7 +189,7 @@
 
         <ImageView
             android:id="@+id/imgDown"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
             android:src="@drawable/rightchevron"
