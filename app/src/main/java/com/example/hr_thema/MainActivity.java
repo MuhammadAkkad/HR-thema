@@ -43,8 +43,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        MediaPlayer mp = MediaPlayer.create(this, R.raw.allah);
-        mp.start();
 
         sliderView = findViewById(R.id.imageSlider);
 
