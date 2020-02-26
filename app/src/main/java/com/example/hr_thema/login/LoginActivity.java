@@ -104,17 +104,20 @@ public class LoginActivity extends AppCompatActivity {
                     accessToken = response.body().getAccessToken();
                     Intent i = new Intent(getApplicationContext(),NavigationDrawer.class);
                     startActivity(i);
+                    System.out.println("Başarılı");
                 }
                 else{
                     progressBar.setVisibility(View.INVISIBLE);
                     Toast.makeText(getApplicationContext(),"Girdiğiniz şifre veya kullanıcı adı hatalı!",Toast.LENGTH_LONG).show();
+                    System.out.println("Başarısız");
+
                 }
             }
 
             @Override
             public void onFailure(Call<Token> call, Throwable t) {
                 Toast.makeText(getApplicationContext(),t + " onFailure",Toast.LENGTH_LONG).show();
-                System.out.println(t);
+                System.out.println(t + "onFailure");
                 progressBar.setVisibility(View.INVISIBLE);
             }
         });

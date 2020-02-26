@@ -2,6 +2,8 @@ package com.example.hr_thema.api;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
+import java.util.List;
+
 public class Token {
 
     @SerializedName("access_token")
@@ -18,7 +20,7 @@ public class Token {
     private String userName;
     @SerializedName("claim_detail")
     @Expose
-    private String claimDetail;
+    private List<ClaimDetail> claimDetail = null;
     @SerializedName("issued")
     @Expose
     private String issued;
@@ -58,11 +60,11 @@ public class Token {
         this.userName = userName;
     }
 
-    public String getClaimDetail() {
+    public List<ClaimDetail> getClaimDetail() {
         return claimDetail;
     }
 
-    public void setClaimDetail(String claimDetail) {
+    public void setClaimDetail(List<ClaimDetail> claimDetail) {
         this.claimDetail = claimDetail;
     }
 
@@ -81,5 +83,4 @@ public class Token {
     public void setExpires(String expires) {
         this.expires = expires;
     }
-
 }

@@ -1,6 +1,7 @@
 package com.example.hr_thema.api;
 
 import java.util.HashMap;
+import java.util.List;
 
 import retrofit2.Call;
 import retrofit2.http.Body;
@@ -22,5 +23,5 @@ public interface APIService {
     Call<User> getUserInformation(@Header("Content-Type") String content_type,@Header("Authorization") String Authorization);
 
     @GET("WorkflowApi/GetWaiting")
-    Call<ProcessRequest> getProcessInformation(@Header("Content-Type") String content_type,@Header("Authorization") String Authorization);
+    Call<List<ProcessRequest>> getProcessInformation(@Header("Content-Type") String content_type,@Header("Authorization") String Authorization);
 }

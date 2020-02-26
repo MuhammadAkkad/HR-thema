@@ -9,30 +9,15 @@ public class Preview {
     @SerializedName("Title")
     @Expose
     private String title;
-
     @SerializedName("Content")
     @Expose
     private String content;
-
     @SerializedName("LangId")
     @Expose
     private Integer langId;
-
     @SerializedName("LangCode")
     @Expose
-    private Object langCode;
-
-    @SerializedName("Previews")
-    @Expose
-    private ProcessRequest processRequest;
-
-    public ProcessRequest getProcessRequest() {
-        return processRequest;
-    }
-
-    public void setProcessRequest(ProcessRequest processRequest) {
-        this.processRequest = processRequest;
-    }
+    private String langCode;
 
     public String getTitle() {
         return title;
@@ -58,11 +43,11 @@ public class Preview {
         this.langId = langId;
     }
 
-    public Object getLangCode() {
+    public String getLangCode() {
         return langCode;
     }
 
-    public void setLangCode(Object langCode) {
+    public void setLangCode(String langCode) {
         this.langCode = langCode;
     }
 }
