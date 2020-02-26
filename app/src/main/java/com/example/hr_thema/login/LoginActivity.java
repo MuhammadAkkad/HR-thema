@@ -113,7 +113,9 @@ public class LoginActivity extends AppCompatActivity {
 
             @Override
             public void onFailure(Call<Token> call, Throwable t) {
-                Toast.makeText(getApplicationContext()," onFailure",Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(),t + " onFailure",Toast.LENGTH_LONG).show();
+                System.out.println(t);
+                progressBar.setVisibility(View.INVISIBLE);
             }
         });
     }
