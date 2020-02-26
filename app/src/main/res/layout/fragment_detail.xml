@@ -41,8 +41,6 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-
-
         <ImageView
             android:id="@+id/img_operation_icon_detail_fragment"
             android:layout_width="47dp"
@@ -189,8 +187,8 @@
 
         <ImageView
             android:id="@+id/imgDown"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
             android:layout_marginTop="15dp"
             android:src="@drawable/rightchevron"
             android:visibility="visible"

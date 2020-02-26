@@ -30,6 +30,8 @@ public class NavigationDrawer extends AppCompatActivity implements IDrawerListen
     private AdvanceDrawerLayout drawer;
     NavigationView navigationView;
     MenuItem menuItemAnasayfa,onaylanmayiBekleyen;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -57,6 +59,8 @@ public class NavigationDrawer extends AppCompatActivity implements IDrawerListen
 
         onaylanmayiBekleyen = findViewById(R.id.onaylanmayı_bekleyen);
 
+        // side nav bar
+        //region
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
@@ -172,7 +176,10 @@ public class NavigationDrawer extends AppCompatActivity implements IDrawerListen
                 return false;
             }
         });
+        // endregion
 
+        // bottom nav bar
+        // region
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(MenuItem menuItem) {
@@ -205,6 +212,8 @@ public class NavigationDrawer extends AppCompatActivity implements IDrawerListen
         });
 
         drawer.closeDrawer(GravityCompat.START);
+        // endregion
+
 
     }
 
@@ -216,16 +225,18 @@ public class NavigationDrawer extends AppCompatActivity implements IDrawerListen
  //TODO : on back pressed exit app
     @Override
     public void onBackPressed() {
+        if(drawer.isDrawerOpen(GravityCompat.START))
+        {
+            drawer.closeDrawer(GravityCompat.START);
+        }
         // if back pressed twice exit app
-        if (doubleBackToExitPressedOnce) {
+        else if (doubleBackToExitPressedOnce) {
             super.onBackPressed();
             finishAffinity();
             return;
         }
-
         this.doubleBackToExitPressedOnce = true;
         Toast.makeText(this, "Please click BACK again to exit", Toast.LENGTH_SHORT).show();
-
         new Handler().postDelayed(new Runnable() {
 
             @Override
@@ -233,6 +244,11 @@ public class NavigationDrawer extends AppCompatActivity implements IDrawerListen
                 doubleBackToExitPressedOnce = false;
             }
         }, 2000);
+
+        boolean LastActivitiesFragment =getSupportFragmentManager().isDestroyed();
+        if (LastActivitiesFragment){
+            loadFragment(new LastActivitiesFragment());
+        }
     }
 
 

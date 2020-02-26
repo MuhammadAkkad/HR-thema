@@ -16,6 +16,7 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.viewpager.widget.ViewPager;
 
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -105,17 +106,17 @@ public class DetailFragment extends Fragment {
             @Override
             public void onClick(View v) {
 
-                imgDown.animate().alpha(0f).setDuration(400);
+                imgDown.animate().translationY(Gravity.BOTTOM);
                 imgDown.setVisibility(View.GONE);
 
 
-                txt_operation_summery_detail_fragment.setAlpha(0f);
-                txt_operation_summery_detail_fragment.setVisibility(View.VISIBLE);
-
-                txt_operation_summery_detail_fragment.animate()
-                        .translationY(txt_operation_summery_detail_fragment.getHeight())
-                        .alpha(1f)
-                        .setDuration(400);
+//                txt_operation_summery_detail_fragment.setAlpha(0f);
+//                txt_operation_summery_detail_fragment.setVisibility(View.VISIBLE);
+//
+//                txt_operation_summery_detail_fragment.animate()
+//                        .translationY(txt_operation_summery_detail_fragment.getHeight())
+//                        .alpha(1f)
+//                        .setDuration(400);
             }
         });
 
