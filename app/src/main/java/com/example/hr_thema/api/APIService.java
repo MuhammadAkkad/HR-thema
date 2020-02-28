@@ -1,5 +1,9 @@
 package com.example.hr_thema.api;
 
+import androidx.media.AudioAttributesCompat;
+
+import org.json.JSONObject;
+
 import java.util.HashMap;
 import java.util.List;
 
@@ -15,6 +19,7 @@ import retrofit2.http.POST;
 public interface APIService {
     //@Headers("Content-Type:application/x-www-form-urlencoded")
     //@Headers({ "Content-Type: application/json;charset=UTF-8"})
+
     @POST("oauth/token")
     @FormUrlEncoded
     Call<Token> getDataToken(@Header("Content-Type") String content_type, @Field("userName") String userName, @Field("password") String password, @Field("grant_type") String grant_type);
@@ -23,5 +28,5 @@ public interface APIService {
     Call<User> getUserInformation(@Header("Content-Type") String content_type,@Header("Authorization") String Authorization);
 
     @GET("WorkflowApi/GetWaiting")
-    Call<List<ProcessRequest>> getProcessInformation(@Header("Content-Type") String content_type,@Header("Authorization") String Authorization);
+    Call<List<ProcessRequest>> getProcessInformation(@Header("Authorization") String Authorization);
 }

@@ -20,6 +20,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.example.hr_thema.R;
 import com.example.hr_thema.api.APIService;
 import com.example.hr_thema.api.APIUrl;
+import com.example.hr_thema.api.Deneme;
 import com.example.hr_thema.api.Token;
 import com.example.hr_thema.api.User;
 import com.example.hr_thema.navigationDrawer.NavigationDrawer;
@@ -102,6 +103,7 @@ public class LoginActivity extends AppCompatActivity {
             public void onResponse(Call<Token> call, Response<Token> response) {
                 if(response.isSuccessful()){
                     accessToken = response.body().getAccessToken();
+                    Deneme.getTokenNow = accessToken;
                     Intent i = new Intent(getApplicationContext(),NavigationDrawer.class);
                     startActivity(i);
                     System.out.println("Başarılı");
@@ -110,7 +112,6 @@ public class LoginActivity extends AppCompatActivity {
                     progressBar.setVisibility(View.INVISIBLE);
                     Toast.makeText(getApplicationContext(),"Girdiğiniz şifre veya kullanıcı adı hatalı!",Toast.LENGTH_LONG).show();
                     System.out.println("Başarısız");
-
                 }
             }
 
